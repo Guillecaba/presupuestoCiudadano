@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav,Container} from 'react-bootstrap'
 
-const nav = props => {
+const nav = () => {
   return (
     <>
       <Container>
