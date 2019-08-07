@@ -1,0 +1,91 @@
+.banner__principal {
+  background: #CBE776;
+}
+
+.banner__principal_item {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.banner__principal_item_monto {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
+
+.banner__principal_item_one {
+  border-left: solid 10px #A7D5FF;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+
+.banner__principal_item_two {
+  border-left: solid 10px #0AFC5D;
+  padding-left:10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_three {
+  border-left: solid 10px #E16163;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_four {
+  border-left: solid 10px #FAFF0E;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+
+.gastos__title {
+  font-size: 28px;
+  line-height: 30px;
+  color: #363736;
+  font-weight: bold;
+}
+.gastos__treemap {
+  text-align: center;
+}
+
+.encuesta__title {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.encuesta__subtitle {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+
+.item { 
+  background:#E16163;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2;
+  margin-bottom: 1%;
+  padding: 1% 1% 1% 4%;
+  color:white;
+  text-align: left;
+}
+
+input {
+  background: #E5E5E5;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+.button__primary {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  background: #CBE776;
+  color: #FFFFFF;
+  line-height: 12px;
+  font-size: 18px;
+  padding:2% 5%;
+  border:none
+}

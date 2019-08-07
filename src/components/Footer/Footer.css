@@ -1,3 +1,19 @@
 .footer__img {
     width:100%;
 }
+
+.footer__title {
+    color: #363736;
+}
+
+ul {
+    align-self: start;
+    list-style: none;
+}
+
+.footer_text {
+    color: #000000;
+}
+.footer{
+    background: #F1F1F1;
+}
