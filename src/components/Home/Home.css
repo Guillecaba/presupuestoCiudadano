@@ -18,7 +18,7 @@
 .banner__text_title {
   font-size:36px;
   line-height: 50px;
-  text-transform: uppercase;
+  
   font-weight: bold;
   color: #363736 !important;
 }
@@ -30,10 +30,12 @@
   line-height: 12px;
   font-size: 12px;
   padding:2% 5%;
-  border:none
+  border:none;
+  text-decoration:none;
 }
 .button__primary:hover {
   background:#A7D5FF;
+  text-decoration:none;
 }
 
 
@@ -150,6 +152,14 @@
   text-align: center;
 }
 
+.presupuesto_total__subtitle_secondary {
+  font-weight: 400;
+  color: #000000;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+}
+
 .presupuesto_total__card_img {
   align-self: center;
   width:50%
@@ -162,6 +172,38 @@
   color:#363736;
 } 
 
+.presupuesto_total__card__title_two {
+  color: #E16163 !important;
+  line-height: 33px;
+  font-size: 28px;
+  font-weight: bold;
+} 
+
+.presupuesto_total__subtitle_two {
+  font-weight: bold;
+  color: #000000;
+  font-size: 28px;
+  line-height: 56px;
+  text-align: center;
+}
+
+
+
+.presupuesto_total__card_monto_primary {
+  font-weight: bold;
+  font-size:14px;
+  line-height: 18px;
+  color:#363736;
+}
+
+.presupuesto_total__card_monto_secondary {
+  font-weight: 400;
+  font-size:14px;
+  line-height: 18px;
+  color:#363736;
+}
+
+
 .button__secundary {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   
@@ -170,7 +212,8 @@
   line-height: 12px;
   font-size: 12px;
   padding:2% 5%;
-  border:none
+  border:none;
+  text-decoration:none;
 }
 .button__secundary:hover {
   background: #CBE776;
@@ -192,6 +235,21 @@
   line-height: 18px;
   font-size: 15px;
   font-weight: 400;
+}
+
+
+.item_ods {
+  background:#A7D5FF !important;
+  margin-bottom: 2em !important;
+  border:none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  color:white;
+  text-align:center;
+}
+
+
+.list-group-item.active {
+  background:  #CBE776 !important;
 }
 
 

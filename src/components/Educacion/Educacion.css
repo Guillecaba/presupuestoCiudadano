@@ -13,7 +13,11 @@
   line-height: 28px;
 }
 
-
+.banner__principal_item_central {
+  border-left: solid 10px orange;
+  padding-left: 10%;
+  list-style-position: inside;
+}
 
 .banner__principal_item_one {
   border-left: solid 10px #A7D5FF;
@@ -36,6 +40,12 @@
 
 .banner__principal_item_four {
   border-left: solid 10px #FAFF0E;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_five {
+  border-left: solid 10px blue;
   padding-left: 10%;
   list-style-position: inside;
 }
@@ -85,7 +95,15 @@ border-radius: 25px;
   background: #CBE776;
   color: #FFFFFF;
   line-height: 12px;
-  font-size: 18px;
+  font-size: 12px;
   padding:2% 5%;
   border:none
+}
+
+ul {
+  padding-left: 0;
+}
+li {
+  cursor: all-scroll;
+  padding-left: 0;
 }

@@ -31,31 +31,40 @@ const footer = () => {
                   alt="usaid ceamso"
                 />{" "}
               </Col>
-              <Col md={4}>
+              <Col md={3}>
                 <img className="footer__img" src={pfm_lac} alt="pfm lac" />
               </Col>
-              <Col md={4}>
+              <Col md={3}>
                 <img
                   className="footer__img"
                   src={logo_hacienda}
                   alt="logo hacienda"
                 />
               </Col>
-              <Col md={4}>
+             {/*  <Col md={4}>
                 <img
                   className="footer__img"
                   src={banco}
                   alt="banco"
                 />
-              </Col>
+              </Col> */}
 
-              <p className="footer_text pt-5">
+              <p className="footer_text pt-5 pl-3">
                 Este material es publicado gracias al apoyo de la Agencia de los
                 Estados Unidos para el Desarrollo Internacional (USAID). El
                 contenido del mismo es exclusiva responsabilidad de sus autores
                 y no refleja necesariamente las opiniones o puntos de vista de
                 USAID o el Gobierno de los Estados Unidos.
               </p>
+             
+            </Row>
+            <Row>
+              <Col md={6}>
+              <p>Portal actualizado con el apoyo del Banco Mundial 2019   </p>
+                </Col>
+              <Col md={6}>
+              <img className = 'w-50' src={ banco } alt='banco'></img>
+              </Col>
             </Row>
           </Col>
         </Row>
