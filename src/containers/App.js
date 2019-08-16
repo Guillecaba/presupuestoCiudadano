@@ -8,6 +8,7 @@ import Educacion from "../components/Educacion/Educacion";
 import DetalleMinisterio from "../components/Detalle/Detalle"
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Financiacion from "../components/Financiacion/Financiacion";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/financiacion" component={ Financiacion} />
 
-        <Route path="/educacion" component={Educacion} />
-        <Route path="/detalle" component={DetalleMinisterio} />
+        <Route path="/educacion" component={DetalleMinisterio} />
+        <Route path="/obras" component = {DetalleMinisterio} />
+        
       </Switch>
       <Footer />
     </Router>

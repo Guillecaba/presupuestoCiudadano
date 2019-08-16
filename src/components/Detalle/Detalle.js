@@ -8,18 +8,30 @@ import TreeMap from "react-d3-treemap";
 import "react-d3-treemap/dist/react.d3.treemap.css";
 import dataTree from "../../assets/data/data";
 import { render } from "react-dom";
-import { sortableContainer, sortableElement } from "react-sortable-hoc";
+import { sortableContainer, sortableElement,sortableHandle } from "react-sortable-hoc";
 import arrayMove from "array-move";
+//import Sunburst from "react-zoomable-sunburst"
+import Sunburst from "../../components/Sunburst/Sunburst"
+import "../Educacion/Educacion.css"
+
+//import datap from '../../assets/data/data'
 
 import ContainerDimensions from "react-container-dimensions";
 
-const SortableItem = sortableElement(({ value }) => (
-  <li className="item">{value}</li>
+
+const DragHandle = sortableHandle(() => <span className="dragAndDropIcon"></span>);
+
+const SortableItem = sortableElement(({value}) => (
+  <li className="item">
+    <DragHandle />
+    {value}
+  </li>
 ));
 
-const SortableContainer = sortableContainer(({ children }) => {
+const SortableContainer = sortableContainer(({children}) => {
   return <ul>{children}</ul>;
 });
+
 
 class DetalleMinisterio extends Component {
   constructor(props) {
@@ -34,13 +46,18 @@ class DetalleMinisterio extends Component {
   }
   static contextType = MinisterioContext;
 
+  onSelect(event){
+    console.log(event);
+  }
+
   componentDidMount() {
     console.log(this.props.location);
     const pathname = this.props.location.pathname;
-
+    let dataFromContext;
     switch (pathname) {
-      case "/detalle":
-        const dataFromContext = this.context.educacion;
+     
+      case "/educacion":
+        dataFromContext = this.context.educacion;
         console.log(dataFromContext);
 
         this.setState({
@@ -60,6 +77,23 @@ class DetalleMinisterio extends Component {
 
         break;
       case "/obras":
+          dataFromContext = this.context.obras;
+          console.log(dataFromContext);
+  
+          this.setState({
+            logo: escuela,
+  
+            data: dataFromContext[0].data,
+  
+            items: dataFromContext[1].items,
+  
+            banner: dataFromContext[2],
+  
+            treeMap: dataFromContext[3].treeMapData,
+  
+            resumen:dataFromContext[4].resumen
+          });
+          console.log(this.state);
         break;
       case "/salud":
         break;
@@ -172,12 +206,17 @@ class DetalleMinisterio extends Component {
                 <div className="d-flex align-items-center justify-content-center ">
                   <ContainerDimensions>
                     {({ width, height }) => (
-                      <TreeMap
-                        className="gastos__treemap"
-                        width={width}
-                        data={state.treeMap}
-                        valueUnit={"GS"}
-                      />
+                      <Sunburst
+                      data={state.treeMap}
+                      width={width}
+                      height="600"
+                      count_member="value"
+                     labelFunc={(node)=>node.data.name}
+                     tooltipFunc= {(data)=>data.name}
+                     
+                      _debug={false}
+                    />
+                     
                     )}
                   </ContainerDimensions>
                 </div>
@@ -217,9 +256,9 @@ class DetalleMinisterio extends Component {
                   Organiza tus prioridades, arriba las más importantes,{" "}
                   <span className="font-weight-bold">
                     (estirando y soltando las actividades)
-                  </span>
+                  </span>3 
                 </p>
-                <SortableContainer onSortEnd={this.onSortEnd}>
+                <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
                   {this.state.items.map((value, index) => (
                     <SortableItem
                       key={`item-${index}`}
