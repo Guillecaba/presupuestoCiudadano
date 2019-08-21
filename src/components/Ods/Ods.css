@@ -1,0 +1,15 @@
+.ods-banner {
+  
+  background-color:#A7D5FF;
+ 
+}
+
+.ods-banner-img {
+  position: relative;
+  width:100%;
+  top:20%
+}
+
+.ods-banner-title {
+  color:white;
+}

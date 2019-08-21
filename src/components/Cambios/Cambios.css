@@ -1,0 +1,73 @@
+.cambios_banner {
+  background-color: #A7D5FF;
+}
+.cambios_banner_title {
+  color:white;
+}
+
+.cambios_banner_img {
+  text-align: center
+}
+
+
+.clasif {
+  background-color: #E16163; 
+  color:white;
+}
+
+.clasi-item-title {
+  font-size:1.563em;
+
+}
+
+
+
+.clasi-item-1 {
+  font-size:1.563em;
+  
+}
+.clasi-item-2 {
+  font-size:1.563em;
+  padding-left:2em !important;
+}
+.clasi-item-3 {
+  font-size:1.563em;
+  padding-left:4em !important;
+}
+.program-column {
+  align-self: center;
+} 
+
+.program-title {
+  text-align: right !important;
+}
+
+.versus-anho {
+  font-size:3.125em;
+  color: #CBE776;
+}
+
+.versus-columna {
+  color:white;
+  background-color: #A7D5FF;
+  
+}
+
+.central {
+  margin:50% 0%;
+}
+
+
+
+.boton-descarga {
+  border:none;
+  color:white;
+  text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+  padding: 0.25em 1.2em;
+  background: #E16163;
+  font-size: 0.625em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+ 
+}

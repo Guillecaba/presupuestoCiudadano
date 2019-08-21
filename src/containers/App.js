@@ -5,7 +5,9 @@ import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import Home from "../components/Home/Home";
 import Educacion from "../components/Educacion/Educacion";
-import DetalleMinisterio from "../components/Detalle/Detalle"
+import DetalleMinisterio from "../components/Detalle/Detalle";
+import Cambios from "../components/Cambios/Cambios";
+import Ods from "../components/Ods/Ods";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Financiacion from "../components/Financiacion/Financiacion";
@@ -16,11 +18,12 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/financiacion" component={ Financiacion} />
+        <Route path="/financiacion" component={Financiacion} />
+        <Route path="/cambios" component={Cambios} />
+        <Route path="/ods" component={Ods} />
 
         <Route path="/educacion" component={DetalleMinisterio} />
-        <Route path="/obras" component = {DetalleMinisterio} />
-        
+        <Route path="/obras" component={DetalleMinisterio} />
       </Switch>
       <Footer />
     </Router>

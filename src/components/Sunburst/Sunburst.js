@@ -170,6 +170,7 @@ class Sunburst extends React.Component {
         this.props._debug && this.props._log("Sunburst: select(id)")
         const key = '#mainArc-' + id
         const nodes = d3Select(key).nodes()
+        console.log("EL nodo",nodes);
         if (!nodes.length) {
             this.props._warn(`could not find node with id of ${key}`)
             return
@@ -180,6 +181,17 @@ class Sunburst extends React.Component {
 
     _onClick(node) {
         this.props._debug && this.props._log("Sunburst: _onClick(node)")
+        this.props.changed(node)
+    
+        /* console.log(node);
+        console.log(node.data.name);
+        console.log(node.value);
+        console.log(node.children)
+        node.children.map((valor)=> {
+            console.log(valor.data.name)
+            console.log(valor.value)
+        
+        }) */
         this._last_click = node
     }
 
@@ -196,6 +208,7 @@ class Sunburst extends React.Component {
     _create() {
         this.props._debug && this.props._log("Sunburst: _create()")
         if (!this.props.data) return;
+        
 
         const root = d3Hierarchy(this.props.data)
             .sum(function(d) { 
@@ -240,6 +253,7 @@ class Sunburst extends React.Component {
                     return key ? `mainArc-${d.data[key]}` : `mainArc-${i}`
                 }).style("fill", (d) => d.parent ? this._colorize(d) : "white")
                 .on('click', function(node) {
+                    
                     this._onClick(node)
                     this.props.onClick && this.props.onClick(node);
                     this._update(node)
