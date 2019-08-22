@@ -242,7 +242,9 @@ class DetalleMinisterio extends Component {
                 <h1 className="text-uppercase text-center mb-5 gastos__title ">
                   Programas del Ministerio
                 </h1>
-                <div className="d-flex align-items-center justify-content-center ">
+                <Row>
+                  <Col md={6}>
+                  <div className="d-flex align-items-center justify-content-center ">
                   <ContainerDimensions>
                     {({ width, height }) => (
                       <Sunburst
@@ -258,7 +260,9 @@ class DetalleMinisterio extends Component {
                     )}
                   </ContainerDimensions>
                 </div>
-                <div>
+                  </Col>
+                  <Col md={6}>
+                  <div>
                   {this.state.lista && (
                     <Fragment>
                       <div className="text-center text-uppercase text-center my-5 gastos__title">
@@ -302,6 +306,10 @@ class DetalleMinisterio extends Component {
                     </Fragment>
                   )}
                 </div>
+                    </Col>
+                </Row>
+                
+                
               </div>
 
               <div>

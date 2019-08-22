@@ -137,8 +137,12 @@
   color:#363736;
 }
 
+.presupuesto_total {
+  background-color: #E16163;;
+}
+
 .presupuesto_total__title {
-  color: #E16163 !important;
+  color: white !important;
   line-height: 33px;
   font-size: 28px;
   font-weight: bold;
@@ -146,7 +150,7 @@
 
 .presupuesto_total__subtitle {
   font-weight: bold;
-  color: #000000;
+  color:#363736 !important;
   font-size: 48px;
   line-height: 56px;
   text-align: center;
@@ -154,7 +158,7 @@
 
 .presupuesto_total__subtitle_secondary {
   font-weight: 400;
-  color: #000000;
+  color:white !important;
   font-size: 48px;
   line-height: 56px;
   text-align: center;
@@ -169,7 +173,7 @@
   font-weight: 500;
   font-size:14px;
   line-height: 18px;
-  color:#363736;
+  color:white !important;
 } 
 
 .presupuesto_total__card__title_two {
@@ -181,7 +185,7 @@
 
 .presupuesto_total__subtitle_two {
   font-weight: bold;
-  color: #000000;
+  color:white !important;
   font-size: 28px;
   line-height: 56px;
   text-align: center;
@@ -193,14 +197,14 @@
   font-weight: bold;
   font-size:14px;
   line-height: 18px;
-  color:#363736;
+  color:white !important;
 }
 
 .presupuesto_total__card_monto_secondary {
   font-weight: 400;
   font-size:14px;
   line-height: 18px;
-  color:#363736;
+  color:white !important;
 }
 
 
@@ -356,6 +360,20 @@
 /* Handle on hover */
 .timeline ::-webkit-scrollbar-thumb:hover {
   background: gray; 
+}
+
+
+.card-ministerio {
+  background-color: transparent;
+  
+}
+
+.como-se-elabora {
+  font-weight: bold;
+  color:#363736 !important;
+  font-size: 25px;
+  line-height: 56px;
+  text-align: center;
 }
 
   

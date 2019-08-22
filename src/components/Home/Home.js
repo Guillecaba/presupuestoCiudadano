@@ -74,6 +74,9 @@ class Home extends React.Component {
         <Container>
           <Row>
             <Col>
+            <h1 className="como-se-elabora text-center">
+                  COMO SE ELABORA EL PRESUPUESTO?
+                </h1>
               <Carousel interval="5000" className="">
                 {/* <Carousel.Item>
                   <img
@@ -316,6 +319,7 @@ class Home extends React.Component {
               </Carousel>
             </Col>
           </Row>
+          </Container>
           <Row className="timeline">
             <Col>
               <div class="scrolling-wrapper-flexbox">
@@ -367,7 +371,8 @@ class Home extends React.Component {
               </div>
             </Col>
           </Row>
-          <div className="presupuesto_total mb-5 pt-5">
+          <div className="presupuesto_total mb-5 py-5">
+            <Container>
             <Row>
               <Col md={12}>
                 <h1 className="presupuesto_total__title text-center">
@@ -383,7 +388,7 @@ class Home extends React.Component {
                 </h2>
               </Col>
             </Row>
-            <Row>
+           {/*  <Row>
               <Col md={6}>
                 <h1 className="presupuesto_total__card__title_two text-center">
                   {" "}
@@ -402,12 +407,12 @@ class Home extends React.Component {
                   Gs. 34.915.899.880.774 <br /> (Datos de 2019)
                 </h2>
               </Col>
-            </Row>
+            </Row> */}
 
             <Row>
               <Col md={3}>
-                <Card>
-                  <Card.Img className="w-50 align-self-center" src={escuela} />
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center" src={escuela} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Educación y Ciencias
@@ -427,8 +432,8 @@ class Home extends React.Component {
                 </Card>
               </Col>
               <Col md={3}>
-                <Card>
-                  <Card.Img className="w-50 align-self-center" src={cruz} />
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center" src={cruz} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Salud y Bienestar social
@@ -448,8 +453,8 @@ class Home extends React.Component {
                 </Card>
               </Col>
               <Col md={3}>
-                <Card>
-                  <Card.Img className="w-50 align-self-center" src={casco} />
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center" src={casco} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Obras Públicas y Comunicaciones
@@ -470,8 +475,8 @@ class Home extends React.Component {
                 </Card>
               </Col>
               <Col md={3}>
-                <Card>
-                  <Card.Img className="w-50 align-self-center" src={casa} />
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center " src={casa} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Urbanismo, Vivienda y Hábitat
@@ -491,6 +496,7 @@ class Home extends React.Component {
                 </Card>
               </Col>
             </Row>
+            </Container>
           </div>
 
           {/* <div className="banner__preparar">
@@ -554,6 +560,7 @@ class Home extends React.Component {
             </Row>
           </div>
    */}
+   <Container>
           <div className="banner__conoce pt-5">
             <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title">
               conocé más sobre <br /> el presupuesto general de <br /> la

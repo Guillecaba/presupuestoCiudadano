@@ -8,14 +8,16 @@ import Educacion from "../components/Educacion/Educacion";
 import DetalleMinisterio from "../components/Detalle/Detalle";
 import Cambios from "../components/Cambios/Cambios";
 import Ods from "../components/Ods/Ods";
-
+import ScrollIntoView from "../components/ScrollIntoView/ScrollIntoView";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Financiacion from "../components/Financiacion/Financiacion";
 
 function App() {
+ 
   return (
     <Router>
       <Nav />
+      <ScrollIntoView>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/financiacion" component={Financiacion} />
@@ -25,6 +27,7 @@ function App() {
         <Route path="/educacion" component={DetalleMinisterio} />
         <Route path="/obras" component={DetalleMinisterio} />
       </Switch>
+      </ScrollIntoView>
       <Footer />
     </Router>
   );
