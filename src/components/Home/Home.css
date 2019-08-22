@@ -1,7 +1,7 @@
 .banner {
   background-color: #A7D5FF;
-  padding-top: 15% !important;
-  margin-bottom: 15% !important;
+  padding-top: 8% !important;
+  margin-bottom: 5% !important;
 }
 
 .banner__img {
@@ -253,4 +253,109 @@
 }
 
 
+/* Slides */ 
+.slide-title {
+  color:black;
+}
 
+.slide-text {
+  color:black;
+}
+
+.slide-text-side {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.carousel-control-next {
+  right: 0;
+  color:black;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../../assets/icons/arrow-right-solid.svg") !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../../assets/icons/arrow-left-solid.svg") !important;
+}
+
+ @media only screen and (max-width: 600px) {
+  .carousel-item.active {
+   height: 100vh !important;
+  }
+}
+
+
+
+
+ 
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+   
+  }
+  .tarjeta {
+    flex: 0 0 auto;
+    margin-right: 15px;
+  }
+  
+  .tarjeta {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 200px;
+    height: 220px;
+    text-align: center;
+    padding:0px 20px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  .scrolling-wrapper, .scrolling-wrapper-flexbox {
+    margin-top: 40px;
+    height: 320px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+   
+  }
+
+  .timeline {
+    background:#CBE776;
+  }
+
+  .tarjeta-title {
+    padding-top:10px;
+    font-size:1.063em;
+  }
+
+  .tarjeta-text {
+    font-size:0.813em;
+  }
+
+.timeline ::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.timeline ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.timeline ::-webkit-scrollbar-thumb {
+  background:white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.timeline ::-webkit-scrollbar-thumb:hover {
+  background: gray; 
+}
+
+  
