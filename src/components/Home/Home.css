@@ -27,15 +27,17 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: #CBE776;
   color: #FFFFFF;
+  font-family: 'Helsinki';
   line-height: 12px;
   font-size: 12px;
-  padding:2% 5%;
+  padding: 0.6rem 1.5rem;
   border:none;
   text-decoration:none;
 }
-.button__primary:hover {
-  background:#A7D5FF;
+.button__primary:hover,.button__primary:active,.button__primary:focus {
+  background:#A7D5FF !important;
   text-decoration:none;
+  border:none !important;
 }
 
 
@@ -163,13 +165,26 @@
   line-height: 56px;
   text-align: center;
 }
+.presupuesto_total__subtitle_number {
+  font-weight: bold;
+  color:#363736 !important;
+  font-size:  1.375rem;
+  line-height: 56px;
+  text-align: center;
+}
 
 .presupuesto_total__card_img {
   align-self: center;
   width:50%
 }
 
+.icon {
+  width:24px;
+  
+}
+
 .presupuesto_total__card_title {
+  display:inline-block;
   font-weight: 500;
   font-size:14px;
   line-height: 18px;
@@ -177,7 +192,7 @@
 } 
 
 .presupuesto_total__card__title_two {
-  color: #E16163 !important;
+  color: white !important;
   line-height: 33px;
   font-size: 28px;
   font-weight: bold;
@@ -210,17 +225,18 @@
 
 .button__secundary {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  
+  font-family: 'Helsinki';
   background:#A7D5FF;
   color: #FFFFFF;
   line-height: 12px;
   font-size: 12px;
-  padding:2% 5%;
+  padding: 0.6rem 1.5rem;
   border:none;
   text-decoration:none;
 }
-.button__secundary:hover {
-  background: #CBE776;
+.button__secundary:hover,.button__secundary:active,.button__secundary:focus {
+  background: #CBE776 !important;
+  border:none !important;
 }
 
 .information {
@@ -260,10 +276,12 @@
 /* Slides */ 
 .slide-title {
   color:black;
+  font-weight: bold
 }
 
 .slide-text {
   color:black;
+  
 }
 
 .slide-text-side {
@@ -305,11 +323,14 @@
   }
   .tarjeta {
     flex: 0 0 auto;
+    margin-left:5px;
     margin-right: 15px;
   }
   
   .tarjeta {
+    transition: all .2s ease-in-out;
     background: #FFFFFF;
+    margin-top:20px;
     border-radius: 20px;
     width: 200px;
     height: 220px;
@@ -317,6 +338,10 @@
     padding:0px 20px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
     
+  }
+  .tarjeta:hover{
+    transform: scale(1.1);
+    background-color: #A7D5FF;
   }
   
   .scrolling-wrapper, .scrolling-wrapper-flexbox {
@@ -365,15 +390,32 @@
 
 .card-ministerio {
   background-color: transparent;
+  text-align: center;
   
 }
 
 .como-se-elabora {
   font-weight: bold;
   color:#363736 !important;
-  font-size: 25px;
+  font-size: 1.563rem;
   line-height: 56px;
   text-align: center;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+@media only screen and (max-width: 768px) {
+  
+  .banner__text_title {
+    font-size: 1.250em;
+  }
+  .banner__text {
+    padding-top:25%;
+  }
+  .information__title {
+    padding-top:20px;
+  }
 }
 
   

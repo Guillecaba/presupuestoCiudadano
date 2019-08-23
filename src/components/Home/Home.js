@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import personitas from "../../assets/images/personitas-completo.png";
 import familia from "../../assets/images/familia.png";
 import hacienda from "../../assets/images/hacienda.png";
@@ -15,6 +15,8 @@ import casco from "../../assets/images/casco.png";
 import casa from "../../assets/images/casa.png";
 import pdf from "../../assets/media/PropuestaTeoria.pdf";
 import white from "../../assets/images/White.png";
+import help from "../../assets/icons/question.svg"
+import {Fade,LightSpeed} from 'react-reveal/';
 import {
   Container,
   Col,
@@ -41,10 +43,19 @@ import estudio from "../../assets/images/estudio.png";
 import aprobacion from "../../assets/images/aprobacion.png";
 import presidente from "../../assets/images/presidente.png";
 import ejecucion from "../../assets/images/ejecucion.png";
+import Zoom from 'react-reveal/Zoom';
 //import { ciclo } from "../../assets/images/ciclo.png"
 import "./Home.css";
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { show: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ show: !this.state.show });
+  }
   render() {
     return (
       <div>
@@ -52,19 +63,21 @@ class Home extends React.Component {
           <Container>
             <Row>
               <Col md={6}>
+              <Fade className="grow" left>
                 <img
-                  className="banner__img"
+                  className="banner__img grow"
                   src={personitas}
                   alt="Personitas"
                 />
+                </Fade>
               </Col>
               <Col className="banner__text" md={6}>
-                <h1 className="banner__text_title">
+                <h2 className="banner__text_title grow">
                   ¿Sabías que el Presupuesto General de Gastos de la Nación para
                   el año 2020 propone algunos cambios?{" "}
-                </h1>
-                <Button href={pdf} className="button__primary">
-                  Ver más
+                </h2>
+                <Button href={"/cambios"} className="button__primary grow">
+                  Ver mas
                 </Button>
               </Col>
             </Row>
@@ -72,11 +85,13 @@ class Home extends React.Component {
         </div>
 
         <Container>
-          <Row>
+          <Row id="proceso">
             <Col>
-            <h1 className="como-se-elabora text-center">
+            <LightSpeed right>
+            <h1 className="como-se-elabora  text-center grow">
                   COMO SE ELABORA EL PRESUPUESTO?
                 </h1>
+                </LightSpeed>
               <Carousel interval="5000" className="">
                 {/* <Carousel.Item>
                   <img
@@ -105,10 +120,10 @@ class Home extends React.Component {
                         <img className=" w-100" src={ciclo} alt="C" />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <h3 className="slide-title text-right">
+                        <h3 className="slide-title text-left">
                           CICLO PRESUPUESTARIO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           A fin de que el Gobierno Nacional cada año pueda
                           conocer cuánto de los recursos programados va a
                           disponer para poder gastar y cumplir con sus fines, se
@@ -132,11 +147,11 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">ABRIL</p>
-                        <h3 className="slide-title text-right">
+                        <p className="slide-text text-left">ABRIL</p>
+                        <h3 className="slide-title text-left">
                           LINEAMIENTOS PARA PROGRAMACIÓN
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           El Ministerio de Hacienda elabora un decreto donde se
                           estipulan los lineamientos para que las instituciones
                           realicen sus anteproyectos.
@@ -158,11 +173,11 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">MAYO - JUNIO</p>
-                        <h3 className="slide-title text-right">
+                        <p className="slide-text text-left">MAYO - JUNIO</p>
+                        <h3 className="slide-title text-left">
                           ANTEPROYECTO DE PRESUPUESTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           Los organismos y entidades del sector público elaboran
                           sus anteproyectos de presupuestos donde calculan el
                           monto de dinero que se puede obtener y disponer y por
@@ -187,11 +202,11 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">JULIO - AGOSTO</p>
-                        <h3 className="slide-title text-right">
+                        <p className="slide-text text-left">JULIO - AGOSTO</p>
+                        <h3 className="slide-title text-left">
                           PROYECTO DE PRESUPUESTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           El Ministerio de Hacienda analiza los anteproyectos
                           verificando que se cumplan los lineamientos, que la
                           estimación de los ingresos sea real y que la
@@ -215,13 +230,13 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           SEPTIEMBRE - DICIEMBRE
                         </p>
-                        <h3 className="slide-title text-right">
+                        <h3 className="slide-title text-left">
                           ESTUDIO DEL PROYECTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           El Congreso Nacional, a través de una comisión
                           bicameral formada por diputados y senadores se encarga
                           de revisar y discutir el proyecto de ingresos y gastos
@@ -244,13 +259,13 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           NOVIEMBRE - DICIEMBREE
                         </p>
-                        <h3 className="slide-title text-right">
+                        <h3 className="slide-title text-left">
                           APROBACIÓN DEL PRESUPUESTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           Una vez acordadas las modificaciones y cambios se
                           procede a aprobar el presupuesto a través de una ley
                           de la Nación
@@ -272,13 +287,13 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           21 DICIEMBRE — 31 DICIEMBRE{" "}
                         </p>
-                        <h3 className="slide-title text-right">
+                        <h3 className="slide-title text-left">
                           PROMULGACIÓN DEL PRESUPUESTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           Dicha ley debe ser presentada al Poder Ejecutivo que
                           deberá refrendar y publicar la “Ley que aprueba el
                           Presupuesto General de la Nación”
@@ -300,14 +315,14 @@ class Home extends React.Component {
                         />
                       </Col>
                       <Col md={6} className="slide-text-side">
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           ENERO A DICIEMBRE DEL SIGUENTE AÑO
                         </p>
 
-                        <h3 className="slide-title text-right">
+                        <h3 className="slide-title text-left">
                           EJECUCIÓN DEL PRESUPUESTO
                         </h3>
-                        <p className="slide-text text-right">
+                        <p className="slide-text text-left">
                           A partir del 1 de enero hasta el 31 de diciembre del
                           año siguiente, los Organismos y Entidades del Sector
                           Público proceden a ejecutar el Presupuesto aprobado.
@@ -323,7 +338,7 @@ class Home extends React.Component {
           <Row className="timeline">
             <Col>
               <div class="scrolling-wrapper-flexbox">
-                <div class="tarjeta">
+                <div class="tarjeta ">
                   <h2 className="tarjeta-title font-weight-bold">Abril</h2>
                   <p className="tarjeta-text">LINEAMIENTOS PARA PROGRAMACIÓN</p>
                 </div>
@@ -375,10 +390,12 @@ class Home extends React.Component {
             <Container>
             <Row>
               <Col md={12}>
-                <h1 className="presupuesto_total__title text-center">
-                  PRESUPUESTO TOTAL 2020
+                <h1 onClick={this.handleClick} className="presupuesto_total__title text-center grow ">
+                  PRESUPUESTO TOTAL 2020 <img className=" icon"  src={help}></img> 
+          
+        
                 </h1>
-                <h2 className="presupuesto_total__subtitle ">
+                <h2 className="presupuesto_total__subtitle grow">
                   {" "}
                   Gs.80 billones{" "}
                 </h2>
@@ -388,6 +405,26 @@ class Home extends React.Component {
                 </h2>
               </Col>
             </Row>
+            <Zoom left when={this.state.show}>
+            { this.state.show &&
+            <Fragment>
+            <h1 className="presupuesto_total__card__title_two text-center">
+                
+                  Entidades Centralizadas
+                </h1>
+                <h2 className="presupuesto_total__subtitle_two  mb-5 ">
+                  Gs. 45.155.949.081.587 <br /> (Datos de 2019)
+                </h2>
+                <h1 className="presupuesto_total__card__title_two text-center">
+                  
+                  Entidades Descentralizadas:
+                </h1>
+                <h2 className="presupuesto_total__subtitle_two  mb-5 ">
+                  Gs. 34.915.899.880.774 <br /> (Datos de 2019)
+                </h2></Fragment>}
+        </Zoom>
+        
+          
            {/*  <Row>
               <Col md={6}>
                 <h1 className="presupuesto_total__card__title_two text-center">
@@ -412,7 +449,7 @@ class Home extends React.Component {
             <Row>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center" src={escuela} />
+                  <Card.Img className="w-25 align-self-center grow" src={escuela} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Educación y Ciencias
@@ -425,15 +462,15 @@ class Home extends React.Component {
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
-                    <Button className="button__secundary align-self-center  w-50 mb-3">
-                      Ver Más
+                    <Button className="button__secundary align-self-center grow   mb-3">
+                      Ver Mas
                     </Button>
                   </Link>
                 </Card>
               </Col>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center" src={cruz} />
+                  <Card.Img className="w-25 align-self-center grow" src={cruz} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Salud y Bienestar social
@@ -446,15 +483,15 @@ class Home extends React.Component {
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
-                    <Button className="button__secundary align-self-center  w-50 mb-3">
-                      Ver Más
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
                     </Button>
                   </Link>
                 </Card>
               </Col>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center" src={casco} />
+                  <Card.Img className="w-25 align-self-center grow" src={casco} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Obras Públicas y Comunicaciones
@@ -468,15 +505,15 @@ class Home extends React.Component {
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
-                    <Button className="button__secundary align-self-center  w-50 mb-3">
-                      Ver Más
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
                     </Button>
                   </Link>
                 </Card>
               </Col>
               <Col md={3}>
-                <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center " src={casa} />
+                <Card className="card-ministerio ">
+                  <Card.Img className="w-25 align-self-center grow " src={casa} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Urbanismo, Vivienda y Hábitat
@@ -489,8 +526,8 @@ class Home extends React.Component {
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
-                    <Button className="button__secundary align-self-center  w-50 mb-3">
-                      Ver Más
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
                     </Button>
                   </Link>
                 </Card>
@@ -562,62 +599,62 @@ class Home extends React.Component {
    */}
    <Container>
           <div className="banner__conoce pt-5">
-            <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title">
-              conocé más sobre <br /> el presupuesto general de <br /> la
-              nación:
+            <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title grow">
+              conoce mas sobre <br /> el presupuesto general de <br /> la
+              nacion:
             </h1>
             <Row>
               <Col md={3}>
                 <Card>
-                  <Card.Img variant="top" src={billete} />
+                  <Card.Img className="grow" variant="top" src={billete} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿Qué es el presupuesto y cómo se financia?
                     </Card.Title>
                   </Card.Body>
-                  <Button className="button__primary align-self-center  w-50 mb-3">
-                    Ver Más
+                  <Button className="button__primary align-self-center   grow mb-3">
+                    Ver Mas
                   </Button>
                 </Card>
               </Col>
               <Col md={3}>
                 <Card>
-                  <Card.Img variant="top" src={moneda} />
+                  <Card.Img className="grow " variant="top" src={moneda} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿En qué se gasta el presupuesto?
                     </Card.Title>
                   </Card.Body>
-                  <Button className="button__primary align-self-center  w-50 mb-3">
-                    Ver Más
+                  <Button className="button__primary align-self-center  grow   mb-3">
+                    Ver Mas
                   </Button>
                 </Card>
               </Col>
               <Col md={3}>
                 <Card>
-                  <Card.Img variant="top" src={ods} />
+                  <Card.Img className="grow " variant="top" src={ods} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿El PGN está vinculado a los ODS?
                     </Card.Title>
                   </Card.Body>
                   <Link className="text-center" to={"/ods"}>
-                    <Button className="button__primary align-self-center  w-50 mb-3">
-                      Ver Más
+                    <Button className="button__primary align-self-center  grow   mb-3">
+                      Ver Mas
                     </Button>
                   </Link>
                 </Card>
               </Col>
               <Col md={3}>
                 <Card>
-                  <Card.Img variant="top" src={lupa} />
+                  <Card.Img  className="grow " variant="top" src={lupa} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿Cómo se ejecuta el presupuesto?
                     </Card.Title>
                   </Card.Body>
-                  <Button className="button__primary align-self-center  w-50 mb-3">
-                    Ver Más
+                  <Button className="button__primary align-self-center grow  mb-3">
+                    Ver Mas
                   </Button>
                 </Card>
               </Col>
@@ -719,12 +756,16 @@ class Home extends React.Component {
           <Container>
             <Row>
               <Col md={5}>
+              <Fade left>
                 <img className="w-100" src={personitas} alt="Personitas" />
+                </Fade>
               </Col>
               <Col md={7}>
-                <h2 className="text-uppercase font-weigth-bold information__title">
+                <Fade right>
+                <h1 className="text-uppercase font-weigth-bold information__title pb-3">
                   informate
-                </h2>
+                </h1>
+                </Fade>
                 <p className="informartion__subtitle">
                   Conocer el Presupuesto es esencial para conocer que usos se le
                   dan a tus impuestos, cuáles son las prioridades de las
@@ -732,7 +773,7 @@ class Home extends React.Component {
                   obras, justicia y otros servicios que determinan tu calidad de
                   vida.
                 </p>
-                <Button className="button__secundary">Descargá la guía</Button>
+                <Button className="button__secundary">Descarga la guia</Button>
               </Col>
             </Row>
           </Container>

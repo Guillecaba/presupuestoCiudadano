@@ -1,6 +1,10 @@
 .footer__img {
     width:100%;
 }
+.footer__img_2{
+    width:100%;
+}
+
 
 .footer__title {
     color: #363736;
@@ -13,7 +17,20 @@ ul {
 
 .footer_text {
     color: #000000;
+    font-weight: 500;
 }
 .footer{
     background: #F1F1F1;
 }
+
+.footer-item-text {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  
+    .footer__img_2{
+        width:50%;
+    }
+    
+  }

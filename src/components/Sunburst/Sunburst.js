@@ -430,10 +430,11 @@ class Sunburst extends React.Component {
         current.fill = current.parent.fill.brighter(child_brightness);
         const thishsl = d3Hsl(current.fill);
         hue = this.hueDXScale(current.x0);
-        const colorshift = thishsl.h + (hue / 4 );
+        const colorshift = thishsl.h + (hue / 1 );
         const c = d3Hsl(colorshift, thishsl.s, thishsl.l)
         return (this.props.colorFunc || this.props.colorFunc(d,c)) || c
     }
+    
 
     // we have to render first then componentMounted will give us
     // access to the dom

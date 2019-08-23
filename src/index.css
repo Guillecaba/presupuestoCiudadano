@@ -1,11 +1,33 @@
+@font-face {
+  font-family: 'Helsinki';
+  src: url('./assets/fonts/Helsinki.eot');
+  src: local('./assets/Helsinki'),
+      url('./assets/fonts/Helsinki.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Helsinki.woff2') format('woff2'),
+      url('./assets/fonts/Helsinki.woff') format('woff'),
+      url('./assets/fonts/Helsinki.ttf') format('truetype'),
+      url('./assets/fonts/Helsinki.svg#Helsinki') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 body {
   margin: 0;
   font-size:16px;
-  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400,500,700;
+  font-family: 'Montserrat', sans-serif !important;
+  /* font-family: 'Roboto', sans-serif ;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
+
+
+
+h1 {
+  font-family: 'Helsinki' !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -27,7 +27,7 @@ const ministerioContext = React.createContext({
   
   ]},{
   datos:{
-    nombre:"Ministerio de Educación y Ciencias",
+    nombre:"Ministerio de Educacion y Ciencias",
     programas:[{
       nombre:"Programa Central",
       monto: "Gs. 6.240.521.885.664"

@@ -12,31 +12,31 @@ const footer = () => {
       <Container>
         <Row className="pt-5">
           <Col md={6}>
-            <h3 className="font-weigth-bold text-uppercase footer__title mb-4">Links de Interés</h3>
-            <p><a>Sobre el proyecto</a></p>
-            <p><a>Ministerio de Hacienda - Datos abiertos</a></p>
-            <p><a>Contrataciones Públicas - Datos abiertos</a></p>
-            <p> <a>Secretaría de la Funcion Pública - Datos abiertos</a></p>
-            <p><a>Qué Compramos</a></p>
-            <p><a>Portal de Datos Abiertos Gubernamentales</a></p>
+            <h3 className="font-weight-bold text-uppercase footer__title mb-4">Links de Interés</h3>
+            <p className="footer-item-text"><a>Sobre el proyecto</a></p>
+            <p className="footer-item-text"><a>Ministerio de Hacienda - Datos abiertos</a></p>
+            <p className="footer-item-text"><a>Contrataciones Públicas - Datos abiertos</a></p>
+            <p className="footer-item-text"> <a>Secretaría de la Funcion Pública - Datos abiertos</a></p>
+            <p className="footer-item-text"><a>Qué Compramos</a></p>
+            <p className="footer-item-text"><a>Portal de Datos Abiertos Gubernamentales</a></p>
                 
            
           </Col>
           <Col md={6}>
             <Row>
-              <Col md={6}>
+              <Col md={6}  sm={3}>
                 <img
                   className="footer__img"
                   src={usaid_ceamso}
                   alt="usaid ceamso"
                 />{" "}
               </Col>
-              <Col md={3}>
-                <img className="footer__img" src={pfm_lac} alt="pfm lac" />
+              <Col md={3}  sm={3}>
+                <img className="footer__img_2" src={pfm_lac} alt="pfm lac" />
               </Col>
-              <Col md={3}>
+              <Col md={3} sm={3}>
                 <img
-                  className="footer__img"
+                  className="footer__img_2"
                   src={logo_hacienda}
                   alt="logo hacienda"
                 />
@@ -60,7 +60,7 @@ const footer = () => {
             </Row>
             <Row>
               <Col md={6}>
-              <p>Portal actualizado con el apoyo del Banco Mundial 2019   </p>
+              <p className="footer_text"> Portal actualizado con el apoyo del Banco Mundial 2019   </p>
                 </Col>
               <Col md={6}>
               <img className = 'w-50' src={ banco } alt='banco'></img>

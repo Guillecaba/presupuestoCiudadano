@@ -132,7 +132,7 @@ const Cambios = () => {
                 generan Producto. De un Programa Sustantivo, pueden depender
                 Proyectos que contribuyan al resultado que busca el Programa.
               </p>
-              <h3>Programa Tipo 3.</h3>
+              <h3>Programas de Partidas no Asignables</h3>
               <p>
                 Recogen todas las actividades que de alguna forma, el Estado
                 tiene que realizar o presupuestar, pero no expresan Resultado,
