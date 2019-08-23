@@ -15,6 +15,7 @@ import {
   
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import RubberBand from 'react-reveal/RubberBand';
 import { Doughnut } from "react-chartjs-2";
 import TreeMap from "react-d3-treemap";
 import "react-d3-treemap/dist/react.d3.treemap.css";
@@ -258,7 +259,7 @@ class DetalleMinisterio extends Component {
                 </h1>
                 <Row>
                   <Col md={6}>
-                  {!this.state.lista && (<h2 className="gastos__title text-center">Haz click en el gráfico</h2>)}
+                  {!this.state.lista && (<RubberBand><h2 className="gastos__title text-center">Haz click en el gráfico</h2></RubberBand>)}
                   <div className="d-flex align-items-center justify-content-center ">
                     
                   <ContainerDimensions>

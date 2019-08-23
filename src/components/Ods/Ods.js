@@ -7,6 +7,7 @@ import educacion_calidad from "../../assets/images/educacion_calidad.png";
 import industria_innovacion from "../../assets/images/industria_innovacion.png";
 import ciudades_sostenibles from "../../assets/images/ciudades_sostenibles.png";
 import LightSpeed from 'react-reveal/LightSpeed';
+import Zoom from 'react-reveal/Zoom';
 import "./Ods.css";
 
 const Ods = () => {
@@ -14,7 +15,9 @@ const Ods = () => {
     <Container>
       <Row className="ods-banner my-5 ">
         <Col md={6}>
+        <Zoom left>
           <img className="w-100 ods-banner-img" src={ods} alt="" />
+          </Zoom>
         </Col>
         <Col md={6} className="align-self-center">
         <LightSpeed right>

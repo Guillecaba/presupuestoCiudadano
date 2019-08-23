@@ -117,7 +117,9 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img className=" w-100" src={ciclo} alt="C" />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <h3 className="slide-title text-left">
@@ -140,11 +142,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={lineamientos}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">ABRIL</p>
@@ -166,11 +170,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={anteproyecto}
                           alt="anteproyecto"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">MAYO - JUNIO</p>
@@ -195,11 +201,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={proyecto}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">JULIO - AGOSTO</p>
@@ -223,11 +231,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={estudio}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -252,11 +262,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={aprobacion}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -280,11 +292,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-50"
                           src={presidente}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -308,11 +322,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
+                      <Zoom left>
                         <img
                           className=" w-100"
                           src={ejecucion}
                           alt="Lineamientos"
                         />
+                        </Zoom>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -405,10 +421,10 @@ class Home extends React.Component {
                 </h2>
               </Col>
             </Row>
-            <Zoom left when={this.state.show}>
+            <Zoom left opposite when={this.state.show}>
             { this.state.show &&
             <Fragment>
-            <h1 className="presupuesto_total__card__title_two text-center">
+            <h1  className="presupuesto_total__card__title_two text-center">
                 
                   Entidades Centralizadas
                 </h1>
@@ -448,6 +464,8 @@ class Home extends React.Component {
 
             <Row>
               <Col md={3}>
+              <Zoom left>
+        
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={escuela} />
                   <Card.Body>
@@ -467,8 +485,11 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
+                
+        </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={cruz} />
                   <Card.Body>
@@ -488,8 +509,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={casco} />
                   <Card.Body>
@@ -510,8 +533,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio ">
                   <Card.Img className="w-25 align-self-center grow " src={casa} />
                   <Card.Body>
@@ -531,6 +556,7 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
             </Row>
             </Container>
@@ -605,6 +631,7 @@ class Home extends React.Component {
             </h1>
             <Row>
               <Col md={3}>
+              <Zoom left>
                 <Card>
                   <Card.Img className="grow" variant="top" src={billete} />
                   <Card.Body>
@@ -616,8 +643,10 @@ class Home extends React.Component {
                     Ver Mas
                   </Button>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card>
                   <Card.Img className="grow " variant="top" src={moneda} />
                   <Card.Body>
@@ -629,8 +658,10 @@ class Home extends React.Component {
                     Ver Mas
                   </Button>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card>
                   <Card.Img className="grow  " variant="top" src={ods} />
                   <Card.Body>
@@ -644,8 +675,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card>
                   <Card.Img  className="grow " variant="top" src={lupa} />
                   <Card.Body>
@@ -657,6 +690,7 @@ class Home extends React.Component {
                     Ver Mas
                   </Button>
                 </Card>
+                </Zoom>
               </Col>
             </Row>
           </div>
@@ -773,7 +807,7 @@ class Home extends React.Component {
                   obras, justicia y otros servicios que determinan tu calidad de
                   vida.
                 </p>
-                <Button className="button__secundary">Descarga la guia</Button>
+                <Button className="button__secundary grow">Descarga la guia</Button>
               </Col>
             </Row>
           </Container>
