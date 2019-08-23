@@ -63,7 +63,21 @@ width:50%;
     }
     
     .card-img-2 {
-      width:100%;
+      width:100% !important;
     }
+    .title-princi {
+      font-size:2rem;
+    }
+
+    .como_title {
+      padding-top: 15%;
+      color: white;
+  }
+
+  .como {
+    background-color: #A7D5FF;
+    padding: 10% 5%;
+    margin-bottom: 10% !important;
+}
   }
   

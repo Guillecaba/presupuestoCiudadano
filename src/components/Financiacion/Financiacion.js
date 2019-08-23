@@ -38,7 +38,7 @@ const Financiacion = () => {
       </Row>
 
       
-        <h1 className="text-center mt-5"> Principios presupuestarios</h1>
+        <h1 className="text-center title-princi mt-5"> Principios presupuestarios</h1>
         <p className="text-center">La administración del presupuesto está sujeta a los siguientes principios (Art.6 - Ley 1535/99): </p>
         <Row>
         <Col md={4}><Card><Card.Img className="card-img-1 m-auto" src={universalidad} /> 
