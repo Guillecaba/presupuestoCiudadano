@@ -639,9 +639,9 @@ class Home extends React.Component {
                       ¿Qué es el presupuesto y cómo se financia?
                     </Card.Title>
                   </Card.Body>
-                  <Button className="button__primary align-self-center   grow mb-3">
+                  <Link className="text-center" to={"/financiacion"}><Button className="button__primary align-self-center   grow mb-3">
                     Ver Mas
-                  </Button>
+                  </Button></Link>
                 </Card>
                 </Zoom>
               </Col>

@@ -1,6 +1,69 @@
 .como {
   background-color: #A7D5FF;
+  padding:2% 5%;
+  margin-bottom: 10% !important;
 }
 .como_title {
   color:white;
 }
+.como-img {
+  position: relative;
+  width:100%;
+  top:25%
+}
+
+.card-img-1 {
+width:50%;
+}
+
+.card-img-2 {
+  width:25%;
+}
+
+.programas-presu {
+  display:block;
+  background-color: #E16163;
+}
+
+.programa-presu-title {
+  color:white;
+}
+
+.programa-presu-subtitle {
+  color:white;
+}
+
+.card-acordeon {
+  background-color: transparent !important;
+}
+.card-header {
+  background-color: transparent;
+  border-bottom-color: white;
+}
+
+.card-header {
+  border-bottom-color: white;
+  border-bottom-width: 2px;
+}
+
+.acordeon-card-title {
+  color:white;
+}
+.acordeon-card-text {
+  color:white;
+}
+
+.fuente-clasi{
+  font-size:1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-img-1 {
+    width:100%;
+    }
+    
+    .card-img-2 {
+      width:100%;
+    }
+  }
+  
