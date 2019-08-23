@@ -13,7 +13,7 @@ const nav = () => {
             <Nav className="ml-auto">
               <Nav.Link className='navbar__item' href="">¿Qué es?</Nav.Link>
               <Nav.Link className='navbar__item' href="">Gasto</Nav.Link>
-              <Nav.Link className='navbar__item' href="#proceso"> Proceso</Nav.Link>
+              <Nav.Link className='navbar__item' href="/#proceso"> Proceso</Nav.Link>
               <Nav.Link className='navbar__item' href=""> Ejecución </Nav.Link>
             </Nav>
           </Navbar.Collapse>

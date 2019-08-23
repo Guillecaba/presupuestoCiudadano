@@ -632,7 +632,7 @@ class Home extends React.Component {
               </Col>
               <Col md={3}>
                 <Card>
-                  <Card.Img className="grow " variant="top" src={ods} />
+                  <Card.Img className="grow  " variant="top" src={ods} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿El PGN está vinculado a los ODS?

@@ -6,6 +6,7 @@ import salud_bienestar from "../../assets/images/salud_bienestar.png";
 import educacion_calidad from "../../assets/images/educacion_calidad.png";
 import industria_innovacion from "../../assets/images/industria_innovacion.png";
 import ciudades_sostenibles from "../../assets/images/ciudades_sostenibles.png";
+import LightSpeed from 'react-reveal/LightSpeed';
 import "./Ods.css";
 
 const Ods = () => {
@@ -16,13 +17,16 @@ const Ods = () => {
           <img className="w-100 ods-banner-img" src={ods} alt="" />
         </Col>
         <Col md={6} className="align-self-center">
+        <LightSpeed right>
           <h1 className="text-uppercase ods-banner-title align-middle">
-            ¿El PGN está vinculado a los ODS?
+            ¿El PGN esta vinculado a los ODS?
+            
           </h1>
+          </LightSpeed>
         </Col>
       </Row>
       <Row />
-      <div className="mt-5">
+      <div className="my-5">
           
           <p className="text-center">
             El PGN 2020 se ha construido en base a las 10 prioridades del
@@ -57,10 +61,10 @@ const Ods = () => {
                     <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MSPBS</h2>
                     <Row>
                       <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75" src={salud_bienestar} alt="salud bienestar" />
+                        <img className="w-75 mt-2" src={salud_bienestar} alt="salud bienestar" />
                       </Col>
                       <Col col={6} className="d-flex justify-content-center">
-                        <img className="w-75" src={agua_limpia} alt="agua limpia" />
+                        <img className="w-75 mt-2" src={agua_limpia} alt="agua limpia" />
                       </Col>
                     </Row>
                   </Tab.Pane>
@@ -68,7 +72,7 @@ const Ods = () => {
                     <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MEC</h2>
                     <Row>
                       <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75"
+                        <img className="w-75 mt-2"
                           src={educacion_calidad}
                           alt="educacion de calidad"
                         />
@@ -79,10 +83,10 @@ const Ods = () => {
                     <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MOPC</h2>
                     <Row>
                       <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75" src={industria_innovacion} alt="ods" />
+                        <img className="w-75 mt-2" src={industria_innovacion} alt="ods" />
                       </Col>
                       <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75" src={agua_limpia} alt="ods" />
+                        <img className="w-75 mt-2" src={agua_limpia} alt="ods" />
                       </Col>
                     </Row>
                   </Tab.Pane>
@@ -90,7 +94,7 @@ const Ods = () => {
                     <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MUVH</h2>
                     <Row>
                       <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75" src={ciudades_sostenibles} alt="ods" />
+                        <img className="w-75 mt-2" src={ciudades_sostenibles} alt="ods" />
                       </Col>
                     </Row>
                   </Tab.Pane>

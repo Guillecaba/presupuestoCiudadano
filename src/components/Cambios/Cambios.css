@@ -15,23 +15,24 @@
   color:white;
 }
 
-.clasi-item-title {
-  font-size:1.563em;
+.clasi_item_title {
+  font-size:1.5625rem;
+  font-weight: 700;
 
 }
 
 
 
 .clasi-item-1 {
-  font-size:1.563em;
+  font-size:1.25rem;
   
 }
 .clasi-item-2 {
-  font-size:1.563em;
+  font-size:1.25rem;
   padding-left:2em !important;
 }
 .clasi-item-3 {
-  font-size:1.563em;
+  font-size:1.25rem;
   padding-left:4em !important;
 }
 .program-column {
@@ -40,6 +41,11 @@
 
 .program-title {
   text-align: right !important;
+  font-size:1.5625rem;
+}
+
+.program-item {
+  font-size:1.25rem;
 }
 
 .versus-anho {
@@ -48,10 +54,22 @@
 }
 
 .versus-columna {
+
   color:white;
   background-color: #A7D5FF;
   
 }
+
+.versus-columna h3 {
+  font-size:1rem;
+  font-weight: 700;
+}
+
+.versus-columna p {
+  font-size:0.8125rem;
+  font-weight: 500;
+}
+
 
 .central {
   margin:50% 0%;
@@ -59,15 +77,14 @@
 
 
 
-.boton-descarga {
-  border:none;
-  color:white;
-  text-align: center;
-letter-spacing: 0.05em;
-text-transform: uppercase;
-  padding: 0.25em 1.2em;
+ .boton-descarga {
+  
   background: #E16163;
-  font-size: 0.625em;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  
+ 
+} 
+
+@media only screen and (max-width: 768px) {
+  
  
 }

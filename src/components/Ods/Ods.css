@@ -13,3 +13,11 @@
 .ods-banner-title {
   color:white;
 }
+
+@media only screen and (max-width: 768px) {
+  .ods-banner-title {
+    padding-top:20%;
+  }
+  
+ 
+}

@@ -2,18 +2,27 @@ import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
 
 import escuela from "../../assets/images/escuela.png";
+import LightSpeed from 'react-reveal/LightSpeed';
 import {
   Row,
   Col,
   Container,
   InputGroup,
   FormControl,
-  Table
+  Table,
+  Button,
+  Card,
+  
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Doughnut } from "react-chartjs-2";
 import TreeMap from "react-d3-treemap";
 import "react-d3-treemap/dist/react.d3.treemap.css";
 import dataTree from "../../assets/data/data";
+
+import cruz from "../../assets/images/cruz.png";
+import casco from "../../assets/images/casco.png";
+import casa from "../../assets/images/casa.png";
 import { render } from "react-dom";
 import {
   sortableContainer,
@@ -164,11 +173,13 @@ class DetalleMinisterio extends Component {
             <div className="banner__principal pt-5 ">
               <Container>
                 <img
-                  className="mx-auto d-block"
+                  className="mx-auto d-block grow"
                   src={state.logo}
                   alt="escuela"
                 />
+                <LightSpeed right>
                 <h1 className="text-center">{state.banner.datos.nombre}</h1>
+                </LightSpeed>
 
                 <Row className="pt-5">
                   <Col md={4}>
@@ -225,14 +236,17 @@ class DetalleMinisterio extends Component {
                     </ul>
                   </Col>
                   <Col className="align-self-center" md={5}>
-                    <Doughnut data={state.data} />
+                  
+                    <Doughnut data={state.data}  />
+                    
+                  
                   </Col>
                   <Col
                     className="align-self-center font-weight-bold text-center"
                     md={3}
                   >
-                    <h3>Presupuesto total</h3>
-                    <p>{state.banner.datos.presupuestoTotal} </p>
+                    <h3 className="">Presupuesto total</h3>
+                    <p className="banner__principal_item_monto">{state.banner.datos.presupuestoTotal} </p>
                   </Col>
                 </Row>
               </Container>
@@ -244,7 +258,9 @@ class DetalleMinisterio extends Component {
                 </h1>
                 <Row>
                   <Col md={6}>
+                  {!this.state.lista && (<h2 className="gastos__title text-center">Haz click en el gráfico</h2>)}
                   <div className="d-flex align-items-center justify-content-center ">
+                    
                   <ContainerDimensions>
                     {({ width, height }) => (
                       <Sunburst
@@ -305,6 +321,7 @@ class DetalleMinisterio extends Component {
                       </Table>
                     </Fragment>
                   )}
+                  
                 </div>
                     </Col>
                 </Row>
@@ -313,9 +330,9 @@ class DetalleMinisterio extends Component {
               </div>
 
               <div>
-                <h2 className="encuesta__title text-center">
-                  ¿Cuáles serían tus prioridades en Educación?
-                </h2>
+                <h1 className="encuesta__title text-center">
+                  ¿Cuales serian tus prioridades en Educacion?
+                </h1>
                 <p className="text-center encuesta__subtitle">
                   Organiza tus prioridades, arriba las más importantes,{" "}
                   <span className="font-weight-bold">
@@ -353,7 +370,103 @@ class DetalleMinisterio extends Component {
             </Container>
           </div>
         ) : null}
-      </Fragment>
+         <div className="presupuesto_total mb-5 py-5">
+         <Container>
+         <Row>
+        
+              <Col md={3}>
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center grow" src={escuela} />
+                  <Card.Body>
+                    <Card.Title className="presupuesto_total__card_title text-center">
+                      Ministerio de Educación y Ciencias
+                    </Card.Title>
+                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                      Gs. 6,562 billones
+                    </Card.Text>
+                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                      Gs. 6.562.729.598.658
+                    </Card.Text>
+                  </Card.Body>
+                  <Link className="text-center" to={"/educacion"}>
+                    <Button className="button__secundary align-self-center grow   mb-3">
+                      Ver Mas
+                    </Button>
+                  </Link>
+                </Card>
+              </Col>
+              <Col md={3}>
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center grow" src={cruz} />
+                  <Card.Body>
+                    <Card.Title className="presupuesto_total__card_title text-center">
+                      Ministerio de Salud y Bienestar social
+                    </Card.Title>
+                    <Card.Text className="presupuesto_total__card_monto_primary  text-center">
+                      Gs. 5,518 billones
+                    </Card.Text>
+                    <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
+                      Gs. 5.518.667.479.787
+                    </Card.Text>
+                  </Card.Body>
+                  <Link className="text-center" to={"/educacion"}>
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
+                    </Button>
+                  </Link>
+                </Card>
+              </Col>
+              <Col md={3}>
+                <Card className="card-ministerio">
+                  <Card.Img className="w-25 align-self-center grow" src={casco} />
+                  <Card.Body>
+                    <Card.Title className="presupuesto_total__card_title text-center">
+                      Ministerio de Obras Públicas y Comunicaciones
+                    </Card.Title>
+
+                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                      Gs. 8,041 billones
+                    </Card.Text>
+                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                      Gs. 8.041.969.626.615
+                    </Card.Text>
+                  </Card.Body>
+                  <Link className="text-center" to={"/educacion"}>
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
+                    </Button>
+                  </Link>
+                </Card>
+              </Col>
+              <Col md={3}>
+                <Card className="card-ministerio ">
+                  <Card.Img className="w-25 align-self-center grow " src={casa} />
+                  <Card.Body>
+                    <Card.Title className="presupuesto_total__card_title text-center">
+                      Ministerio de Urbanismo, Vivienda y Hábitat
+                    </Card.Title>
+                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                      Gs. 0.612 billones{" "}
+                    </Card.Text>
+                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                      Gs. 612.908.572.547
+                    </Card.Text>
+                  </Card.Body>
+                  <Link className="text-center" to={"/educacion"}>
+                    <Button className="button__secundary align-self-center grow  mb-3">
+                      Ver Mas
+                    </Button>
+                  </Link>
+                </Card>
+              </Col>
+            </Row>
+            </Container>
+            
+            </div>
+            
+        
+        </Fragment>
+   
     );
   }
 }
