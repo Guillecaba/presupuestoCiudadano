@@ -20,7 +20,7 @@ const Financiacion = () => {
   return (
     <Fragment>
     <Container>
-      <Row className="como ">
+      <Row className="como mt-5">
         <Col md={6}>
           <img className = "w-75 como-img " src={financiacion} alt="" />
         </Col>
