@@ -12,7 +12,7 @@ import ScrollIntoView from "../components/ScrollIntoView/ScrollIntoView";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Financiacion from "../components/Financiacion/Financiacion";
 import Ejecucion from "../components/Ejecucion/Ejecucion";
-
+import Gasto from "../components/Gasto/Gasto";
 
 function App() {
  
@@ -28,6 +28,7 @@ function App() {
         <Route path="/ejecucion" component={Ejecucion} />
         <Route path="/educacion" component={DetalleMinisterio} />
         <Route path="/obras" component={DetalleMinisterio} />
+        <Route path =  "/gasto" component={Gasto} />
       </Switch>
       </ScrollIntoView>
       <Footer />

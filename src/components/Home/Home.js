@@ -686,9 +686,12 @@ class Home extends React.Component {
                       ¿Cómo se ejecuta el presupuesto?
                     </Card.Title>
                   </Card.Body>
+                  <Link className="text-center" to={"/ejecucion"}>
+
                   <Button className="button__primary align-self-center grow  mb-3">
                     Ver Mas
                   </Button>
+                  </Link>
                 </Card>
                 </Zoom>
               </Col>
