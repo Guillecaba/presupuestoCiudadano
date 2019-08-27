@@ -76,9 +76,11 @@ class Home extends React.Component {
                   ¿Sabías que el Presupuesto General de Gastos de la Nación para
                   el año 2020 propone algunos cambios?{" "}
                 </h2>
-                <Button href={"/cambios"} className="button__primary grow">
+                <Link className="text-center" to={"/cambios"}>
+                <Button className="button__primary grow">
                   Ver mas
                 </Button>
+                </Link>
               </Col>
             </Row>
           </Container>
@@ -503,7 +505,7 @@ class Home extends React.Component {
                       Gs. 5.518.667.479.787
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/salud"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>
@@ -527,7 +529,7 @@ class Home extends React.Component {
                       Gs. 8.041.969.626.615
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/obras"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>
@@ -550,7 +552,7 @@ class Home extends React.Component {
                       Gs. 612.908.572.547
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/urbanismo"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>
@@ -654,9 +656,11 @@ class Home extends React.Component {
                       ¿En qué se gasta el presupuesto?
                     </Card.Title>
                   </Card.Body>
+                  <Link className="text-center" to={"/gasto"}>
                   <Button className="button__primary align-self-center  grow   mb-3">
                     Ver Mas
                   </Button>
+                  </Link>
                 </Card>
                 </Zoom>
               </Col>

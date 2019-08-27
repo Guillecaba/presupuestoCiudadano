@@ -6,6 +6,7 @@ import presupuestoAprobado from "../../assets/images/presu.png";
 import moneda from "../../assets/images/moneda.png";
 import legis from "../../assets/images/legis.png";
 import LightSpeed from 'react-reveal/LightSpeed';
+import pdf from "../../assets/media/decreto.pdf"
 
 const Cambios = () => {
   return (
@@ -106,7 +107,7 @@ const Cambios = () => {
           <div className="central">
           <img src={legis} className="w-50  grow" alt="" />
           <p className="text-center pt-1 font-weight-bold">Decreto de Lineamiento <br/> Nº 1710/19</p>
-          <button className=" button__primary boton-descarga  grow  ">Descargar aqui</button>
+          <button className=" button__primary boton-descarga  grow  " ><a className="text-decoration-none color_a" href={pdf}>Descargar aqui</a></button>
           </div>
         </Col>
         <Col md={4}  className="">

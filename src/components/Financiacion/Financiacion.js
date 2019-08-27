@@ -8,13 +8,13 @@ import unidad from "../../assets/images/unidad.png";
 import anualidad from "../../assets/images/anualidad.png";
 import equilibrio from "../../assets/images/equilibrio.png";
 import grafico from "../../assets/images/grafico.png";
-import Zoom from 'react-reveal/Zoom';
+
 import impuestos from "../../assets/images/impuestos-libro.png";
 import dinero from "../../assets/images/dinero.png";
 import essap from "../../assets/images/essap.png";
 import personitas from "../../assets/images/personitas-completo.png";
-import {Fade} from 'react-reveal/';
 
+import {Fade,LightSpeed ,Zoom} from 'react-reveal/';
 
 const Financiacion = () => {
   return (
@@ -22,10 +22,14 @@ const Financiacion = () => {
     <Container>
       <Row className="como mt-5">
         <Col md={6}>
+        <Fade bottom>
           <img className = "w-75 como-img " src={financiacion} alt="" />
+          </Fade>
         </Col>
         <Col md={6} className='align-self-center'>
+        <LightSpeed right>
           <h1 className="text-uppercase como_title align-middle">¿Que es el presupuesto y como se financia?</h1>
+          </LightSpeed>
         </Col>
       </Row>
       <Row className="mt-5">

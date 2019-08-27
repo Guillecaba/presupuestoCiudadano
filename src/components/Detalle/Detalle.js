@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
 
 import escuela from "../../assets/images/escuela.png";
+
 import LightSpeed from 'react-reveal/LightSpeed';
 import {
   Row,
@@ -96,13 +97,22 @@ class DetalleMinisterio extends Component {
     this.setState({ lista: estado });
   };
 
-  componentDidMount() {
-    console.log(this.props.location);
-    const pathname = this.props.location.pathname;
+  static getDerivedStateFromProps(props, state) {
+    console.log('Detalle: getDerivaredStateFromProps')
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("Detalle: componentDidUpdate")
+    console.log(this.props.location.pathname)
+    console.log(this.state.pathname)
+   
+    if(this.props.location.pathname !== this.state.pathname){
+      console.log("Detalle:componentDidUpdate Cambio")
+      const pathname = this.props.location.pathname;
     let dataFromContext;
     switch (pathname) {
       case "/educacion":
-        dataFromContext = this.context.educacion;
+        dataFromContext = this.context[0].educacion;
         console.log(dataFromContext);
 
         this.setState({
@@ -116,13 +126,93 @@ class DetalleMinisterio extends Component {
 
           treeMap: dataFromContext[3].treeMapData,
 
-          resumen: dataFromContext[4].resumen
+          resumen: dataFromContext[4].resumen,
+
+          pathname:pathname
         });
         console.log(this.state);
 
         break;
       case "/obras":
-        dataFromContext = this.context.obras;
+        dataFromContext = this.context[1].obras;
+        console.log(this.context);
+
+
+        this.setState({
+          logo: casco,
+
+          data: dataFromContext[0].data,
+
+          items: dataFromContext[1].items,
+
+          banner: dataFromContext[2],
+
+          treeMap: dataFromContext[3].treeMapData,
+
+          resumen: dataFromContext[4].resumen,
+
+          pathname:pathname
+        });
+        console.log(this.state);
+        break;
+      case "/salud":
+          dataFromContext = this.context[3].salud;
+          console.log(this.context);
+  
+  
+          this.setState({
+            logo: cruz,
+  
+            data: dataFromContext[0].data,
+  
+            items: dataFromContext[1].items,
+  
+            banner: dataFromContext[2],
+  
+            treeMap: dataFromContext[3].treeMapData,
+  
+            resumen: dataFromContext[4].resume,
+
+            pathname:pathname
+          });
+          console.log(this.state);
+        break;
+      case "/urbanismo":
+          dataFromContext = this.context[2].urbanismo;
+          console.log(this.context);
+  
+  
+          this.setState({
+            logo: casa,
+  
+            data: dataFromContext[0].data,
+  
+            items: dataFromContext[1].items,
+  
+            banner: dataFromContext[2],
+  
+            treeMap: dataFromContext[3].treeMapData,
+  
+            resumen: dataFromContext[4].resume,
+
+            pathname:pathname
+          });
+          console.log(this.state);
+        break;
+
+      default:
+        break;
+    }
+    }
+  }
+  componentDidMount() {
+    console.log("Detalle: componentDidMount")
+    console.log(this.props.location);
+    const pathname = this.props.location.pathname;
+    let dataFromContext;
+    switch (pathname) {
+      case "/educacion":
+        dataFromContext = this.context[0].educacion;
         console.log(dataFromContext);
 
         this.setState({
@@ -136,13 +226,78 @@ class DetalleMinisterio extends Component {
 
           treeMap: dataFromContext[3].treeMapData,
 
-          resumen: dataFromContext[4].resumen
+          resumen: dataFromContext[4].resumen,
+
+          pathname:pathname
+        });
+        console.log(this.state);
+
+        break;
+      case "/obras":
+        dataFromContext = this.context[1].obras;
+        console.log(this.context);
+
+
+        this.setState({
+          logo: casco,
+
+          data: dataFromContext[0].data,
+
+          items: dataFromContext[1].items,
+
+          banner: dataFromContext[2],
+
+          treeMap: dataFromContext[3].treeMapData,
+
+          resumen: dataFromContext[4].resumen,
+
+          pathname:pathname
         });
         console.log(this.state);
         break;
       case "/salud":
+          dataFromContext = this.context[3].salud;
+          console.log(this.context);
+  
+  
+          this.setState({
+            logo: cruz,
+  
+            data: dataFromContext[0].data,
+  
+            items: dataFromContext[1].items,
+  
+            banner: dataFromContext[2],
+  
+            treeMap: dataFromContext[3].treeMapData,
+  
+            resumen: dataFromContext[4].resume,
+
+            pathname:pathname
+          });
+          console.log(this.state);
         break;
       case "/urbanismo":
+          dataFromContext = this.context[2].urbanismo;
+          console.log(this.context);
+  
+  
+          this.setState({
+            logo: casa,
+  
+            data: dataFromContext[0].data,
+  
+            items: dataFromContext[1].items,
+  
+            banner: dataFromContext[2],
+  
+            treeMap: dataFromContext[3].treeMapData,
+  
+            resumen: dataFromContext[4].resume,
+
+            pathname:pathname
+          });
+          console.log(this.state);
         break;
 
       default:
@@ -167,9 +322,11 @@ class DetalleMinisterio extends Component {
       items = this.state.items;
     }
     console.log(this.state);
+    console.log(this.state.pathname)
+    console.log(this.props.location.pathname)
     return (
       <Fragment>
-        {items ? (
+        {items && this.state.pathname ==this.props.location.pathname ? (
           <div>
             <div className="banner__principal pt-5 ">
               <Container>
@@ -410,7 +567,7 @@ class DetalleMinisterio extends Component {
                       Gs. 5.518.667.479.787
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/salud"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>
@@ -432,7 +589,7 @@ class DetalleMinisterio extends Component {
                       Gs. 8.041.969.626.615
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/obras"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>
@@ -453,7 +610,7 @@ class DetalleMinisterio extends Component {
                       Gs. 612.908.572.547
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
+                  <Link className="text-center" to={"/urbanismo"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
                       Ver Mas
                     </Button>

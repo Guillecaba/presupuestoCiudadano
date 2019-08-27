@@ -3,6 +3,7 @@ import { Container , Row, Col , Tab , Tabs } from "react-bootstrap";
 import moneda from "../../assets/images/moneda-interna.png";
 import hospitales from "../../assets/images/hospitales.png";
 import billete_grafico from "../../assets/images/billete-grafico.png"
+import ContainerDimensions from "react-container-dimensions";
 import {Doughnut} from 'react-chartjs-2';
 import "./Gasto.css"
 
@@ -76,11 +77,11 @@ class Gasto extends Component {
           <img className="w-50 pt-3" src={billete_grafico} alt="billete grafico"></img>
           </Col>
         </Row>
-        <Row>
+      {/*   <Row>
           <Col className="text-left" md={8}>
             <h1 >Funciones</h1>
             <p>Las actividades mencionadas, el Estado las realiza a fin de cumplir con las funciones de Salud, Educación, Seguridad Pública, establecidas en la Constitución Nacional.</p>
-            <p className="font-weight-bold">¿Cómo se gasta nuestro presupuesto?</p>
+            <p className="font-weight-bold">¿Cómo se gasta nuestro presupuesto? (Datos de 2015)</p>
             <p className="">El tamaño de los circulos dependen de del monto presupuestado por función.</p>
           </Col>
         </Row>
@@ -88,30 +89,47 @@ class Gasto extends Component {
           <Col>
           <Tabs defaultActiveKey="todos" id="uncontrolled-tab-example">
     <Tab eventKey="todos" title="TODOS" >
-      <h1>Todos</h1>
-      <Doughnut data={data} />
+      
+      <ContainerDimensions>
+                    {({ width, height }) => (
+      <Doughnut data={data} width={width}  height="400"/>
+      )}
+                  </ContainerDimensions>
     </Tab>
     <Tab eventKey="fuente" title="FUENTE DE FINANCIAMIENTO">
     <Row>
       <Col md={4}>
-        <h2> Recursos del  Credito Publico</h2>
+        <h4> Recursos del  Credito Publico</h4>
         <Doughnut data={data} />
       </Col>
       <Col md={4}>
-        <h2>Recursos del Tesoro</h2>
+        <h4>Recursos del Tesoro</h4>
         <Doughnut data={data} />
         </Col>
         <Col md={4}>
-        <h2> Recursos Institucionales</h2>
-   <Doughnut data={data} />
+        <h4> Recursos Institucionales</h4>
+   <Doughnut data={data} width="" />
         </Col>
     </Row>
     </Tab>
     <Tab eventKey="grupo" title="GRUPO ECONOMICO"   >
-    <h1>ola</h1>
+    <Row>
+      <Col md={4}>
+        <h5> 300 GASTOS DE <br /> FINANCIAMIENTO</h5>
+        <Doughnut data={data} />
+      </Col>
+      <Col md={4}>
+        <h5>200 GASTOS DE <br />  CAPITAL</h5>
+        <Doughnut data={data} />
+        </Col>
+        <Col md={4}>
+        <h5> 100 GASTOS <br />  CORRIENTES</h5>
+   <Doughnut data={data} width="" />
+        </Col>
+    </Row>
     </Tab>
   </Tabs></Col>
-        </Row>
+        </Row> */}
         </Container>
   
       </Fragment>

@@ -28,7 +28,9 @@ function App() {
         <Route path="/ejecucion" component={Ejecucion} />
         <Route path="/educacion" component={DetalleMinisterio} />
         <Route path="/obras" component={DetalleMinisterio} />
-        <Route path =  "/gasto" component={Gasto} />
+        <Route path="/urbanismo" component={DetalleMinisterio} />
+        <Route path="/salud" component={DetalleMinisterio} />
+        <Route path = "/gasto" component={Gasto} />
       </Switch>
       </ScrollIntoView>
       <Footer />

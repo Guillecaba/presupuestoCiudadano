@@ -28,19 +28,19 @@ const nav = () => {
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navbar__item">
+             {/*  <Nav.Link className="navbar__item">
                 <Link className="text-decoration-none nav-link-color" to={"/gasto"}>
                 Gasto
 
                 </Link>
-              </Nav.Link>
+              </Nav.Link> */}
 
               <Nav.Link className="navbar__item" href="/#proceso">
                 {" "}
                 Proceso
               </Nav.Link>
 
-              <Nav.Link className="navbar__item text-decoration-none text-center">
+              <Nav.Link className="navbar__item text-decoration-none">
                 <Link
                   className="text-decoration-none nav-link-color "
                   to={"/ejecucion"}
