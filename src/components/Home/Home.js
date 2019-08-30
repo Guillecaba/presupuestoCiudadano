@@ -16,6 +16,7 @@ import casa from "../../assets/images/casa.png";
 import pdf from "../../assets/media/PropuestaTeoria.pdf";
 import white from "../../assets/images/White.png";
 import help from "../../assets/icons/question.svg"
+import guia from "../../assets/media/guia-presupuesto-ciudadano.pdf"
 import {Fade,LightSpeed} from 'react-reveal/';
 import {
   Container,
@@ -814,7 +815,7 @@ class Home extends React.Component {
                   obras, justicia y otros servicios que determinan tu calidad de
                   vida.
                 </p>
-                <Button className="button__secundary grow">Descarga la guia</Button>
+                <Button href={guia} className="button__secundary grow">Descarga la guia</Button>
               </Col>
             </Row>
           </Container>

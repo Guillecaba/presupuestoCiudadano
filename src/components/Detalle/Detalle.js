@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
-
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 import escuela from "../../assets/images/escuela.png";
 
-import LightSpeed from 'react-reveal/LightSpeed';
+import LightSpeed from "react-reveal/LightSpeed";
 import {
   Row,
   Col,
@@ -12,11 +13,10 @@ import {
   FormControl,
   Table,
   Button,
-  Card,
-  
+  Card
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import RubberBand from 'react-reveal/RubberBand';
+import RubberBand from "react-reveal/RubberBand";
 import { Doughnut } from "react-chartjs-2";
 import TreeMap from "react-d3-treemap";
 import "react-d3-treemap/dist/react.d3.treemap.css";
@@ -63,10 +63,34 @@ class DetalleMinisterio extends Component {
       items: null,
       treeMap: null,
       loading: false,
-      lista: null
+      lista: null,
+      comentario: null,
+      enviado: false
     };
   }
   static contextType = MinisterioContext;
+
+  notify = message => {
+    toast.success(`🦄 ${message}`, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  };
+
+  notifyFail = message => {
+    toast.error(`🦄 ${message}`, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  };
 
   onSelect(event) {
     console.log(event);
@@ -97,207 +121,349 @@ class DetalleMinisterio extends Component {
     this.setState({ lista: estado });
   };
 
+  sendVote = () => {
+    const enviar = {
+      comentario: this.state.comentario,
+      orden_set: this.state.items,
+      ministerio: this.state.items[0].ministerio
+    };
+    const send = JSON.stringify(enviar);
+    console.log(send);
+    axios
+      .post(`http://localhost:8000/v1/respuesta/`, send, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(
+        res => {
+          console.log(res);
+          this.setState({ enviado: true });
+          this.notify(`Enviamos tu voto!`);
+
+          console.log(res.data);
+        },
+        err => {
+          this.notifyFail(`Hubo un error en el envio`);
+          console.log(err);
+        }
+      );
+  };
+
+  changeInputHandler = (event, id) => {
+    console.log(event.target.value);
+    const comentario = event.target.value;
+    this.setState({ comentario: comentario });
+  };
+
   static getDerivedStateFromProps(props, state) {
-    console.log('Detalle: getDerivaredStateFromProps')
+    console.log("Detalle: getDerivaredStateFromProps");
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("Detalle: componentDidUpdate")
-    console.log(this.props.location.pathname)
-    console.log(this.state.pathname)
-   
-    if(this.props.location.pathname !== this.state.pathname){
-      console.log("Detalle:componentDidUpdate Cambio")
+    console.log("Detalle: componentDidUpdate");
+    console.log(this.props.location.pathname);
+    console.log(this.state.pathname);
+
+    if (this.props.location.pathname !== this.state.pathname) {
+      console.log("Detalle:componentDidUpdate Cambio");
       const pathname = this.props.location.pathname;
-    let dataFromContext;
-    switch (pathname) {
-      case "/educacion":
-        dataFromContext = this.context[0].educacion;
-        console.log(dataFromContext);
+      let dataFromContext;
+      switch (pathname) {
+        case "/educacion":
+          dataFromContext = this.context[0].educacion;
 
-        this.setState({
-          logo: escuela,
+          console.log(dataFromContext);
+          axios
+            .get(
+              `http://localhost:8000/v1/actividades/?ministerio__slug=educacion`
+            )
+            .then(res => {
+              console.log(res.data);
+              res.data.map((item, index) => {
+                item.orden = index;
+                item.actividad = item.id;
+                item.ministerio = item.ministerio.id;
+              });
+  
+              this.setState({
+                logo: escuela,
+  
+                data: dataFromContext[0].data,
+  
+                items: res.data,
+  
+                banner: dataFromContext[2],
+  
+                treeMap: dataFromContext[3].treeMapData,
+  
+                resumen: dataFromContext[4].resumen,
+  
+                pathname: pathname,
+                enviado:false
+              });
+              console.log(this.state);
+            });
 
-          data: dataFromContext[0].data,
-
-          items: dataFromContext[1].items,
-
-          banner: dataFromContext[2],
-
-          treeMap: dataFromContext[3].treeMapData,
-
-          resumen: dataFromContext[4].resumen,
-
-          pathname:pathname
-        });
-        console.log(this.state);
-
-        break;
-      case "/obras":
-        dataFromContext = this.context[1].obras;
-        console.log(this.context);
-
-
-        this.setState({
-          logo: casco,
-
-          data: dataFromContext[0].data,
-
-          items: dataFromContext[1].items,
-
-          banner: dataFromContext[2],
-
-          treeMap: dataFromContext[3].treeMapData,
-
-          resumen: dataFromContext[4].resumen,
-
-          pathname:pathname
-        });
-        console.log(this.state);
-        break;
-      case "/salud":
+          break;
+        case "/obras":
+          dataFromContext = this.context[1].obras;
+          console.log(this.context);
+  
+          axios
+            .get(
+              `http://localhost:8000/v1/actividades/?ministerio__slug=obras`
+            )
+            .then(res => {
+              console.log(res.data);
+              res.data.map((item, index) => {
+                item.orden = index;
+                item.actividad = item.id;
+                item.ministerio = item.ministerio.id;
+                
+              });
+              this.setState({
+                logo: casco,
+      
+                data: dataFromContext[0].data,
+      
+                items: res.data,
+      
+                banner: dataFromContext[2],
+      
+                treeMap: dataFromContext[3].treeMapData,
+      
+                resumen: dataFromContext[4].resumen,
+      
+                pathname: pathname,
+                enviado:false
+              });
+              console.log(this.state);
+            })
+          break;
+        case "/salud":
           dataFromContext = this.context[3].salud;
           console.log(this.context);
   
-  
-          this.setState({
-            logo: cruz,
-  
-            data: dataFromContext[0].data,
-  
-            items: dataFromContext[1].items,
-  
-            banner: dataFromContext[2],
-  
-            treeMap: dataFromContext[3].treeMapData,
-  
-            resumen: dataFromContext[4].resume,
-
-            pathname:pathname
-          });
-          console.log(this.state);
-        break;
-      case "/urbanismo":
+          axios
+            .get(
+              `http://localhost:8000/v1/actividades/?ministerio__slug=salud`
+            )
+            .then(res => {
+              console.log(res.data);
+              res.data.map((item, index) => {
+                item.orden = index;
+                item.actividad = item.id;
+                item.ministerio = item.ministerio.id;
+                
+              });
+              this.setState({
+                logo: cruz,
+      
+                data: dataFromContext[0].data,
+      
+                items:res.data,
+      
+                banner: dataFromContext[2],
+      
+                treeMap: dataFromContext[3].treeMapData,
+      
+                resumen: dataFromContext[4].resume,
+      
+                pathname: pathname,
+                enviado:false
+              });
+              console.log(this.state);
+            })
+          break;
+        case "/urbanismo":
           dataFromContext = this.context[2].urbanismo;
-          console.log(this.context);
-  
-  
-          this.setState({
-            logo: casa,
-  
-            data: dataFromContext[0].data,
-  
-            items: dataFromContext[1].items,
-  
-            banner: dataFromContext[2],
-  
-            treeMap: dataFromContext[3].treeMapData,
-  
-            resumen: dataFromContext[4].resume,
+        console.log(this.context);
 
-            pathname:pathname
-          });
-          console.log(this.state);
-        break;
+        axios
+          .get(
+            `http://localhost:8000/v1/actividades/?ministerio__slug=urbanismo`
+          )
+          .then(res => {
+            console.log(res.data);
+            res.data.map((item, index) => {
+              item.orden = index;
+              item.actividad = item.id;
+              item.ministerio = item.ministerio.id;
+              
+            });
+            this.setState({
+              logo: casa,
+    
+              data: dataFromContext[0].data,
+    
+              items: res.data,
+    
+              banner: dataFromContext[2],
+    
+              treeMap: dataFromContext[3].treeMapData,
+    
+              resumen: dataFromContext[4].resume,
+    
+              pathname: pathname,
+              enviado:false
+            });
+            console.log(this.state);
 
-      default:
-        break;
-    }
+          })
+          break;
+
+        default:
+          break;
+      }
     }
   }
   componentDidMount() {
-    console.log("Detalle: componentDidMount")
+    console.log("Detalle: componentDidMount");
     console.log(this.props.location);
+
     const pathname = this.props.location.pathname;
     let dataFromContext;
     switch (pathname) {
       case "/educacion":
         dataFromContext = this.context[0].educacion;
+
         console.log(dataFromContext);
+        axios
+          .get(
+            `http://localhost:8000/v1/actividades/?ministerio__slug=educacion`
+          )
+          .then(res => {
+            console.log(res.data);
+            res.data.map((item, index) => {
+              item.orden = index;
+              item.actividad = item.id;
+              item.ministerio = item.ministerio.id;
+            });
 
-        this.setState({
-          logo: escuela,
+            this.setState({
+              logo: escuela,
 
-          data: dataFromContext[0].data,
+              data: dataFromContext[0].data,
 
-          items: dataFromContext[1].items,
+              items: res.data,
 
-          banner: dataFromContext[2],
+              banner: dataFromContext[2],
 
-          treeMap: dataFromContext[3].treeMapData,
+              treeMap: dataFromContext[3].treeMapData,
 
-          resumen: dataFromContext[4].resumen,
+              resumen: dataFromContext[4].resumen,
 
-          pathname:pathname
-        });
-        console.log(this.state);
+              pathname: pathname
+            });
+            console.log(this.state);
+          });
 
         break;
       case "/obras":
         dataFromContext = this.context[1].obras;
         console.log(this.context);
 
-
-        this.setState({
-          logo: casco,
-
-          data: dataFromContext[0].data,
-
-          items: dataFromContext[1].items,
-
-          banner: dataFromContext[2],
-
-          treeMap: dataFromContext[3].treeMapData,
-
-          resumen: dataFromContext[4].resumen,
-
-          pathname:pathname
-        });
-        console.log(this.state);
+        axios
+          .get(
+            `http://localhost:8000/v1/actividades/?ministerio__slug=obras`
+          )
+          .then(res => {
+            console.log(res.data);
+            res.data.map((item, index) => {
+              item.orden = index;
+              item.actividad = item.id;
+              item.ministerio = item.ministerio.id;
+              
+            });
+            this.setState({
+              logo: casco,
+    
+              data: dataFromContext[0].data,
+    
+              items: res.data,
+    
+              banner: dataFromContext[2],
+    
+              treeMap: dataFromContext[3].treeMapData,
+    
+              resumen: dataFromContext[4].resumen,
+    
+              pathname: pathname
+            });
+            console.log(this.state);
+          })
+       
         break;
       case "/salud":
-          dataFromContext = this.context[3].salud;
-          console.log(this.context);
-  
-  
-          this.setState({
-            logo: cruz,
-  
-            data: dataFromContext[0].data,
-  
-            items: dataFromContext[1].items,
-  
-            banner: dataFromContext[2],
-  
-            treeMap: dataFromContext[3].treeMapData,
-  
-            resumen: dataFromContext[4].resume,
+        dataFromContext = this.context[3].salud;
+        console.log(this.context);
 
-            pathname:pathname
-          });
-          console.log(this.state);
+        axios
+          .get(
+            `http://localhost:8000/v1/actividades/?ministerio__slug=salud`
+          )
+          .then(res => {
+            console.log(res.data);
+            res.data.map((item, index) => {
+              item.orden = index;
+              item.actividad = item.id;
+              item.ministerio = item.ministerio.id;
+              
+            });
+            this.setState({
+              logo: cruz,
+    
+              data: dataFromContext[0].data,
+    
+              items:res.data,
+    
+              banner: dataFromContext[2],
+    
+              treeMap: dataFromContext[3].treeMapData,
+    
+              resumen: dataFromContext[4].resume,
+    
+              pathname: pathname
+            });
+            console.log(this.state);
+          })
+       
         break;
       case "/urbanismo":
-          dataFromContext = this.context[2].urbanismo;
-          console.log(this.context);
-  
-  
-          this.setState({
-            logo: casa,
-  
-            data: dataFromContext[0].data,
-  
-            items: dataFromContext[1].items,
-  
-            banner: dataFromContext[2],
-  
-            treeMap: dataFromContext[3].treeMapData,
-  
-            resumen: dataFromContext[4].resume,
+        dataFromContext = this.context[2].urbanismo;
+        console.log(this.context);
 
-            pathname:pathname
-          });
-          console.log(this.state);
+        axios
+          .get(
+            `http://localhost:8000/v1/actividades/?ministerio__slug=urbanismo`
+          )
+          .then(res => {
+            console.log(res.data);
+            res.data.map((item, index) => {
+              item.orden = index;
+              item.actividad = item.id;
+              item.ministerio = item.ministerio.id;
+              
+            });
+            this.setState({
+              logo: casa,
+    
+              data: dataFromContext[0].data,
+    
+              items: res.data,
+    
+              banner: dataFromContext[2],
+    
+              treeMap: dataFromContext[3].treeMapData,
+    
+              resumen: dataFromContext[4].resume,
+    
+              pathname: pathname
+            });
+            console.log(this.state);
+
+          })
         break;
 
       default:
@@ -306,9 +472,11 @@ class DetalleMinisterio extends Component {
   }
 
   onSortEnd = ({ oldIndex, newIndex }) => {
-    this.setState(({ items }) => ({
-      items: arrayMove(items, oldIndex, newIndex)
-    }));
+    const newItems = arrayMove(this.state.items, oldIndex, newIndex);
+    newItems.map((item, index) => (item.orden = index));
+    this.setState({
+      items: newItems
+    });
   };
   render() {
     let items;
@@ -322,11 +490,22 @@ class DetalleMinisterio extends Component {
       items = this.state.items;
     }
     console.log(this.state);
-    console.log(this.state.pathname)
-    console.log(this.props.location.pathname)
+    console.log(this.state.pathname);
+    console.log(this.props.location.pathname);
     return (
       <Fragment>
-        {items && this.state.pathname ==this.props.location.pathname ? (
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          pauseOnHover
+        />
+        {items && this.state.pathname == this.props.location.pathname ? (
           <div>
             <div className="banner__principal pt-5 ">
               <Container>
@@ -336,7 +515,7 @@ class DetalleMinisterio extends Component {
                   alt="escuela"
                 />
                 <LightSpeed right>
-                <h1 className="text-center">{state.banner.datos.nombre}</h1>
+                  <h1 className="text-center">{state.banner.datos.nombre}</h1>
                 </LightSpeed>
 
                 <Row className="pt-5">
@@ -394,17 +573,16 @@ class DetalleMinisterio extends Component {
                     </ul>
                   </Col>
                   <Col className="align-self-center" md={5}>
-                  
-                    <Doughnut data={state.data}  />
-                    
-                  
+                    <Doughnut data={state.data} />
                   </Col>
                   <Col
                     className="align-self-center font-weight-bold text-center"
                     md={3}
                   >
                     <h3 className="">Presupuesto total</h3>
-                    <p className="banner__principal_item_monto">{state.banner.datos.presupuestoTotal} </p>
+                    <p className="banner__principal_item_monto">
+                      {state.banner.datos.presupuestoTotal}{" "}
+                    </p>
                   </Col>
                 </Row>
               </Container>
@@ -416,125 +594,133 @@ class DetalleMinisterio extends Component {
                 </h1>
                 <Row>
                   <Col md={6}>
-                  {!this.state.lista && (<RubberBand><h2 className="gastos__title text-center">Haz click en el gráfico</h2></RubberBand>)}
-                  <div className="d-flex align-items-center justify-content-center ">
-                    
-                  <ContainerDimensions>
-                    {({ width, height }) => (
-                      <Sunburst
-                        changed={this.changeListHandler}
-                        data={state.treeMap}
-                        width={width}
-                        height="600"
-                        count_member="value"
-                        labelFunc={node => node.data.name}
-                        tooltipFunc={data => data.name}
-                        _debug={false}
-                      />
+                    {!this.state.lista && (
+                      <RubberBand>
+                        <h2 className="gastos__title text-center">
+                          Haz click en el gráfico
+                        </h2>
+                      </RubberBand>
                     )}
-                  </ContainerDimensions>
-                </div>
+                    <div className="d-flex align-items-center justify-content-center ">
+                      <ContainerDimensions>
+                        {({ width, height }) => (
+                          <Sunburst
+                            changed={this.changeListHandler}
+                            data={state.treeMap}
+                            width={width}
+                            height="600"
+                            count_member="value"
+                            labelFunc={node => node.data.name}
+                            tooltipFunc={data => data.name}
+                            _debug={false}
+                          />
+                        )}
+                      </ContainerDimensions>
+                    </div>
                   </Col>
                   <Col md={6}>
-                  <div>
-                  {this.state.lista && (
-                    <Fragment>
-                      <div className="text-center text-uppercase text-center my-5 gastos__title">
-                        <h2>{state.lista.titulo.nombre}</h2>
-                        <p>
-                          <NumberFormat
-                            value={state.lista.titulo.valor}
-                            displayType={"text"}
-                            thousandSeparator={true}
-                            prefix={"Gs "}
-                          />
-                        </p>
-                      </div>
+                    <div>
+                      {this.state.lista && (
+                        <Fragment>
+                          <div className="text-center text-uppercase text-center my-5 gastos__title">
+                            <h2>{state.lista.titulo.nombre}</h2>
+                            <p>
+                              <NumberFormat
+                                value={state.lista.titulo.valor}
+                                displayType={"text"}
+                                thousandSeparator={true}
+                                prefix={"Gs "}
+                              />
+                            </p>
+                          </div>
 
-                      <Table responsive>
-                        <thead>
-                          <tr>
-                            <th>Nombre</th>
-                            <th>Monto</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {state.lista &&
-                            state.lista.lista.map((item, index) => {
-                              return (
-                                <tr>
-                                  <td>{item.nombre}</td>
-                                  <td>
-                                    <NumberFormat
-                                      value={item.valor}
-                                      displayType={"text"}
-                                      thousandSeparator={true}
-                                      prefix={"Gs "}
-                                    />{" "}
-                                  </td>
-                                </tr>
-                              );
-                            })}
-                        </tbody>
-                      </Table>
-                    </Fragment>
-                  )}
-                  
-                </div>
-                    </Col>
+                          <Table responsive>
+                            <thead>
+                              <tr>
+                                <th>Nombre</th>
+                                <th>Monto</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {state.lista &&
+                                state.lista.lista.map((item, index) => {
+                                  return (
+                                    <tr>
+                                      <td>{item.nombre}</td>
+                                      <td>
+                                        <NumberFormat
+                                          value={item.valor}
+                                          displayType={"text"}
+                                          thousandSeparator={true}
+                                          prefix={"Gs "}
+                                        />{" "}
+                                      </td>
+                                    </tr>
+                                  );
+                                })}
+                            </tbody>
+                          </Table>
+                        </Fragment>
+                      )}
+                    </div>
+                  </Col>
                 </Row>
-                
-                
               </div>
 
               <div>
-                <h1 className="encuesta__title text-center">
-                  ¿Cuales serian tus prioridades en Educacion?
-                </h1>
-                <p className="text-center encuesta__subtitle">
-                  Organiza tus prioridades, arriba las más importantes,{" "}
-                  <span className="font-weight-bold">
-                    (estirando y soltando las actividades)
-                  </span>
-                  
-                </p>
-                <SortableContainer onSortEnd={this.onSortEnd} >
-                  {this.state.items.map((value, index) => (
-                    <SortableItem
-                      key={`item-${index}`}
-                      index={index}
-                      value={value}
-                      className="item"
-                    />
-                  ))}
-                </SortableContainer>
+                {!this.state.enviado && (
+                  <div>
+                    <h1 className="encuesta__title text-center">
+                      ¿Cuales serian tus prioridades en Educacion?
+                    </h1>
+                    <p className="text-center encuesta__subtitle">
+                      Organiza tus prioridades, arriba las más importantes,{" "}
+                      <span className="font-weight-bold">
+                        (estirando y soltando las actividades)
+                      </span>
+                    </p>
+                    <SortableContainer onSortEnd={this.onSortEnd}>
+                      {this.state.items.map((value, index) => (
+                        <SortableItem
+                          key={`item-${index}`}
+                          index={index}
+                          value={value.descripcion}
+                          className="item"
+                        />
+                      ))}
+                    </SortableContainer>
 
-                <InputGroup className="pt-3 " size="lg">
-                  <FormControl
-                    placeholder="¿Quieres explicarnos porqué?"
-                    aria-label="Large"
-                    aria-describedby="inputGroup-sizing-sm"
-                  />
-                </InputGroup>
+                    <InputGroup className="pt-3 " size="lg">
+                      <FormControl
+                        onChange={this.changeInputHandler}
+                        placeholder="¿Quieres explicarnos porqué?"
+                        aria-label="Large"
+                        aria-describedby="inputGroup-sizing-sm"
+                      />
+                    </InputGroup>
 
-                <button
-                  className="button__primary  my-5 d-block mx-auto "
-                  onClick={this.ver}
-                >
-                  {" "}
-                  Enviar
-                </button>
+                    <button
+                      className="button__primary  my-5 d-block mx-auto "
+                      onClick={this.sendVote}
+                    >
+                      {" "}
+                      Enviar
+                    </button>
+                  </div>
+                )}
               </div>
             </Container>
           </div>
         ) : null}
-         <div className="presupuesto_total mb-5 py-5">
-         <Container>
-         <Row>
-        
+        <div className="presupuesto_total mb-5 py-5">
+          <Container>
+            <Row>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={escuela} />
+                  <Card.Img
+                    className="w-25 align-self-center grow"
+                    src={escuela}
+                  />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Educación y Ciencias
@@ -555,7 +741,10 @@ class DetalleMinisterio extends Component {
               </Col>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={cruz} />
+                  <Card.Img
+                    className="w-25 align-self-center grow"
+                    src={cruz}
+                  />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Salud y Bienestar social
@@ -576,7 +765,10 @@ class DetalleMinisterio extends Component {
               </Col>
               <Col md={3}>
                 <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={casco} />
+                  <Card.Img
+                    className="w-25 align-self-center grow"
+                    src={casco}
+                  />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Obras Públicas y Comunicaciones
@@ -598,7 +790,10 @@ class DetalleMinisterio extends Component {
               </Col>
               <Col md={3}>
                 <Card className="card-ministerio ">
-                  <Card.Img className="w-25 align-self-center grow " src={casa} />
+                  <Card.Img
+                    className="w-25 align-self-center grow "
+                    src={casa}
+                  />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Urbanismo, Vivienda y Hábitat
@@ -618,13 +813,9 @@ class DetalleMinisterio extends Component {
                 </Card>
               </Col>
             </Row>
-            </Container>
-            
-            </div>
-            
-        
-        </Fragment>
-   
+          </Container>
+        </div>
+      </Fragment>
     );
   }
 }

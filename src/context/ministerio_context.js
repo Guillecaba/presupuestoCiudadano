@@ -12,17 +12,17 @@ const ministerioContext = React.createContext([{
       }
     ]
   }},
-  {items: [
-    "Educación inicial (per-jardín y jardín) con Becas, Complemento Nutricional, Canasta Básica de Útiles y otros.",
-    "Educación Inicial ampliada a niños y niñas desde cero a cinco años. ",
-    "Textos para estudiantes y guías para Docentes de la Educación Media",
-    "Documentos pedagogicos para estudiantes con necesidades de apoyo",
-    "Material educativo diseñado para pueblos indígenas",
-    "Distribución de materiales didáctico a las instituciones educativas",
-    "Evaluaciones estandarizadas sobre el desempeño de los estudiantes",
-    "Ampliación de la jornada escolar",
-    "Becas, kits escolares para la culminación oportuna de estudios",
-    "Boleto estudiantil para la culminación oportuna de estudios  "
+  {items: [{id:1,descripcion:"Educación inicial (per-jardín y jardín) con Becas, Complemento Nutricional, Canasta Básica de Útiles y otros.", },
+    { id: 2, descripcion: "Educación inicial (per-jardín y jardín) con Becas, Complemento Nutricional, Canasta Básica de Útiles y otros.", },
+    { id: 3, descripcion: "Educación Inicial ampliada a niños y niñas desde cero a cinco años. ", },
+    { id: 4, descripcion: "Textos para estudiantes y guías para Docentes de la Educación Media", },
+    { id: 5, descripcion: "Documentos pedagogicos para estudiantes con necesidades de apoyo", },
+    { id: 6, descripcion: "Material educativo diseñado para pueblos indígenas", },
+    { id: 7, descripcion: "Distribución de materiales didáctico a las instituciones educativas", },
+    { id: 8, descripcion: "Evaluaciones estandarizadas sobre el desempeño de los estudiantes", },
+    { id: 9, descripcion: "Ampliación de la jornada escolar", },
+    { id: 10, descripcion: "Becas, kits escolares para la culminación oportuna de estudios", },
+    { id: 11, descripcion: "Boleto estudiantil para la culminación oportuna de estudios  " },
   
   
   ]},{
