@@ -70,6 +70,8 @@ class DetalleMinisterio extends Component {
   }
   static contextType = MinisterioContext;
 
+  url = `https://presupuesto-ciudadano.herokuapp.com`
+
   notify = message => {
     toast.success(`🦄 ${message}`, {
       position: "bottom-center",
@@ -130,7 +132,7 @@ class DetalleMinisterio extends Component {
     const send = JSON.stringify(enviar);
     console.log(send);
     axios
-      .post(`http://localhost:8000/v1/respuesta/`, send, {
+      .post(`${this.url}/v1/respuesta/`, send, {
         headers: {
           "Content-Type": "application/json"
         }
@@ -176,7 +178,7 @@ class DetalleMinisterio extends Component {
           console.log(dataFromContext);
           axios
             .get(
-              `http://localhost:8000/v1/actividades/?ministerio__slug=educacion`
+              `${this.url}/v1/actividades/?ministerio__slug=educacion`
             )
             .then(res => {
               console.log(res.data);
@@ -212,7 +214,7 @@ class DetalleMinisterio extends Component {
   
           axios
             .get(
-              `http://localhost:8000/v1/actividades/?ministerio__slug=obras`
+              `${this.url}/v1/actividades/?ministerio__slug=obras`
             )
             .then(res => {
               console.log(res.data);
@@ -247,7 +249,7 @@ class DetalleMinisterio extends Component {
   
           axios
             .get(
-              `http://localhost:8000/v1/actividades/?ministerio__slug=salud`
+              `${this.url}/v1/actividades/?ministerio__slug=salud`
             )
             .then(res => {
               console.log(res.data);
@@ -282,7 +284,7 @@ class DetalleMinisterio extends Component {
 
         axios
           .get(
-            `http://localhost:8000/v1/actividades/?ministerio__slug=urbanismo`
+            `${this.url}/v1/actividades/?ministerio__slug=urbanismo`
           )
           .then(res => {
             console.log(res.data);
@@ -331,7 +333,7 @@ class DetalleMinisterio extends Component {
         console.log(dataFromContext);
         axios
           .get(
-            `http://localhost:8000/v1/actividades/?ministerio__slug=educacion`
+            `${this.url}/v1/actividades/?ministerio__slug=educacion`
           )
           .then(res => {
             console.log(res.data);
@@ -366,7 +368,7 @@ class DetalleMinisterio extends Component {
 
         axios
           .get(
-            `http://localhost:8000/v1/actividades/?ministerio__slug=obras`
+            `${this.url}/v1/actividades/?ministerio__slug=obras`
           )
           .then(res => {
             console.log(res.data);
@@ -401,7 +403,7 @@ class DetalleMinisterio extends Component {
 
         axios
           .get(
-            `http://localhost:8000/v1/actividades/?ministerio__slug=salud`
+            `${this.url}/v1/actividades/?ministerio__slug=salud`
           )
           .then(res => {
             console.log(res.data);
@@ -436,7 +438,7 @@ class DetalleMinisterio extends Component {
 
         axios
           .get(
-            `http://localhost:8000/v1/actividades/?ministerio__slug=urbanismo`
+            `${this.url}/v1/actividades/?ministerio__slug=urbanismo`
           )
           .then(res => {
             console.log(res.data);
