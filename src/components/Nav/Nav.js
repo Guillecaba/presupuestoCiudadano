@@ -28,14 +28,9 @@ const nav = () => {
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navbar__item">
-                <Link className="text-decoration-none nav-link-color" to={"/gasto"}>
-                Gasto
+              
 
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link className="navbar__item" href="/#proceso">
+              <Nav.Link className="navbar__item nav-link-color" href="/#proceso">
                 {" "}
                 Proceso
               </Nav.Link>
@@ -49,6 +44,13 @@ const nav = () => {
                   Ejecución
                 </Link>{" "}
               </Nav.Link>
+              <Nav.Link className="navbar__item">
+                <Link className="text-decoration-none nav-link-color" to={"/cambios"}>
+                2019 vs 2020
+
+                </Link>
+              </Nav.Link>
+              
             </Nav>
           </Navbar.Collapse>
         </Navbar>

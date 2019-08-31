@@ -592,7 +592,7 @@ class DetalleMinisterio extends Component {
             <Container>
               <div className="py-5">
                 <h1 className="text-uppercase text-center mb-5 gastos__title ">
-                  Programas del Ministerio
+                  Presupuesto del ministerio en detalle
                 </h1>
                 <Row>
                   <Col md={6}>
