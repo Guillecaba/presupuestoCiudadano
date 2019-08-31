@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import ReactLoading from 'react-loading';
 import escuela from "../../assets/images/escuela.png";
 
 import LightSpeed from "react-reveal/LightSpeed";
@@ -511,7 +512,7 @@ class DetalleMinisterio extends Component {
           draggable
           pauseOnHover
         />
-        {items && this.state.pathname == this.props.location.pathname ? (
+        {items && this.state.pathname == this.props.location.pathname  ? (
           <div>
             <div className="banner__principal pt-5 ">
               <Container>
@@ -717,7 +718,9 @@ class DetalleMinisterio extends Component {
               </div>
             </Container>
           </div>
-        ) : null}
+        ) : <div className='d-flex justify-content-center'>
+          <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />
+          </div>}
         <div className="presupuesto_total mb-5 py-5">
           <Container>
             <Row>
