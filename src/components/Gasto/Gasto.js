@@ -1,10 +1,13 @@
 import React , { Fragment , Component} from "react";
-import { Container , Row, Col , Tab , Tabs } from "react-bootstrap";
+import guia from "../../assets/media/guia-presupuesto-ciudadano.pdf"
+import personitas from "../../assets/images/personitas-completo.png";
+import { Container , Row, Col , Tab , Tabs, Button } from "react-bootstrap";
 import moneda from "../../assets/images/moneda-interna.png";
 import hospitales from "../../assets/images/hospitales.png";
 import billete_grafico from "../../assets/images/billete-grafico.png"
 import ContainerDimensions from "react-container-dimensions";
 import {Doughnut} from 'react-chartjs-2';
+import {Fade,LightSpeed} from 'react-reveal/';
 import "./Gasto.css"
 
 
@@ -57,7 +60,7 @@ class Gasto extends Component {
           </Col>
         </Row>
         <Row>
-          <Col md={6}>
+          <Col className="pl-5" md={6}>
               <p className="font-weight-bold">El Presupuesto General de la Nación contiene la previsión de los ingresos y la asignación de los gastos.<br/>
   Los gastos son los montos que el Estado calcula utilizar para:</p>
   <ul>
@@ -71,12 +74,13 @@ class Gasto extends Component {
   
           </Col>
         </Row>
-        <Row className="mt-5">
+        <Row className="my-5">
           <Col className="text-center">
           <h1 className=" ">En el 2020 de cada 1 00.000 gs se gasto:</h1>
-          <img className="w-50 pt-3" src={billete_grafico} alt="billete grafico"></img>
+          <img className="billete pt-3" src={billete_grafico} alt="billete grafico"></img>
           </Col>
         </Row>
+       
       {/*   <Row>
           <Col className="text-left" md={8}>
             <h1 >Funciones</h1>
@@ -131,6 +135,32 @@ class Gasto extends Component {
   </Tabs></Col>
         </Row> */}
         </Container>
+        <div className="information py-5 ">
+          <Container>
+            <Row>
+              <Col md={5}>
+              <Fade left>
+                <img className="w-100" src={personitas} alt="Personitas" />
+                </Fade>
+              </Col>
+              <Col md={7}>
+                <Fade right>
+                <h1 className="text-uppercase font-weigth-bold information__title pb-3">
+                  informate
+                </h1>
+                </Fade>
+                <p className="informartion__subtitle">
+                  Conocer el Presupuesto es esencial para conocer que usos se le
+                  dan a tus impuestos, cuáles son las prioridades de las
+                  instituciones públicas y cuánto se gasta en salud, educación,
+                  obras, justicia y otros servicios que determinan tu calidad de
+                  vida.
+                </p>
+                <Button href={guia} className="button__secundary grow">Descarga la guia</Button>
+              </Col>
+            </Row>
+          </Container>
+        </div>
   
       </Fragment>
     )

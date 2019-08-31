@@ -1,3 +1,13 @@
 .lista-elemento {
   list-style-type: circle;
 }
+
+.billete{
+  width:50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .billete{
+    width:100%;
+  }
+}

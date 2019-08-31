@@ -159,7 +159,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  353889062834 , 393743094684,  903027947584 ,   63913095215134 , 0],
+        data: [   353889062834 , 393743094684, 903027947584 ,   6391309521513 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -361,7 +361,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  353889062834 , 393743094684,  903027947584 ,   63913095215134 , 0],
+        data: [ 2268000000 , 78705450295,  0 ,   531935122252 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }

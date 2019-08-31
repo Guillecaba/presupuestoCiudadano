@@ -151,10 +151,10 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
   </Card>
 
   <Card className="card-acordeon" >
-    <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="2">
+    <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="3">
     Pago de la Obligación:
     </Accordion.Toggle>
-    <Accordion.Collapse eventKey="2">
+    <Accordion.Collapse eventKey="3">
       <Card.Body className='acordeon-card-text '>constituye la etapa por el cual se registra el cumplimiento parcial o total de las obligaciones contraídas. Con posterioridad al depósito de los recursos en la cuenta bancaria del proveedor el banco operante emite la nota de depósito que confirma el traspaso del Dinero a su cuenta, el proveedor emite el Recibo de Dinero que constituye el documento utilizado para registrar el Pago o cancelación de la obligación asumida por el ente público respectivo, derivando toda la documentación respaldatoria para elaborar los legajos de Rendición de cuenta respectiva.</Card.Body>
     </Accordion.Collapse>
   </Card>

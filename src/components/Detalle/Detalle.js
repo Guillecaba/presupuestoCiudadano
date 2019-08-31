@@ -200,6 +200,7 @@ class DetalleMinisterio extends Component {
                 treeMap: dataFromContext[3].treeMapData,
   
                 resumen: dataFromContext[4].resumen,
+                lista: null,
   
                 pathname: pathname,
                 enviado:false
@@ -238,6 +239,7 @@ class DetalleMinisterio extends Component {
                 resumen: dataFromContext[4].resumen,
       
                 pathname: pathname,
+                lista: null,
                 enviado:false
               });
               console.log(this.state);
@@ -273,7 +275,8 @@ class DetalleMinisterio extends Component {
                 resumen: dataFromContext[4].resume,
       
                 pathname: pathname,
-                enviado:false
+                enviado:false,
+                lista: null,
               });
               console.log(this.state);
             })
@@ -308,7 +311,8 @@ class DetalleMinisterio extends Component {
               resumen: dataFromContext[4].resume,
     
               pathname: pathname,
-              enviado:false
+              enviado:false,
+              lista: null,
             });
             console.log(this.state);
 
