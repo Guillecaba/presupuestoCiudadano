@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Financiacion from "../components/Financiacion/Financiacion";
 import Ejecucion from "../components/Ejecucion/Ejecucion";
 import Gasto from "../components/Gasto/Gasto";
+import Dashboard from "../components/Dashboard/Dashboard"
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/urbanismo" component={DetalleMinisterio} />
             <Route path="/salud" component={DetalleMinisterio} />
             <Route path="/gasto" component={Gasto} />
+            <Route path="/reporte" component={Dashboard} />
           </Switch>
         </ScrollIntoView>
         <Footer />

@@ -29,7 +29,7 @@ import {
   Tab,
   Carousel
 } from "react-bootstrap";
-import ods from "../../assets/images/rueda_home.png";
+import ods from "../../assets/images/rueda_color.png";
 import agua_limpia from "../../assets/images/agua_limpia.png";
 import salud_bienestar from "../../assets/images/salud_bienestar.png";
 import educacion_calidad from "../../assets/images/educacion_calidad.png";
@@ -668,7 +668,7 @@ class Home extends React.Component {
               <Col md={3}>
               <Zoom left>
                 <Card>
-                  <Card.Img className="grow  " variant="top" src={ods} />
+                  <Card.Img className="gro img-ods   " src={ods} />
                   <Card.Body>
                     <Card.Title className="card__title text-center">
                       ¿El PGN está vinculado a los ODS?

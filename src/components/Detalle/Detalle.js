@@ -65,7 +65,7 @@ class DetalleMinisterio extends Component {
       treeMap: null,
       loading: false,
       lista: null,
-      comentario: null,
+      comentario: " ",
       enviado: false
     };
   }
@@ -74,7 +74,7 @@ class DetalleMinisterio extends Component {
   url = `https://presupuesto-ciudadano.herokuapp.com`
 
   notify = message => {
-    toast.success(`🦄 ${message}`, {
+    toast.success(`${message}`, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -85,7 +85,7 @@ class DetalleMinisterio extends Component {
   };
 
   notifyFail = message => {
-    toast.error(`🦄 ${message}`, {
+    toast.error(` ${message}`, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
