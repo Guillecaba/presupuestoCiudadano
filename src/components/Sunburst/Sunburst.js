@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import shallowEqual from "shallowequal";
+import './Sunburst.css'
 
 import { hsl as d3Hsl } from "d3-color";
 import { select as d3Select, event as d3Event } from "d3-selection";
@@ -101,6 +102,7 @@ class Sunburst extends React.Component {
     saturation: 0.9,
     lightness: 0.6,
     child_brightness: 0.9,
+    prevX0Node:null,
     _debug: false,
     _log: console.log,
     _warn: console.warn
@@ -112,8 +114,10 @@ class Sunburst extends React.Component {
     this._last_click = null;
     this.radius = Math.min(this.props.width, this.props.height) / 2;
     this.y = d3ScaleSqrt().range([0, this.radius]);
+    
 
     this.x = d3ScaleLinear().range([0, 2 * Math.PI]);
+    console.log(this.x)
 
     this.arc = d3Arc()
       .startAngle(d => {
@@ -159,6 +163,7 @@ class Sunburst extends React.Component {
 
   _destroy_svg() {
     this.props._debug && this.props._log("Sunburst: _destroy_svg()");
+    this.prevX0Node = null;
     this.svg && this.svg.selectAll("*").remove();
     this.svg = null;
     var rectangle = document.getElementById('svg');
@@ -246,6 +251,11 @@ class Sunburst extends React.Component {
       .style("fill", d => (d.parent ? this._colorize(d) : "yellow"));
   }
 
+  destroy(){
+    this._destroy_svg()
+    this._create()
+  }
+
   _create(node) {
     console.log("Entra a create");
     this.props._debug && this.props._log("Sunburst: _create()");
@@ -298,6 +308,7 @@ class Sunburst extends React.Component {
           .style("class", "sunburst-svg")
           .style("width", w + "px")
           .style("height", h + "px")
+          .style("cursor","grab")
           .attr("viewBox", `${-w / 2} ${-h / 2} ${w} ${h}`)
           .attr("id","svg");
         //this.canvas = this.svg.append('g');
@@ -323,7 +334,7 @@ class Sunburst extends React.Component {
           .attr("id", (d, i) => {
             return key ? `mainArc-${d.data[key]}` : `mainArc-${i}`;
           })
-          .style("fill", d => (d.parent ? this._colorize(d) : "yellow"))
+          .style("fill", d => (d.parent ? this._colorize(d) : "white"))
           .on(
             "click",
             function(node) {
@@ -432,6 +443,7 @@ class Sunburst extends React.Component {
           .style("class", "sunburst-svg")
           .style("width", w + "px")
           .style("height", h + "px")
+          .style("cursor","grab")
           .attr("viewBox", `${-w / 2} ${-h / 2} ${w} ${h}`)
           .attr("id","svg");;
         //this.canvas = this.svg.append('g');
@@ -457,7 +469,7 @@ class Sunburst extends React.Component {
           .attr("id", (d, i) => {
             return key ? `mainArc-${d.data[key]}` : `mainArc-${i}`;
           })
-          .style("fill", d => (d.parent ? this._colorize(d) : "yellow"))
+          .style("fill", d => (d.parent ? this._colorize(d) : "white"))
           .on(
             "click",
             function(node) {
@@ -669,6 +681,8 @@ class Sunburst extends React.Component {
 
   _colorize(d) {
     this.props._debug && this.props._log("Sunburst: _colorize(d)");
+    console.log(d)
+    
     let hue;
     const current = d;
     if (current.depth === 0) {
@@ -676,14 +690,61 @@ class Sunburst extends React.Component {
     }
     const { lightness, saturation, child_brightness } = this.props;
     if (current.depth <=1) {
-      hue = this.hueDXScale(d.x0);
-      current.fill = d3Hsl(hue, saturation, lightness);
-      return current.fill;
+      if(this.prevX0Node != null) {
+
+        console.log(d.x0)
+        console.log(this.prevX0Node)
+  
+        if(d.x0-this.prevX0Node < 0.1){ //De los pequenos
+          
+          const newDx0 = d.x0+0.1
+          if(newDx0 > 1){
+            hue = this.hueDXScale(Math.random());
+          }else{
+            hue = this.hueDXScale(Math.random());
+          }
+          
+          console.log(hue)
+          current.fill = d3Hsl(hue, saturation, lightness);
+          this.prevX0Node = d.x0
+          return current.fill;
+        }else if(d.x0-this.prevX0Node > 0.9){ // Caso de los grandes
+          
+          const newDx0 = d.x0+0.25
+          if(newDx0 > 1){
+            hue = this.hueDXScale(0.5);
+          }else{
+            hue = this.hueDXScale(newDx0);
+          }
+          
+          console.log(hue)
+          current.fill = d3Hsl(hue, saturation, lightness);
+          this.prevX0Node = d.x0
+          return current.fill;
+        }else{          //Caso normal
+          hue = this.hueDXScale(d.x0);
+          console.log(hue)
+          current.fill = d3Hsl(hue, saturation, lightness);
+          this.prevX0Node = d.x0
+          return current.fill;
+        }
+
+
+
+      }else{          //Caso normal
+        hue = this.hueDXScale(d.x0);
+        console.log(hue)
+        current.fill = d3Hsl(hue, saturation, lightness);
+        this.prevX0Node = d.x0
+        return current.fill;
+      }
+      
+     
     }
     current.fill = current.parent.fill.brighter(child_brightness);
     const thishsl = d3Hsl(current.fill);
     hue = this.hueDXScale(current.x0);
-    const colorshift = thishsl.h + hue / 1;
+    const colorshift = thishsl.h + hue / 8;
     const c = d3Hsl(colorshift, thishsl.s, thishsl.l);
     return this.props.colorFunc || this.props.colorFunc(d, c) || c;
   }
@@ -692,7 +753,9 @@ class Sunburst extends React.Component {
   // access to the dom
   render() {
     this.props._debug && this.props._log("Sunburst: render()");
-    return <div className="sunburst-wrapper" id={this.domId} />;
+    return <div className="sunburst-wrapper" id={this.domId} >
+      <button className="boton-atras" onClick={this.destroy.bind(this)}>ir al inicio</button>
+    </div>;
   }
 }
 

@@ -6,7 +6,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  5387709245284 , 844972495318,  7840145062 ,   322207712994 , 0],
+        data: [  82 ,12,  0.1 ,   3.9 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -91,7 +91,7 @@ const ministerioContext = React.createContext([{
                       ]
                   },
                   {
-                      "name":"Actividad Proyecto",
+                      "name":"Proyecto",
                       "children": [
                           {"name":"FOMENTO Y APOYO OPERAT. PARA LA EJEC. DE PROY. DEL MEC","value":7840145062},   
                       ]
@@ -159,7 +159,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [   353889062834 , 393743094684, 903027947584 ,   6391309521513 , 0],
+        data: [   4, 5, 12 ,   79 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -230,7 +230,7 @@ const ministerioContext = React.createContext([{
                       ]
                   },
                   {
-                      "name":"Actividad Proyecto",
+                      "name":"Proyecto",
                       "children": [
                           {"name":"SP CONST. AVDA. COST. CENT. HIST. Y PARQUE BICENTENARIO","value":97318632310},
                           {"name":"CONSTRUCCIÓN AV. COSTANERA NORTE, 2ª ETAPA","value":167130374717}, 
@@ -361,7 +361,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [ 2268000000 , 78705450295,  0 ,   531935122252 , 0],
+        data: [ 0.3 , 12.9,  0 ,  86.8 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -430,7 +430,7 @@ const ministerioContext = React.createContext([{
                       ]
                   },
                   {
-                      "name":"Actividad Proyecto",
+                      "name":"Proyecto",
                       "children": [
                           
 
@@ -486,7 +486,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  216090625327 , 1223157111772,  100106673399 ,  3979313069289 , 0],
+        data: [  3.9 , 22.2,  1.8,  72.1 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -532,7 +532,7 @@ const ministerioContext = React.createContext([{
     
   },{
     treeMapData : {
-      'name':"MINISTERIO DE SALUD PÚBLICA Y BIENESTAR SOCIA",
+      'name':"MINISTERIO DE SALUD PÚBLICA Y BIENESTAR SOCIAL",
       'children':
       [{
       "name":"Programa Central",
@@ -565,7 +565,7 @@ const ministerioContext = React.createContext([{
                       ]
                   },
                   {
-                      "name":"Actividad Proyecto",
+                      "name":"Proyecto",
                       "children": [
                           {"name":"008-SP PROGRAMA DE DESARROLLO INFANTIL TEMPRANO (DIT)","value":91640054750},
                           {"name":"012-INVESTIGACIÓN ,EDUC. Y BIOTECNOLOGÍA APLICADAS A LA SALUD","value":8466618649},

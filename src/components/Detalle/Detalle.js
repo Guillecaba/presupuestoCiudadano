@@ -526,7 +526,9 @@ class DetalleMinisterio extends Component {
                 </LightSpeed>
 
                 <Row className="pt-5">
+
                   <Col md={4}>
+                    <h2 className='py-3'>Estructura por tipo de programa</h2>
                     <ul>
                       <li className="banner__principal_item_central">
                         <p className="banner__principal_item">
@@ -596,8 +598,10 @@ class DetalleMinisterio extends Component {
             </div>
             <Container>
               <div className="py-5">
+              
                 <h1 className="text-uppercase text-center mb-5 gastos__title ">
-                  Presupuesto del ministerio en detalle
+                  
+                  Presupuesto {this.state.banner.datos.nombre} < br  />en detalle
                 </h1>
                 <Row>
                   <Col md={6}>
@@ -617,7 +621,7 @@ class DetalleMinisterio extends Component {
                             width={width}
                             height="600"
                             count_member="value"
-                            labelFunc={node => node.data.name}
+                            //labelFunc={node => node.data.name}
                             tooltipFunc={data => data.name}
                             _debug={false}
                           />
@@ -678,7 +682,7 @@ class DetalleMinisterio extends Component {
                 {!this.state.enviado && (
                   <div>
                     <h1 className="encuesta__title text-center">
-                      ¿Cuales serian tus prioridades en Educacion?
+                      ¿Cuales serian tus prioridades?
                     </h1>
                     <p className="text-center encuesta__subtitle">
                       Organiza tus prioridades, arriba las más importantes,{" "}

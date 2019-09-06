@@ -1,0 +1,22 @@
+.boton-atras {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  background-color: #E16163;
+
+
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background: #E16163;
+  color: #FFFFFF;
+  font-family: 'Helsinki';
+  line-height: 12px;
+  font-size: 12px;
+  padding: 0.6rem 1.5rem;
+  border:none;
+  text-decoration:none;
+}

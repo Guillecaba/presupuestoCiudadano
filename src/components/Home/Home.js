@@ -429,7 +429,7 @@ class Home extends React.Component {
             <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
-                  Entidades Centralizadas
+                  Administracion central
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
                   Gs. 45.155.949.081.587 <br /> (Datos de 2019)

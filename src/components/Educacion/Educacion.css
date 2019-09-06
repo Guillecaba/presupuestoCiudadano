@@ -98,7 +98,7 @@ ul {
   padding-left: 0;
 }
 li {
-  cursor: all-scroll;
+  cursor: grab;
   padding-left: 0;
 }
 
