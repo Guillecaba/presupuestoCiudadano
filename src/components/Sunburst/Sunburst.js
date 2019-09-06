@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import shallowEqual from "shallowequal";
+import React from 'react';
+import PropTypes from 'prop-types';
+import shallowEqual from 'shallowequal';
 
-import { hsl as d3Hsl } from "d3-color";
-import { select as d3Select, event as d3Event } from "d3-selection";
+import { hsl as d3Hsl } from 'd3-color';
+import { select as d3Select, event as d3Event } from 'd3-selection';
 import {
   scaleLinear as d3ScaleLinear,
   scaleSqrt as d3ScaleSqrt
-} from "d3-scale";
+} from 'd3-scale';
 import {
   hierarchy as d3Hierarchy,
   partition as d3Partition
-} from "d3-hierarchy";
-import { arc as d3Arc } from "d3-shape";
-import { path as d3Path } from "d3-path";
-import { interpolate as d3Interpolate } from "d3-interpolate";
+} from 'd3-hierarchy';
+import { arc as d3Arc } from 'd3-shape';
+import { path as d3Path } from 'd3-path';
+import { interpolate as d3Interpolate } from 'd3-interpolate';
 
 // We have to import this event though we dont use it
-import { transition as d3Transition } from "d3-transition";
+import { transition as d3Transition } from 'd3-transition';
 
 /* REFS
  * zoomable /w/ labels -- https://bl.ocks.org/vasturiano/12da9071095fbd4df434e60d52d2d58d
@@ -94,7 +94,7 @@ class Sunburst extends React.Component {
     radianCutoff: 0.001,
     transitionDuration: 500,
     colorFunc: (node, current_color) => current_color,
-    key_member: "key",
+    key_member: 'key',
     font_size: 12,
     tooltipX: 20,
     tooltipY: 20,
@@ -137,20 +137,20 @@ class Sunburst extends React.Component {
 
     this.domId =
       this.props.domId ||
-      "sunburst-wrapper-" + Math.round(Math.random() * 1e12).toString();
+      'sunburst-wrapper-' + Math.round(Math.random() * 1e12).toString();
     this.svg = null;
     this.tooltipDom = null;
     this.lastSelect = null;
   }
 
   componentDidMount() {
-    this.props._debug && this.props._log("Sunburst: componentDidMount()");
+    this.props._debug && this.props._log('Sunburst: componentDidMount()');
     this._create();
   }
 
   shouldComponentUpdate(nextProps) {
     this.props._debug &&
-      this.props._log("Sunburst: shouldComponentUpdate()", this.props);
+      this.props._log('Sunburst: shouldComponentUpdate()', this.props);
     if (!shallowEqual(this.props, nextProps)) {
       return false;
     }
@@ -158,21 +158,20 @@ class Sunburst extends React.Component {
   }
 
   _destroy_svg() {
-    this.props._debug && this.props._log("Sunburst: _destroy_svg()");
-    this.svg && this.svg.selectAll("*").remove();
+    this.props._debug && this.props._log('Sunburst: _destroy_svg()');
+    this.svg && this.svg.selectAll('*').remove();
     this.svg = null;
     var rectangle = document.getElementById('svg');
-    console.log(rectangle)
-    var parent    = rectangle.parentNode;
-    parent.removeChild(rectangle); 
-    var titulos = document.getElementsByClassName('sunburst-tooltip')
-    console.log(titulos)
+    console.log(rectangle);
+    var parent = rectangle.parentNode;
+    parent.removeChild(rectangle);
+    var titulos = document.getElementsByClassName('sunburst-tooltip');
+    console.log(titulos);
     for (let index = 0; index < titulos.length; index++) {
-        const element = titulos[index];
-        console.log(element)
-        var parent =element.parentNode
-        parent.removeChild(element)
-        
+      const element = titulos[index];
+      console.log(element);
+      var parent = element.parentNode;
+      parent.removeChild(element);
     }
     /* titulos.forEach(element => {
         console.log(element)
@@ -182,20 +181,18 @@ class Sunburst extends React.Component {
     console.log(titulos) */
     //var parent = titulos.parentNode
     //parent.removeChild(titulos)
-
-   
   }
 
   componentDidUpdate() {
     //prevProps
-    this.props._debug && this.props._log("Sunburst: componentDidUpdate()");
-    console.log('Se destruye el svg')
+    this.props._debug && this.props._log('Sunburst: componentDidUpdate()');
+    console.log('Se destruye el svg');
     this._destroy_svg();
     this._create();
   }
 
   componentWillUnmount() {
-    this.props._debug && this.props._log("Sunburst: componentWillUnmount()");
+    this.props._debug && this.props._log('Sunburst: componentWillUnmount()');
     this._destroy_svg();
   }
   /**
@@ -204,12 +201,12 @@ class Sunburst extends React.Component {
    * props.
    */
   select(id) {
-    console.log('select')
-    this.props._debug && this.props._log("Sunburst: select(id)");
-    const key = "#mainArc-" + id;
+    console.log('select');
+    this.props._debug && this.props._log('Sunburst: select(id)');
+    const key = '#mainArc-' + id;
     const nodes = d3Select(key).nodes();
-    console.log(nodes)
-    console.log("EL nodo", nodes);
+    console.log(nodes);
+    console.log('EL nodo', nodes);
     if (!nodes.length) {
       this.props._warn(`could not find node with id of ${key}`);
       return;
@@ -219,9 +216,9 @@ class Sunburst extends React.Component {
   }
 
   _onClick(node) {
-    this.props._debug && this.props._log("Sunburst: _onClick(node)");
+    this.props._debug && this.props._log('Sunburst: _onClick(node)');
     this.props.changed(node);
-    console.log('_onClick')
+    console.log('_onClick');
 
     /* console.log(node);
         console.log(node.data.name);
@@ -240,15 +237,15 @@ class Sunburst extends React.Component {
    * to update to the new color sheme.
    */
   updateColor() {
-    this.props._debug && this.props._log("Sunburst: updateColor()");
+    this.props._debug && this.props._log('Sunburst: updateColor()');
     this.svg
-      .selectAll("path.sunburst-main-arc")
-      .style("fill", d => (d.parent ? this._colorize(d) : "yellow"));
+      .selectAll('path.sunburst-main-arc')
+      .style('fill', d => (d.parent ? this._colorize(d) : 'yellow'));
   }
 
   _create(node) {
-    console.log("Entra a create");
-    this.props._debug && this.props._log("Sunburst: _create()");
+    console.log('Entra a create');
+    this.props._debug && this.props._log('Sunburst: _create()');
     if (!this.props.data) return;
 
     console.log(this.props.data);
@@ -274,123 +271,116 @@ class Sunburst extends React.Component {
 
       // console.log(this.partition(root).descendants().filter((d)=> d.depth<=1))
       console.log(root);
-      console.log(this.props.data)
-    
+      console.log(this.props.data);
+
       const data = this.partition(root)
         .descendants()
         .filter(d => d.x1 - d.x0 >= this.props.radianCutoff); // 0.005 radians = 0.29 degrees
       //console.log(this.partition(root).descendants().filter((d)=>))
-     
+
       const raiz = data[0];
       console.log(raiz);
       const data2 = data.filter(d => d.depth <= raiz.depth + 1);
       console.log(data2);
-      console.log("Actualizacion");
-    this.props.changed(raiz)
+      console.log('Actualizacion');
+      this.props.changed(raiz);
       if (!this.svg) {
-        console.log("entro en this.svg");
+        console.log('entro en this.svg');
         const w = this.props.width;
         const h = this.props.height;
-        const el = d3Select("#" + this.domId);
+        const el = d3Select('#' + this.domId);
 
-        this.svg = el.append("svg");
+        this.svg = el.append('svg');
         this.svg
-          .style("class", "sunburst-svg")
-          .style("width", w + "px")
-          .style("height", h + "px")
-          .attr("viewBox", `${-w / 2} ${-h / 2} ${w} ${h}`)
-          .attr("id","svg");
+          .style('class', 'sunburst-svg')
+          .style('width', w + 'px')
+          .style('height', h + 'px')
+          .attr('viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`)
+          .attr('id', 'svg');
         //this.canvas = this.svg.append('g');
         //this.svg = d3Select("svg").append("g").attr("id", "bigG")
 
         var gSlices = this.svg
-          .selectAll("g")
+          .selectAll('g')
           .data(data2)
           .enter()
-          .append("g");
+          .append('g');
 
         gSlices.exit().remove();
 
         const key = this.props.key_member;
         gSlices
-          .append("path")
-          .attr("class", d => {
+          .append('path')
+          .attr('class', d => {
             const cursor =
-              !d.parent || !d.children ? " cursor-pointer" : " cursor-pointer";
-            const evenodd = d.depth % 2 ? "even-row" : "odd-row";
+              !d.parent || !d.children ? ' cursor-pointer' : ' cursor-pointer';
+            const evenodd = d.depth % 2 ? 'even-row' : 'odd-row';
             return `sunburst-main-arc${cursor} ${evenodd}`;
           })
-          .attr("id", (d, i) => {
+          .attr('id', (d, i) => {
             return key ? `mainArc-${d.data[key]}` : `mainArc-${i}`;
           })
-          .style("fill", d => (d.parent ? this._colorize(d) : "yellow"))
+          .style('fill', d => (d.parent ? this._colorize(d) : 'yellow'))
           .on(
-            "click",
+            'click',
             function(node) {
-                if(node.depth==1 && node.height ==0){
-                    this._onClick(raiz)
-                    this._update(raiz)
-                    return 
-                }
-                if(node.depth ==0 && node.height !=0){
-                    console.log('CENTRO')
-                    this._onClick(raiz)
-                    this._destroy_svg()
-                    this._create();
-                    
-                    this._update(node);
-                    return
-                    
-                   /*  this.props.onClick && this.props.onClick(node);
+              if (node.depth == 1 && node.height == 0) {
+                this._onClick(raiz);
+                this._update(raiz);
+                return;
+              }
+              if (node.depth == 0 && node.height != 0) {
+                console.log('CENTRO');
+                this._onClick(raiz);
+                this._destroy_svg();
+                this._create();
+
+                this._update(node);
+                return;
+
+                /*  this.props.onClick && this.props.onClick(node);
                     console.log("Create:Click");
                     console.log(node); */
-                    
-                    
-                    
-                }else{
-                    this._onClick(node)
-                    this._destroy_svg();
-                    this._create(node);
-                    
-                 
-                  this.props.onClick && this.props.onClick(node);
-                  console.log("Create:Click");
-                  console.log(node);
-                }
+              } else {
+                this._onClick(node);
+                this._destroy_svg();
+                this._create(node);
 
-                
-              
-              
+                this.props.onClick && this.props.onClick(node);
+                console.log('Create:Click');
+                console.log(node);
+              }
+
               this._update(node);
             }.bind(this)
           );
 
         if (this.props.labelFunc) {
           gSlices
-            .append("path")
-            .attr("class", "sunburst-hidden-arc")
-            .attr("id", (_, i) => `hiddenArc${i}`)
-            .attr("d", this._middleArcLine.bind(this))
-            .style("fill", "none");
+            .append('path')
+            .attr('class', 'sunburst-hidden-arc')
+            .attr('id', (_, i) => `hiddenArc${i}`)
+            .attr('d', this._middleArcLine.bind(this))
+            .style('fill', 'none');
           console.log(gSlices);
 
           const text = gSlices
-            .append("text")
-            .style("pointer-events", "none")
-            .style("dominant-baseline", "middle")
-            .style("text-anchor", "middle");
+            .append('text')
+            .style('pointer-events', 'none')
+            .style('dominant-baseline', 'middle')
+            .style('text-anchor', 'middle');
           //.attr('display', d => this._textFits(d) ? null : 'none')
 
           text
-            .append("textPath")
-            .attr("startOffset", "50%")
-            .attr("xlink:href", (_, i) => `#hiddenArc${i}`)
-            .text(d => this._getLabelText(d) || "");
+            .append('textPath')
+            .attr('startOffset', '50%')
+            .attr('xlink:href', (_, i) => `#hiddenArc${i}`)
+            .text(d => this._getLabelText(d) || '');
         }
       }
     } else {
-        //Cuando se crea por primera vez
-        console.log('Cuando se crea por primera vez')
+      //Cuando se crea por primera vez
+      console.log('Cuando se crea por primera vez');
       root = d3Hierarchy(this.props.data).sum(
         function(d) {
           if (d[this.props.count_member] === undefined)
@@ -412,107 +402,105 @@ class Sunburst extends React.Component {
       const data = this.partition(root)
         .descendants()
         .filter(d => d.x1 - d.x0 >= this.props.radianCutoff); // 0.005 radians = 0.29 degrees
-        console.log(data)
+      console.log(data);
       //console.log(this.partition(root).descendants().filter((d)=>))
       const raiz = data[0];
       console.log(raiz);
-      this.props.changed(raiz)
+      this.props.changed(raiz);
       const data2 = data.filter(d => d.depth <= raiz.depth + 1);
       console.log(data2);
-      console.log("Actualizacion");
+      console.log('Actualizacion');
 
       if (!this.svg) {
-        console.log("entro en this.svg");
+        console.log('entro en this.svg');
         const w = this.props.width;
         const h = this.props.height;
-        const el = d3Select("#" + this.domId);
+        const el = d3Select('#' + this.domId);
 
-        this.svg = el.append("svg");
+        this.svg = el.append('svg');
         this.svg
-          .style("class", "sunburst-svg")
-          .style("width", w + "px")
-          .style("height", h + "px")
-          .attr("viewBox", `${-w / 2} ${-h / 2} ${w} ${h}`)
-          .attr("id","svg");;
+          .style('class', 'sunburst-svg')
+          .style('width', w + 'px')
+          .style('height', h + 'px')
+          .attr('viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`)
+          .attr('id', 'svg');
         //this.canvas = this.svg.append('g');
         //this.svg = d3Select("svg").append("g").attr("id", "bigG")
 
         var gSlices = this.svg
-          .selectAll("g")
+          .selectAll('g')
           .data(data2)
           .enter()
-          .append("g");
+          .append('g');
 
         gSlices.exit().remove();
 
         const key = this.props.key_member;
         gSlices
-          .append("path")
-          .attr("class", d => {
+          .append('path')
+          .attr('class', d => {
             const cursor =
-              !d.parent || !d.children ? " cursor-pointer" : " cursor-pointer";
-            const evenodd = d.depth % 2 ? "even-row" : "odd-row";
+              !d.parent || !d.children ? ' cursor-pointer' : ' cursor-pointer';
+            const evenodd = d.depth % 2 ? 'even-row' : 'odd-row';
             return `sunburst-main-arc${cursor} ${evenodd}`;
           })
-          .attr("id", (d, i) => {
+          .attr('id', (d, i) => {
             return key ? `mainArc-${d.data[key]}` : `mainArc-${i}`;
           })
-          .style("fill", d => (d.parent ? this._colorize(d) : "yellow"))
+          .style('fill', d => (d.parent ? this._colorize(d) : 'yellow'))
           .on(
-            "click",
+            'click',
             function(node) {
-                this._onClick(node)
-                this.props.changed(node)
-                this._destroy_svg();
-                this._create(node); 
-            
+              this._onClick(node);
+              this.props.changed(node);
+              this._destroy_svg();
+              this._create(node);
+
               this.props.onClick && this.props.onClick(node);
-              console.log("Create:Click");
+              console.log('Create:Click');
               console.log(node);
-            
-             
+
               this._update(node);
             }.bind(this)
           );
 
         if (this.props.labelFunc) {
           gSlices
-            .append("path")
-            .attr("class", "sunburst-hidden-arc")
-            .attr("id", (_, i) => `hiddenArc${i}`)
-            .attr("d", this._middleArcLine.bind(this))
-            .style("fill", "none");
+            .append('path')
+            .attr('class', 'sunburst-hidden-arc')
+            .attr('id', (_, i) => `hiddenArc${i}`)
+            .attr('d', this._middleArcLine.bind(this))
+            .style('fill', 'none');
           console.log(gSlices);
 
           const text = gSlices
-            .append("text")
-            .style("pointer-events", "none")
-            .style("dominant-baseline", "middle")
-            .style("text-anchor", "middle");
+            .append('text')
+            .style('pointer-events', 'none')
+            .style('dominant-baseline', 'middle')
+            .style('text-anchor', 'middle');
           //.attr('display', d => this._textFits(d) ? null : 'none')
 
           text
-            .append("textPath")
-            .attr("startOffset", "50%")
-            .attr("xlink:href", (_, i) => `#hiddenArc${i}`)
-            .text(d => this._getLabelText(d) || "");
+            .append('textPath')
+            .attr('startOffset', '50%')
+            .attr('xlink:href', (_, i) => `#hiddenArc${i}`)
+            .text(d => this._getLabelText(d) || '');
         }
       }
-      
     }
     console.log(root);
     this.props.tooltip && this._setTooltips();
-    console.log("va a update");
+    console.log('va a update');
     this._update(root);
   }
 
   _update(d, i, a) {
-    console.log("_update")
+    console.log('_update');
     console.log(d);
     console.log(d);
     console.log(i);
     console.log(a);
-    this.props._debug && this.props._log("Sunburst: _update(d, i, a)");
+    this.props._debug && this.props._log('Sunburst: _update(d, i, a)');
 
     if (this.lastSelect && a && this.lastSelect == a[i].id) return;
 
@@ -520,58 +508,55 @@ class Sunburst extends React.Component {
 
     this.svg
       .transition()
-      .selectAll("textPath")
-      .attr("opacity", 0);
+      .selectAll('textPath')
+      .attr('opacity', 0);
 
     const transition = this.svg
       .transition()
       .duration(this.props.transitionDuration) // duration of transition
       .tween(
-        "scale",
+        'scale',
         function() {
-         /*  var xd = d3Interpolate(this.x.domain(), [d.x0, d.x1]),
+          /*  var xd = d3Interpolate(this.x.domain(), [d.x0, d.x1]),
             yd = d3Interpolate(this.y.domain(), [d.y0, 1]),
             yr = d3Interpolate(this.y.range(), [d.y0 ? 20 : 0, this.radius]); */
           return function(t) {
-           /*  this.x.domain(xd(t));
+            /*  this.x.domain(xd(t));
             this.y.domain(yd(t)).range(yr(t)); */
           }.bind(this);
         }.bind(this)
       );
-      
 
     transition
-      .selectAll("path.sunburst-hidden-arc")
-      .attrTween("d", d => () => this._middleArcLine(d));
-      
+      .selectAll('path.sunburst-hidden-arc')
+      .attrTween('d', d => () => this._middleArcLine(d));
+
     //.style("fill", (d) => d.parent ? this._colorize(d) : "white")
     transition
-      .selectAll("path.sunburst-main-arc")
-      .attrTween("d", d => () => {
+      .selectAll('path.sunburst-main-arc')
+      .attrTween('d', d => () => {
         const arc = this.arc(d);
         return arc;
       })
-      .on("end", (e, i, a) => {
+      .on('end', (e, i, a) => {
         if (!this.arc.innerRadius()(e))
           // if its not visible
           return;
         // get a selection of the associated text element
-        var arcText = d3Select(a[i].parentNode).select("text textPath");
+        var arcText = d3Select(a[i].parentNode).select('text textPath');
         // fade in the text element and recalculate positions
         arcText
           .transition(this.props.transitionDuration / 2)
-          .attr("opacity", 1)
+          .attr('opacity', 1)
           .text(d => {
             const text = this._getLabelText(d);
             return text;
           });
-          
       });
-      
   }
 
   _textFits(d, label) {
-    this.props._debug && this.props._log("Sunburst: _textFits(d, label)");
+    this.props._debug && this.props._log('Sunburst: _textFits(d, label)');
 
     if (!label) return false;
     // changed to degress
@@ -582,7 +567,7 @@ class Sunburst extends React.Component {
   }
 
   _getLabelText(d) {
-    this.props._debug && this.props._log("Sunburst: _getLabelText(d)");
+    this.props._debug && this.props._log('Sunburst: _getLabelText(d)');
     var label;
     label = this.props.labelFunc && this.props.labelFunc(d);
     if (this._textFits(d, label)) return label;
@@ -592,7 +577,7 @@ class Sunburst extends React.Component {
   }
 
   _middleArcLine(d) {
-    this.props._debug && this.props._log("Sunburst: _middleArcLine(d)");
+    this.props._debug && this.props._log('Sunburst: _middleArcLine(d)');
     const halfPi = Math.PI / 2;
     const angles = [this.x(d.x0) - halfPi, this.x(d.x1) - halfPi];
     const r = Math.max(0, (this.y(d.y0) + this.y(d.y1)) / 2);
@@ -609,7 +594,7 @@ class Sunburst extends React.Component {
   }
 
   _inDomain(d) {
-    this.props._debug && this.props._log("Sunburst: _inDomain(d)");
+    this.props._debug && this.props._log('Sunburst: _inDomain(d)');
     const d0 = this.x.domain()[0];
     const d1 = this.x.domain()[1];
     if (d.x0 < d0) return false;
@@ -618,35 +603,35 @@ class Sunburst extends React.Component {
   }
 
   _setTooltips() {
-    this.props._debug && this.props._log("Sunburst: _setTooltips(d)");
+    this.props._debug && this.props._log('Sunburst: _setTooltips(d)');
     this.tooltipDom = d3Select(`#${this.domId}`)
-      .append("div")
-      .attr("class", "sunburst-tooltip")
-      .style("position", "absolute")
-      .style("z-index", "10")
-      .style("opacity", "0")
-      .style("text-align", "center")
-      .style("border-radius", "8px")
+      .append('div')
+      .attr('class', 'sunburst-tooltip')
+      .style('position', 'absolute')
+      .style('z-index', '10')
+      .style('opacity', '0')
+      .style('text-align', 'center')
+      .style('border-radius', '8px')
       //.style('max-width', '20em')
-      .style("pointer-events", "none")
-      .style("background", "lightsteelblue")
-      .style("padding", "3px");
+      .style('pointer-events', 'none')
+      .style('background', 'lightsteelblue')
+      .style('padding', '3px');
 
-    const dx = this.props.tooltipX;
-    const dy = this.props.tooltipY;
+    const dx = 150;
+    const dy = 15;
     this.svg
-      .selectAll("path.sunburst-main-arc")
+      .selectAll('path.sunburst-main-arc')
       .on(
-        "mouseover",
+        'mouseover',
         function(d) {
           if (this.props.tooltip) {
             this.tooltipDom
               .html(this.props.tooltipFunc(d.data))
-              .style("left", d3Event.x + dx + "px")
-              .style("top", d3Event.y + dy + "px");
+              .style('left', d3Event.x - dx + 'px')
+              .style('top', d3Event.y - dy + 'px');
             this.tooltipDom
               .transition()
-              .style("opacity", 0.9)
+              .style('opacity', 0.9)
               .duration(200);
 
             this.props.onMouseover && this.props.onMouseover(d.data);
@@ -654,12 +639,12 @@ class Sunburst extends React.Component {
         }.bind(this)
       )
       .on(
-        "mouseout",
+        'mouseout',
         function(d) {
           this.props.tooltip &&
             this.tooltipDom
               .transition()
-              .style("opacity", 0)
+              .style('opacity', 0)
               .duration(500);
 
           this.props.onMouseout && this.props.onMouseout(d.data);
@@ -668,14 +653,14 @@ class Sunburst extends React.Component {
   }
 
   _colorize(d) {
-    this.props._debug && this.props._log("Sunburst: _colorize(d)");
+    this.props._debug && this.props._log('Sunburst: _colorize(d)');
     let hue;
     const current = d;
     if (current.depth === 0) {
-      return "#33cccc";
+      return '#33cccc';
     }
     const { lightness, saturation, child_brightness } = this.props;
-    if (current.depth <=1) {
+    if (current.depth <= 1) {
       hue = this.hueDXScale(d.x0);
       current.fill = d3Hsl(hue, saturation, lightness);
       return current.fill;
@@ -691,7 +676,7 @@ class Sunburst extends React.Component {
   // we have to render first then componentMounted will give us
   // access to the dom
   render() {
-    this.props._debug && this.props._log("Sunburst: render()");
+    this.props._debug && this.props._log('Sunburst: render()');
     return <div className="sunburst-wrapper" id={this.domId} />;
   }
 }
