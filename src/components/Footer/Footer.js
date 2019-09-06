@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import usaid_ceamso from "../../assets/images/usaid_ceamso.png";
+import usaid from "../../assets/images/usaid.png";
+import ceamso from "../../assets/images/ceamso.png"
 import pfm_lac from "../../assets/images/PFM-LAC.png";
 import logo_hacienda from "../../assets/images/logo_hacienda.png";
 import banco from "../../assets/images/banco_mundial.jpg"
@@ -24,20 +25,7 @@ const footer = () => {
           </Col>
           <Col md={6}>
             <Row>
-              <Col md={6}  sm={3}>
-                <a href="http://www.ceamso.org.py/" >
-                <img
-                  className="footer__img"
-                  src={usaid_ceamso}
-                  alt="usaid ceamso"
-                />
-                </a>
-                {" "}
-              </Col>
-              <Col md={3}  sm={3}>
-                <img className="footer__img_2" src={pfm_lac} alt="pfm lac" />
-              </Col>
-              <Col md={3} sm={3}>
+            <Col className="py-3" md={4} sm={4}>
                 <a  href="http://www.hacienda.gov.py">
                 <img
                   className="footer__img_2"
@@ -45,6 +33,38 @@ const footer = () => {
                   alt="logo hacienda"
                 /></a>
               </Col>
+              <Col className="py-3" md={4} sm={4}>
+                <a href = "https://www.bancomundial.org/" >
+                <img className = 'w-100' src={ banco } alt='banco'></img>
+                </a>
+              
+              </Col>
+              <Col className="py-3" md={4}  sm={4}>
+              <a href="https://www.usaid.gov/paraguay" >
+               {/*  <a href="http://www.ceamso.org.py/" > */}
+                <img
+                  className="footer__img"
+                  src={usaid}
+                  alt="usaid ceamso"
+                />
+                </a>
+                {" "}
+              </Col>
+             
+                {" "}
+              
+              <Col className="py-3" md={4}  sm={4}>
+                <img className="footer__img_2" src={pfm_lac} alt="pfm lac" />
+              </Col>
+              <Col className="py-3" md={4}  sm={4}>
+                <a href="http://www.ceamso.org.py/" >
+                <img
+                  className="footer__img"
+                  src={ceamso}
+                  alt="ceamso"
+                />
+                </a>
+                </Col>
              {/*  <Col md={4}>
                 <img
                   className="footer__img"
@@ -61,17 +81,12 @@ const footer = () => {
                 USAID o el Gobierno de los Estados Unidos.
               </p>
              
-            </Row>
+              </Row>
             <Row>
               <Col md={6}>
               <p className="footer_text"> Portal actualizado con el apoyo del Banco Mundial 2019   </p>
                 </Col>
-              <Col md={6}>
-                <a href = "https://www.bancomundial.org/" >
-                <img className = 'w-50' src={ banco } alt='banco'></img>
-                </a>
               
-              </Col>
             </Row>
           </Col>
         </Row>
