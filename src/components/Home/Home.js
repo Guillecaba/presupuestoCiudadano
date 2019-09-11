@@ -92,7 +92,7 @@ class Home extends React.Component {
             <Col>
             <LightSpeed right>
             <h1 className="como-se-elabora  text-center grow">
-                  COMO SE ELABORA EL PRESUPUESTO?
+            ¿COMO SE ELABORA EL PRESUPUESTO?
                 </h1>
                 </LightSpeed>
               <Carousel interval="5000" className="">
@@ -275,7 +275,7 @@ class Home extends React.Component {
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                          NOVIEMBRE - DICIEMBREE
+                          NOVIEMBRE - DICIEMBRE
                         </p>
                         <h3 className="slide-title text-left">
                           APROBACIÓN DEL PRESUPUESTO
@@ -343,7 +343,7 @@ class Home extends React.Component {
                         </h3>
                         <p className="slide-text text-left">
                           A partir del 1 de enero hasta el 31 de diciembre del
-                          año siguiente, los Organismos y Entidades del Sector
+                          año siguiente, los organismos y Entidades del Sector
                           Público proceden a ejecutar el Presupuesto aprobado.
                         </p>
                       </Col>

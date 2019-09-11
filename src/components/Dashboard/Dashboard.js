@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment} from "react";
 import axios from "axios";
-import { Dropdown, Container } from "react-bootstrap";
+import { Dropdown, Container ,Table,Pagination,Button } from "react-bootstrap";
 import {HorizontalBar} from 'react-chartjs-2';
 import ReactLoading from 'react-loading';
 
@@ -45,10 +45,14 @@ class Dashboard extends Component {
       },
       descripcion:null,
       descripcion2:null,
+      listaComentarios:null,
+      
+
       
 
       
     };
+    this.handleReport = this.handleReport.bind(this)
   }
   componentDidMount() {
    
@@ -61,6 +65,14 @@ class Dashboard extends Component {
 
       console.log(this.state.ministerios);
     });
+    /* const url2 = `http://localhost:8000/v1/respuestas-report/?ministerio__slug=${data.slug}&`;
+    axios.get(url2).then((res)=>{
+      const datos = res.data
+      this.setState({listaComentarios:datos})
+      console.log(this.state.listaComentarios)
+      //this.state.lista =res.data
+     
+    }) */
   }
 
   handleChart(data) {
@@ -104,6 +116,45 @@ class Dashboard extends Component {
 
    
   }
+
+  handleReport(data) {
+    console.log(data.slug)
+    const url = `http://presupuesto-ciudadano.herokuapp.com/v1/respuestas-report/?ministerio__slug=${data.slug}&`;
+    axios.get(url).then((res)=>{
+      const datos = res.data
+      this.setState({listaComentarios:datos})
+      console.log(this.state.listaComentarios)
+      //this.state.lista =res.data
+     
+    })
+
+  }
+
+  handlePagination(data) {
+    console.log(data)
+    if(data === 'next'){
+      const url = this.state.listaComentarios.next;
+    axios.get(url).then((res)=>{
+      const datos = res.data
+      this.setState({listaComentarios:datos})
+      console.log(this.state.listaComentarios)
+      //this.state.lista =res.data
+     
+    })
+    }
+    if(data=='prev') {
+      const url = this.state.listaComentarios.previous;
+      axios.get(url).then((res)=>{
+        const datos = res.data
+        this.setState({listaComentarios:datos})
+        console.log(this.state.listaComentarios)
+        //this.state.lista =res.data
+       
+      })
+      
+    }
+  }
+
   render() {
     return (
       <Container className="py-5">
@@ -166,6 +217,72 @@ class Dashboard extends Component {
         
         <HorizontalBar data={this.state.data} />
         </div>
+        <Button onClick={this.handleReport}  >Reporte de Comentarios por Ministerio</Button>
+        
+  
+ 
+    {this.state.listaComentarios ? (
+      <Fragment>
+      <Table responsive>
+      <thead>
+        <tr>
+        
+          <th>Comentarios</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+      {this.state.ministerios && this.state.listaComentarios ? (
+         
+         <Dropdown>
+           <Dropdown.Toggle  className="my-3" variant="info" id="dropdown-basic">
+             Ministerios
+           </Dropdown.Toggle>
+           <Dropdown.Menu>
+             {this.state.ministerios.map(res => (
+               <Dropdown.Item onClick={ () => this.handleReport(res)}>{res.nombre}</Dropdown.Item>
+              
+             ))}
+           </Dropdown.Menu>
+         </Dropdown>
+         
+      
+     ):<div className='d-flex justify-content-center'> 
+     <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />
+     </div>}
+        {this.state.listaComentarios.results.map(res => (
+          <tr>
+<td>{res.comentario}</td>
+</tr>
+      ))}
+     
+     </tbody>
+      
+      </Table>
+      <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" onClick={()=>this.handlePagination('prev')}><a class="page-link" >Anterior</a></li>
+   
+    <li class="page-item"  onClick={()=>this.handlePagination('next')}><a class="page-link" >Siguiente</a></li>
+  </ul>
+</nav>
+    </Fragment>
+    ):<div></div>}
+
+    
+
+
+  
+    
+    
+   
+      
+     
+      
+   
+   
+  
+
 
       
      
