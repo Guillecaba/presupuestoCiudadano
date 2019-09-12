@@ -416,32 +416,44 @@ class Home extends React.Component {
                 </h1>
                 <h2 className="presupuesto_total__subtitle grow">
                   {" "}
-                  Gs.80 billones{" "}
+                  Gs.92 billones{" "}
                 </h2>
                 <h2 className="presupuesto_total__subtitle_number text-center  mb-5 ">
                   {" "}
-                  Gs. 80.071.848.962.361{" "}
+                  Gs. 92.214.394.217.040{" "}
                 </h2>
               </Col>
             </Row>
-            <Zoom left opposite when={this.state.show}>
-            { this.state.show &&
-            <Fragment>
+            <Row>
+              <Col md={6}>
+              <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
                   Administracion central
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
-                  Gs. 45.155.949.081.587 <br /> (Datos de 2019)
+                  Gs. 51.947.801.921.775 <br /> 
+                 
                 </h2>
+                </Fragment>
+              </Col>
+              <Col md={6}>
+                <Fragment>
                 <h1 className="presupuesto_total__card__title_two text-center">
                   
                   Entidades Descentralizadas:
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
-                  Gs. 34.915.899.880.774 <br /> (Datos de 2019)
-                </h2></Fragment>}
-        </Zoom>
+                  Gs. 40.266.592.295.265 <br /> 
+                </h2>
+                </Fragment>
+              </Col>
+            </Row>
+            {/* <Zoom left opposite when={this.state.show}>
+            { this.state.show &&
+           
+                }
+        </Zoom> */}
         
           
            {/*  <Row>

@@ -110,6 +110,13 @@ li {
     height: 11px;
     margin-right: 20px;
     cursor: row-resize;
-    background: -webkit-linear-gradient(top,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff);
-    background: linear-gradient(180deg,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff);
+    /* background: -webkit-linear-gradient(top,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff);
+    background: linear-gradient(180deg,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff); */
+    background-image:url('../../assets/icons/arrows.png') !important;
+    color:white
+}
+
+.img-flecha{
+  width:15px;
+  margin:0px 15px;
 }

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import {HorizontalBar} from 'react-chartjs-2';
 import ReactLoading from 'react-loading';
 import escuela from "../../assets/images/escuela.png";
 
@@ -14,7 +15,8 @@ import {
   FormControl,
   Table,
   Button,
-  Card
+  Card,
+  Dropdown
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import RubberBand from "react-reveal/RubberBand";
@@ -37,16 +39,19 @@ import arrayMove from "array-move";
 import Sunburst from "../../components/Sunburst/Sunburst";
 import "../Educacion/Educacion.css";
 import NumberFormat from "react-number-format";
+import flecha from "../../assets/icons/arrows.png"
 
 //import datap from '../../assets/data/data'
 
 import ContainerDimensions from "react-container-dimensions";
 
-const DragHandle = sortableHandle(() => <span className="dragAndDropIcon" />);
+const DragHandle = sortableHandle(() => <img src={flecha} className="img-flecha" ></img>);
 
-const SortableItem = sortableElement(({ value }) => (
+const SortableItem = sortableElement(({ index,value }) => (
   <li className="item">
+    {index+1}
     <DragHandle />
+     
     {value}
   </li>
 ));
@@ -60,13 +65,46 @@ class DetalleMinisterio extends Component {
     super(props);
     this.state = {
       data: null,
+      slug:null,
       banner: null,
       items: null,
       treeMap: null,
       loading: false,
       lista: null,
       comentario: " ",
-      enviado: false
+      enviado: false,
+      ministerios: null,
+      datos:{
+        labels: [0,0,0],
+        datasets: [
+          {
+            label: 'Cantidad de votos',
+            backgroundColor: 'rgba(255,99,132,0.2)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+            hoverBorderColor: 'rgba(255,99,132,1)',
+            data: [0,0,0]
+          }
+        ]
+      },
+      data2:{
+        labels: [0,0,0],
+        datasets: [
+          {
+            label: 'Cantidad de votos',
+            backgroundColor: 'rgba(255,99,132,0.2)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+            hoverBorderColor: 'rgba(255,99,132,1)',
+            data: [0,0,0]
+          }
+        ]
+      },
+      descripcion:null,
+      descripcion2:null,
+      listaComentarios:null,
     };
   }
   static contextType = MinisterioContext;
@@ -100,6 +138,7 @@ class DetalleMinisterio extends Component {
   }
 
   changeListHandler = node => {
+    console.log(node)
     const titulo = {
       nombre: node.data.name,
       valor: node.value
@@ -143,8 +182,37 @@ class DetalleMinisterio extends Component {
           console.log(res);
           this.setState({ enviado: true });
           this.notify(`Enviamos tu voto!`);
+          
+
 
           console.log(res.data);
+
+          const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+          axios.get(url).then(res => {
+          console.log(res.data);
+          const ministerios = res.data;
+           console.log(ministerios);
+              this.setState({ ministerios });
+
+              console.log(this.state.ministerios);
+
+               /* let actividades = [];
+              let votos = [];
+            data.actividades.map(res=>{
+      actividades.push(res.descripcion)
+      votos.push(res.data[0].cantidad)
+    })
+    console.log(actividades)
+    console.log(votos)
+    let prevData = this.state.data2
+    console.log(this.state.data)
+    prevData.labels=actividades
+    prevData.datasets[0].data= votos
+    console.log(prevData)
+    
+    this.setState({data2:prevData,descripcion2:data.nombre})  */
+    });
+
         },
         err => {
           this.notifyFail(`Hubo un error en el envio`);
@@ -152,6 +220,28 @@ class DetalleMinisterio extends Component {
         }
       );
   };
+
+
+  handleChartTopRanking (data) {
+    //console.log(data)
+    let actividades = [];
+    let votos = [];
+    data.actividades.map(res=>{
+      actividades.push(res.descripcion)
+      votos.push(res.data[0].cantidad)
+    })
+    console.log(actividades)
+    console.log(votos)
+    let prevData = this.state.data2
+    console.log(this.state.data)
+    prevData.labels=actividades
+    prevData.datasets[0].data= votos
+    console.log(prevData)
+    
+    this.setState({data2:prevData,descripcion2:data.nombre})
+
+   
+  }
 
   changeInputHandler = (event, id) => {
     console.log(event.target.value);
@@ -191,6 +281,8 @@ class DetalleMinisterio extends Component {
   
               this.setState({
                 logo: escuela,
+
+                slug:'educacion',
   
                 data: dataFromContext[0].data,
   
@@ -228,6 +320,8 @@ class DetalleMinisterio extends Component {
               });
               this.setState({
                 logo: casco,
+
+                slug:'obras',
       
                 data: dataFromContext[0].data,
       
@@ -264,6 +358,8 @@ class DetalleMinisterio extends Component {
               });
               this.setState({
                 logo: cruz,
+
+                slug:'salud',
       
                 data: dataFromContext[0].data,
       
@@ -300,6 +396,8 @@ class DetalleMinisterio extends Component {
             });
             this.setState({
               logo: casa,
+
+              slug:'urbanismo',
     
               data: dataFromContext[0].data,
     
@@ -353,6 +451,8 @@ class DetalleMinisterio extends Component {
 
               data: dataFromContext[0].data,
 
+              slug:'educacion',
+
               items: res.data,
 
               banner: dataFromContext[2],
@@ -387,6 +487,8 @@ class DetalleMinisterio extends Component {
               logo: casco,
     
               data: dataFromContext[0].data,
+
+              slug:'obras',
     
               items: res.data,
     
@@ -422,6 +524,8 @@ class DetalleMinisterio extends Component {
               logo: cruz,
     
               data: dataFromContext[0].data,
+
+              slug:'salud',
     
               items:res.data,
     
@@ -455,6 +559,8 @@ class DetalleMinisterio extends Component {
             });
             this.setState({
               logo: casa,
+
+              slug:'urbanismo',
     
               data: dataFromContext[0].data,
     
@@ -719,6 +825,34 @@ class DetalleMinisterio extends Component {
                     </button>
                   </div>
                 )}
+                {this.state.enviado && this.state.ministerios ?(
+                  <Fragment>
+                    <h1>Resultados</h1>
+                     <h2>Top de mayor interes en actividades por ministerio: {this.state.descripcion2}</h2>
+                   
+
+                   <Dropdown>
+                     <Dropdown.Toggle  className="my-3" variant="info" id="dropdown-basic">
+                       Seleccionar ministerio:
+                     </Dropdown.Toggle>
+                     <Dropdown.Menu>
+                       {this.state.ministerios.map(res => (
+                         <Dropdown.Item onClick={ () => this.handleChartTopRanking(res)}>{res.nombre}</Dropdown.Item>
+                        
+                       ))}
+                     </Dropdown.Menu>
+                   </Dropdown>
+                   
+                   
+                   
+                   <HorizontalBar data={this.state.data2} />
+                  </Fragment>
+                
+
+
+                ):<div></div>
+                
+              }
               </div>
             </Container>
           </div>

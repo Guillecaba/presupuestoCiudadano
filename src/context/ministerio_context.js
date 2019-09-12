@@ -61,39 +61,40 @@ const ministerioContext = React.createContext([{
       "name":"Programa Central",
       "children": [
                   { 
-                      "name": "Actividade Administrativa" ,
+                      "name": "Actividad Administrativa" ,
                       "children": [
-                          {"name":"GESTIÓN ADMINISTRATIVA INSTITUCIONAL","value":844972495318},
+                          {"name":"GESTIÓN ADMINISTRATIVA INSTITUCIONAL","value":  825610338799 },
                           
                       ]
                   },
                   {
                       "name":"Actividad Misional",
                       "children": [
-                          {"name":"BRINDAR SERVICIO EDUCATIVO EN EDUCACIÓN INICIAL","value":22224895209},
-                          {"name":"BRINDAR SERVICIO EDUCATIVO EN PRIMER Y SEGUNDO CICLO DE EEB","value":3517471652123},
-                          {"name":"BRINDAR SERVICIO EDUCATIVO EN EL TERCER CICLO DE LA EEB Y EM","value":1360384688378},
-                          {"name":"ATENCION A EDUCACION SUPERIOR Y CIENCIAS","value":53922280085},
-                          {"name":"FORMACION DE MUSICOS EN LOS DISTINTOS GENEROS DE MUSICAL","value":14388395100},
-                          {"name":"BRINDAR SERV.EDUC.A JOVENES Y ADULTOS DE 15 AÑOS Y MAS","value":304850435905},
-                          {"name":"BRINDAR SERVICIO EDUCATIVO EN CENTROS REGIONALES DE EDUC","value":77011495141},
-                          {"name":"SERV.EDUC.A ESTUDIANTES C/NECESIDADES ESPECIFICAS DE APOYO","value":17631398507},
-                          {"name":"PROMOVER EL TALENTOY LA FORMACION ARTISTICA","value":964526200},
-                          {"name":"BRINDAR ATENCION A INSTITUCIONES DE EDUC ESCOLAR INDIGENA","value":4989634943},
-                          {"name":"OTORGAR BECAS PARA EDUCACION SUPERIOR","value":7837900000},
-                          {"name":"PLANIFICACION Y MONITOREO DE LA POLITICA EDUCATIVA NACIONAL","value":377987871},
+                          {"name":"BRINDAR SERVICIO EDUCATIVO EN EDUCACIÓN INICIAL","value":  23733554561},
+                          {"name":"BRINDAR SERVICIO EDUCATIVO EN PRIMER Y SEGUNDO CICLO DE EEB","value":  3788337220084 },
+                          {"name":"BRINDAR SERVICIO EDUCATIVO EN EL TERCER CICLO DE LA EEB Y EM","value":  1446246278653 },
+                          {"name":"ATENCION A EDUCACION SUPERIOR Y CIENCIAS","value":  55655897369},
+                          {"name":"FORMACION DE MUSICOS EN LOS DISTINTOS GENEROS DE MUSICAL","value":  15378406129},
+                          {"name":"BRINDAR SERV.EDUC.A JOVENES Y ADULTOS DE 15 AÑOS Y MAS","value":  335486421492 },
+                          {"name":"BRINDAR SERVICIO EDUCATIVO EN CENTROS REGIONALES DE EDUC","value":  80117516114 },
+                          {"name":"SERV.EDUC.A ESTUDIANTES C/NECESIDADES ESPECIFICAS DE APOYO","value":  18766116131},
+                          {"name":"PROMOVER EL TALENTOY LA FORMACION ARTISTICA","value":  964526200 },
+                          {"name":"BRINDAR ATENCION A INSTITUCIONES DE EDUC ESCOLAR INDIGENA","value":  4937942157},
+                          {"name":"OTORGAR BECAS PARA EDUCACION SUPERIOR","value":  7837900000 },
+                          {"name":"PLANIFICACION Y MONITOREO DE LA POLITICA EDUCATIVA NACIONAL","value":  377987871},
                           {"name":"DIFUNDIR LA INVESTIGACION EDUCATIVA","value":61750000},
                           {"name":"EVALUAR LA CALIDAD EDUCATIVA","value":3419909678},
-                          {"name":"PROMOVER POLITICAS P/ EL DESARROLLO DE EDUCACION Y CIENCIAS","value":2172296144},
-                          {"name":"BRINDAR SERVICIO EDUCATIVO EN EDUCACIÓN INICIAL","value":22224895209},
-
+                          {"name":"PROMOVER POLITICAS P/ EL DESARROLLO DE EDUCACION Y CIENCIAS","value":  2065696144}
+                         
+  
                           
                       ]
                   },
                   {
                       "name":"Proyecto",
                       "children": [
-                          {"name":"FOMENTO Y APOYO OPERAT. PARA LA EJEC. DE PROY. DEL MEC","value":7840145062},   
+                          {"name":"FOMENTO Y APOYO OPERAT. PARA LA EJEC. DE PROY. DEL MEC","value":7840145062},  
+                          {"name":"DIFUSIÓN DISEÑO DE LA ESTRATEGIA DE TRANSFORMACIÓN EDUC","value":  11635907321}, 
                       ]
                   },
                  
@@ -105,14 +106,16 @@ const ministerioContext = React.createContext([{
                 { 
                     "name": "001 - ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN" ,
                     "children": [
-                        {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":9718004849},
+                        {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":  73140554894 },
                         {"name":"005-AMPLIACIÓN EN LA ATENC. EDUC. DESDE LA GEST. HASTA 5 AÑOS","value":123596276913},
                     ]
                 },
                 {
                     "name":"002 - EDUCACIÓN MEDIA INTEGRADA",
                     "children": [
-                        {"name":"005-TRANSFERENCIA Y DOTACION TEXTOS A ESTUD.Y GUIAS A DOCENTES","value":32000000}
+                        {"name":"004-DIFUNDIR LAS OFERTAS EDUCATIVAS","value":  200000000 },
+                        {"name":"005-TRANSFERENCIA Y DOTACION TEXTOS A ESTUD.Y GUIAS A DOCENTES","value":32000000},
+                        {"name":"006-CAPACITACIÓN A LOS EDUCADORES DE TODOS LOS NIVELES Y MODAL.","value":  85187652000 }
                         
                     ]
                 },
@@ -123,19 +126,22 @@ const ministerioContext = React.createContext([{
                         {"name":"003-ELABORAR CURRÍCULUM Y MATERIAL EDUCATIVO P/ PUEBLO INDÍGENA","value":238349364},
                         {"name":"004-DOTAR A INSTITUCIONES EDUCATIVAS DE MATERIALES DIDÁCTICOS","value":1510309674},
                         {"name":"007-INVESTIGACIÓN EVAL. ESTANDARIZADAS DE DESEMPEÑO A ESTUD.","value":3520539526},
-                        {"name":"008-CAPACITACIÓN APOYO A LA AMPLIACIÓN DE LA JORNADA ESCOLAR.","value":40569960659}
+                        {"name":"008-CAPACITACIÓN APOYO A LA AMPLIACIÓN DE LA JORNADA ESCOLAR.","value":  20584812599 },
+                        {"name":"009-MEJORAMIENTO DE COND. DE APRENDIZ. CON INCORPORACIÓN DE TIC.","value":    322565734094  }
                         
                     ]
                 },
                 {
                     "name":"004 - CULMINACIÓN OPORTUNA DE ESTUDIOS",
                     "children": [
-                        {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":133384400639},
-                        {"name":"008-MEJORAMIENTO CONDICIONES DE TRANSPORTE DE ESTUDIANTES","value":9481118126}
+                        {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":  153184194989 },
+                        {"name":"006-AMPLIACIÓN REP. 111 EST. EDUC. ASU Y 10 DEP. GEOG.","value":    4424756667  },
+                        {"name":"007-AMPLIACIÓN REP. 822 EST. EDUC. ASU 17 DPTOS","value":    200210262217  },
+                        {"name":"008-MEJORAMIENTO CONDICIONES DE TRANSPORTE DE ESTUDIANTES","value":  6356483900 }
                     ]
                 }
             ]
-}]}},{resumen:[
+  }]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
         porcentaje:"41.38"
@@ -210,7 +216,7 @@ const ministerioContext = React.createContext([{
                   { 
                       "name": "Actividades Administrativa" ,
                       "children": [
-                          {"name":"GESTION ADMINISTRATIVA FINANCIERA","value":393743094684},
+                          {"name":"GESTION ADMINISTRATIVA FINANCIERA","value":  371512289231 },
                           
                       ]
                   },
@@ -218,31 +224,31 @@ const ministerioContext = React.createContext([{
                       "name":"Actividad Misional",
                       "children": [
                           {"name":"REGULACION DEL TRANSPORTE PÚBLICO DEL ÁREA METROPOLITANA","value":34816987000},
-                          {"name":"CONTROL DEL TRANSPORTE PÚBLICO DEL ÁREA METROPOLITANA","value":18806845549},
-                          {"name":"FISCALIZACIONES DE LOS RECURSOS MINERALES Y ENERGETICOS","value":6869494933},
-                          {"name":"CONTROL DE CUMPLIMIENTO DE LAS NORMAS DE TRANSITO","value":51275938759},
-                          {"name":"FISCALIZACIONES DEL TRANSPORTE FLUVIO-MARITIMO","value":2702043103},
-                          {"name":"REGULACION DEL TRANSPORTE FLUVIO-MARITIMO","value":2233095912},
-                          {"name":"MANTENIMIENTO, CONSERVACION DE PATRIMONIO HISTORICO Y OTROS","value":3594000000},
-                          {"name":"CONSERVACIÓN Y DESPEJE DE LA CONTAMINACIÓN DEL RIO PILCOMAYO","value":140517668360},
-                          {"name":"MANTENIMIENTO DE MÁRGENES Y CAUCES DE ARROYOS","value":91305538180},
-                          {"name":"CONSTRUCCIÓN DE ÁREAS DE RETENCIÓN DE CAUCES DE ARROYOS","value":1767451038},      
+                          {"name":"CONTROL DEL TRANSPORTE PÚBLICO DEL ÁREA METROPOLITANA","value":  18799845549 },
+                          {"name":"FISCALIZACIONES DE LOS RECURSOS MINERALES Y ENERGETICOS","value":  6837994933 },
+                          {"name":"CONTROL DE CUMPLIMIENTO DE LAS NORMAS DE TRANSITO","value":  51422170537 },
+                          {"name":"FISCALIZACIONES DEL TRANSPORTE FLUVIO-MARITIMO","value":  2667336228 },
+                          {"name":"REGULACION DEL TRANSPORTE FLUVIO-MARITIMO","value":  2233095912 },
+                          {"name":"MANTENIMIENTO, CONSERVACION DE PATRIMONIO HISTORICO Y OTROS","value":  3579000000 },
+                          {"name":"CONSERVACIÓN Y DESPEJE DE LA CONTAMINACIÓN DEL RIO PILCOMAYO","value":  9842768360 },
+                          {"name":"MANTENIMIENTO DE MÁRGENES Y CAUCES DE ARROYOS","value":  28807788180 }
+                             
                       ]
                   },
                   {
                       "name":"Proyecto",
                       "children": [
-                          {"name":"SP CONST. AVDA. COST. CENT. HIST. Y PARQUE BICENTENARIO","value":97318632310},
-                          {"name":"CONSTRUCCIÓN AV. COSTANERA NORTE, 2ª ETAPA","value":167130374717}, 
+                          {"name":"SP CONST. AVDA. COST. CENT. HIST. Y PARQUE BICENTENARIO","value":14447423400},
+                          {"name":"CONSTRUCCIÓN AV. COSTANERA NORTE, 2ª ETAPA","value":  167130374717 }, 
                           {"name":"DIAGNÓSTICO Y PROTOCOLO DE INTERVENCIÒN EDIF. HISTÒRICOS","value":1700000000}, 
-                          {"name":"RESTAURACIÓN DE EDIFICIOS PATRIMONIALES","value":16211828100}, 
+                          {"name":"RESTAURACIÓN DE EDIFICIOS PATRIMONIALES","value":  16061828100 }, 
                           {"name":"EQUIPAMIENTO PROVISIÓN Y COLOCACIÓN DE TEATROS","value":3100000000}, 
-                          {"name":"LEVANTAMIENTO DE DATOS Y ELABORACIÓN DE PROYECTOS EJECUTIVOS","value":1420000000}, 
-                          {"name":"CONSTRUCCIÓN PENITENCIARÍA REGIONAL DE CIUDAD DEL ESTE","value": 42000000000}, 
-                          {"name":"CONSTRUCCIÓN DEL CIRS DE EMBOSCADA","value":84000000000}, 
-                          {"name":"SP REC. Z. PTO AS. CENT OFIC, CONT. P2419/OC-PR Y 2420/BL-PR","value":420981743568}, 
-                          {"name":"ANÁLISIS ELAB.PLAN MAESTRO DE NAVEGACIÓN DEL RIO PY","value":30000000000}, 
-                          {"name":"CAPACITACIÓN Y MEJOR.FORM EJECUCIÓN DE PROYECTOS DE LA DIPE","value":10000000000}, 
+                          {"name":"LEVANTAMIENTO DE DATOS Y ELABORACIÓN DE PROYECTOS EJECUTIVOS","value":  1420000000 }, 
+                          {"name":"CONSTRUCCIÓN PENITENCIARÍA REGIONAL DE CIUDAD DEL ESTE","value":  10000000000 }, 
+                          {"name":"CONSTRUCCIÓN DEL CIRS DE EMBOSCADA","value":  15000000000 }, 
+                          {"name":"SP REC. Z. PTO AS. CENT OFIC, CONT. P2419/OC-PR Y 2420/BL-PR","value":  240981743440 }, 
+                          {"name":"ANÁLISIS ELAB.PLAN MAESTRO DE NAVEGACIÓN DEL RIO PY","value":  12000000000 }, 
+                          {"name":"CAPACITACIÓN Y MEJOR.FORM EJECUCIÓN DE PROYECTOS DE LA DIPE","value":  10000000000 }, 
                           {"name":"CONSTRUCCIÓN CONSTRUCCIÓN DE LA FRANJA COSTERA SUR","value":29165368889}, 
 
                       ]
@@ -256,71 +262,72 @@ const ministerioContext = React.createContext([{
                 { 
                     "name": "RED VIAL PAVIMENTADA INCREMENTADA" ,
                     "children": [
-                        {"name":"MEJORAMIENTO DE 151 KM CPTAN. BADO-SANTA ROSA","value":7150000000},
-                        {"name":"SP MEJ.TRAVESÍAS URB. CDAD. PARAGUARI-CARAPEGUA-QUIIDY-CAAP","value":17000000000},
-                        {"name":"004-SP FOCEM-REHAB. Y PAV. ASF. DEL TRAMO CONCEPCIÓN - VALLEMI","value":11452501534},
-                        {"name":"005-MEJORAMIENTO PAV.CORRED.INTEG.REHAB.MANT.RED VIAL(FASE II)","value":208073600000},
-                        {"name":"007-MEJORAMIENTO DE CORREDORES DE INTEGRACIÓN Y RECONST. VIAL","value":140343994780},
-                        {"name":"008-MEJORAMIENTO CORREDOR DE EXPORTACIÓN EN ITAPÚA Y ALTO PARANÁ","value":365654356373},
-                        {"name":"009-MEJORAMIENTO TRAMO SAN JUAN NEPOMUCENO  - EMPALME RUTA VI","value":162050000000},
-                        {"name":"010-MEJORAMIENTO TRAMO ALBERDI - PILAR","value":178149202827},
-                        {"name":"012-HABILITACIÓN DE LA RED VIAL PAV. EN COR, PAR, CAG, GUA, CAZ","value":146639665065},
-                        {"name":"013-HABILITACIÓN DE LA RED VIAL PAV. EN DPTO. DE SAN PEDRO","value":53015353748},
-                        {"name":"014-HABILITACIÓN DE LA RED VIAL PAV. VILLETA - ALBERDI","value":36748409409},
-                        {"name":"015-HABILITACIÓN DE LA RED PAV., DPTOS DE MISIONES E ITAPÚA","value":97668477673},
-                        {"name":"016-HABILITACIÓN DE LA RED PAV. DPTOS. S. PEDRO, CAAG. Y CANIND.","value":121057800110},
-                        {"name":"017-CONSERVACIÓN DE RUTAS PAVIMENTADAS POR ADMINISTRACIÓN","value":180654798897},
-                        {"name":"020-MEJORAMIENTO DE LA FRANJA DE DOMINIO ZONA CHACO","value":2958526595},
-                        {"name":"022-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL ESTE","value":47580935182},
-                        {"name":"023-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL NORTE","value":28246039106},
-                        {"name":"024-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL SUR","value":16527810004},
-                        {"name":"025-CONSTRUCCIÓN Y MANTENIMIENTO RUTA Nº 3 TRAMO KM 21.8-170.3","value":26915521686},
-                        {"name":"026-CONSTRUCCIÓN Y MANTENIMIENTO RUTA Nº 4 TRAMO KM 225 - 358.4","value":17541720111},
-                        {"name":"028-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES-REGIÓN SURESTE-CPE","value":22000000000},
-                        {"name":"029-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CENTRO-CPE","value":22984000000},
-                        {"name":"030-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CENTRO","value":23000000000},
-                        {"name":"031-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN SUR","value":15984000000},
-                        {"name":"032-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN ESTE","value":20000000000},
-                        {"name":"033-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES -REGIÓN NORTE","value":18000000000},
-                        {"name":"034-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CHACO","value":2000000000},
-                        {"name":"035-CONSTRUCCIÓN PAVIMENTO TIPO ADOQUIN - REGIÓN SUR","value":11984000000},
-                        {"name":"036-CONSTRUCCIÓN  PASOS A DESNIVEL - CENTRAL","value":6000000000},
+                        {"name":"MEJORAMIENTO DE 151 KM CPTAN. BADO-SANTA ROSA","value":  4530000000 },
+                        {"name":"SP MEJ.TRAVESÍAS URB. CDAD. PARAGUARI-CARAPEGUA-QUIIDY-CAAP","value":  4000000000 },
+                        {"name":"004-SP FOCEM-REHAB. Y PAV. ASF. DEL TRAMO CONCEPCIÓN - VALLEMI","value":  12944593534 },
+                        {"name":"005-MEJORAMIENTO PAV.CORRED.INTEG.REHAB.MANT.RED VIAL(FASE II)","value":  90773600000 },
+                        {"name":"007-MEJORAMIENTO DE CORREDORES DE INTEGRACIÓN Y RECONST. VIAL","value":  132090522909 },
+                        {"name":"008-MEJORAMIENTO CORREDOR DE EXPORTACIÓN EN ITAPÚA Y ALTO PARANÁ","value":  244454356373 },
+                        {"name":"009-MEJORAMIENTO TRAMO SAN JUAN NEPOMUCENO  - EMPALME RUTA VI","value":  112050000000 },
+                        {"name":"010-MEJORAMIENTO TRAMO ALBERDI - PILAR","value":  173649202827 },
+                        {"name":"012-HABILITACIÓN DE LA RED VIAL PAV. EN COR, PAR, CAG, GUA, CAZ","value":  146639665065 },
+                        {"name":"013-HABILITACIÓN DE LA RED VIAL PAV. EN DPTO. DE SAN PEDRO","value":  18589567500 },
+                        {"name":"014-HABILITACIÓN DE LA RED VIAL PAV. VILLETA - ALBERDI","value":  36748409409 },
+                        {"name":"015-HABILITACIÓN DE LA RED PAV., DPTOS DE MISIONES E ITAPÚA","value":  91767420661 },
+                        {"name":"016-HABILITACIÓN DE LA RED PAV. DPTOS. S. PEDRO, CAAG. Y CANIND.","value":  113842654646 },
+                        {"name":"017-CONSERVACIÓN DE RUTAS PAVIMENTADAS POR ADMINISTRACIÓN","value":  148193823547 },
+                        {"name":"020-MEJORAMIENTO DE LA FRANJA DE DOMINIO ZONA CHACO","value":  1500000000 },
+                        {"name":"022-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL ESTE","value":  6000000000 },
+                        {"name":"023-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL NORTE","value":  6291054415 },
+                        {"name":"024-MEJORAMIENTO DE LA SEÑALIZACIÓN HORIZONTAL Y VERTICAL SUR","value":  6000000000 },
+                        {"name":"025-CONSTRUCCIÓN Y MANTENIMIENTO RUTA Nº 3 TRAMO KM 21.8-170.3","value":  6500000000 },
+                        {"name":"026-CONSTRUCCIÓN Y MANTENIMIENTO RUTA Nº 4 TRAMO KM 225 - 358.4","value":  7300000000 },
+                        {"name":"028-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES-REGIÓN SURESTE-CPE","value":  216742860 },
+                        {"name":"029-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CENTRO-CPE","value":  1084000000 },
+                        {"name":"030-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CENTRO","value":  4600000000 },
+                        {"name":"031-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN SUR","value":  8084000000 },
+                        {"name":"032-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN ESTE","value":8100000000},
+                        {"name":"033-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES -REGIÓN NORTE","value":2100000000},
+                        {"name":"034-CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CHACO","value":1000000000},
+                        {"name":"035-CONSTRUCCIÓN PAVIMENTO TIPO ADOQUIN - REGIÓN SUR","value":1000000000},
+                        {"name":"036-CONSTRUCCIÓN  PASOS A DESNIVEL - CENTRAL","value":2100000000},
                         {"name":"037-CONSTRUCCIÓN ALCANTARILLADO Y DESAGÜE PLUVIAL EN CENTRAL","value":100000000},
-                        {"name":"038-CONSTRUCCIÓN PAV. S/ EMPEDRADOS EN REGIÓN NORTE","value":12400000000},
-                        {"name":"040-CONSTRUCCIÓN DE PAV. S/ EMPEDRADOS EN REGIÓN ESTE","value":29000000000},
-                        {"name":"041-CONSTRUCCIÓN ASFALTO S/ EMPEDRADOS - REGIÓN SUR","value":34000000000},
-                        {"name":"043-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN NORESTE","value":95000000000},
-                        {"name":"045-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN ESTE","value":10000000000},
-                        {"name":"046-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN CENTRO","value":101950000000},
-                        {"name":"047-CONSTRUCCIÓN Y PAV. ASFALTICA DE TR. CAMIN. EN REGIÓN CHACO","value":34950000000},
+                        {"name":"038-CONSTRUCCIÓN PAV. S/ EMPEDRADOS EN REGIÓN NORTE","value":2000000000},
+                        {"name":"040-CONSTRUCCIÓN DE PAV. S/ EMPEDRADOS EN REGIÓN ESTE","value":9800000000},
+                        {"name":"041-CONSTRUCCIÓN ASFALTO S/ EMPEDRADOS - REGIÓN SUR","value":8100000000},
+                        {"name":"043-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN NORESTE","value":22100000000},
+                        {"name":"045-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN ESTE","value":5100000000},
+                        {"name":"046-CONSTRUCCIÓN Y PAV. ASF. DE TR. CAMINEROS EN REGIÓN CENTRO","value":47050000000},
+                        {"name":"047-CONSTRUCCIÓN Y PAV. ASFALTICA DE TR. CAMIN. EN REGIÓN CHACO","value":16050000000},
                         {"name":"048-CONSTRUCCIÓN PAVIMENTACIÓNN NARANJAL SAN CRISTOBAL RUTA 6","value":9288635406},
-                        {"name":"049-AMPLIACIÓN Y DUPLICACIÓN DE LAS RUTAS 2 Y 7","value":489720257049},
+                        {"name":"049-AMPLIACIÓN Y DUPLICACIÓN DE LAS RUTAS 2 Y 7","value":269971257050},
                         {"name":"050-MEJORAMIENTO TRAZADO DEL TRAMO LOMA PLATA - CARMELO PERALTA","value":42738787961},
-                        {"name":"051-CONSTRUCCIÓN DE PAV. S/ EMPEDRADOS EN REGIÓN CENTRO","value":140000000000},
+                        {"name":"051-CONSTRUCCIÓN DE PAV. S/ EMPEDRADOS EN REGIÓN CENTRO","value":8100000000},
                         {"name":"052-MEJORAMIENTO Y CONSERV. TRAMO CAAGUAZU - YHU. - EMP. RN 10","value":16000000000},
                         {"name":"053-MEJORAMIENTO Y CONSERV. TRAMO ÑUMI - SAN JUAN N. - EMP. RN6","value":45870000000},
-                        {"name":"054-HABILITACIÓN Y MANT. DE VÍAS DE ACC. AL ÁREA METROP. DE ASU","value":66626591725},
+                        {"name":"054-HABILITACIÓN Y MANT. DE VÍAS DE ACC. AL ÁREA METROP. DE ASU","value":15000000000},
                         {"name":"055-HABILITACIÓN Y MANT. DE LA RUTA 1 TRAMO CARAPEGUA - SJB","value":102041547368},
                         {"name":"056-HABILITACIÓN Y MANT. TRAMO POZO COLORADO - CONCEPCIÓN","value":245987625589},
-                        {"name":"057-HABILITACIÓN Y MANT. RUTA NACIONAL Nº 9 Y ACC. COL. MENONIT","value":865698000000},
+                        {"name":"057-HABILITACIÓN Y MANT. RUTA NACIONAL Nº 9 Y ACC. COL. MENONIT","value":475698000000},
                         {"name":"058-MEJORAMIENTO RUTA N° 9 Y RAFAEL FRANCO","value":36143400000},
+                        {"name":"059-CONSTRUCCIÓN DE LA RUTA SAN PEDRO - BELEN - CONCEPCIÓN","value":219767507904},
                     ]
                 },
                 {
                     "name":"002 - TRANSITABILIDAD DE CAMINOS VECINALES Y RURALES MEJORADA",
                     "children": [
-                        {"name":"001-SP PROG.NAC.CAM. RUR. 2° E.FASE II BID 2163/OC-2164/BL-OFID","value":15138674714},
-                        {"name":"002-MEJORAMIENTO DE CAMINOS VECINALES Y PUENTES","value":25147386364},
-                        {"name":"003-MEJORAMIENTO CAMINOS VECINALES EN LA REGIÓN ORIENTAL","value":236916491410},
+                        {"name":"001-SP PROG.NAC.CAM. RUR. 2° E.FASE II BID 2163/OC-2164/BL-OFID","value":  9982000000 },
+                        {"name":"002-MEJORAMIENTO DE CAMINOS VECINALES Y PUENTES","value":23979386364},
+                        {"name":"003-MEJORAMIENTO CAMINOS VECINALES EN LA REGIÓN ORIENTAL","value":184375365867},
                         {"name":"004-MEJORAMIENTO DE 160KM DE CAMINOS VECINALES EN LA R ORIENTAL","value":141735994721},
-                        {"name":"005-CONSERVACIÓN CAMINOS RURALES NO PAVIMENTADOS R. OCCIDENTAL","value":39759606600},
-                        {"name":"006-CONSTRUCCIÓN CAMINOS RURALES NO PAVIMENTADOS R. ORIENTAL","value":338824848499},
-                        {"name":"007-CONSTRUCCIÓN PUENTES Y ALCANTARILLAS EN LA REGIÓN ORIENTAL","value":60062489851},
-                        {"name":"008-CONSTRUCCIÓN PUENTES Y ALCANTARILLAS EN LA R.OCCIDENTAL","value":18646956346},
-                        {"name":"009-CONSERVACIÓN CAMINOS RURALES NO PAVIMENT. R. ORIENTAL","value":74763464836},
+                        {"name":"005-CONSERVACIÓN CAMINOS RURALES NO PAVIMENTADOS R. OCCIDENTAL","value":9572000000},
+                        {"name":"006-CONSTRUCCIÓN CAMINOS RURALES NO PAVIMENTADOS R. ORIENTAL","value":15082173606},
+                        {"name":"007-CONSTRUCCIÓN PUENTES Y ALCANTARILLAS EN LA REGIÓN ORIENTAL","value":9672169851},
+                        {"name":"008-CONSTRUCCIÓN PUENTES Y ALCANTARILLAS EN LA R.OCCIDENTAL","value":3546956346},
+                        {"name":"009-CONSERVACIÓN CAMINOS RURALES NO PAVIMENT. R. ORIENTAL","value":15123912692},
                         {"name":"010-LEVANTAMIENTO FACTIB. Y DISEÑO INGENIERÍA CAMINOS Y PUENTES","value":2536000000},
-                        {"name":"011-MEJORAMIENTO CAMINOS VECINALES Y PUENTES EN LA RO","value":505092465900},
-                        {"name":"012-MEJORAMIENTO DE LA GESTIÓN DE LOS DISTRITOS DEPARTAMENTALES","value":155190448400},
+                        {"name":"011-MEJORAMIENTO CAMINOS VECINALES Y PUENTES EN LA RO","value":291092465900},
+                        {"name":"012-MEJORAMIENTO DE LA GESTIÓN DE LOS DISTRITOS DEPARTAMENTALES","value":83290448400},
 
                         
                     ]
@@ -328,8 +335,8 @@ const ministerioContext = React.createContext([{
                 {
                     "name":"003 - ACCESO A SISTEMAS DE AGUA POTABLE Y SANEAMIENTO",
                     "children": [
-                        {"name":"001-SP PROYECTO ACUEDUCTO","value":51678006992},
-                        {"name":"002-SP PROG. SANEAM. Y AGUA POT. P/CHACO Y CIUD. INTERM. RE","value":132132872157},
+                        {"name":"001-SP PROYECTO ACUEDUCTO","value":21678006992},
+                        {"name":"002-SP PROG. SANEAM. Y AGUA POT. P/CHACO Y CIUD. INTERM. RE","value":126907611052},
                         {"name":"003-MEJORAMIENTO DEL SERV. DE ALCANT. DE LA BAH. ASUNCIÓN","value":126205966418},
                         {"name":"004-MEJORAMIENTO ALCANTARILLADO DE LA CIUDAD DE SAN LORENZO","value":82582290107},
                     ]
@@ -416,9 +423,9 @@ const ministerioContext = React.createContext([{
       "name":"Programa Central",
       "children": [
                   { 
-                      "name": "Actividades Administrativa" ,
+                      "name": "Actividades Administrativas" ,
                       "children": [
-                          {"name":"001-GESTIÓN ADMINISTRATIVA","value":78705450295},
+                          {"name":"001-GESTIÓN ADMINISTRATIVA","value":  78631039448 },
                           
                       ]
                   },
@@ -445,16 +452,16 @@ const ministerioContext = React.createContext([{
                 { 
                     "name": "001 - SOLUCIONES HABITACIONALES ADECUADAS" ,
                     "children": [
-                        {"name":"001-CONSTRUCCIÓN DE VIVIENDAS ECONÓMICAS","value":85832985293},
-                        {"name":"002-PRÉSTAMOS PARA VIVIENDAS OTORGADOS","value":25716387524},
-                        {"name":"003-CONSTRUCCIÓN DE VIVIENDAS EN ASENTAMIENTOS INDÍGENAS","value":15939583536},
-                        {"name":"004-SUBSIDIO HABITACIONAL","value":260609315835},
-                        {"name":"005-CONSTRUCCIÓN DE VIVIENDAS SOCIALES EN MUNICIPIOS","value":25552679828},
-                        {"name":"006-SP MERCOSUR ROGA","value":2348850000},
-                        {"name":"007-CONSTRUCCIÓN DE 4500 SOLUCIONES HABITACIONALES EN EL PY","value":26939637050},
-                        {"name":"008-CONSTRUCCIÓN DE 5800 SOLUCIONES HABITAC. EN ÁREAS RURALES PY","value":28000000000},
-                        {"name":"009-MEJORAMIENTO DE LAS CONDIC. DE HÁBITAT. DE CHACARITA ALTA","value":43704165752},
-                        {"name":"010-MEJORAMIENTO  Y AMPLIACION DE VIVIENDAS DEL AMA","value":17291517434},
+                        {"name":"001-CONSTRUCCIÓN DE VIVIENDAS ECONÓMICAS","value":  85814585293 },
+                        {"name":"002-PRÉSTAMOS PARA VIVIENDAS OTORGADOS","value":  25716387524 },
+                        {"name":"003-CONSTRUCCIÓN DE VIVIENDAS EN ASENTAMIENTOS INDÍGENAS","value":  15939583536 },
+                        {"name":"004-SUBSIDIO HABITACIONAL","value":  136683619461 },
+                        {"name":"005-CONSTRUCCIÓN DE VIVIENDAS SOCIALES EN MUNICIPIOS","value":  25552679828 },
+                        {"name":"006-SP MERCOSUR ROGA","value":  2348850000 },
+                        {"name":"007-CONSTRUCCIÓN DE 4500 SOLUCIONES HABITACIONALES EN EL PY","value":  26939637050 },
+                       
+                        {"name":"009-MEJORAMIENTO DE LAS CONDIC. DE HÁBITAT. DE CHACARITA ALTA","value":  43704165752 },
+                        {"name":"010-MEJORAMIENTO  Y AMPLIACION DE VIVIENDAS DEL AMA","value":  17291517434 },
                        
                     ]
                 },
@@ -540,34 +547,37 @@ const ministerioContext = React.createContext([{
                   { 
                       "name": "Actividades Administrativa" ,
                       "children": [
-                          {"name":"Gestión administrativa p/el funcionamiento institucional","value":1174716458009},
-                          {"name":"Recursos financieros transferidos a consejos de salud ","value":48440653763},
+                          {"name":"Gestión administrativa p/el funcionamiento institucional","value":  1188371059555 },
+                          {"name":"Recursos financieros transferidos a consejos de salud ","value":  48440653763 },
+                          {"name":"004-CONSTRUCCIÓN DEL HOSPITAL NACIONAL  DE CORONEL OVIEDO ","value":    50000000000  },
+                          {"name":"005-CONSTRUCCIÓN GRAN HOSPITAL GENERAL DE BARRIO OBRERO ","value":    50000000000  },
+                          {"name":"006-MEJORAMIENTO FORT. Y APOYO INTEGRAL A LOS SERV DE SALUD PUB ","value":    64038335529  },
                           
                       ]
                   },
                   {
                       "name":"Actividad Misional",
                       "children": [
-                          {"name":"007-ACCIONES PARA EL APOYO A LOS SERV. DE SALUD","value":28693581338},
-                          {"name":"009-CONTROL DE LA ZOONOSIS","value":6096809146},
-                          {"name":"010-ENFERMEDADES. TRANSMITIDAS POR VECTORES REDUCIDAS Y CONTROLADAS","value":123575901680},
-                          {"name":"011-CURSOS Y CAPACITACIONES EN EL ÁREA DE SALUD","value":882823445},
-                          {"name":"013-ACCIONES PARA LA ATENCIÓN INTEGRAL DEL VIH-SIDA","value":2362552658},
-                          {"name":"014-VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES Y TRANSMISIBLES","value":8994026217},
-                          {"name":"015-VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES","value":590864166},
-                          {"name":"016-ATENCIÓN INTEGRAL A PACIENTES CON ENFERM. DE LA DIABETES","value":868798357},
-                          {"name":"017-GENERACIÓN DE INFORMACIÓN DE CALID S/ LA SITUAC DE SALUD D TERRI","value":2930726799},
-                          {"name":"018-INSPECCIONES Y HABILITACIONES A ESTABLECIMIENTOS SANITARIOS","value":20454483270},
-                          {"name":"019-REGISTROS NUEVOS Y RENOVACIÓN DE PRODUCTOS SANITARIOS","value":11220840095},
-                          {"name":"020-CATEG. Y ACRED. ENTID. PRESTAD. DE SERV. DE SALUD NIVEL NAC","value":7168346256},
-                          {"name":"021-REGULAR Y FISCALIZAR LA UTILIZACIÓN DE SANGRE HUMANA Y DERIV","value":2250871900},
+                          {"name":"007-ACCIONES PARA EL APOYO A LOS SERV. DE SALUD","value":  28693581338 },
+                          {"name":"009-CONTROL DE LA ZOONOSIS","value":  5807585146 },
+                          {"name":"010-ENFERMEDADES. TRANSMITIDAS POR VECTORES REDUCIDAS Y CONTROLADAS","value":  116013836082 },
+                          {"name":"011-CURSOS Y CAPACITACIONES EN EL ÁREA DE SALUD","value":  882673445 },
+                          {"name":"013-ACCIONES PARA LA ATENCIÓN INTEGRAL DEL VIH-SIDA","value":  2362552658 },
+                          {"name":"014-VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES Y TRANSMISIBLES","value":  8978755067 },
+                          {"name":"015-VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES","value":  590864166 },
+                          {"name":"016-ATENCIÓN INTEGRAL A PACIENTES CON ENFERM. DE LA DIABETES","value":  868798357 },
+                          {"name":"017-GENERACIÓN DE INFORMACIÓN DE CALID S/ LA SITUAC DE SALUD D TERRI","value":  2925992407 },
+                          {"name":"018-INSPECCIONES Y HABILITACIONES A ESTABLECIMIENTOS SANITARIOS","value":  20403939270 },
+                          {"name":"019-REGISTROS NUEVOS Y RENOVACIÓN DE PRODUCTOS SANITARIOS","value":  11220840095 },
+                          {"name":"020-CATEG. Y ACRED. ENTID. PRESTAD. DE SERV. DE SALUD NIVEL NAC","value":  7058258256 },
+                          {"name":"021-REGULAR Y FISCALIZAR LA UTILIZACIÓN DE SANGRE HUMANA Y DERIV","value":  2250440127 },
                               
                       ]
                   },
                   {
                       "name":"Proyecto",
                       "children": [
-                          {"name":"008-SP PROGRAMA DE DESARROLLO INFANTIL TEMPRANO (DIT)","value":91640054750},
+                          {"name":"008-SP PROGRAMA DE DESARROLLO INFANTIL TEMPRANO (DIT)","value":  120322934005 },
                           {"name":"012-INVESTIGACIÓN ,EDUC. Y BIOTECNOLOGÍA APLICADAS A LA SALUD","value":8466618649},
 
                       ]
@@ -723,3 +733,97 @@ const ministerioContext = React.createContext([{
 
 
 export default ministerioContext;
+
+
+
+
+
+
+// OOOOOOLAAAA //
+
+/* {
+  treeMapData : {
+    'name':"MINISTERIO DE EDUCACIÓN Y CIENCIAS",
+    'children':
+    [{
+    "name":"Programa Central",
+    "children": [
+                { 
+                    "name": "Actividade Administrativa" ,
+                    "children": [
+                        {"name":"GESTIÓN ADMINISTRATIVA INSTITUCIONAL","value":  825610338799 },
+                        
+                    ]
+                },
+                {
+                    "name":"Actividad Misional",
+                    "children": [
+                        {"name":"BRINDAR SERVICIO EDUCATIVO EN EDUCACIÓN INICIAL","value":  23733554561},
+                        {"name":"BRINDAR SERVICIO EDUCATIVO EN PRIMER Y SEGUNDO CICLO DE EEB","value":  3788337220084 },
+                        {"name":"BRINDAR SERVICIO EDUCATIVO EN EL TERCER CICLO DE LA EEB Y EM","value":  1446246278653 },
+                        {"name":"ATENCION A EDUCACION SUPERIOR Y CIENCIAS","value":  55655897369},
+                        {"name":"FORMACION DE MUSICOS EN LOS DISTINTOS GENEROS DE MUSICAL","value":  15378406129},
+                        {"name":"BRINDAR SERV.EDUC.A JOVENES Y ADULTOS DE 15 AÑOS Y MAS","value":  335.486421492 },
+                        {"name":"BRINDAR SERVICIO EDUCATIVO EN CENTROS REGIONALES DE EDUC","value":  80.117516114 },
+                        {"name":"SERV.EDUC.A ESTUDIANTES C/NECESIDADES ESPECIFICAS DE APOYO","value":  18766116131},
+                        {"name":"PROMOVER EL TALENTOY LA FORMACION ARTISTICA","value":  964526200 },
+                        {"name":"BRINDAR ATENCION A INSTITUCIONES DE EDUC ESCOLAR INDIGENA","value":  4937942157},
+                        {"name":"OTORGAR BECAS PARA EDUCACION SUPERIOR","value":  7837900000 },
+                        {"name":"PLANIFICACION Y MONITOREO DE LA POLITICA EDUCATIVA NACIONAL","value":  377987871},
+                        {"name":"DIFUNDIR LA INVESTIGACION EDUCATIVA","value":61750000},
+                        {"name":"EVALUAR LA CALIDAD EDUCATIVA","value":3419909678},
+                        {"name":"PROMOVER POLITICAS P/ EL DESARROLLO DE EDUCACION Y CIENCIAS","value":  2065696144}
+                       
+
+                        
+                    ]
+                },
+                {
+                    "name":"Proyecto",
+                    "children": [
+                        {"name":"FOMENTO Y APOYO OPERAT. PARA LA EJEC. DE PROY. DEL MEC","value":7840145062},  
+                        {"name":"DIFUSIÓN DISEÑO DE LA ESTRATEGIA DE TRANSFORMACIÓN EDUC","value":  11635907321}, 
+                    ]
+                },
+               
+            ]
+}
+    ,{
+  "name":"Programa Sustantivo",
+  "children": [
+              { 
+                  "name": "001 - ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN" ,
+                  "children": [
+                      {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":9718004849},
+                      {"name":"005-AMPLIACIÓN EN LA ATENC. EDUC. DESDE LA GEST. HASTA 5 AÑOS","value":123596276913},
+                  ]
+              },
+              {
+                  "name":"002 - EDUCACIÓN MEDIA INTEGRADA",
+                  "children": [
+                      {"name":"005-TRANSFERENCIA Y DOTACION TEXTOS A ESTUD.Y GUIAS A DOCENTES","value":32000000}
+                      
+                  ]
+              },
+              {
+                  "name":"003 - CALIDAD DEL APRENDIZAJE",
+                  "children": [
+                      {"name":"001-ELABORAR DOCUMENTOS PEDAG. P/ ESTUD. C/ NECESIDADES DE APOYO","value":156753244},
+                      {"name":"003-ELABORAR CURRÍCULUM Y MATERIAL EDUCATIVO P/ PUEBLO INDÍGENA","value":238349364},
+                      {"name":"004-DOTAR A INSTITUCIONES EDUCATIVAS DE MATERIALES DIDÁCTICOS","value":1510309674},
+                      {"name":"007-INVESTIGACIÓN EVAL. ESTANDARIZADAS DE DESEMPEÑO A ESTUD.","value":3520539526},
+                      {"name":"008-CAPACITACIÓN APOYO A LA AMPLIACIÓN DE LA JORNADA ESCOLAR.","value":40569960659}
+                      
+                  ]
+              },
+              {
+                  "name":"004 - CULMINACIÓN OPORTUNA DE ESTUDIOS",
+                  "children": [
+                      {"name":"004-OPTIMIZAR LOS PROGRAMAS COMPENSATORIOS","value":133384400639},
+                      {"name":"008-MEJORAMIENTO CONDICIONES DE TRANSPORTE DE ESTUDIANTES","value":9481118126}
+                  ]
+              }
+          ]
+}]}}
+ */
+
