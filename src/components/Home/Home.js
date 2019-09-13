@@ -416,11 +416,11 @@ class Home extends React.Component {
                 </h1>
                 <h2 className="presupuesto_total__subtitle grow">
                   {" "}
-                  Gs.92 billones{" "}
+                  Gs.85 billones{" "}
                 </h2>
                 <h2 className="presupuesto_total__subtitle_number text-center  mb-5 ">
                   {" "}
-                  Gs. 92.214.394.217.040{" "}
+                  Gs.  85.539.568.662.797{" "}
                 </h2>
               </Col>
             </Row>
@@ -429,10 +429,10 @@ class Home extends React.Component {
               <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
-                  Administracion central
+            Entidades de la Administración Central 
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
-                  Gs. 51.947.801.921.775 <br /> 
+                  Gs. 45.934.977.875.335 <br /> 
                  
                 </h2>
                 </Fragment>
@@ -444,7 +444,7 @@ class Home extends React.Component {
                   Entidades Descentralizadas:
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
-                  Gs. 40.266.592.295.265 <br /> 
+                  Gs. 39.604.590.787.444 <br /> 
                 </h2>
                 </Fragment>
               </Col>
@@ -488,10 +488,10 @@ class Home extends React.Component {
                       Ministerio de Educación y Ciencias
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 6,562 billones
+                      Gs. 7.623 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 6.562.729.598.658
+                      Gs. 7.623.382.193.846
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
@@ -512,10 +512,10 @@ class Home extends React.Component {
                       Ministerio de Salud y Bienestar social
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                      Gs. 5,518 billones
+                      Gs. 5.818 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
-                      Gs. 5.518.667.479.787
+                      Gs. 5.818.720.392.443
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/salud"}>
@@ -536,10 +536,10 @@ class Home extends React.Component {
                     </Card.Title>
 
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 8,041 billones
+                      Gs. 5,187 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 8.041.969.626.615
+                      Gs. 5.187.945.137.816
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/obras"}>
@@ -559,10 +559,10 @@ class Home extends React.Component {
                       Ministerio de Urbanismo, Vivienda y Hábitat
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 0.612 billones{" "}
+                      Gs. 0.460 billones{" "}
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 612.908.572.547
+                      Gs. 460.890.065.326
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/urbanismo"}>

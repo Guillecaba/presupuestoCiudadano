@@ -6,7 +6,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  82 ,12,  0.1 ,   3.9 , 0],
+        data: [  75.9 ,10.9,  0.2 ,  13 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -30,26 +30,26 @@ const ministerioContext = React.createContext([{
     nombre:"Ministerio de Educacion y Ciencias",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 6.240.521.885.664"
+      monto: "Gs. 6.628.473.513.765"
     },{
       nombre:"Misional",
-      monto:"Gs. 5.387.709.245.284"
+      monto:"Gs. 5.783.387.122.583"
     },{
       nombre:"Administrativo",
-      monto:"Gs. 844.972.495.318"
+      monto:"Gs. 825.610.338.799"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 7.840.145.062 "
+      monto:"Gs. 19.476.052.383 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 322.207.712.994"
+      monto:"Gs. 994.908.680.081"
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs. 6.562.729.598.658",
+  presupuestoTotal: "Gs. 7.623.382.193.846",
   },
  
     
@@ -165,7 +165,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [   4, 5, 12 ,   79 , 0],
+        data: [   3.06, 7.16 , 10.04 ,   79.74 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -183,26 +183,26 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE OBRAS PUBLICAS Y COMUNICACIONES",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 1.650.660.105.102 "
+      monto: "Gs. 1.051.526.014.476 "
     },{
       nombre:"Misional",
-      monto:"Gs. 353.889.062.834"
+      monto:"Gs. 159.006.986.699"
     },{
       nombre:"Administrativo",
-      monto:"Gs. 393.743.094.684"
+      monto:"Gs.  371.512.289.231"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 903.027.947.584 "
+      monto:"Gs. 521.006.738.546 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 6.391.309.521.513"
+      monto:"Gs. 4.136.419.123.340"
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs. 8.041.969.626.615",
+  presupuestoTotal: "Gs. 5.187.945.137.816",
   },
  
     
@@ -368,7 +368,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [ 0.3 , 12.9,  0 ,  86.8 , 0],
+        data: [ 0.4 , 17.6,  0 ,  82.44 , 0],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -391,26 +391,26 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE URBANISMO VIVIENDA Y HABITAT",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs.  80.973.450.295  "
+      monto: "Gs.  80.899.039.448  "
     },{
       nombre:"Misional",
       monto:"Gs. 2.268.000.000"
     },{
       nombre:"Administrativo",
-      monto:"Gs. 78.705.450.295"
+      monto:"Gs.  78.631.039.448"
     },
     {
       nombre:"Proyecto",
       monto:"Gs. 0 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 531.935.122.252"
+      monto:"Gs. 379.991.025.878"
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs.  612.908.572.547",
+  presupuestoTotal: "Gs.  460.890.065.326",
   
   },
  
@@ -513,26 +513,26 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE SALUD PUBLICA Y BIENESTAR SOCIAL",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 1.539.354.410.4985  "
+      monto: "Gs. 1.737.697.717.915  "
     },{
       nombre:"Misional",
-      monto:"Gs. 216.090.625.327"
+      monto:"Gs. 208.058.116.414"
     },{
       nombre:"Administrativo",
-      monto:"Gs. 1.223.157.111.772"
+      monto:"Gs.  1.400.850.048.847"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 100.106.673.399 "
+      monto:"Gs. 128.789.552.654 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 3.979.313.069.289"
+      monto:"Gs. 4.081.022.674.528"
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs. 5.518.667.479.787",
+  presupuestoTotal: "Gs. 5.818.720.392.443",
   
   },
  
@@ -591,78 +591,78 @@ const ministerioContext = React.createContext([{
                 { 
                     "name": "001 - ACCESO A LA ATENCIÓN PRIMARIA DE LA SALUD" ,
                     "children": [
-                        {"name":"001-SERVICIOS DE ATENCIÓN PRIMARIA DE LA SALUD","value":280061045039}
+                        {"name":"001-SERVICIOS DE ATENCIÓN PRIMARIA DE LA SALUD","value":309911543761}
                     ]
                 },{
                   "name":"002 - SERVICIOS HOSPITALARIOS P/LA REDUCCIÓN DE LA MORBIMORTALIDAD",
                   "children":[
-                    {"name":"001-SERVICIOS DE ATENC. INTEGRAL. A LA POBLACIÓN DE CONCEPCIÓN","value":  56164742377 },
-                    {"name":"002-SERV. DE ATEN. INTEGRAL A LA POBLACIÓN DE SAN PEDRO","value":77858010116},
-                    {"name":"003-SERV. DE ATEN. INTEG. A LA  POBLACIÓN DE CORDILLERA","value":72278622883},
-                    {"name":"004-SERV. DE ATEN.INT. A POBLACIÓN DE GUAIRÁ","value":64910363565},
-                    {"name":"005-SERV. DE ATEN. INT. A POBLACIÓN DE CAAGUAZÚ","value":91701297637  },
-                    {"name":"006-SERV. DE ATEN. INT. A POBLACIÓN DE CAAZAPÁ","value":45551005001},
-                    {"name":"007-SERV. DE ATEN. INT. A POBLACIÓN DE ITAPÚA","value":84412701505},
-                    {"name":"008-SERV. DE ATEN. INT. A POBLACIÓN DE MISIONES","value":60564186911},
-                    {"name":"009-SERV. DE ATEN. INT. A POBLACIÓN DE PARAGUARÍ","value":82225691755},
-                    {"name":"010-SERV. DE ATEN. INT. A POBLACIÓN DE ALTO PARANÁ","value":99942671514},
-                    {"name":"011-SERV. DE ATEN. INT. A POBLACIÓN DE CENTRAL","value":93635127862},
-                    {"name":"012-SERV. DE ATEN. INT. A POBLACIÓN DE ÑEEMBUCU","value":40055601233},
-                    {"name":"013-SERV. DE ATEN. INT. A POBLACIÓN DE AMAMBAY","value":36408950651},
-                    {"name":"014-SERV. DE ATEN. INT. A POBLACIÓN DE CANINDEYÚ","value":41289539737},
-                    {"name":"015-SERV. DE ATEN. INT. A POBLACIÓN DE PDTE HAYES","value":32068421807},
-                    {"name":"016-SERV. DE ATEN. INT.  A  POBLACIÓN DE BOQUERÓN","value":18826926435},
-                    {"name":"017-SERV. DE ATEN. INT. A  POBLACIÓN DE ALTO PARAGUAY","value":15898860557},
-                    {"name":"018-SERV. DE ATEN. INT. A  POBLACIÓN DE LA CAPITAL","value":63989746930},
-                    {"name":"019-SERV. DE ATEN. INT. A POBLACIÓN DE VILLETA","value":9980956771},
-                    {"name":"020-SERV. DE ATEN. INT. A POBLACIÓN EN H. BARRIO OBRERO","value":54405303876},
-                    {"name":"021-SERV. DE ATEN. INT. A POBLACIÓN EN H. DE ITÁ","value":14558265974},
-                    {"name":"022-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.D. ITAUGUA","value":7758160600},
-                    {"name":"023-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. DE LUQUE","value":59996303293},
-                    {"name":"024-SERV. DE ATEN. INT. A POBLACIÓN EN H. DE ÑEMBY","value":28455654425},
-                    {"name":"025-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. SAN LORENZO","value":46629555480},
-                    {"name":"026-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. DE VILLA ELISA","value":19722120516},
-                    {"name":"027-SERV. DE ATENCIÓN INTEGRAL A LA POB. EN EL H. PEDIÁTRICO","value":41731885576},
-                    {"name":"028-SERV. DE ATEN.INT. A POBLAC. EN EL HOSP. NACIONAL","value":231943864429},
-                    {"name":"029-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. STA. ROSA DEL A.","value":28025828329},
-                    {"name":"030-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. LAMBARÉ","value":34775115466},
-                    {"name":"031-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.FDO DE LA MORA","value":26297777889},
-                    {"name":"032-SERV. DE ATENC. INT. A POBLACIÓN EN EL H. LIMPIO","value":29222553957},
-                    {"name":"033-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. LOMA PYTA","value":24758671623},
-                    {"name":"034-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. CAPIATÁ","value":36387451388},
-                    {"name":"035-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.M.R.A.","value":28111177342},
+                    {"name":"001-SERVICIOS DE ATENC. INTEGRAL. A LA POBLACIÓN DE CONCEPCIÓN","value":  55801106377 },
+                    {"name":"002-SERV. DE ATEN. INTEGRAL A LA POBLACIÓN DE SAN PEDRO","value":76862309275},
+                    {"name":"003-SERV. DE ATEN. INTEG. A LA  POBLACIÓN DE CORDILLERA","value":71820918883},
+                    {"name":"004-SERV. DE ATEN.INT. A POBLACIÓN DE GUAIRÁ","value":64350167565},
+                    {"name":"005-SERV. DE ATEN. INT. A POBLACIÓN DE CAAGUAZÚ","value":91121445637  },
+                    {"name":"006-SERV. DE ATEN. INT. A POBLACIÓN DE CAAZAPÁ","value":44879893001},
+                    {"name":"007-SERV. DE ATEN. INT. A POBLACIÓN DE ITAPÚA","value":83796345505},
+                    {"name":"008-SERV. DE ATEN. INT. A POBLACIÓN DE MISIONES","value":60162459099},
+                    {"name":"009-SERV. DE ATEN. INT. A POBLACIÓN DE PARAGUARÍ","value":80022221482},
+                    {"name":"010-SERV. DE ATEN. INT. A POBLACIÓN DE ALTO PARANÁ","value":99364223514},
+                    {"name":"011-SERV. DE ATEN. INT. A POBLACIÓN DE CENTRAL","value":93020175862},
+                    {"name":"012-SERV. DE ATEN. INT. A POBLACIÓN DE ÑEEMBUCU","value":39663885233},
+                    {"name":"013-SERV. DE ATEN. INT. A POBLACIÓN DE AMAMBAY","value":36170787035},
+                    {"name":"014-SERV. DE ATEN. INT. A POBLACIÓN DE CANINDEYÚ","value":41038223737},
+                    {"name":"015-SERV. DE ATEN. INT. A POBLACIÓN DE PDTE HAYES","value":31817105807},
+                    {"name":"016-SERV. DE ATEN. INT.  A  POBLACIÓN DE BOQUERÓN","value":18572802435},
+                    {"name":"017-SERV. DE ATEN. INT. A  POBLACIÓN DE ALTO PARAGUAY","value":15751440557},
+                    {"name":"018-SERV. DE ATEN. INT. A  POBLACIÓN DE LA CAPITAL","value":62949382930},
+                    {"name":"019-SERV. DE ATEN. INT. A POBLACIÓN DE VILLETA","value":9858808771},
+                    {"name":"020-SERV. DE ATEN. INT. A POBLACIÓN EN H. BARRIO OBRERO","value":54023415876},
+                    {"name":"021-SERV. DE ATEN. INT. A POBLACIÓN EN H. DE ITÁ","value":14410845974},
+                    {"name":"022-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.D. ITAUGUA","value":7718848600},
+                    {"name":"023-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. DE LUQUE","value":59581707293},
+                    {"name":"024-SERV. DE ATEN. INT. A POBLACIÓN EN H. DE ÑEMBY","value":28017606425},
+                    {"name":"025-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. SAN LORENZO","value":46198527480},
+                    {"name":"026-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. DE VILLA ELISA","value":19650516516},
+                    {"name":"027-SERV. DE ATENCIÓN INTEGRAL A LA POB. EN EL H. PEDIÁTRICO","value":41073409576},
+                    {"name":"028-SERV. DE ATEN.INT. A POBLAC. EN EL HOSP. NACIONAL","value":228983333498},
+                    {"name":"029-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. STA. ROSA DEL A.","value":27993536329},
+                    {"name":"030-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. LAMBARÉ","value":34456407466},
+                    {"name":"031-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.FDO DE LA MORA","value":26054885889},
+                    {"name":"032-SERV. DE ATENC. INT. A POBLACIÓN EN EL H. LIMPIO","value":28906653957},
+                    {"name":"033-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. LOMA PYTA","value":24330118123},
+                    {"name":"034-SERV. DE ATEN. INT. A POBLACIÓN EN EL H. CAPIATÁ","value":36051895388},
+                    {"name":"035-SERV. DE ATEN. INT. A POBLACIÓN EN EL H.M.R.A.","value":28053613342},
                     {"name":"036-SERV. DE ATEN. EN EL INST. NAC. DE ABLACIÓN Y TRASP.","value":4532859515},
-                    {"name":"037-ATEN. INT. A POBLACIÓN H. INDÍGENA SAN ROQUE G. SC.","value":7419845146},
-                    {"name":"038-ATEN. DE AFECCIONES CARDIOVAS. H. SAN JORGE","value":25665000716},
+                    {"name":"037-ATEN. INT. A POBLACIÓN H. INDÍGENA SAN ROQUE G. SC.","value":7308929146},
+                    {"name":"038-ATEN. DE AFECCIONES CARDIOVAS. H. SAN JORGE","value":25417607276},
                     {"name":"039-ATENCIÓN A POBLAC. PROG. NAC. PREV. CARDIOVASCULAR","value":2026338844},
-                    {"name":"040-ATENCIÓN INT. EN SALUD RESPIRATORIA - INERAM","value":43606619264},
-                    {"name":"041-ATENCIÓN DE POBLAC. CON ENFERM. INFECCIOSAS IMT","value":32730860372},
-                    {"name":"042-ATENCIÓN A LA POBLACIÓN CON ENFERMEDADES ONCOLÓGICAS-INCAN","value":202824334318},
+                    {"name":"040-ATENCIÓN INT. EN SALUD RESPIRATORIA - INERAM","value":43151723264},
+                    {"name":"041-ATENCIÓN DE POBLAC. CON ENFERM. INFECCIOSAS IMT","value":32544128372},
+                    {"name":"042-ATENCIÓN A LA POBLACIÓN CON ENFERMEDADES ONCOLÓGICAS-INCAN","value":351742128125},
                     {"name":"043-ATENC. DE POBLAC. C/ ENFERM. ONCOLOG. DE CUELLO UTERINO","value":1219697453},
-                    {"name":"044-ATENC. INT. DEL QUEMADO CENQUER","value":26393229536},
-                    {"name":"045-ATEN. INT. EN EL CENT. NAC. DE CONTROL DE ADICCIONES","value":9785941293},
+                    {"name":"044-ATENC. INT. DEL QUEMADO CENQUER","value":26302722636},
+                    {"name":"045-ATEN. INT. EN EL CENT. NAC. DE CONTROL DE ADICCIONES","value":9695223179},
                     {"name":"046-ATENCION A PACIENTES RENALES INST. NAC. DE NEFROLOGÍA","value":11677155387},
-                    {"name":"047-ATENCIÓN A LAS URGENCIAS MÉDICO, QUIRURGICAS - H . TRAUMA","value":146065642864},
+                    {"name":"047-ATENCIÓN A LAS URGENCIAS MÉDICO, QUIRURGICAS - H . TRAUMA","value":143931084864},
                     {"name":"048-SERVICIO DE PROVISIÓN DE LECHE MATERNA - BANCO DE LECH","value":87372284},
-                    {"name":"049-ATENCIÓN A LA POBLACIÓN CON ENFERMEDAD MENTAL - H. PSIQUIÁTR","value":33233805373},
-                    {"name":"050-ATENCIÓN INTEGRAL A LA POBLACIÓN MAT. INF. SAN PABLO","value":58868751083},
-                    {"name":"051-ATENCIÓN INTEGRAL A POBLACIÓN MAT. INF. CRUZ ROJA PYA.","value":23767040705},
-                    {"name":"052-ATENCIÓN INTEGRAL A POBLACIÓN MAT. INF. STMA.TRINIDAD","value":30812070054},
+                    {"name":"049-ATENCIÓN A LA POBLACIÓN CON ENFERMEDAD MENTAL - H. PSIQUIÁTR","value":32934753373},
+                    {"name":"050-ATENCIÓN INTEGRAL A LA POBLACIÓN MAT. INF. SAN PABLO","value":58552851083},
+                    {"name":"051-ATENCIÓN INTEGRAL A POBLACIÓN MAT. INF. CRUZ ROJA PYA.","value":23361284705},
+                    {"name":"052-ATENCIÓN INTEGRAL A POBLACIÓN MAT. INF. STMA.TRINIDAD","value":30623703444},
                     {"name":"053-CAPACITACIONES, FORMACIÓN E INVESTIGACIÓN EN EL IMT","value":235504370},
-                    {"name":"054-CAPACITACIONES, FORMACIÓN E INVESTIGACIÓN EN EL H. NACIONAL","value":1350777967},
+                    {"name":"054-CAPACITACIONES, FORMACIÓN E INVESTIGACIÓN EN EL H. NACIONAL","value":1295704508},
                     {"name":"055-CAPACITACIÓN, FORMACIÓN E INVESTIGACIÓN EN EL H. PEDIÁTRICO","value":23900740845},
                     {"name":"056-CAPACITACIÓN, FORMACIÓN E INVESTIGACIÓN EN EL INERAN","value":180090481},
-                    {"name":"057-CAPACITACIÓN, FORMACIÓN E INVESTIGACIÓN EN EL CENQUER","value":759096691},
+                    {"name":"057-CAPACITACIÓN, FORMACIÓN E INVESTIGACIÓN EN EL CENQUER","value":745348726},
                   ]
                 },{ 
                   "name": "003 - SERVICIOS DE APOYO Y DIAGNÓSTICO P/ LA MEJORA EN LA ATENCIÓN" ,
                   "children": [
-                      {"name":"001-OBTENCIÓN, PRODUCCIÓN Y SUMINISTROS DE SANGRE","value":  6654628428 },
-                      {"name":"002-HABILITACIÓN Y CONTROL DE LABORATORIOS DE ANÁLISIS CLÍNICOS","value":16714294515},
+                      {"name":"001-OBTENCIÓN, PRODUCCIÓN Y SUMINISTROS DE SANGRE","value":  6500188428 },
+                      {"name":"002-HABILITACIÓN Y CONTROL DE LABORATORIOS DE ANÁLISIS CLÍNICOS","value":16344856465},
                       {"name":"003-SERVICIOS LABORATORIALES","value":    7025618152 },
                       {"name":"004-GESTIONES INTEGRADAS PARA LA PROVISIÓN DE BIOLÓGICOS","value":190399109118},
-                      {"name":"005-INTERVENCIONES EN CASOS EMERG. EXTRAHOSPITALARIAS","value":58650593990},
-                      {"name":"006-PROV. DE MEDICAMENTOS, INSUMOS, INST.Y EQUIPOS","value":542504388880},
+                      {"name":"005-INTERVENCIONES EN CASOS EMERG. EXTRAHOSPITALARIAS","value":59316980535},
+                      {"name":"006-PROV. DE MEDICAMENTOS, INSUMOS, INST.Y EQUIPOS","value":492826057540},
                   ]
               },
               { 
@@ -674,36 +674,36 @@ const ministerioContext = React.createContext([{
                     {"name":"004-ATENCIÓN INTEGRAL DE POBLACIÓN CON ENFERMEDADES BUCALES","value":4397466098},
                     {"name":"005-ENTREGA DE INSUMOS PARA PERSONAS CON OSTOMÍA","value":2097600000},
                     {"name":"006-ASISTENCIA A LA POBLACIÓN (ANATOMÍA Y SALUD MENTAL)","value":484826985},
-                    {"name":"007-CAPACITACIONES DE RR.HH. DEL MSPYBS.","value":5961027839},
-                    {"name":"008-ENTREGA DE MEDICAMENTOS, KIT DE PARTO Y ANTICONCEPTIVOS","value":16210894870},
+                    {"name":"007-CAPACITACIONES DE RR.HH. DEL MSPYBS.","value":5960514798},
+                    {"name":"008-ENTREGA DE MEDICAMENTOS, KIT DE PARTO Y ANTICONCEPTIVOS","value":16210434870},
                 ]
             },
             { 
               "name": "005 - SEGURIDAD ALIMENTARIA NUTRICIONAL HUMANA MEJORADA" ,
               "children": [
-                  {"name":"001-VIGILANCIA ALIMENTARIA NUTRICIONAL","value":22336485959},
+                  {"name":"001-VIGILANCIA ALIMENTARIA NUTRICIONAL","value":22085169959},
                   {"name":"002-SENSIBILIZACIÓN EN TEMAS DE ALIMENTACIÓN Y NUTRICIÓN","value":3913924211},
-                  {"name":"003-ASISTENCIA ALIMENTARIA NUTRICIONAL","value":103567128891},
+                  {"name":"003-ASISTENCIA ALIMENTARIA NUTRICIONAL","value":102858928891},
 
               ]
           },
           { 
             "name": "006 - MEJORA EN EL BIENESTAR SOCIAL P/ PER. EN SITUAC. DE RIESGO" ,
             "children": [
-                {"name":"001-ATENCIÓN INTEGRAL A LA POBLACIÓN ADULTA MAYOR","value":1920099016},
-                {"name":"002-ATENCIÓN INTEGRAL A LA POBLACIÓN EN SITUACIÓN DE RIESGO","value":26085369385},
-                {"name":"003-REGISTRO Y ACREDITACIÓN DE ENTIDADES SIN FINES DE LUCRO","value":967394804},
+                {"name":"001-ATENCIÓN INTEGRAL A LA POBLACIÓN ADULTA MAYOR","value":1913599016},
+                {"name":"002-ATENCIÓN INTEGRAL A LA POBLACIÓN EN SITUACIÓN DE RIESGO","value":25494285385},
+                {"name":"003-REGISTRO Y ACREDITACIÓN DE ENTIDADES SIN FINES DE LUCRO","value":960742374},
             ]
         },
         { 
           "name": "007 - ACCESO A LOS SERV. DE AGUA POTABLE Y SANEAMIENTO AMBIENTAL" ,
           "children": [
-              {"name":"001-GESTIÓN ADMINISTRATIVA","value":48538241500},
+              {"name":"001-GESTIÓN ADMINISTRATIVA","value":46458721500},
               {"name":"003-CONSTRUCCIÓN SEMB. OPORT.- 480 SISTEMA DE AGUA Y SANEAM.","value":3528327466},
-              {"name":"004-SP ABAST.DE AGUA. POT.Y SAN.BAS PEQ.COM.RURAL E INDI(FOCEM)","value":12360238508},
-              {"name":"005-CONSTRUCCIÓN GRAN HOSPITAL GENERAL DE BARRIO OBRERO","value":912400000},
+              {"name":"004-SP ABAST.DE AGUA. POT.Y SAN.BAS PEQ.COM.RURAL E INDI(FOCEM)","value":12359746995},
+              
               {"name":"006-CONSTRUCCIÓN SIST.AGUAPOT.Y.SAN.PEQ.CIUD.COM.RURAL.E.INDIG.","value":104806242103},
-              {"name":"007-ACCIONES DE VIGILANCIA DE CALIDAD AMBIENTAL","value":20843146104},
+              {"name":"007-ACCIONES DE VIGILANCIA DE CALIDAD AMBIENTAL","value":20485126104},
               
           ]
       }

@@ -5,6 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import {HorizontalBar} from 'react-chartjs-2';
 import ReactLoading from 'react-loading';
 import escuela from "../../assets/images/escuela.png";
+import Zoom from 'react-reveal/Zoom';
 
 import LightSpeed from "react-reveal/LightSpeed";
 import {
@@ -861,22 +862,21 @@ class DetalleMinisterio extends Component {
           </div>}
         <div className="presupuesto_total mb-5 py-5">
           <Container>
-            <Row>
+          <Row>
               <Col md={3}>
+              <Zoom left>
+        
                 <Card className="card-ministerio">
-                  <Card.Img
-                    className="w-25 align-self-center grow"
-                    src={escuela}
-                  />
+                  <Card.Img className="w-25 align-self-center grow" src={escuela} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Educación y Ciencias
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 6,562 billones
+                      Gs. 7.623 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 6.562.729.598.658
+                      Gs. 7.623.382.193.846
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
@@ -885,22 +885,22 @@ class DetalleMinisterio extends Component {
                     </Button>
                   </Link>
                 </Card>
+                
+        </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio">
-                  <Card.Img
-                    className="w-25 align-self-center grow"
-                    src={cruz}
-                  />
+                  <Card.Img className="w-25 align-self-center grow" src={cruz} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Salud y Bienestar social
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                      Gs. 5,518 billones
+                      Gs. 5.818 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
-                      Gs. 5.518.667.479.787
+                      Gs. 5.818.720.392.443
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/salud"}>
@@ -909,23 +909,22 @@ class DetalleMinisterio extends Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio">
-                  <Card.Img
-                    className="w-25 align-self-center grow"
-                    src={casco}
-                  />
+                  <Card.Img className="w-25 align-self-center grow" src={casco} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Obras Públicas y Comunicaciones
                     </Card.Title>
 
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 8,041 billones
+                      Gs. 5,187 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 8.041.969.626.615
+                      Gs. 5.187.945.137.816
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/obras"}>
@@ -934,22 +933,21 @@ class DetalleMinisterio extends Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
               <Col md={3}>
+              <Zoom left>
                 <Card className="card-ministerio ">
-                  <Card.Img
-                    className="w-25 align-self-center grow "
-                    src={casa}
-                  />
+                  <Card.Img className="w-25 align-self-center grow " src={casa} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
                       Ministerio de Urbanismo, Vivienda y Hábitat
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 0.612 billones{" "}
+                      Gs. 0.460 billones{" "}
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 612.908.572.547
+                      Gs. 460.890.065.326
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/urbanismo"}>
@@ -958,6 +956,7 @@ class DetalleMinisterio extends Component {
                     </Button>
                   </Link>
                 </Card>
+                </Zoom>
               </Col>
             </Row>
           </Container>
