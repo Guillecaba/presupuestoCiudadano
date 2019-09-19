@@ -18,6 +18,7 @@ ul {
 .footer_text {
     color: #000000;
     font-weight: 500;
+    font-size:0.725rem;
 }
 .footer{
     background: #F1F1F1;
@@ -25,6 +26,8 @@ ul {
 
 .footer-item-text {
     font-weight: 500;
+    font-size:0.725rem;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

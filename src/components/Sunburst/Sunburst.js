@@ -638,7 +638,7 @@ class Sunburst extends React.Component {
         function(d) {
           if (this.props.tooltip) {
             this.tooltipDom
-              .html(this.props.tooltipFunc(d.data))
+              .html(this.props.tooltipFunc(d))
               .style('left', d3Event.x - dx + 'px')
               .style('top', d3Event.y - dy + 'px');
             this.tooltipDom

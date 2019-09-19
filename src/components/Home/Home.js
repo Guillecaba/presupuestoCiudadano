@@ -29,7 +29,7 @@ import {
   Tab,
   Carousel
 } from "react-bootstrap";
-import ods from "../../assets/images/rueda_color.png";
+import ods from "../../assets/images/rueda_color_resize.png";
 import agua_limpia from "../../assets/images/agua_limpia.png";
 import salud_bienestar from "../../assets/images/salud_bienestar.png";
 import educacion_calidad from "../../assets/images/educacion_calidad.png";
@@ -410,7 +410,7 @@ class Home extends React.Component {
             <Row>
               <Col md={12}>
                 <h1 onClick={this.handleClick} className="presupuesto_total__title text-center grow ">
-                  PRESUPUESTO TOTAL 2020 <img className=" icon"  src={help}></img> 
+                  PRESUPUESTO TOTAL 2020 {/* <img className=" icon"  src={help}></img> */} 
           
         
                 </h1>
@@ -429,7 +429,7 @@ class Home extends React.Component {
               <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
-            Entidades de la Administración Central 
+            Entidades de la Administracion Central 
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
                   Gs. 45.934.977.875.335 <br /> 
@@ -639,7 +639,7 @@ class Home extends React.Component {
           </div>
    */}
    <Container>
-          <div className="banner__conoce pt-5">
+          <div className="banner__conoce pt-2">
             <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title grow">
               conoce mas sobre <br /> el presupuesto general de <br /> la
               nacion:

@@ -74,6 +74,7 @@ class DetalleMinisterio extends Component {
       lista: null,
       comentario: " ",
       enviado: false,
+     
       ministerios: null,
       datos:{
         labels: [0,0,0],
@@ -165,6 +166,7 @@ class DetalleMinisterio extends Component {
   };
 
   sendVote = () => {
+    this.setState({loading:true})
     const enviar = {
       comentario: this.state.comentario,
       orden_set: this.state.items,
@@ -194,6 +196,7 @@ class DetalleMinisterio extends Component {
           const ministerios = res.data;
            console.log(ministerios);
               this.setState({ ministerios });
+              this.setState({loading:false})
 
               console.log(this.state.ministerios);
 
@@ -635,7 +638,7 @@ class DetalleMinisterio extends Component {
                 <Row className="pt-5">
 
                   <Col md={4}>
-                    <h2 className='py-3'>Estructura por tipo de programa</h2>
+                    <h2 className=''>Estructura por tipo de programa</h2>
                     <ul>
                       <li className="banner__principal_item_central">
                         <p className="banner__principal_item">
@@ -688,17 +691,18 @@ class DetalleMinisterio extends Component {
                       </li>
                     </ul>
                   </Col>
-                  <Col className="align-self-center" md={5}>
-                    <Doughnut data={state.data} />
-                  </Col>
+                 {/*  <Col className="align-self-center" md={8}>
+                    
+                  </Col> */}
                   <Col
-                    className="align-self-center font-weight-bold text-center"
-                    md={3}
+                    className="font-weight-bold text-center"
+                    md={8}
                   >
                     <h3 className="">Presupuesto total</h3>
                     <p className="banner__principal_item_monto">
                       {state.banner.datos.presupuestoTotal}{" "}
                     </p>
+                    <Doughnut data={state.data} />
                   </Col>
                 </Row>
               </Container>
@@ -729,7 +733,7 @@ class DetalleMinisterio extends Component {
                             height="600"
                             count_member="value"
                             //labelFunc={node => node.data.name}
-                            tooltipFunc={data => data.name}
+                            tooltipFunc={data => `${data.data.name} \n ${data.value}`}
                             _debug={false}
                           />
                         )}
@@ -756,7 +760,7 @@ class DetalleMinisterio extends Component {
                             <thead>
                               <tr>
                                 <th>Nombre</th>
-                                <th>Monto</th>
+                                <th className="text-right">Monto</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -765,7 +769,7 @@ class DetalleMinisterio extends Component {
                                   return (
                                     <tr>
                                       <td>{item.nombre}</td>
-                                      <td>
+                                      <td className="text-right">
                                         <NumberFormat
                                           value={item.valor}
                                           displayType={"text"}
@@ -829,7 +833,7 @@ class DetalleMinisterio extends Component {
                 {this.state.enviado && this.state.ministerios ?(
                   <Fragment>
                     <h1>Resultados</h1>
-                     <h2>Top de mayor interes en actividades por ministerio: {this.state.descripcion2}</h2>
+                     <h2>Top de mayor interés en actividades por ministerio: {this.state.descripcion2}</h2>
                    
 
                    <Dropdown>
@@ -851,9 +855,14 @@ class DetalleMinisterio extends Component {
                 
 
 
-                ):<div></div>
+                ): <div className='d-flex justify-content-center'>
+                {/* <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />  */}
+                </div>
                 
               }
+              {this.state.loading && <div className='d-flex justify-content-center'>
+                <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} /> 
+                </div>}
               </div>
             </Container>
           </div>

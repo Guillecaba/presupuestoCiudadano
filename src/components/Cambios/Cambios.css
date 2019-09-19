@@ -2,7 +2,10 @@
   background-color: #A7D5FF;
 }
 .cambios_banner_title {
-  color:white;
+  color:black;
+  /* position:relative;
+  top:150%; */
+
 }
 
 .cambios_banner_img {
@@ -13,6 +16,11 @@
 .clasif {
   background-color: #E16163; 
   color:white;
+}
+
+.clasif-2 {
+  background-color: #CBE776; 
+  color:black;
 }
 
 .clasi_item_title {
@@ -87,7 +95,45 @@
  
 } 
 
-@media only screen and (max-width: 768px) {
+
+.rotate {
+  transform:          rotate(0deg);
+  -ms-transform:      rotate(0deg);
+-moz-transform:     rotate(0deg);
+-webkit-transform:  rotate(0deg);
+-o-transform:       rotate(0deg);
+}
+
+.borde-rojo {
+  padding-bottom:3%;
+  border-bottom : #E16163 2px solid;
+}
+
+.img-palacio {
+  width:25%;
+}
+
+@media only screen and (max-width: 600px) {
+  .cambios_banner_title {
+    color:black;
+    position:relative;
+    top:0%;
+    
+    
+  
+  }
+
+  .img-palacio {
+    width:100%;
+  }
+
+  .rotate {
+    transform:          rotate(90deg);
+    -ms-transform:      rotate(90deg);
+-moz-transform:     rotate(90deg);
+-webkit-transform:  rotate(90deg);
+-o-transform:       rotate(90deg);
+  }
   
  
 }

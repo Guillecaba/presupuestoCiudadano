@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import usaid from "../../assets/images/usaid.png";
 import ceamso from "../../assets/images/ceamso.png"
 import pfm_lac from "../../assets/images/PFM-LAC.png";
-import logo_hacienda from "../../assets/images/logo_hacienda.png";
-import banco from "../../assets/images/banco_mundial.jpg"
+import logo_hacienda from "../../assets/images/hacienda-logo.png";
+import banco from "../../assets/images/banco-mundial.png"
 import "./Footer.css";
 
 const footer = () => {
@@ -26,12 +26,19 @@ const footer = () => {
           <Col md={6}>
             <Row>
             <Col className="py-3" md={4} sm={4}>
-                <a  href="http://www.hacienda.gov.py">
+            <a href="http://www.ceamso.org.py/" >
+                <img
+                  className="footer__img"
+                  src={ceamso}
+                  alt="ceamso"
+                />
+                </a>
+                {/* <a  href="http://www.hacienda.gov.py">
                 <img
                   className="footer__img_2"
                   src={logo_hacienda}
                   alt="logo hacienda"
-                /></a>
+                /></a> */}
               </Col>
               <Col className="py-3" md={4} sm={4}>
                 <a href = "https://www.bancomundial.org/" >
@@ -56,24 +63,20 @@ const footer = () => {
               <Col className="py-3" md={4}  sm={4}>
                 <img className="footer__img_2" src={pfm_lac} alt="pfm lac" />
               </Col>
-              <Col className="py-3" md={4}  sm={4}>
-                <a href="http://www.ceamso.org.py/" >
-                <img
+              {/* <Col className="py-3" md={4}  sm={4}>
+               
+                </Col> */}
+              <Col md={4}>
+              <a href = "https://www.hacienda.gov.py/web-hacienda/index.php" >
+                <img 
                   className="footer__img"
-                  src={ceamso}
-                  alt="ceamso"
+                  src={logo_hacienda}
+                  alt="hacienda"
                 />
                 </a>
-                </Col>
-             {/*  <Col md={4}>
-                <img
-                  className="footer__img"
-                  src={banco}
-                  alt="banco"
-                />
-              </Col> */}
+              </Col>
 
-              <p className="footer_text pt-5 pl-3">
+              <p className="footer_text  pl-3">
               El diseño e implementación del Presupuesto Ciudadano es parte de una asociación más amplia entre el Ministerio de Hacienda, el grupo del Banco Mundial y CEAMSO para fortalecer la diseminación de información sobre y la participación pública en el proceso presupuestario. Esta iniciativa se basa en un piloto inicial lanzado en 2016 con el apoyo financiero de USAID. 
               </p>
              

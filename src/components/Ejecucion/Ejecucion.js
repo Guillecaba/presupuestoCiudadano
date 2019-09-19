@@ -36,17 +36,17 @@ const Ejecucion = () => {
         </Fade>
         </Col>
         <Col className="text-right" md={5}>
-        <Zoom right>
+        <Fade right>
           <img className="w-50 " src={engranajes} alt="engranajes"></img>
-          </Zoom>
+          </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
         <Col className= "text-left" md={5}>
-        <Zoom right>
+        <Fade right>
 
 <img className="w-75" src= {ley} alt="ley "></img>
-        </Zoom>
+        </Fade>
         </Col>
         <Col md={7}>
         <Fade bottom>
@@ -73,18 +73,18 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
         </Fade>
         </Col>
         <Col className="text-center" md={5}>
-          <Zoom right>
+          <Fade right>
 
           <img className="w-75 " src={grafico} alt="grafica"></img>
-          </Zoom>
+          </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
         <Col className= "text-left" md={5}>
-          <Zoom right>
+          <Fade right>
 
 <img className="w-75" src= {bolsa} alt="bolsa"></img>
-          </Zoom>
+          </Fade>
         </Col>
         <Col md={7}>
           <Fade bottom>
@@ -101,7 +101,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
         <Col md={7}>
           <Fade bottom>
 
-        <h2 className= "font-weight-bold">PROCESO DE CONTRATACION</h2>
+        <h2 className= "font-weight-bold">Proceso de contratación</h2>
            
             <p>A partir de la aprobación del Plan Financiero las Unidades Operativas de Contrataciones de las instituciones pueden dar inicio a los procesos que permitan contratar los bienes, servicios y obras requeridas para el cumplimiento de sus actividades prioritarias, para ello elaboran su Plan Anual de Contrataciones y solicitan el Certificado de Disponibilidad Presupuestaria CDP que les permite reservar el rubro y monto a ser utilizado.
 
@@ -112,10 +112,10 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           </Fade>
         </Col>
         <Col className="text-right" md={5}>
-          <Zoom right>
+          <Fade right>
 
           <img className="w-75 " src={manos} alt="manos"></img>
-          </Zoom>
+          </Fade>
         </Col>
       </Row>
       </Container>

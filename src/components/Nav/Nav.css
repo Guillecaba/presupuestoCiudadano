@@ -17,8 +17,22 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
-  padding-left:6em !important;
+  margin: 0 2rem;
+  /* padding-left:6em !important; */
+  position: relative;
 
+}
+
+.navbar__item .arrow {
+  display: none;
+  position: absolute;
+  bottom: -1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__item:hover .arrow {
+  display: block;
 }
 
 .nav-link-color {

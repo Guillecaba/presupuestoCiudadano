@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ Fragment} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Cambios.css";
 import palacio from "../../assets/images/palacio.png";
@@ -7,9 +7,11 @@ import moneda from "../../assets/images/moneda.png";
 import legis from "../../assets/images/legis.png";
 import LightSpeed from 'react-reveal/LightSpeed';
 import pdf from "../../assets/media/decreto.pdf"
+import Arrow from "../../assets/images/Arrow.png"
 
 const Cambios = () => {
   return (
+    <Fragment>
     <Container>
       <Row className="cambios_banner mt-5 p-5">
         <Col>
@@ -21,8 +23,17 @@ const Cambios = () => {
         </Col>
       </Row>
       <Row>
-        <Col md={9} className="py-5 d-flex align-items-center">
-          <p className="">
+        <Col md={12} className="d-flex  justify-content-center">
+        <img
+            src={palacio}
+            className="cambios_banner_img grow align-self-center img-palacio"
+            alt="palacio"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12} className="pb-5 d-flex align-items-center">
+          <p className="text-center font-weight-bold">
             El Ministerio de Hacienda en su carácter de Administrador del
             Proceso Presupuestario del Sector Público y fundamentalmente en el
             interés de fortalecer la implementación del Presupuesto por
@@ -33,19 +44,17 @@ const Cambios = () => {
             nueva Estructura Presupuestaria
           </p>
         </Col>
-        <Col md={3} className="py-5">
-          <img
-            src={palacio}
-            className="cambios_banner_img w-100 grow"
-            alt="palacio"
-          />
-        </Col>
+        {/* <Col md={3} className="py-5">
+          
+        </Col> */}
       </Row>
-
-      <Row className="clasif pt-5 pl-5  mb-5">
+      </Container>
+      <Row className="clasif pt-5 pl-5  ">
+      <Container className="d-lg-flex">
         <Col md={6} className="d-flex flex-column justify-content-center">
+        
           <h2 className="font-weight-bold clasi_item_title ">
-            Clasificacion Programatica
+            Clasificación Programática
           </h2>
           <ul className="py-1 pl-2 clasi-list">
             <li className="clasi-item-1 pt-1">Programa</li>
@@ -53,7 +62,9 @@ const Cambios = () => {
             <li className="clasi-item-2 pt-1">Actividad</li>
             <li className="clasi-item-3 pt-1">Obra</li>
           </ul>
+        
         </Col>
+
         <Col md={6} className="d-flex  justify-content-center">
           <img
             src={presupuestoAprobado}
@@ -61,16 +72,18 @@ const Cambios = () => {
             alt="presupuesto aprobado"
           />
         </Col>
+        </Container>
       </Row>
 
-      <Row className="clasif pt-5 pl-5">
+      <Row className="clasif-2 pt-5 pl-5  ">
+        <Container className="d-lg-flex ">
         <Col md={5} className="d-flex justify-content-center">
           <img src={moneda} className="w-75  grow" alt="moneda" />
         </Col>
         <Col md={7} className=" pr-5  program-column ">
           <h2 className=" program-title font-weight-bold">
             
-            Programacion del Gasto
+            Programación del Gasto
           </h2>
           <ul className=" clasi-list align-self-center">
             <li className="text-right program-item pt-1">Programa Central</li>
@@ -78,7 +91,21 @@ const Cambios = () => {
             <li className="text-right program-item  pt-1">Programa de Partidas no asignables</li>
           </ul>
         </Col>
+        </Container>
       </Row>
+      <Container>
+        <Row className="pt-5 borde-rojo ">
+        <Col md={12} className="align-self-center text-center d-flex flex-row justify-content-center ">
+          <div className="d-flex flex-row">
+          <img src={legis} className=" px-3 grow" alt="" />
+          <div className="d-flex flex-column align-self-center pl-md-4">
+          <p className="text-center pt-1 font-weight-bold">Decreto de Lineamiento <br/> Nº 1710/19</p>
+          <button className=" button__primary boton-descarga  grow  " ><a className="text-decoration-none color_a" href={pdf}>Descargar aqui</a></button>
+          </div>
+         
+          </div>
+        </Col>
+        </Row>
       <Row className="py-5 mb-5 d-flex">
         <Col md={4} className="">
           <div className="h-100">
@@ -91,9 +118,9 @@ const Cambios = () => {
             <Col className="h-100 versus-columna pt-5 px-5 ">
 
               <h3 className="">Programa Tipo 1.</h3>
-              <p>Presupuestos de programas de administracion.</p>
+              <p>Presupuestos de programas de administración.</p>
               <h3>Programa Tipo 2.</h3>
-              <p>Presupuestos de programas de accion.</p>
+              <p>Presupuestos de programas de acción.</p>
               <h3>Programa Tipo 3.</h3>
               <p>Presupuestos de programas de inversión.</p>
               <h3>Programa Tipo 4.</h3>
@@ -105,9 +132,9 @@ const Cambios = () => {
         
         <Col md={4} className="align-self-center text-center">
           <div className="central">
-          <img src={legis} className="w-50  grow" alt="" />
-          <p className="text-center pt-1 font-weight-bold">Decreto de Lineamiento <br/> Nº 1710/19</p>
-          <button className=" button__primary boton-descarga  grow  " ><a className="text-decoration-none color_a" href={pdf}>Descargar aqui</a></button>
+          <img src={Arrow} className=" rotate grow" alt="" />
+          {/* <p className="text-center pt-1 font-weight-bold">Decreto de Lineamiento <br/> Nº 1710/19</p>
+          <button className=" button__primary boton-descarga  grow  " ><a className="text-decoration-none color_a" href={pdf}>Descargar aqui</a></button> */}
           </div>
         </Col>
         <Col md={4}  className="">
@@ -149,6 +176,7 @@ const Cambios = () => {
       </Row>
       
     </Container>
+    </Fragment>
   );
 };
 
