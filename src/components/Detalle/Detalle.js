@@ -61,6 +61,20 @@ const SortableContainer = sortableContainer(({ children }) => {
   return <ul>{children}</ul>;
 });
 
+
+function addDots(nStr)
+    {
+        nStr += '';
+       let x = nStr.split('.');
+        let x1 = x[0];
+        let x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + '.' + '$2'); // changed comma to dot here
+        }
+        return x1 + x2;
+    }
+
 class DetalleMinisterio extends Component {
   constructor(props) {
     super(props);
@@ -247,6 +261,8 @@ class DetalleMinisterio extends Component {
    
   }
 
+  
+
   changeInputHandler = (event, id) => {
     console.log(event.target.value);
     const comentario = event.target.value;
@@ -427,6 +443,9 @@ class DetalleMinisterio extends Component {
       }
     }
   }
+
+
+  
   componentDidMount() {
     console.log("Detalle: componentDidMount");
     console.log(this.props.location);
@@ -733,7 +752,10 @@ class DetalleMinisterio extends Component {
                             height="600"
                             count_member="value"
                             //labelFunc={node => node.data.name}
-                            tooltipFunc={data => `${data.data.name} \n ${data.value}`}
+                            tooltipFunc={data => {
+                              let value = addDots(data.value)
+                              return `${data.data.name} \n ${value}`
+                            }}
                             _debug={false}
                           />
                         )}
