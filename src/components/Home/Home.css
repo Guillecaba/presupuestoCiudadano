@@ -27,7 +27,7 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: #CBE776;
   color: #FFFFFF;
-  font-family: 'Helsinki';
+  /* font-family: 'Helsinki'; */
   line-height: 12px;
   font-size: 12px;
   padding: 0.6rem 1.5rem;
@@ -180,6 +180,7 @@
 
 .icon {
   width:24px;
+  margin-left: 5px;
   
 }
 
@@ -225,7 +226,7 @@
 
 .button__secundary {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  font-family: 'Helsinki';
+/*   font-family: 'Helsinki'; */
   background:#A7D5FF;
   color: #FFFFFF;
   line-height: 12px;

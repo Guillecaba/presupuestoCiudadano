@@ -79,7 +79,7 @@ class Home extends React.Component {
                 </h2>
                 <Link className="text-center" to={"/cambios"}>
                 <Button className="button__primary grow">
-                  Ver mas
+                  Ver más
                 </Button>
                 </Link>
               </Col>
@@ -92,7 +92,7 @@ class Home extends React.Component {
             <Col>
             <LightSpeed right>
             <h1 className="como-se-elabora  text-center grow">
-            ¿COMO SE ELABORA EL PRESUPUESTO?
+            ¿CÓMO SE ELABORA EL PRESUPUESTO?
                 </h1>
                 </LightSpeed>
               <Carousel interval="5000" className="">
@@ -429,7 +429,7 @@ class Home extends React.Component {
               <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
-            Entidades de la Administracion Central 
+            Entidades de la Administración Central 
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
                   Gs. 45.934.977.875.335 <br /> 
@@ -488,15 +488,15 @@ class Home extends React.Component {
                       Ministerio de Educación y Ciencias
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 7.623 billones
+                      Gs. 9.243 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 7.623.382.193.846
+                      Gs. 9.243.946.951.188
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/educacion"}>
                     <Button className="button__secundary align-self-center grow   mb-3">
-                      Ver Mas
+                    Ver Más
                     </Button>
                   </Link>
                 </Card>
@@ -512,15 +512,15 @@ class Home extends React.Component {
                       Ministerio de Salud y Bienestar social
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                      Gs. 5.818 billones
+                      Gs. 5.823 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
-                      Gs. 5.818.720.392.443
+                      Gs.  5.823.285.397.358
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/salud"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
+                    Ver más
                     </Button>
                   </Link>
                 </Card>
@@ -536,15 +536,15 @@ class Home extends React.Component {
                     </Card.Title>
 
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 5,187 billones
+                      Gs. 5,241 billones
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 5.187.945.137.816
+                      Gs. 5.241.719.832.513
                     </Card.Text>
                   </Card.Body>
                   <Link className="text-center" to={"/obras"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
+                    Ver más
                     </Button>
                   </Link>
                 </Card>
@@ -556,18 +556,18 @@ class Home extends React.Component {
                   <Card.Img className="w-25 align-self-center grow " src={casa} />
                   <Card.Body>
                     <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de Urbanismo, Vivienda y Hábitat
+                    Ministerio de <br></br> Desarrollo social
                     </Card.Title>
                     <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 0.460 billones{" "}
+                      Gs. 0.524 billones{" "}
                     </Card.Text>
                     <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 460.890.065.326
+                      Gs. 524.872.980.571
                     </Card.Text>
                   </Card.Body>
-                  <Link className="text-center" to={"/urbanismo"}>
+                  <Link className="text-center" to={"/desarrollo"}>
                     <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
+                    Ver más
                     </Button>
                   </Link>
                 </Card>
@@ -641,8 +641,8 @@ class Home extends React.Component {
    <Container>
           <div className="banner__conoce pt-2">
             <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title grow">
-              conoce mas sobre <br /> el presupuesto general de <br /> la
-              nacion:
+              conocé mas sobre <br /> el presupuesto general de <br /> la
+              nación:
             </h1>
             <Row>
               <Col md={3}>
@@ -655,7 +655,7 @@ class Home extends React.Component {
                     </Card.Title>
                   </Card.Body>
                   <Link className="text-center" to={"/financiacion"}><Button className="button__primary align-self-center   grow mb-3">
-                    Ver Mas
+                  Ver más
                   </Button></Link>
                 </Card>
                 </Zoom>
@@ -671,7 +671,7 @@ class Home extends React.Component {
                   </Card.Body>
                   <Link className="text-center" to={"/gasto"}>
                   <Button className="button__primary align-self-center  grow   mb-3">
-                    Ver Mas
+                  Ver más
                   </Button>
                   </Link>
                 </Card>
@@ -688,7 +688,7 @@ class Home extends React.Component {
                   </Card.Body>
                   <Link className="text-center" to={"/ods"}>
                     <Button className="button__primary align-self-center  grow   mb-3">
-                      Ver Mas
+                    Ver más
                     </Button>
                   </Link>
                 </Card>
@@ -706,7 +706,7 @@ class Home extends React.Component {
                   <Link className="text-center" to={"/ejecucion"}>
 
                   <Button className="button__primary align-self-center grow  mb-3">
-                    Ver Mas
+                  Ver más
                   </Button>
                   </Link>
                 </Card>
@@ -817,7 +817,7 @@ class Home extends React.Component {
               <Col md={7}>
                 <Fade right>
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informate
+                  informáte
                 </h1>
                 </Fade>
                 <p className="informartion__subtitle">
@@ -827,7 +827,7 @@ class Home extends React.Component {
                   obras, justicia y otros servicios que determinan tu calidad de
                   vida.
                 </p>
-                <Button href={guia} className="button__secundary grow">Descarga la guia</Button>
+                <Button href={guia} className="button__secundary grow">Descargá la guía</Button>
               </Col>
             </Row>
           </Container>

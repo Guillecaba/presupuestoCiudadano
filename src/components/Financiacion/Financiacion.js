@@ -28,7 +28,7 @@ const Financiacion = () => {
         </Col>
         <Col md={6} className='align-self-center'>
         <LightSpeed right>
-          <h1 className="text-uppercase como_title align-middle">¿Que es el presupuesto y como se financia?</h1>
+          <h1 className="text-uppercase como_title align-middle">¿Qué es el presupuesto y cómo se financia?</h1>
           </LightSpeed>
         </Col>
       </Row>
@@ -90,7 +90,7 @@ const Financiacion = () => {
       </Row>
       <Row className="mt-5">
         <Col md={8} className=" align-self-center">
-          <h1>¿Que es un programa?</h1>
+          <h1>¿Qué es un programa?</h1>
           <p>
           Es el instrumento presupuestario destinado a cumplir las funciones del Estado y sus planes a corto plazo y por el cual se establecen objetivos, resultados y metas a cumplirse mediante un conjunto de acciones integradas y obras específicas coordinadas, empleando los recursos humanos, materiales y financieros asignados a un costo global y unitario. Su ejecución queda a cargo de una unidad administrativa. (Art.10– Ley 1535/99).
           </p>
@@ -101,7 +101,7 @@ const Financiacion = () => {
       </Row>
       
     </Container>
-    <Row className="programas-presu my-5 pb-3">
+    <Row id="infoProgramas" className="programas-presu my-5 pb-3">
       <h1 className="text-center programa-presu-title pt-5">Programas del Presupuesto</h1>
       <p className="text-center  programa-presu-subtitle">Los presupuestos se clasifican de la siguiente manera:</p>
         <Container>
@@ -140,7 +140,7 @@ const Financiacion = () => {
         <Col md={8}>
         <h1>Fuentes de financiamiento</h1>
         <p>La Clasificación por Fuente de Financiamiento fue diseñada a fin de tener un ordenamiento del registro de los Ingresos Públicos en función a su origen y naturaleza y de asígnalos sistemáticamente hacia el financiamiento de los Gastos de los Organismos y Entidades del Estado.</p>
-        <p className="font-weight-bold fuente-clasi">Estas fuentes se  clasifica en:</p>
+        <p className="font-weight-bold fuente-clasi">Estas fuentes se  clasifican en:</p>
         </Col>
       </Row>
       <Row>
@@ -219,7 +219,7 @@ Incluye además el dinero que en concepto las donaciones tanto internas como ext
               <Col md={7}>
                 <Fade right>
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informate
+                  informáte
                 </h1>
                 </Fade>
                 <p className="informartion__subtitle">

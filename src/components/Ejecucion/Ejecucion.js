@@ -21,7 +21,7 @@ const Ejecucion = () => {
         </Col>
         <Col md={6} className='align-self-center'>
         <LightSpeed right>
-          <h1 className="text-uppercase como_title align-middle">¿Como se ejecuta el presupuesto?</h1>
+          <h1 className="text-uppercase como_title align-middle">¿Cómo se ejecuta el presupuesto?</h1>
           </LightSpeed>
         </Col>
       </Row>
@@ -173,7 +173,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
               <Col md={7}>
                 <Fade right>
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informate
+                  informáte
                 </h1>
                 </Fade>
                 <p className="informartion__subtitle">

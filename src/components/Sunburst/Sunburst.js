@@ -684,9 +684,11 @@ class Sunburst extends React.Component {
           
           const newDx0 = d.x0+0.1
           if(newDx0 > 1){
-            hue = this.hueDXScale(Math.random());
+            /* hue = this.hueDXScale(Math.random()); */
+            hue = this.hueDXScale(d.x0);
           }else{
-            hue = this.hueDXScale(Math.random());
+            /* hue = this.hueDXScale(Math.random()); */
+            hue = this.hueDXScale(d.x0);
           }
           
           console.log(hue)
@@ -695,11 +697,13 @@ class Sunburst extends React.Component {
           return current.fill;
         }else if(d.x0-this.prevX0Node > 0.9){ // Caso de los grandes
           
-          const newDx0 = d.x0+0.25
+          const newDx0 = d.x0/* +0.25 */
           if(newDx0 > 1){
-            hue = this.hueDXScale(0.5);
+          /*   hue = this.hueDXScale(0.5); */
+            hue = this.hueDXScale(d.x0);
           }else{
-            hue = this.hueDXScale(newDx0);
+           /*  hue = this.hueDXScale(newDx0); */
+            hue = this.hueDXScale(d.x0);
           }
           
           console.log(hue)
@@ -721,11 +725,14 @@ class Sunburst extends React.Component {
         console.log(hue)
         current.fill = d3Hsl(hue, saturation, lightness);
         this.prevX0Node = d.x0
+        console.log("Caso normal")
+        console.log(current.fill)
         return current.fill;
       }
       
      
     }
+    console.log("Entro al ultimo nivel")
     current.fill = current.parent.fill.brighter(child_brightness);
     const thishsl = d3Hsl(current.fill);
     hue = this.hueDXScale(current.x0);

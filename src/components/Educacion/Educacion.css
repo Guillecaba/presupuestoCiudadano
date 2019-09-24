@@ -125,3 +125,8 @@ li {
 -webkit-transform:  rotate(90deg);
 -o-transform:       rotate(90deg);
 }
+
+
+.tabla-grafico {
+  table-layout: fixed;
+}

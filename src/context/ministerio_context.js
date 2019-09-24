@@ -6,7 +6,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  75.9 ,10.9,  0.2 ,  13 , 0],
+        data: [ 62.56  ,8.93,  0.2 ,  10.76 , 17.55],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -27,7 +27,7 @@ const ministerioContext = React.createContext([{
   
   ]},{
   datos:{
-    nombre:"Ministerio de Educacion y Ciencias",
+    nombre:"Ministerio de Educación y Ciencias",
     programas:[{
       nombre:"Programa Central",
       monto: "Gs. 6.628.473.513.765"
@@ -46,10 +46,16 @@ const ministerioContext = React.createContext([{
       monto:"Gs. 994.908.680.081"
     },{
       nombre:"Partidas no asignables",
-      monto:"Gs. 0"
+      monto:"Gs. 1.620.564.757.342"
+    },{
+      nombre:"Proyecto",
+      monto:"Gs. 766.478.517.916"
+    },{
+      nombre:"Actividad",
+      monto:"Gs. 228.430.162.165"
     }
   ],
-  presupuestoTotal: "Gs. 7.623.382.193.846",
+  presupuestoTotal: "Gs. 9.243.946.951.188",
   },
  
     
@@ -141,6 +147,9 @@ const ministerioContext = React.createContext([{
                     ]
                 }
             ]
+  },{
+    "name":"Partidas no asignables",
+    "value":"1620564757342"    
   }]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
@@ -165,7 +174,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [   3.06, 7.16 , 10.04 ,   79.74 , 0],
+        data: [   3.03, 7.08 , 9.95 ,   78.93 , 1.04],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -180,7 +189,7 @@ const ministerioContext = React.createContext([{
   
   ]},{
   datos:{
-    nombre:"MINISTERIO DE OBRAS PUBLICAS Y COMUNICACIONES",
+    nombre:"MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES",
     programas:[{
       nombre:"Programa Central",
       monto: "Gs. 1.051.526.014.476 "
@@ -199,10 +208,17 @@ const ministerioContext = React.createContext([{
       monto:"Gs. 4.136.419.123.340"
     },{
       nombre:"Partidas no asignables",
+      monto:"Gs. 53.774.694.697"
+    },
+    {
+      nombre:"Proyecto",
+      monto:"Gs. 4.136.419.123.340"
+    },{
+      nombre:"Actividad",
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs. 5.187.945.137.816",
+  presupuestoTotal: "Gs. 5.241.719.832.513",
   },
  
     
@@ -343,6 +359,9 @@ const ministerioContext = React.createContext([{
                 },
                 
             ]
+},{
+  "name":"Partidas no asignables",
+  "value":"53774694697"
 }]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
@@ -408,6 +427,13 @@ const ministerioContext = React.createContext([{
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 0"
+    },
+    {
+      nombre:"Proyecto",
+      monto:"Gs. 90.284.170.236"
+    },{
+      nombre:"Actividad",
+      monto:"Gs. 289.706.855.642"
     }
   ],
   presupuestoTotal: "Gs.  460.890.065.326",
@@ -493,7 +519,7 @@ const ministerioContext = React.createContext([{
     labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
     datasets: [
       {
-        data: [  3.9 , 22.2,  1.8,  72.1 , 0],
+        data: [  3.57 , 24.05,  2.21,  70.08 ,0.11 ],
         backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
         hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
       }
@@ -510,7 +536,7 @@ const ministerioContext = React.createContext([{
     
   ]},{
   datos:{
-    nombre:"MINISTERIO DE SALUD PUBLICA Y BIENESTAR SOCIAL",
+    nombre:"MINISTERIO DE SALUD PÚBLICA Y BIENESTAR SOCIAL",
     programas:[{
       nombre:"Programa Central",
       monto: "Gs. 1.737.697.717.915  "
@@ -529,10 +555,17 @@ const ministerioContext = React.createContext([{
       monto:"Gs. 4.081.022.674.528"
     },{
       nombre:"Partidas no asignables",
-      monto:"Gs. 0"
+      monto:"Gs. 4.565.004.915"
+    },
+    {
+      nombre:"Proyecto",
+      monto:"Gs. 120.694.316.564"
+    },{
+      nombre:"Actividad",
+      monto:"Gs. 3.960.328.357.964"
     }
   ],
-  presupuestoTotal: "Gs. 5.818.720.392.443",
+  presupuestoTotal: "Gs. 5.823.285.397.358",
   
   },
  
@@ -711,7 +744,154 @@ const ministerioContext = React.createContext([{
                
                 
             ]
+},
+{
+  "name":"Partidas no asignables",
+  "value":"4565004915"    
 }]}},{resumen:[
+      {
+        nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
+        porcentaje:"41.38"
+      }, {
+        nombre:"EDUCACIÓN MEDIA INTEGRADA",
+        porcentaje:" 0.010"
+      },
+      {
+        nombre:"CALIDAD DEL APRENDIZAJE",
+        porcentaje:"14.28"
+      },
+      {
+        nombre:"CULMINACIÓN OPORTUNA DE ESTUDIOS",
+        porcentaje:"44"
+      },
+]}
+  ],
+},
+{
+  desarrollo:[{
+    data:{
+    labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
+    datasets: [
+      {
+        data: [  2 , 10,  0,  88 , 0],
+        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
+        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+      }
+    ]
+  }},
+  {items: [
+    "Acceso a unidades de salud familiar integrales y de calidad en comunidades",
+    "Servicios hospitalarios para la reducción de muertes causadas por enfermedades",
+    "Servicios de apoyo y diagnóstico para mejora en la atención  ",
+    "Aumento de la cobertura en la atención y medicamentos a enfermedades especiales (físicas y mentales)",
+    "Sensibilización, asistencia y vigilancia en materia de alimentación y nutrición",
+    "Bienestar social y atención a adultos mayores y otras personas en situaciones de riesgo ",
+    "Acceso a los servicios de agua potable y saneamiento ambiental en comunidades rurales e indígenas"
+    
+  ]},{
+  datos:{
+    nombre:"MINISTERIO DE DESARROLLO SOCIAL",
+    programas:[{
+      nombre:"Programa Central",
+      monto: "Gs. 63.000.224.308  "
+    },{
+      nombre:"Misional",
+      monto:"Gs. 10.316.780.170"
+    },{
+      nombre:"Administrativo",
+      monto:"Gs.   52.683.444.138"
+    },
+    {
+      nombre:"Proyecto",
+      monto:"Gs. 0 "
+    },{
+      nombre:"Programa sustantivo",
+      monto:"Gs. 461.872.756.263"
+    },{
+      nombre:"Partidas no asignables",
+      monto:"Gs. 0"
+    },
+    {
+      nombre:"Proyecto",
+      monto:"Gs. 0"
+    },{
+      nombre:"Actividad",
+      monto:"Gs. 461.872.756.263"
+    }
+  ],
+  presupuestoTotal: "Gs. 524.872.980.571",
+  
+  },
+ 
+    
+  },{
+    treeMapData : {
+      'name':"MINISTERIO DE DESARROLLO SOCIAL",
+      'children':
+      [{
+      "name":"Programa Central",
+      "children": [
+                  { 
+                      "name": "Actividades Administrativas" ,
+                      "children": [
+                          {"name":"ACTIVIDADES CENTRALES ADMINISTRATIVAS","value":  52683444138 },
+                          
+                          
+                      ]
+                  },
+                  {
+                      "name":"Actividad Misional",
+                      "children": [
+                          {"name":"ATENCION SOCIAL Y COMEDORES COMUNITARIOS","value":  10316780170 },
+                          
+                          
+                              
+                      ]
+                  },
+                 /*  {
+                      "name":"Proyecto",
+                      "children": [
+                          {"name":"008-SP PROGRAMA DE DESARROLLO INFANTIL TEMPRANO (DIT)","value":  120322934005 },
+                          {"name":"012-INVESTIGACIÓN ,EDUC. Y BIOTECNOLOGÍA APLICADAS A LA SALUD","value":8466618649},
+
+                      ]
+                  }, */
+                 
+              ]
+  }
+      ,{
+    "name":"Programa Sustantivo",
+    "children": [
+                { 
+                    "name": "PROTECCION SOCIAL A FAMILIAS EN SITUACION DE POBREZA" ,
+                    "children": [
+                        {"name":"PROTECCION SOCIAL A FAMILIAS DE TEKOPORA","value":415595076232}
+                    ]
+                },{
+                  "name":"INCLUSIÓN ECONÓMICA DE FAMILIAS EN SITUACIÓN DE POBREZA",
+                  "children":[
+                    {"name":"FOMENTO DE MICROEMPRENDIMIENTOS A PARTICIPANTES DE TENONDERA","value":  37132748096 },
+                    
+                ]
+            },
+            { 
+              "name": "003 - PROMOCION SOCIAL" ,
+              "children": [
+                  {"name":"REGULARIZACIÓN DE TERRITORIOS SOCIALES","value":9144931935},
+                  
+
+              ]
+          },
+         
+                
+               
+                
+            ]
+},
+/* {
+  "name":"Partidas no asignables",
+  "value":"4565004915"    
+} */]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
         porcentaje:"41.38"

@@ -13,10 +13,10 @@
   border-radius: 50%;
   background: #E16163;
   color: #FFFFFF;
-  font-family: 'Helsinki';
+  /* font-family: 'Helsinki'; */
   line-height: 12px;
   font-size: 12px;
-  padding: 2.5rem 1.5rem;
+  padding: 3rem 1.5rem;
   border:none;
   text-decoration:none;
 }

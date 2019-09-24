@@ -32,6 +32,7 @@ function App() {
             <Route path="/educacion" component={DetalleMinisterio} />
             <Route path="/obras" component={DetalleMinisterio} />
             <Route path="/urbanismo" component={DetalleMinisterio} />
+            <Route path = '/desarrollo' component={DetalleMinisterio} />
             <Route path="/salud" component={DetalleMinisterio} />
             <Route path="/gasto" component={Gasto} />
             <Route path="/reporte" component={Dashboard} />

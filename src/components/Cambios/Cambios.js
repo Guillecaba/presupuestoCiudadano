@@ -60,7 +60,7 @@ const Cambios = () => {
             <li className="clasi-item-1 pt-1">Programa</li>
             <li className="clasi-item-2 pt-1">Proyecto</li>
             <li className="clasi-item-2 pt-1">Actividad</li>
-            <li className="clasi-item-3 pt-1">Obra</li>
+            {/* <li className="clasi-item-3 pt-1">Obra</li> */}
           </ul>
         
         </Col>

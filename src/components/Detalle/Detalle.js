@@ -2,10 +2,17 @@ import React, { Component, Fragment } from "react";
 import MinisterioContext from "../../context/ministerio_context";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-import {HorizontalBar} from 'react-chartjs-2';
-import ReactLoading from 'react-loading';
+import { HorizontalBar } from "react-chartjs-2";
+import ReactLoading from "react-loading";
 import escuela from "../../assets/images/escuela.png";
-import Zoom from 'react-reveal/Zoom';
+import { hsl as d3Hsl } from "d3-color";
+import help from "../../assets/icons/question.svg"
+import Zoom from "react-reveal/Zoom";
+
+import {
+  scaleLinear as d3ScaleLinear,
+  scaleSqrt as d3ScaleSqrt
+} from "d3-scale";
 
 import LightSpeed from "react-reveal/LightSpeed";
 import {
@@ -40,19 +47,21 @@ import arrayMove from "array-move";
 import Sunburst from "../../components/Sunburst/Sunburst";
 import "../Educacion/Educacion.css";
 import NumberFormat from "react-number-format";
-import flecha from "../../assets/icons/arrows.png"
+import flecha from "../../assets/icons/arrows.png";
 
 //import datap from '../../assets/data/data'
 
 import ContainerDimensions from "react-container-dimensions";
 
-const DragHandle = sortableHandle(() => <img src={flecha} className="img-flecha" ></img>);
+const DragHandle = sortableHandle(() => (
+  <img src={flecha} className="img-flecha"></img>
+));
 
-const SortableItem = sortableElement(({ index,value }) => (
+const SortableItem = sortableElement(({ index, value }) => (
   <li className="item">
-    {index+1}
+    {index + 1}
     <DragHandle />
-     
+
     {value}
   </li>
 ));
@@ -61,26 +70,24 @@ const SortableContainer = sortableContainer(({ children }) => {
   return <ul>{children}</ul>;
 });
 
-
-function addDots(nStr)
-    {
-        nStr += '';
-       let x = nStr.split('.');
-        let x1 = x[0];
-        let x2 = x.length > 1 ? '.' + x[1] : '';
-        var rgx = /(\d+)(\d{3})/;
-        while (rgx.test(x1)) {
-            x1 = x1.replace(rgx, '$1' + '.' + '$2'); // changed comma to dot here
-        }
-        return x1 + x2;
-    }
+function addDots(nStr) {
+  nStr += "";
+  let x = nStr.split(".");
+  let x1 = x[0];
+  let x2 = x.length > 1 ? "." + x[1] : "";
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, "$1" + "." + "$2"); // changed comma to dot here
+  }
+  return x1 + x2;
+}
 
 class DetalleMinisterio extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: null,
-      slug:null,
+      slug: null,
       banner: null,
       items: null,
       treeMap: null,
@@ -88,44 +95,44 @@ class DetalleMinisterio extends Component {
       lista: null,
       comentario: " ",
       enviado: false,
-     
+
       ministerios: null,
-      datos:{
-        labels: [0,0,0],
+      datos: {
+        labels: [0, 0, 0],
         datasets: [
           {
-            label: 'Cantidad de votos',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            borderColor: 'rgba(255,99,132,1)',
+            label: "Cantidad de votos",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
             borderWidth: 1,
-            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-            hoverBorderColor: 'rgba(255,99,132,1)',
-            data: [0,0,0]
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [0, 0, 0]
           }
         ]
       },
-      data2:{
-        labels: [0,0,0],
+      data2: {
+        labels: [0, 0, 0],
         datasets: [
           {
-            label: 'Cantidad de votos',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            borderColor: 'rgba(255,99,132,1)',
+            label: "Cantidad de votos",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
             borderWidth: 1,
-            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-            hoverBorderColor: 'rgba(255,99,132,1)',
-            data: [0,0,0]
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [0, 0, 0]
           }
         ]
       },
-      descripcion:null,
-      descripcion2:null,
-      listaComentarios:null,
+      descripcion: null,
+      descripcion2: null,
+      listaComentarios: null
     };
   }
   static contextType = MinisterioContext;
 
-  url = `https://presupuesto-ciudadano.herokuapp.com`
+  url = `https://presupuesto-ciudadano.herokuapp.com`;
 
   notify = message => {
     toast.success(`${message}`, {
@@ -153,18 +160,38 @@ class DetalleMinisterio extends Component {
     console.log(event);
   }
 
+  colorNodoLista(nodo) {
+    let hueDXScale = d3ScaleLinear()
+      .domain([0, 1])
+      .range([0, 360]);
+
+    const hue = hueDXScale(nodo.x0);
+    console.log("colorNodo");
+    console.log(nodo.x0);
+    const color = d3Hsl(hue, 0.9, 0.6);
+    let nodoNuevo = { ...nodo, color: color };
+    console.log(nodoNuevo);
+    return nodoNuevo;
+  }
+
   changeListHandler = node => {
-    console.log(node)
+    console.log(node);
+    let nodoNuevoTitulo = this.colorNodoLista(node);
     const titulo = {
-      nombre: node.data.name,
-      valor: node.value
+      nombre: nodoNuevoTitulo.data.name,
+      valor: nodoNuevoTitulo.value,
+      color: nodoNuevoTitulo.color
     };
+
     const lista = [];
     if (node.children) {
+      let nodoNuevoHijo;
       node.children.map((valor, index) => {
+        nodoNuevoHijo = this.colorNodoLista(valor);
         const elemento = {
           nombre: valor.data.name,
-          valor: valor.value
+          valor: valor.value,
+          color: nodoNuevoHijo.color
         };
         console.log(elemento);
         lista[index] = elemento;
@@ -180,7 +207,7 @@ class DetalleMinisterio extends Component {
   };
 
   sendVote = () => {
-    this.setState({loading:true})
+    this.setState({ loading: true });
     const enviar = {
       comentario: this.state.comentario,
       orden_set: this.state.items,
@@ -199,22 +226,20 @@ class DetalleMinisterio extends Component {
           console.log(res);
           this.setState({ enviado: true });
           this.notify(`Enviamos tu voto!`);
-          
-
 
           console.log(res.data);
 
           const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
           axios.get(url).then(res => {
-          console.log(res.data);
-          const ministerios = res.data;
-           console.log(ministerios);
-              this.setState({ ministerios });
-              this.setState({loading:false})
+            console.log(res.data);
+            const ministerios = res.data;
+            console.log(ministerios);
+            this.setState({ ministerios });
+            this.setState({ loading: false });
 
-              console.log(this.state.ministerios);
+            console.log(this.state.ministerios);
 
-               /* let actividades = [];
+            /* let actividades = [];
               let votos = [];
             data.actividades.map(res=>{
       actividades.push(res.descripcion)
@@ -229,8 +254,7 @@ class DetalleMinisterio extends Component {
     console.log(prevData)
     
     this.setState({data2:prevData,descripcion2:data.nombre})  */
-    });
-
+          });
         },
         err => {
           this.notifyFail(`Hubo un error en el envio`);
@@ -239,29 +263,24 @@ class DetalleMinisterio extends Component {
       );
   };
 
-
-  handleChartTopRanking (data) {
+  handleChartTopRanking(data) {
     //console.log(data)
     let actividades = [];
     let votos = [];
-    data.actividades.map(res=>{
-      actividades.push(res.descripcion)
-      votos.push(res.data[0].cantidad)
-    })
-    console.log(actividades)
-    console.log(votos)
-    let prevData = this.state.data2
-    console.log(this.state.data)
-    prevData.labels=actividades
-    prevData.datasets[0].data= votos
-    console.log(prevData)
-    
-    this.setState({data2:prevData,descripcion2:data.nombre})
+    data.actividades.map(res => {
+      actividades.push(res.descripcion);
+      votos.push(res.data[0].cantidad);
+    });
+    console.log(actividades);
+    console.log(votos);
+    let prevData = this.state.data2;
+    console.log(this.state.data);
+    prevData.labels = actividades;
+    prevData.datasets[0].data = votos;
+    console.log(prevData);
 
-   
+    this.setState({ data2: prevData, descripcion2: data.nombre });
   }
-
-  
 
   changeInputHandler = (event, id) => {
     console.log(event.target.value);
@@ -288,9 +307,7 @@ class DetalleMinisterio extends Component {
 
           console.log(dataFromContext);
           axios
-            .get(
-              `${this.url}/v1/actividades/?ministerio__slug=educacion`
-            )
+            .get(`${this.url}/v1/actividades/?ministerio__slug=educacion`)
             .then(res => {
               console.log(res.data);
               res.data.map((item, index) => {
@@ -298,25 +315,25 @@ class DetalleMinisterio extends Component {
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
               });
-  
+
               this.setState({
                 logo: escuela,
 
-                slug:'educacion',
-  
+                slug: "educacion",
+
                 data: dataFromContext[0].data,
-  
+
                 items: res.data,
-  
+
                 banner: dataFromContext[2],
-  
+
                 treeMap: dataFromContext[3].treeMapData,
-  
+
                 resumen: dataFromContext[4].resumen,
                 lista: null,
-  
+
                 pathname: pathname,
-                enviado:false
+                enviado: false
               });
               console.log(this.state);
             });
@@ -325,117 +342,107 @@ class DetalleMinisterio extends Component {
         case "/obras":
           dataFromContext = this.context[1].obras;
           console.log(this.context);
-  
+
           axios
-            .get(
-              `${this.url}/v1/actividades/?ministerio__slug=obras`
-            )
+            .get(`${this.url}/v1/actividades/?ministerio__slug=obras`)
             .then(res => {
               console.log(res.data);
               res.data.map((item, index) => {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
-                
               });
               this.setState({
                 logo: casco,
 
-                slug:'obras',
-      
+                slug: "obras",
+
                 data: dataFromContext[0].data,
-      
+
                 items: res.data,
-      
+
                 banner: dataFromContext[2],
-      
+
                 treeMap: dataFromContext[3].treeMapData,
-      
+
                 resumen: dataFromContext[4].resumen,
-      
+
                 pathname: pathname,
                 lista: null,
-                enviado:false
+                enviado: false
               });
               console.log(this.state);
-            })
+            });
           break;
         case "/salud":
           dataFromContext = this.context[3].salud;
           console.log(this.context);
-  
+
           axios
-            .get(
-              `${this.url}/v1/actividades/?ministerio__slug=salud`
-            )
+            .get(`${this.url}/v1/actividades/?ministerio__slug=salud`)
             .then(res => {
               console.log(res.data);
               res.data.map((item, index) => {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
-                
               });
               this.setState({
                 logo: cruz,
 
-                slug:'salud',
-      
+                slug: "salud",
+
                 data: dataFromContext[0].data,
-      
-                items:res.data,
-      
+
+                items: res.data,
+
                 banner: dataFromContext[2],
-      
+
                 treeMap: dataFromContext[3].treeMapData,
-      
+
                 resumen: dataFromContext[4].resume,
-      
+
                 pathname: pathname,
-                enviado:false,
-                lista: null,
+                enviado: false,
+                lista: null
               });
               console.log(this.state);
-            })
+            });
           break;
-        case "/urbanismo":
-          dataFromContext = this.context[2].urbanismo;
-        console.log(this.context);
+        case "/desarrollo":
+          dataFromContext = this.context[4].desarrollo;
+          console.log(this.context);
 
-        axios
-          .get(
-            `${this.url}/v1/actividades/?ministerio__slug=urbanismo`
-          )
-          .then(res => {
-            console.log(res.data);
-            res.data.map((item, index) => {
-              item.orden = index;
-              item.actividad = item.id;
-              item.ministerio = item.ministerio.id;
-              
+          axios
+            .get(`${this.url}/v1/actividades/?ministerio__slug=desarrollo`)
+            .then(res => {
+              console.log(res.data);
+              res.data.map((item, index) => {
+                item.orden = index;
+                item.actividad = item.id;
+                item.ministerio = item.ministerio.id;
+              });
+              this.setState({
+                logo: casa,
+
+                slug: "desarrollo",
+
+                data: dataFromContext[0].data,
+
+                items: res.data,
+
+                banner: dataFromContext[2],
+
+                treeMap: dataFromContext[3].treeMapData,
+
+                resumen: dataFromContext[4].resume,
+
+                pathname: pathname,
+                enviado: false,
+                lista: null
+              });
+              console.log(this.state);
             });
-            this.setState({
-              logo: casa,
-
-              slug:'urbanismo',
-    
-              data: dataFromContext[0].data,
-    
-              items: res.data,
-    
-              banner: dataFromContext[2],
-    
-              treeMap: dataFromContext[3].treeMapData,
-    
-              resumen: dataFromContext[4].resume,
-    
-              pathname: pathname,
-              enviado:false,
-              lista: null,
-            });
-            console.log(this.state);
-
-          })
           break;
 
         default:
@@ -444,8 +451,6 @@ class DetalleMinisterio extends Component {
     }
   }
 
-
-  
   componentDidMount() {
     console.log("Detalle: componentDidMount");
     console.log(this.props.location);
@@ -458,9 +463,7 @@ class DetalleMinisterio extends Component {
 
         console.log(dataFromContext);
         axios
-          .get(
-            `${this.url}/v1/actividades/?ministerio__slug=educacion`
-          )
+          .get(`${this.url}/v1/actividades/?ministerio__slug=educacion`)
           .then(res => {
             console.log(res.data);
             res.data.map((item, index) => {
@@ -474,7 +477,7 @@ class DetalleMinisterio extends Component {
 
               data: dataFromContext[0].data,
 
-              slug:'educacion',
+              slug: "educacion",
 
               items: res.data,
 
@@ -495,111 +498,101 @@ class DetalleMinisterio extends Component {
         console.log(this.context);
 
         axios
-          .get(
-            `${this.url}/v1/actividades/?ministerio__slug=obras`
-          )
+          .get(`${this.url}/v1/actividades/?ministerio__slug=obras`)
           .then(res => {
             console.log(res.data);
             res.data.map((item, index) => {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
-              
             });
             this.setState({
               logo: casco,
-    
+
               data: dataFromContext[0].data,
 
-              slug:'obras',
-    
+              slug: "obras",
+
               items: res.data,
-    
+
               banner: dataFromContext[2],
-    
+
               treeMap: dataFromContext[3].treeMapData,
-    
+
               resumen: dataFromContext[4].resumen,
-    
+
               pathname: pathname
             });
             console.log(this.state);
-          })
-       
+          });
+
         break;
       case "/salud":
         dataFromContext = this.context[3].salud;
         console.log(this.context);
 
         axios
-          .get(
-            `${this.url}/v1/actividades/?ministerio__slug=salud`
-          )
+          .get(`${this.url}/v1/actividades/?ministerio__slug=salud`)
           .then(res => {
             console.log(res.data);
             res.data.map((item, index) => {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
-              
             });
             this.setState({
               logo: cruz,
-    
+
               data: dataFromContext[0].data,
 
-              slug:'salud',
-    
-              items:res.data,
-    
+              slug: "salud",
+
+              items: res.data,
+
               banner: dataFromContext[2],
-    
+
               treeMap: dataFromContext[3].treeMapData,
-    
+
               resumen: dataFromContext[4].resume,
-    
+
               pathname: pathname
             });
             console.log(this.state);
-          })
-       
+          });
+
         break;
-      case "/urbanismo":
-        dataFromContext = this.context[2].urbanismo;
+      case "/desarrollo":
+        dataFromContext = this.context[4].desarrollo;
         console.log(this.context);
 
         axios
-          .get(
-            `${this.url}/v1/actividades/?ministerio__slug=urbanismo`
-          )
+          .get(`${this.url}/v1/actividades/?ministerio__slug=desarrollo`)
           .then(res => {
             console.log(res.data);
             res.data.map((item, index) => {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
-              
             });
             this.setState({
               logo: casa,
 
-              slug:'urbanismo',
-    
+              slug: "desarrollo",
+
               data: dataFromContext[0].data,
-    
+
               items: res.data,
-    
+
               banner: dataFromContext[2],
-    
+
               treeMap: dataFromContext[3].treeMapData,
-    
+
               resumen: dataFromContext[4].resume,
-    
+
               pathname: pathname
             });
             console.log(this.state);
-
-          })
+          });
         break;
 
       default:
@@ -614,6 +607,25 @@ class DetalleMinisterio extends Component {
       items: newItems
     });
   };
+
+  trLista = ({ color, item }) => (
+    <tr
+      style={{
+        borderColor: "#ff0000"
+      }}
+    >
+      <td>{item.nombre}</td>
+      <td className="text-right">
+        <NumberFormat
+          value={item.valor}
+          displayType={"text"}
+          thousandSeparator={false}
+          prefix={"Gs "}
+        />{" "}
+      </td>
+    </tr>
+  );
+
   render() {
     let items;
     let state;
@@ -641,7 +653,7 @@ class DetalleMinisterio extends Component {
           draggable
           pauseOnHover
         />
-        {items && this.state.pathname == this.props.location.pathname  ? (
+        {items && this.state.pathname == this.props.location.pathname ? (
           <div>
             <div className="banner__principal pt-5 ">
               <Container>
@@ -655,14 +667,17 @@ class DetalleMinisterio extends Component {
                 </LightSpeed>
 
                 <Row className="pt-5">
-
                   <Col md={4}>
-                    <h2 className=''>Estructura por tipo de programa</h2>
+                    <h2 className="">Estructura por tipo de programa</h2>
                     <ul>
                       <li className="banner__principal_item_central">
+                        <div className="d-flex align-items-start">
                         <p className="banner__principal_item">
                           Programa Central
                         </p>
+                        <a  href="/financiacion/#infoProgramas"> <img className=" icon"  src={help}></img> </a>
+                        </div>
+                        
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[0].monto}
                         </p>
@@ -693,30 +708,54 @@ class DetalleMinisterio extends Component {
                       </li>
 
                       <li className="banner__principal_item_four">
+                      <div className="d-flex align-items-start">
                         <p className="banner__principal_item">
                           Programa sustantivo
                         </p>
+                        <a  href="/financiacion#infoProgramas"> <img className=" icon"  src={help}></img> </a>
+                       
+                        </div>
+                        
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[4].monto}
                         </p>
                       </li>
+                      <li>
+                        <ul>
+                          <li className="banner__principal_item_one ml-5">
+                            <p className="banner__principal_item">Proyecto</p>
+                            <p className="banner__principal_item_monto">
+                              {state.banner.datos.programas[6].monto}
+                            </p>
+                          </li>
+                          <li className="banner__principal_item_two ml-5">
+                            <p className="banner__principal_item">
+                              Actividad
+                            </p>
+                            <p className="banner__principal_item_monto">
+                              {state.banner.datos.programas[7].monto}
+                            </p>
+                          </li>
+                          
+                        </ul>
+                      </li>
                       <li className="banner__principal_item_five">
+                      <div className="d-flex align-items-start">
                         <p className="banner__principal_item">
                           Partidas no asignables
                         </p>
+                        <a  href="/financiacion#infoProgramas"> <img className=" icon"  src={help}></img> </a>
+                        </div>
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[5].monto}
                         </p>
                       </li>
                     </ul>
                   </Col>
-                 {/*  <Col className="align-self-center" md={8}>
+                  {/*  <Col className="align-self-center" md={8}>
                     
                   </Col> */}
-                  <Col
-                    className="font-weight-bold text-center"
-                    md={8}
-                  >
+                  <Col className="font-weight-bold text-center" md={8}>
                     <h3 className="">Presupuesto total</h3>
                     <p className="banner__principal_item_monto">
                       {state.banner.datos.presupuestoTotal}{" "}
@@ -728,10 +767,9 @@ class DetalleMinisterio extends Component {
             </div>
             <Container>
               <div className="py-5">
-              
                 <h1 className="text-uppercase text-center mb-5 gastos__title ">
-                  
-                  Presupuesto {this.state.banner.datos.nombre} < br  />en detalle
+                  Presupuesto {this.state.banner.datos.nombre} <br />
+                  en detalle
                 </h1>
                 <Row>
                   <Col md={6}>
@@ -753,8 +791,8 @@ class DetalleMinisterio extends Component {
                             count_member="value"
                             //labelFunc={node => node.data.name}
                             tooltipFunc={data => {
-                              let value = addDots(data.value)
-                              return `${data.data.name} \n ${value}`
+                              let value = addDots(data.value);
+                              return `${data.data.name} \n ${value}`;
                             }}
                             _debug={false}
                           />
@@ -772,13 +810,15 @@ class DetalleMinisterio extends Component {
                               <NumberFormat
                                 value={state.lista.titulo.valor}
                                 displayType={"text"}
-                                thousandSeparator={true}
+                                decimalSeparator={","} 
+                                          thousandSeparator={"."}
+                                /* thousandSeparator={false} */
                                 prefix={"Gs "}
                               />
                             </p>
                           </div>
 
-                          <Table responsive>
+                          <Table className="tabla-grafico" responsive>
                             <thead>
                               <tr>
                                 <th>Nombre</th>
@@ -789,13 +829,19 @@ class DetalleMinisterio extends Component {
                               {state.lista &&
                                 state.lista.lista.map((item, index) => {
                                   return (
-                                    <tr>
+                                    <tr
+                                      style={{
+                                        borderLeft: `10px hsl(${item.color.h}, ${(item.color.s *100).toFixed(2)+'%'}, ${(item.color.l *100).toFixed(2)+'%'}) solid`,
+                                        
+                                      }}
+                                    >
                                       <td>{item.nombre}</td>
                                       <td className="text-right">
                                         <NumberFormat
                                           value={item.valor}
-                                          displayType={"text"}
-                                          thousandSeparator={true}
+                                           displayType={"text"}
+                                          decimalSeparator={","} 
+                                          thousandSeparator={"."}
                                           prefix={"Gs "}
                                         />{" "}
                                       </td>
@@ -815,7 +861,7 @@ class DetalleMinisterio extends Component {
                 {!this.state.enviado && (
                   <div>
                     <h1 className="encuesta__title text-center">
-                      ¿Cuales serian tus prioridades?
+                      ¿Cuáles serían tus prioridades?
                     </h1>
                     <p className="text-center encuesta__subtitle">
                       Organiza tus prioridades, arriba las más importantes,{" "}
@@ -852,141 +898,169 @@ class DetalleMinisterio extends Component {
                     </button>
                   </div>
                 )}
-                {this.state.enviado && this.state.ministerios ?(
+                {this.state.enviado && this.state.ministerios ? (
                   <Fragment>
                     <h1>Resultados</h1>
-                     <h2>Top de mayor interés en actividades por ministerio: {this.state.descripcion2}</h2>
-                   
+                    <h2>
+                      Top de mayor interés en actividades por ministerio:{" "}
+                      {this.state.descripcion2}
+                    </h2>
 
-                   <Dropdown>
-                     <Dropdown.Toggle  className="my-3" variant="info" id="dropdown-basic">
-                       Seleccionar ministerio:
-                     </Dropdown.Toggle>
-                     <Dropdown.Menu>
-                       {this.state.ministerios.map(res => (
-                         <Dropdown.Item onClick={ () => this.handleChartTopRanking(res)}>{res.nombre}</Dropdown.Item>
-                        
-                       ))}
-                     </Dropdown.Menu>
-                   </Dropdown>
-                   
-                   
-                   
-                   <HorizontalBar data={this.state.data2} />
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        className="my-3"
+                        variant="info"
+                        id="dropdown-basic"
+                      >
+                        Seleccionar ministerio:
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        {this.state.ministerios.map(res => (
+                          <Dropdown.Item
+                            onClick={() => this.handleChartTopRanking(res)}
+                          >
+                            {res.nombre}
+                          </Dropdown.Item>
+                        ))}
+                      </Dropdown.Menu>
+                    </Dropdown>
+
+                    <HorizontalBar data={this.state.data2} />
                   </Fragment>
-                
-
-
-                ): <div className='d-flex justify-content-center'>
-                {/* <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />  */}
-                </div>
-                
-              }
-              {this.state.loading && <div className='d-flex justify-content-center'>
-                <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} /> 
-                </div>}
+                ) : (
+                  <div className="d-flex justify-content-center">
+                    {/* <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />  */}
+                  </div>
+                )}
+                {this.state.loading && (
+                  <div className="d-flex justify-content-center">
+                    <ReactLoading
+                      type={"bars"}
+                      color={"#CBE776"}
+                      height={"20%"}
+                      width={"20%"}
+                    />
+                  </div>
+                )}
               </div>
             </Container>
           </div>
-        ) : <div className='d-flex justify-content-center'>
-          <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />
-          </div>}
+        ) : (
+          <div className="d-flex justify-content-center">
+            <ReactLoading
+              type={"bars"}
+              color={"#CBE776"}
+              height={"20%"}
+              width={"20%"}
+            />
+          </div>
+        )}
         <div className="presupuesto_total mb-5 py-5">
           <Container>
-          <Row>
+            <Row>
               <Col md={3}>
-              <Zoom left>
-        
-                <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={escuela} />
-                  <Card.Body>
-                    <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de Educación y Ciencias
-                    </Card.Title>
-                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 7.623 billones
-                    </Card.Text>
-                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 7.623.382.193.846
-                    </Card.Text>
-                  </Card.Body>
-                  <Link className="text-center" to={"/educacion"}>
-                    <Button className="button__secundary align-self-center grow   mb-3">
-                      Ver Mas
-                    </Button>
-                  </Link>
-                </Card>
-                
-        </Zoom>
-              </Col>
-              <Col md={3}>
-              <Zoom left>
-                <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={cruz} />
-                  <Card.Body>
-                    <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de Salud y Bienestar social
-                    </Card.Title>
-                    <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                      Gs. 5.818 billones
-                    </Card.Text>
-                    <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
-                      Gs. 5.818.720.392.443
-                    </Card.Text>
-                  </Card.Body>
-                  <Link className="text-center" to={"/salud"}>
-                    <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
-                    </Button>
-                  </Link>
-                </Card>
+                <Zoom left>
+                  <Card className="card-ministerio">
+                    <Card.Img
+                      className="w-25 align-self-center grow"
+                      src={escuela}
+                    />
+                    <Card.Body>
+                      <Card.Title className="presupuesto_total__card_title text-center">
+                        Ministerio de Educación y Ciencias
+                      </Card.Title>
+                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                        Gs. 9.243 billones
+                      </Card.Text>
+                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                        Gs. 9.243.946.951.188
+                      </Card.Text>
+                    </Card.Body>
+                    <Link className="text-center" to={"/educacion"}>
+                      <Button className="button__secundary align-self-center grow   mb-3">
+                        Ver Mas
+                      </Button>
+                    </Link>
+                  </Card>
                 </Zoom>
               </Col>
               <Col md={3}>
-              <Zoom left>
-                <Card className="card-ministerio">
-                  <Card.Img className="w-25 align-self-center grow" src={casco} />
-                  <Card.Body>
-                    <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de Obras Públicas y Comunicaciones
-                    </Card.Title>
+                <Zoom left>
+                  <Card className="card-ministerio">
+                    <Card.Img
+                      className="w-25 align-self-center grow"
+                      src={cruz}
+                    />
+                    <Card.Body>
+                      <Card.Title className="presupuesto_total__card_title text-center">
+                        Ministerio de Salud y Bienestar social
+                      </Card.Title>
+                      <Card.Text className="presupuesto_total__card_monto_primary  text-center">
+                        Gs. 5.823 billones
+                      </Card.Text>
+                      <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
+                        Gs. 5.823.285.397.358
+                      </Card.Text>
+                    </Card.Body>
+                    <Link className="text-center" to={"/salud"}>
+                      <Button className="button__secundary align-self-center grow  mb-3">
+                        Ver Mas
+                      </Button>
+                    </Link>
+                  </Card>
+                </Zoom>
+              </Col>
+              <Col md={3}>
+                <Zoom left>
+                  <Card className="card-ministerio">
+                    <Card.Img
+                      className="w-25 align-self-center grow"
+                      src={casco}
+                    />
+                    <Card.Body>
+                      <Card.Title className="presupuesto_total__card_title text-center">
+                        Ministerio de Obras Públicas y Comunicaciones
+                      </Card.Title>
 
-                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 5,187 billones
-                    </Card.Text>
-                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 5.187.945.137.816
-                    </Card.Text>
-                  </Card.Body>
-                  <Link className="text-center" to={"/obras"}>
-                    <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
-                    </Button>
-                  </Link>
-                </Card>
+                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                        Gs. 5,241 billones
+                      </Card.Text>
+                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                        Gs. 5.241.719.832.513
+                      </Card.Text>
+                    </Card.Body>
+                    <Link className="text-center" to={"/obras"}>
+                      <Button className="button__secundary align-self-center grow  mb-3">
+                        Ver Mas
+                      </Button>
+                    </Link>
+                  </Card>
                 </Zoom>
               </Col>
               <Col md={3}>
-              <Zoom left>
-                <Card className="card-ministerio ">
-                  <Card.Img className="w-25 align-self-center grow " src={casa} />
-                  <Card.Body>
-                    <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de Urbanismo, Vivienda y Hábitat
-                    </Card.Title>
-                    <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                      Gs. 0.460 billones{" "}
-                    </Card.Text>
-                    <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                      Gs. 460.890.065.326
-                    </Card.Text>
-                  </Card.Body>
-                  <Link className="text-center" to={"/urbanismo"}>
-                    <Button className="button__secundary align-self-center grow  mb-3">
-                      Ver Mas
-                    </Button>
-                  </Link>
-                </Card>
+                <Zoom left>
+                  <Card className="card-ministerio ">
+                    <Card.Img
+                      className="w-25 align-self-center grow "
+                      src={casa}
+                    />
+                    <Card.Body>
+                      <Card.Title className="presupuesto_total__card_title text-center">
+                      Ministerio de <br></br> Desarrollo social
+                      </Card.Title>
+                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
+                        Gs. 0.524 billones{" "}
+                      </Card.Text>
+                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
+                        Gs. 524.872.980.571
+                      </Card.Text>
+                    </Card.Body>
+                    <Link className="text-center" to={"/desarrollo"}>
+                      <Button className="button__secundary align-self-center grow  mb-3">
+                        Ver Mas
+                      </Button>
+                    </Link>
+                  </Card>
                 </Zoom>
               </Col>
             </Row>
