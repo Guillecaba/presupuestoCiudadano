@@ -20,9 +20,9 @@ const Ejecucion = () => {
           <img className = "w-75 como-img grow " src={aprobacion} alt="" />
         </Col>
         <Col md={6} className='align-self-center'>
-        <LightSpeed right>
+        <Fade bottom>
           <h1 className="text-uppercase como_title align-middle">¿Cómo se ejecuta el presupuesto?</h1>
-          </LightSpeed>
+          </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
@@ -36,14 +36,14 @@ const Ejecucion = () => {
         </Fade>
         </Col>
         <Col className="text-right" md={5}>
-        <Fade right>
+        <Fade bottom>
           <img className="w-50 " src={engranajes} alt="engranajes"></img>
           </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
         <Col className= "text-left" md={5}>
-        <Fade right>
+        <Fade bottom>
 
 <img className="w-75" src= {ley} alt="ley "></img>
         </Fade>
@@ -73,7 +73,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
         </Fade>
         </Col>
         <Col className="text-center" md={5}>
-          <Fade right>
+          <Fade bottom>
 
           <img className="w-75 " src={grafico} alt="grafica"></img>
           </Fade>
@@ -81,7 +81,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
       </Row>
       <Row className="mt-5">
         <Col className= "text-left" md={5}>
-          <Fade right>
+          <Fade bottom>
 
 <img className="w-75" src= {bolsa} alt="bolsa"></img>
           </Fade>
@@ -112,7 +112,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           </Fade>
         </Col>
         <Col className="text-right" md={5}>
-          <Fade right>
+          <Fade bottom>
 
           <img className="w-75 " src={manos} alt="manos"></img>
           </Fade>
@@ -166,16 +166,16 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           <Container>
             <Row>
               <Col md={5}>
-              <Fade left>
+              <Fade bottom>
                 <img className="w-100" src={personitas} alt="Personitas" />
                 </Fade>
               </Col>
               <Col md={7}>
-                <Fade right>
+                <Fade bottom>
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
                   informáte
                 </h1>
-                </Fade>
+                
                 <p className="informartion__subtitle">
                   Conocer el Presupuesto es esencial para conocer que usos se le
                   dan a tus impuestos, cuáles son las prioridades de las
@@ -184,6 +184,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
                   vida.
                 </p>
                 <Button className="button__secundary grow">Descarga la guia</Button>
+                </Fade>
               </Col>
             </Row>
           </Container>

@@ -6,6 +6,7 @@ import presupuestoAprobado from "../../assets/images/presu.png";
 import moneda from "../../assets/images/moneda.png";
 import legis from "../../assets/images/legis.png";
 import LightSpeed from 'react-reveal/LightSpeed';
+import Fade from 'react-reveal/Fade'
 import pdf from "../../assets/media/decreto.pdf"
 import Arrow from "../../assets/images/Arrow.png"
 
@@ -15,11 +16,11 @@ const Cambios = () => {
     <Container>
       <Row className="cambios_banner mt-5 p-5">
         <Col>
-        <LightSpeed right>
+        <Fade>
           <h1 className="text-center cambios_banner_title ">
             Cambios del presupuesto 2020
           </h1>
-          </LightSpeed>
+          </Fade>
         </Col>
       </Row>
       <Row>

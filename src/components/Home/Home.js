@@ -64,7 +64,7 @@ class Home extends React.Component {
           <Container>
             <Row>
               <Col md={6}>
-              <Fade className="grow" left>
+              <Fade className="grow" bottom>
                 <img
                   className="banner__img grow"
                   src={personitas}
@@ -90,11 +90,11 @@ class Home extends React.Component {
         <Container>
           <Row id="proceso">
             <Col>
-            <LightSpeed right>
+            <Fade >
             <h1 className="como-se-elabora  text-center grow">
             ¿CÓMO SE ELABORA EL PRESUPUESTO?
                 </h1>
-                </LightSpeed>
+                </Fade>
               <Carousel interval="5000" className="">
                 {/* <Carousel.Item>
                   <img
@@ -120,9 +120,9 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade >
                         <img className=" w-100" src={ciclo} alt="C" />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <h3 className="slide-title text-left">
@@ -145,13 +145,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={lineamientos}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">ABRIL</p>
@@ -173,13 +173,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={anteproyecto}
                           alt="anteproyecto"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">MAYO - JUNIO</p>
@@ -204,13 +204,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={proyecto}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">JULIO - AGOSTO</p>
@@ -234,13 +234,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={estudio}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -265,13 +265,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={aprobacion}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -295,13 +295,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-50"
                           src={presidente}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -325,13 +325,13 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Zoom left>
+                      <Fade>
                         <img
                           className=" w-100"
                           src={ejecucion}
                           alt="Lineamientos"
                         />
-                        </Zoom>
+                        </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
@@ -429,7 +429,7 @@ class Home extends React.Component {
               <Fragment>
             <h1  className="presupuesto_total__card__title_two text-center">
                 
-            Entidades de la Administración Central 
+            Entidades <br></br> de la Administración Central 
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
                   Gs. 45.934.977.875.335 <br /> 
@@ -441,7 +441,7 @@ class Home extends React.Component {
                 <Fragment>
                 <h1 className="presupuesto_total__card__title_two text-center">
                   
-                  Entidades Descentralizadas:
+                  Entidades <br />Descentralizadas
                 </h1>
                 <h2 className="presupuesto_total__subtitle_two  mb-5 ">
                   Gs. 39.604.590.787.444 <br /> 
@@ -479,7 +479,7 @@ class Home extends React.Component {
 
             <Row>
               <Col md={3}>
-              <Zoom left>
+              <Fade>
         
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={escuela} />
@@ -501,10 +501,10 @@ class Home extends React.Component {
                   </Link>
                 </Card>
                 
-        </Zoom>
+        </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade>
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={cruz} />
                   <Card.Body>
@@ -524,10 +524,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade>
                 <Card className="card-ministerio">
                   <Card.Img className="w-25 align-self-center grow" src={casco} />
                   <Card.Body>
@@ -548,10 +548,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade>
                 <Card className="card-ministerio ">
                   <Card.Img className="w-25 align-self-center grow " src={casa} />
                   <Card.Body>
@@ -571,7 +571,7 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
             </Row>
             </Container>
@@ -646,7 +646,7 @@ class Home extends React.Component {
             </h1>
             <Row>
               <Col md={3}>
-              <Zoom left>
+              <Fade >
                 <Card>
                   <Card.Img className="grow" variant="top" src={billete} />
                   <Card.Body>
@@ -658,10 +658,10 @@ class Home extends React.Component {
                   Ver más
                   </Button></Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade >
                 <Card>
                   <Card.Img className="grow " variant="top" src={moneda} />
                   <Card.Body>
@@ -675,10 +675,10 @@ class Home extends React.Component {
                   </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade >
                 <Card>
                   <Card.Img className="gro img-ods   " src={ods} />
                   <Card.Body>
@@ -692,10 +692,10 @@ class Home extends React.Component {
                     </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-              <Zoom left>
+              <Fade >
                 <Card>
                   <Card.Img  className="grow " variant="top" src={lupa} />
                   <Card.Body>
@@ -710,7 +710,7 @@ class Home extends React.Component {
                   </Button>
                   </Link>
                 </Card>
-                </Zoom>
+                </Fade>
               </Col>
             </Row>
           </div>
@@ -810,16 +810,17 @@ class Home extends React.Component {
           <Container>
             <Row>
               <Col md={5}>
-              <Fade left>
+              <Fade bottom>
                 <img className="w-100" src={personitas} alt="Personitas" />
                 </Fade>
               </Col>
               <Col md={7}>
-                <Fade right>
+                <Fade bottom>
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
                   informáte
                 </h1>
                 </Fade>
+                <Fade bottom>
                 <p className="informartion__subtitle">
                   Conocer el Presupuesto es esencial para conocer que usos se le
                   dan a tus impuestos, cuáles son las prioridades de las
@@ -828,6 +829,9 @@ class Home extends React.Component {
                   vida.
                 </p>
                 <Button href={guia} className="button__secundary grow">Descargá la guía</Button>
+                </Fade>
+                
+                
               </Col>
             </Row>
           </Container>

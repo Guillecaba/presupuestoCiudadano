@@ -27,9 +27,9 @@ const Financiacion = () => {
           </Fade>
         </Col>
         <Col md={6} className='align-self-center'>
-        <LightSpeed right>
+        <Fade >
           <h1 className="text-uppercase como_title align-middle">¿Qué es el presupuesto y cómo se financia?</h1>
-          </LightSpeed>
+          </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
@@ -145,7 +145,7 @@ const Financiacion = () => {
       </Row>
       <Row>
               <Col md={4}>
-              <Zoom left>
+              <Fade left>
         
                 <Card className="card-ministerio">
                   <Card.Img className="w-50 align-self-center grow" src={impuestos} />
@@ -163,10 +163,10 @@ Incluye el dinero provenientes del pago de ingresos tributarios y no	tributarios
                   
                 </Card>
                 
-        </Zoom>
+        </Fade>
               </Col>
               <Col md={4}>
-              <Zoom left>
+              <Fade left>
         
                 <Card className="card-ministerio">
                   <Card.Img className="w-50 align-self-center grow" src={dinero} />
@@ -182,10 +182,10 @@ Incluye el dinero provenientes del pago de ingresos tributarios y no	tributarios
                   
                 </Card>
                 
-        </Zoom>
+        </Fade>
               </Col>
               <Col md={4}>
-              <Zoom left>
+              <Fade left>
         
                 <Card className="card-ministerio">
                   <Card.Img className="w-50 align-self-center grow" src={essap} />
@@ -203,7 +203,7 @@ Incluye además el dinero que en concepto las donaciones tanto internas como ext
                  
                 </Card>
                 
-        </Zoom>
+        </Fade>
               </Col>
               </Row>
               
@@ -212,16 +212,16 @@ Incluye además el dinero que en concepto las donaciones tanto internas como ext
           <Container>
             <Row>
               <Col md={5}>
-              <Fade left>
+              <Fade >
                 <img className="w-100" src={personitas} alt="Personitas" />
                 </Fade>
               </Col>
               <Col md={7}>
-                <Fade right>
+                <Fade >
                 <h1 className="text-uppercase font-weigth-bold information__title pb-3">
                   informáte
                 </h1>
-                </Fade>
+                
                 <p className="informartion__subtitle">
                   Conocer el Presupuesto es esencial para conocer que usos se le
                   dan a tus impuestos, cuáles son las prioridades de las
@@ -230,6 +230,7 @@ Incluye además el dinero que en concepto las donaciones tanto internas como ext
                   vida.
                 </p>
                 <Button className="button__secundary grow">Descarga la guia</Button>
+                </Fade>
               </Col>
             </Row>
             </Container>

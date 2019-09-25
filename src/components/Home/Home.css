@@ -16,7 +16,7 @@
 }
 
 .banner__text_title {
-  font-size:36px;
+  font-size:1.563rem;
   line-height: 50px;
   
   font-weight: bold;
@@ -153,7 +153,7 @@
 .presupuesto_total__subtitle {
   font-weight: bold;
   color:#363736 !important;
-  font-size: 48px;
+  font-size: 1.563rem;
   line-height: 56px;
   text-align: center;
 }
@@ -195,14 +195,14 @@
 .presupuesto_total__card__title_two {
   color: white !important;
   line-height: 33px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 } 
 
 .presupuesto_total__subtitle_two {
   font-weight: bold;
   color:white !important;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 56px;
   text-align: center;
 }

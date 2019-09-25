@@ -7,7 +7,7 @@ import ReactLoading from "react-loading";
 import escuela from "../../assets/images/escuela.png";
 import { hsl as d3Hsl } from "d3-color";
 import help from "../../assets/icons/question.svg"
-import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 import {
   scaleLinear as d3ScaleLinear,
@@ -197,6 +197,7 @@ class DetalleMinisterio extends Component {
         lista[index] = elemento;
       });
     }
+    
 
     const estado = {
       titulo: titulo,
@@ -662,9 +663,9 @@ class DetalleMinisterio extends Component {
                   src={state.logo}
                   alt="escuela"
                 />
-                <LightSpeed right>
+                <Fade bottom>
                   <h1 className="text-center">{state.banner.datos.nombre}</h1>
-                </LightSpeed>
+                </Fade>
 
                 <Row className="pt-5">
                   <Col md={4}>
@@ -755,12 +756,12 @@ class DetalleMinisterio extends Component {
                   {/*  <Col className="align-self-center" md={8}>
                     
                   </Col> */}
-                  <Col className="font-weight-bold text-center" md={8}>
+                  <Col className="font-weight-bold text-center align-items-center d-flex flex-column justify-content-center" md={8}>
                     <h3 className="">Presupuesto total</h3>
                     <p className="banner__principal_item_monto">
                       {state.banner.datos.presupuestoTotal}{" "}
                     </p>
-                    <Doughnut data={state.data} />
+                    <Doughnut options={{legend:{display:false}}} className="" data={state.data} />
                   </Col>
                 </Row>
               </Container>
@@ -792,7 +793,7 @@ class DetalleMinisterio extends Component {
                             //labelFunc={node => node.data.name}
                             tooltipFunc={data => {
                               let value = addDots(data.value);
-                              return `${data.data.name} \n ${value}`;
+                              return `${data.data.name} \n Gs. ${value}`;
                             }}
                             _debug={false}
                           />
@@ -823,6 +824,7 @@ class DetalleMinisterio extends Component {
                               <tr>
                                 <th>Nombre</th>
                                 <th className="text-right">Monto</th>
+                                <th className="text-right">Porcentaje</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -835,16 +837,26 @@ class DetalleMinisterio extends Component {
                                         
                                       }}
                                     >
-                                      <td>{item.nombre}</td>
-                                      <td className="text-right">
+                                      <td width="30%">{item.nombre}</td>
+                                      <td width="60%" className="text-right">
                                         <NumberFormat
                                           value={item.valor}
                                            displayType={"text"}
+                                           
                                           decimalSeparator={","} 
                                           thousandSeparator={"."}
-                                          prefix={"Gs "}
+                                          prefix={"Gs \r\n"}
                                         />{" "}
                                       </td>
+                                      <td width="20%" className="text-right"><NumberFormat  
+                                      value={(item.valor/state.lista.titulo.valor)*100}
+                                      displayType={"text"}
+                                      decimalScale={2}
+                                     decimalSeparator={","} 
+                                     thousandSeparator={"."}
+                                     suffix={"%"}
+                                     
+                                      ></NumberFormat></td>
                                     </tr>
                                   );
                                 })}
@@ -959,7 +971,7 @@ class DetalleMinisterio extends Component {
           <Container>
             <Row>
               <Col md={3}>
-                <Zoom left>
+                <Fade>
                   <Card className="card-ministerio">
                     <Card.Img
                       className="w-25 align-self-center grow"
@@ -982,10 +994,10 @@ class DetalleMinisterio extends Component {
                       </Button>
                     </Link>
                   </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-                <Zoom left>
+                <Fade>
                   <Card className="card-ministerio">
                     <Card.Img
                       className="w-25 align-self-center grow"
@@ -1008,10 +1020,10 @@ class DetalleMinisterio extends Component {
                       </Button>
                     </Link>
                   </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-                <Zoom left>
+                <Fade>
                   <Card className="card-ministerio">
                     <Card.Img
                       className="w-25 align-self-center grow"
@@ -1035,10 +1047,10 @@ class DetalleMinisterio extends Component {
                       </Button>
                     </Link>
                   </Card>
-                </Zoom>
+                </Fade>
               </Col>
               <Col md={3}>
-                <Zoom left>
+                <Fade>
                   <Card className="card-ministerio ">
                     <Card.Img
                       className="w-25 align-self-center grow "
@@ -1061,7 +1073,7 @@ class DetalleMinisterio extends Component {
                       </Button>
                     </Link>
                   </Card>
-                </Zoom>
+                </Fade>
               </Col>
             </Row>
           </Container>
