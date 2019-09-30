@@ -26,13 +26,14 @@ const footer = () => {
           <Col md={6}>
             <Row>
             <Col className="py-3" md={4} sm={4}>
-            <a href="http://www.ceamso.org.py/" >
-                <img
+            <a href = "https://www.hacienda.gov.py/web-hacienda/index.php" >
+                <img 
                   className="footer__img"
-                  src={ceamso}
-                  alt="ceamso"
+                  src={logo_hacienda}
+                  alt="hacienda"
                 />
                 </a>
+            
                 {/* <a  href="http://www.hacienda.gov.py">
                 <img
                   className="footer__img_2"
@@ -67,11 +68,11 @@ const footer = () => {
                
                 </Col> */}
               <Col md={4}>
-              <a href = "https://www.hacienda.gov.py/web-hacienda/index.php" >
-                <img 
+              <a href="http://www.ceamso.org.py/" >
+                <img
                   className="footer__img"
-                  src={logo_hacienda}
-                  alt="hacienda"
+                  src={ceamso}
+                  alt="ceamso"
                 />
                 </a>
               </Col>

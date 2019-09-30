@@ -51,22 +51,22 @@ const Cambios = () => {
       </Row>
       </Container>
       <Row className="clasif pt-5 pl-5  ">
-      <Container className="d-lg-flex">
-        <Col md={6} className="d-flex flex-column justify-content-center">
+      <Container id="def-proyecto-acti" className="d-lg-flex">
+        <Col md={7} className="d-flex flex-column justify-content-center">
         
           <h2 className="font-weight-bold clasi_item_title ">
             Clasificación Programática
           </h2>
           <ul className="py-1 pl-2 clasi-list">
             <li className="clasi-item-1 pt-1">Programa</li>
-            <li className="clasi-item-2 pt-1">Proyecto</li>
-            <li className="clasi-item-2 pt-1">Actividad</li>
+            <li className="clasi-item-2 pt-1">Proyecto :<br></br> &emsp; Conjunto de actividades y/u obras con periodo definido de ejecución para mejorar la provisión de los bienes y servicios en el cumplimiento de un resultado. </li>
+            <li className="clasi-item-2 pt-1">Actividad: <br></br> &emsp; Es el conjunto de acciones de mínimo nivel que se llevan a cabo para cumplir las metas de un programa, que consiste en la ejecución de ciertos procesos o tareas mediante la utilización de los recursos humanos, materiales, técnicos, y financieros asignados a la actividad con un costo determinado. </li>
             {/* <li className="clasi-item-3 pt-1">Obra</li> */}
           </ul>
         
         </Col>
 
-        <Col md={6} className="d-flex  justify-content-center">
+        <Col md={5} className="d-flex  justify-content-center">
           <img
             src={presupuestoAprobado}
             className="w-75  grow"

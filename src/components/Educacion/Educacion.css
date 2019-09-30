@@ -130,3 +130,16 @@ li {
 /* .tabla-grafico {
   table-layout: fixed;
 } */
+
+.Toastify__toast--success {
+  background: #CBE776 !important;
+}
+
+.resultado_ministerio_titulo{
+  color:#E16163;
+}
+
+.btn-info {
+  background:rgb(225,97,99);
+  border:none;
+}

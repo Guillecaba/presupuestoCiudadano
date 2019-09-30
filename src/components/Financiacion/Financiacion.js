@@ -8,6 +8,10 @@ import unidad from "../../assets/images/unidad.png";
 import anualidad from "../../assets/images/anualidad.png";
 import equilibrio from "../../assets/images/equilibrio.png";
 import grafico from "../../assets/images/grafico.png";
+import { Link } from "react-router-dom";
+import flecha from "../../assets/images/flecha.png";
+import downArrow from "../../assets/icons/down-arrow.svg";
+
 
 import impuestos from "../../assets/images/impuestos-libro.png";
 import dinero from "../../assets/images/dinero.png";
@@ -109,6 +113,7 @@ const Financiacion = () => {
           <Accordion defaultActiveKey="0">
   <Card className="card-acordeon">
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="0">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Programa Central
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
@@ -117,6 +122,7 @@ const Financiacion = () => {
   </Card>
   <Card className="card-acordeon">
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="1">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Programas Sustantivos
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="1">
@@ -125,6 +131,7 @@ const Financiacion = () => {
   </Card>
   <Card className="card-acordeon" >
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="2">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Programas de Partidas no Asignables
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="2">

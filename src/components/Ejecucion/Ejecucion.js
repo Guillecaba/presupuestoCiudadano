@@ -8,6 +8,8 @@ import grafico from "../../assets/images/grafico.png"
 import manos from "../../assets/images/manos.png";
 import {Fade,LightSpeed ,Zoom} from 'react-reveal/';
 import personitas from "../../assets/images/personitas-completo.png";
+import  "./Ejecucion.css";
+import downArrow from "../../assets/icons/down-arrow.svg";
 
 import bolsa from '../../assets/images/bolsa.png'
 
@@ -127,6 +129,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           <Accordion defaultActiveKey="0">
   <Card className="card-acordeon">
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="0">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Plan de Caja:
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
@@ -135,6 +138,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
   </Card>
   <Card className="card-acordeon">
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="1">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Registro de la Obligación: 
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="1">
@@ -143,6 +147,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
   </Card>
   <Card className="card-acordeon" >
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="2">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Solicitud de Transferencia de Recursos (STR):
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="2">
@@ -152,6 +157,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
 
   <Card className="card-acordeon" >
     <Accordion.Toggle className="acordeon-card-title font-weight-bold" as={Card.Header} eventKey="3">
+    <img className="icono-flecha-abajo" src={downArrow} />
     Pago de la Obligación:
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="3">

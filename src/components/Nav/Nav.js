@@ -9,7 +9,7 @@ const nav = () => {
   return (
     <>
       <Container>
-        <Navbar className="pb-4" collapseOnSelect expand="lg">
+        <Navbar className="py-4" collapseOnSelect expand="lg">
           <Navbar.Brand className="navbar__title grow">
             <Link className="text-decoration-none nav-link-color" to={"/"}>
               PRESUPUESTO CIUDADANO

@@ -6,8 +6,11 @@ import { HorizontalBar } from "react-chartjs-2";
 import ReactLoading from "react-loading";
 import escuela from "../../assets/images/escuela.png";
 import { hsl as d3Hsl } from "d3-color";
-import help from "../../assets/icons/question.svg"
+import help from "../../assets/icons/question.svg";
 import Fade from "react-reveal/Fade";
+import construccion from "../../assets/images/construccion.png";
+import desarrollo from "../../assets/images/desarrollo.png";
+import BannerMinisterios from "../bannerMinisterios/bannerMinisterios";
 
 import {
   scaleLinear as d3ScaleLinear,
@@ -116,11 +119,11 @@ class DetalleMinisterio extends Component {
         datasets: [
           {
             label: "Cantidad de votos",
-            backgroundColor: "rgba(255,99,132,0.2)",
-            borderColor: "rgba(255,99,132,1)",
+            backgroundColor: "#E16163",
+            borderColor: "#E16163",
             borderWidth: 1,
-            hoverBackgroundColor: "rgba(255,99,132,0.4)",
-            hoverBorderColor: "rgba(255,99,132,1)",
+            hoverBackgroundColor: " rgb(225,97,99,0.4) ",
+            hoverBorderColor: " rgb(225,97,99,1) ",
             data: [0, 0, 0]
           }
         ]
@@ -197,7 +200,6 @@ class DetalleMinisterio extends Component {
         lista[index] = elemento;
       });
     }
-    
 
     const estado = {
       titulo: titulo,
@@ -215,7 +217,7 @@ class DetalleMinisterio extends Component {
       ministerio: this.state.items[0].ministerio
     };
     const send = JSON.stringify(enviar);
-    console.log(send);
+    /* console.log(send); */
     axios
       .post(`${this.url}/v1/respuesta/`, send, {
         headers: {
@@ -228,17 +230,22 @@ class DetalleMinisterio extends Component {
           this.setState({ enviado: true });
           this.notify(`Enviamos tu voto!`);
 
-          console.log(res.data);
+          /*  console.log(res.data); */
 
           const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
           axios.get(url).then(res => {
-            console.log(res.data);
-            const ministerios = res.data;
-            console.log(ministerios);
-            this.setState({ ministerios });
+            /*  console.log(res.data) */ const ministerios = res.data;
+            /*  console.log(ministerios) */ this.setState({ ministerios });
             this.setState({ loading: false });
 
             console.log(this.state.ministerios);
+            console.log(enviar.ministerio);
+            this.state.ministerios.map(res => {
+              if (enviar.ministerio == res.id) {
+                this.handleChartTopRanking(res);
+              }
+            });
+            /*  this.state.ministerios */
 
             /* let actividades = [];
               let votos = [];
@@ -666,19 +673,30 @@ class DetalleMinisterio extends Component {
                 <Fade bottom>
                   <h1 className="text-center">{state.banner.datos.nombre}</h1>
                 </Fade>
+                <a  className="text-decoration-none" href={this.props.location.pathname + '#participacion'}><button
+                  className="button__secundary   d-block mx-auto "
+                  
+                >
+Participá!
+                
+                  
+                </button></a>
 
                 <Row className="pt-5">
-                  <Col md={4}>
+                  <Col className="pb-5" md={4}>
                     <h2 className="">Estructura por tipo de programa</h2>
                     <ul>
                       <li className="banner__principal_item_central">
                         <div className="d-flex align-items-start">
-                        <p className="banner__principal_item">
-                          Programa Central
-                        </p>
-                        <a  href="/financiacion/#infoProgramas"> <img className=" icon"  src={help}></img> </a>
+                          <p className="banner__principal_item">
+                            Programa Central
+                          </p>
+                          <a href="/financiacion/#infoProgramas">
+                            {" "}
+                            <img className=" icon" src={help}></img>{" "}
+                          </a>
                         </div>
-                        
+
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[0].monto}
                         </p>
@@ -709,14 +727,16 @@ class DetalleMinisterio extends Component {
                       </li>
 
                       <li className="banner__principal_item_four">
-                      <div className="d-flex align-items-start">
-                        <p className="banner__principal_item">
-                          Programa sustantivo
-                        </p>
-                        <a  href="/financiacion#infoProgramas"> <img className=" icon"  src={help}></img> </a>
-                       
+                        <div className="d-flex align-items-start">
+                          <p className="banner__principal_item">
+                            Programa sustantivo
+                          </p>
+                          <a href="/financiacion#infoProgramas">
+                            {" "}
+                            <img className=" icon" src={help}></img>{" "}
+                          </a>
                         </div>
-                        
+
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[4].monto}
                         </p>
@@ -724,28 +744,42 @@ class DetalleMinisterio extends Component {
                       <li>
                         <ul>
                           <li className="banner__principal_item_one ml-5">
-                            <p className="banner__principal_item">Proyecto</p>
+                            <div className="d-flex align-items-start">
+                              <p className="banner__principal_item">Proyecto</p>
+                              <a href="/cambios#def-proyecto-acti">
+                                {" "}
+                                <img className=" icon" src={help}></img>{" "}
+                              </a>
+                            </div>
                             <p className="banner__principal_item_monto">
                               {state.banner.datos.programas[6].monto}
                             </p>
                           </li>
                           <li className="banner__principal_item_two ml-5">
-                            <p className="banner__principal_item">
-                              Actividad
-                            </p>
+                            <div className="d-flex align-items-start">
+                              <p className="banner__principal_item">
+                                Actividad
+                              </p>
+                              <a href="/cambios#def-proyecto-acti">
+                                {" "}
+                                <img className=" icon" src={help}></img>{" "}
+                              </a>
+                            </div>
                             <p className="banner__principal_item_monto">
                               {state.banner.datos.programas[7].monto}
                             </p>
                           </li>
-                          
                         </ul>
                       </li>
                       <li className="banner__principal_item_five">
-                      <div className="d-flex align-items-start">
-                        <p className="banner__principal_item">
-                          Partidas no asignables
-                        </p>
-                        <a  href="/financiacion#infoProgramas"> <img className=" icon"  src={help}></img> </a>
+                        <div className="d-flex align-items-start">
+                          <p className="banner__principal_item">
+                            Partidas no asignables
+                          </p>
+                          <a href="/financiacion#infoProgramas">
+                            {" "}
+                            <img className=" icon" src={help}></img>{" "}
+                          </a>
                         </div>
                         <p className="banner__principal_item_monto">
                           {state.banner.datos.programas[5].monto}
@@ -756,12 +790,37 @@ class DetalleMinisterio extends Component {
                   {/*  <Col className="align-self-center" md={8}>
                     
                   </Col> */}
-                  <Col className="font-weight-bold text-center align-items-center d-flex flex-column justify-content-center" md={8}>
+                  <Col
+                    className="font-weight-bold text-center align-items-center d-flex flex-column justify-content-center pb-3"
+                    md={8}
+                  >
                     <h3 className="">Presupuesto total</h3>
                     <p className="banner__principal_item_monto">
                       {state.banner.datos.presupuestoTotal}{" "}
                     </p>
-                    <Doughnut options={{legend:{display:false}}} className="" data={state.data} />
+                    <Doughnut
+                      options={{
+                        legend: { display: false },
+                        tooltips: {
+                          enabled: true,
+                          mode: "single",
+                          callbacks: {
+                            label: function(tooltipItems, data) {
+                              return (
+                                data.labels[tooltipItems.index] +
+                                " : " +
+                                data.datasets[tooltipItems.datasetIndex].data[
+                                  tooltipItems.index
+                                ] +
+                                " %"
+                              );
+                            }
+                          }
+                        }
+                      }}
+                      className=""
+                      data={state.data}
+                    />
                   </Col>
                 </Row>
               </Container>
@@ -811,8 +870,8 @@ class DetalleMinisterio extends Component {
                               <NumberFormat
                                 value={state.lista.titulo.valor}
                                 displayType={"text"}
-                                decimalSeparator={","} 
-                                          thousandSeparator={"."}
+                                decimalSeparator={","}
+                                thousandSeparator={"."}
                                 /* thousandSeparator={false} */
                                 prefix={"Gs "}
                               />
@@ -833,30 +892,38 @@ class DetalleMinisterio extends Component {
                                   return (
                                     <tr
                                       style={{
-                                        borderLeft: `10px hsl(${item.color.h}, ${(item.color.s *100).toFixed(2)+'%'}, ${(item.color.l *100).toFixed(2)+'%'}) solid`,
-                                        
+                                        borderLeft: `10px hsl(${
+                                          item.color.h
+                                        }, ${(item.color.s * 100).toFixed(2) +
+                                          "%"}, ${(item.color.l * 100).toFixed(
+                                          2
+                                        ) + "%"}) solid`
                                       }}
                                     >
                                       <td width="30%">{item.nombre}</td>
                                       <td width="60%" className="text-right">
                                         <NumberFormat
                                           value={item.valor}
-                                           displayType={"text"}
-                                           
-                                          decimalSeparator={","} 
+                                          displayType={"text"}
+                                          decimalSeparator={","}
                                           thousandSeparator={"."}
                                           prefix={"Gs \r\n"}
                                         />{" "}
                                       </td>
-                                      <td width="20%" className="text-right"><NumberFormat  
-                                      value={(item.valor/state.lista.titulo.valor)*100}
-                                      displayType={"text"}
-                                      decimalScale={2}
-                                     decimalSeparator={","} 
-                                     thousandSeparator={"."}
-                                     suffix={"%"}
-                                     
-                                      ></NumberFormat></td>
+                                      <td width="20%" className="text-right">
+                                        <NumberFormat
+                                          value={
+                                            (item.valor /
+                                              state.lista.titulo.valor) *
+                                            100
+                                          }
+                                          displayType={"text"}
+                                          decimalScale={2}
+                                          decimalSeparator={","}
+                                          thousandSeparator={"."}
+                                          suffix={"%"}
+                                        ></NumberFormat>
+                                      </td>
                                     </tr>
                                   );
                                 })}
@@ -871,7 +938,7 @@ class DetalleMinisterio extends Component {
 
               <div>
                 {!this.state.enviado && (
-                  <div>
+                  <div id="participacion">
                     <h1 className="encuesta__title text-center">
                       ¿Cuáles serían tus prioridades?
                     </h1>
@@ -915,7 +982,10 @@ class DetalleMinisterio extends Component {
                     <h1>Resultados</h1>
                     <h2>
                       Top de mayor interés en actividades por ministerio:{" "}
-                      {this.state.descripcion2}
+                    </h2>
+                    <h2 className="resultado_ministerio_titulo">
+                      {" "}
+                      {this.state.descripcion2}{" "}
                     </h2>
 
                     <Dropdown>
@@ -937,12 +1007,45 @@ class DetalleMinisterio extends Component {
                       </Dropdown.Menu>
                     </Dropdown>
 
-                    <HorizontalBar data={this.state.data2} />
+                    <HorizontalBar
+                      className="mb-3"
+                      options={{
+                        scales: {
+                          yAxes: [
+                            {
+                              ticks: {
+                                callback: value => {
+                                  return String(value).substring(0, 20) + "..."; //truncate
+                                }
+                              },
+                              
+                            }
+                          ],
+                          xAxes: [{ display: false }]
+                        }
+                      ,
+                      tooltips: {
+                        enabled: true,
+                        mode: "single",
+                        callbacks: {
+                          label: function(tooltipItems, data) {
+                            return (
+                              data.labels[tooltipItems.index] +
+                              " : " +
+                              data.datasets[tooltipItems.datasetIndex].data[
+                                tooltipItems.index
+                              ] 
+                             
+                            );
+                          }
+                        }
+                      }
+                      }}
+                      data={this.state.data2}
+                    />
                   </Fragment>
                 ) : (
-                  <div className="d-flex justify-content-center">
-                    {/* <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />  */}
-                  </div>
+                  <div className="d-flex justify-content-center"></div>
                 )}
                 {this.state.loading && (
                   <div className="d-flex justify-content-center">
@@ -967,117 +1070,7 @@ class DetalleMinisterio extends Component {
             />
           </div>
         )}
-        <div className="presupuesto_total mb-5 py-5">
-          <Container>
-            <Row>
-              <Col md={3}>
-                <Fade>
-                  <Card className="card-ministerio">
-                    <Card.Img
-                      className="w-25 align-self-center grow"
-                      src={escuela}
-                    />
-                    <Card.Body>
-                      <Card.Title className="presupuesto_total__card_title text-center">
-                        Ministerio de Educación y Ciencias
-                      </Card.Title>
-                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                        Gs. 9.243 billones
-                      </Card.Text>
-                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                        Gs. 9.243.946.951.188
-                      </Card.Text>
-                    </Card.Body>
-                    <Link className="text-center" to={"/educacion"}>
-                      <Button className="button__secundary align-self-center grow   mb-3">
-                        Ver Mas
-                      </Button>
-                    </Link>
-                  </Card>
-                </Fade>
-              </Col>
-              <Col md={3}>
-                <Fade>
-                  <Card className="card-ministerio">
-                    <Card.Img
-                      className="w-25 align-self-center grow"
-                      src={cruz}
-                    />
-                    <Card.Body>
-                      <Card.Title className="presupuesto_total__card_title text-center">
-                        Ministerio de Salud y Bienestar social
-                      </Card.Title>
-                      <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                        Gs. 5.823 billones
-                      </Card.Text>
-                      <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
-                        Gs. 5.823.285.397.358
-                      </Card.Text>
-                    </Card.Body>
-                    <Link className="text-center" to={"/salud"}>
-                      <Button className="button__secundary align-self-center grow  mb-3">
-                        Ver Mas
-                      </Button>
-                    </Link>
-                  </Card>
-                </Fade>
-              </Col>
-              <Col md={3}>
-                <Fade>
-                  <Card className="card-ministerio">
-                    <Card.Img
-                      className="w-25 align-self-center grow"
-                      src={casco}
-                    />
-                    <Card.Body>
-                      <Card.Title className="presupuesto_total__card_title text-center">
-                        Ministerio de Obras Públicas y Comunicaciones
-                      </Card.Title>
-
-                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                        Gs. 5,241 billones
-                      </Card.Text>
-                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                        Gs. 5.241.719.832.513
-                      </Card.Text>
-                    </Card.Body>
-                    <Link className="text-center" to={"/obras"}>
-                      <Button className="button__secundary align-self-center grow  mb-3">
-                        Ver Mas
-                      </Button>
-                    </Link>
-                  </Card>
-                </Fade>
-              </Col>
-              <Col md={3}>
-                <Fade>
-                  <Card className="card-ministerio ">
-                    <Card.Img
-                      className="w-25 align-self-center grow "
-                      src={casa}
-                    />
-                    <Card.Body>
-                      <Card.Title className="presupuesto_total__card_title text-center">
-                      Ministerio de <br></br> Desarrollo social
-                      </Card.Title>
-                      <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                        Gs. 0.524 billones{" "}
-                      </Card.Text>
-                      <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                        Gs. 524.872.980.571
-                      </Card.Text>
-                    </Card.Body>
-                    <Link className="text-center" to={"/desarrollo"}>
-                      <Button className="button__secundary align-self-center grow  mb-3">
-                        Ver Mas
-                      </Button>
-                    </Link>
-                  </Card>
-                </Fade>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <BannerMinisterios />
       </Fragment>
     );
   }

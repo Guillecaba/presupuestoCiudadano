@@ -152,7 +152,7 @@
 
 .presupuesto_total__subtitle {
   font-weight: bold;
-  color:#363736 !important;
+  color:white !important;
   font-size: 1.563rem;
   line-height: 56px;
   text-align: center;
@@ -167,7 +167,7 @@
 }
 .presupuesto_total__subtitle_number {
   font-weight: bold;
-  color:#363736 !important;
+  color:white !important;
   font-size:  1.375rem;
   line-height: 56px;
   text-align: center;
@@ -179,7 +179,7 @@
 }
 
 .icon {
-  width:24px;
+  width:16px;
   margin-left: 5px;
   
 }
@@ -359,6 +359,7 @@
 
   .timeline {
     background:#CBE776;
+    scrollbar-width: thin;
   }
 
   .tarjeta-title {
@@ -371,7 +372,11 @@
   }
 
 .timeline ::-webkit-scrollbar {
-  width: 50px;
+ 
+  /* width: 10px; */
+  width: 2em;
+    height: 0.75em;
+  /* width: 1em; */
   margin:0;
 }
 
