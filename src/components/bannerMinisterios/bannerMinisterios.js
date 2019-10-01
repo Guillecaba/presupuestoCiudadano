@@ -10,7 +10,7 @@ import "../Home/Home.css"
 
 const BannerMinisterios = () => {
   return (
-    <div className="presupuesto_total  py-3">
+    <div className="presupuesto_total_ministerios  py-3">
     <Container>
       <Row>
         <Col md={3}>

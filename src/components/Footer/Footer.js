@@ -12,7 +12,7 @@ const footer = () => {
     <footer className="footer">
       <Container>
         <Row className="pt-5">
-          <Col md={6}>
+         {/*  <Col md={6}>
             <h3 className="font-weight-bold text-uppercase footer__title mb-4">Links de Interés</h3>
             <p className="footer-item-text"><a>Sobre el proyecto</a></p>
             <p className="footer-item-text"><a href="https://datos.hacienda.gov.py/" target="_blank" className="text-decoration-none text-reset">Ministerio de Hacienda - Datos abiertos</a></p>
@@ -22,7 +22,7 @@ const footer = () => {
             <p className="footer-item-text"><a href="https://www.datos.gov.py/" target="_blank" class="text-decoration-none text-reset">Portal de Datos Abiertos Gubernamentales</a></p>
                 
            
-          </Col>
+          </Col> */}
           <Col md={6}>
             <Row>
             <Col className="py-3" md={4} sm={4}>
@@ -77,9 +77,7 @@ const footer = () => {
                 </a>
               </Col>
 
-              <p className="footer_text  pl-3">
-              El diseño e implementación del Presupuesto Ciudadano es parte de una asociación más amplia entre el Ministerio de Hacienda, el grupo del Banco Mundial y CEAMSO para fortalecer la diseminación de información sobre y la participación pública en el proceso presupuestario. Esta iniciativa se basa en un piloto inicial lanzado en 2016 con el apoyo financiero de USAID. 
-              </p>
+              
              
               </Row>
             <Row>
@@ -88,6 +86,12 @@ const footer = () => {
                 </Col>
               
             </Row>
+          </Col>
+          <Col md={6}>
+          <p className="footer_text  pl-3">
+              El diseño e implementación del Presupuesto Ciudadano es parte de una asociación más amplia entre el Ministerio de Hacienda, el grupo del Banco Mundial y CEAMSO para fortalecer la diseminación de información sobre y la participación pública en el proceso presupuestario. Esta iniciativa se basa en un piloto inicial lanzado en 2016 con el apoyo financiero de USAID. 
+              </p>
+            <p className="footer_text  pl-3">Este material es publicado gracias al apoyo de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID). El contenido del mismo es exclusiva responsabilidad de sus autores y no refleja necesariamente las opiniones o puntos de vista de USAID o el Gobierno de los Estados Unidos.</p>
           </Col>
         </Row>
       </Container>

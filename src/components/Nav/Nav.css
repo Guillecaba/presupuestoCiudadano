@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
-  margin: 0 2rem;
+  margin: 0 1rem;
   /* padding-left:6em !important; */
   position: relative;
 
@@ -37,6 +37,12 @@
 
 .nav-link-color {
   color:#363736 !important;
+}
+
+.dropdown-item:active {
+  color: #fff;
+    text-decoration: none;
+    background-color: white;
 }
 
 @media only screen and (max-width: 768px) {

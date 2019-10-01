@@ -58,15 +58,7 @@ class Home extends React.Component {
             <Row>
               <Col md={6}>
               <Fade className="grow" bottom>
-                <img
-                  className="banner__img grow"
-                  src={personitas}
-                  alt="Personitas"
-                />
-                </Fade>
-              </Col>
-              <Col className="banner__text" md={6}>
-                <h2 className="banner__text_title grow">
+              <h2 className="banner__text_title grow">
                   ¿Sabías que el Presupuesto General de Gastos de la Nación para
                   el año 2020 propone algunos cambios?{" "}
                 </h2>
@@ -75,6 +67,23 @@ class Home extends React.Component {
                   Ver más
                 </Button>
                 </Link>
+                <img
+                  className="banner__img grow"
+                  src={personitas}
+                  alt="Personitas"
+                />
+                </Fade>
+              </Col>
+              <Col className="banner__text" md={6}>
+              <p className="banner__text_subtitle grow">
+              El Presupuesto Ciudadano es una buena práctica que promueve el Gobierno, para  explicar a los ciudadanos de manera sencilla  la información clave del Presupuesto General de la Nación.
+                </p>
+                
+                <p className="banner__text_subtitle grow">
+                El Presupuesto Ciudadano posibilita que las personas ejerzan su derecho de saber cómo se invierten sus recursos, incluyendo a quienes no están familiarizados con las finanzas públicas.
+                </p>
+                
+               
               </Col>
             </Row>
           </Container>
@@ -424,7 +433,7 @@ class Home extends React.Component {
                 
             Entidades <br></br> de la Administración Central 
                 </h1>
-                <h2 className="presupuesto_total__subtitle_two  mb-5 ">
+                <h2 className="presupuesto_total__subtitle_two  mb-4 ">
                   Gs. 45.934.977.875.335 <br /> 
                  
                 </h2>
@@ -436,7 +445,7 @@ class Home extends React.Component {
                   
                   Entidades <br />Descentralizadas
                 </h1>
-                <h2 className="presupuesto_total__subtitle_two  mb-5 ">
+                <h2 className="presupuesto_total__subtitle_two  mb-4 ">
                   Gs. 39.604.590.787.444 <br /> 
                 </h2>
                 </Fragment>

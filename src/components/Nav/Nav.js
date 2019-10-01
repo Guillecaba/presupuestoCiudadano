@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import flecha from "../../assets/images/flecha.png"
+import flecha from "../../assets/images/flecha.png";
 //import { HashLink as Link } from 'react-router-hash-link';
 import "./Nav.css";
 
@@ -28,12 +28,18 @@ const nav = () => {
                 <img className="arrow" src={flecha} />
               </Nav.Link>
 
-              <Nav.Link className="navbar__item nav-link-color" href="/#proceso">
+              <Nav.Link
+                className="navbar__item nav-link-color"
+                href="/#proceso"
+              >
                 Proceso
                 <img className="arrow" src={flecha} />
               </Nav.Link>
 
-              <Nav.Link href="ejecucion" className="navbar__item text-decoration-none">
+              <Nav.Link
+                href="ejecucion"
+                className="navbar__item text-decoration-none"
+              >
                 <Link
                   className="text-decoration-none nav-link-color "
                   to={"/ejecucion"}
@@ -43,12 +49,47 @@ const nav = () => {
                 <img className="arrow" src={flecha} />
               </Nav.Link>
               <Nav.Link className="navbar__item">
-                <Link className="text-decoration-none nav-link-color" to={"/cambios"}>
-                2019 vs 2020
+                <Link
+                  className="text-decoration-none nav-link-color"
+                  to={"/cambios"}
+                >
+                  2019 vs 2020
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>
-              
+              <NavDropdown className="navbar__item" title="Prioriza tu presupuesto" id="basic-nav-dropdown">
+                <NavDropdown.Item > <Link
+                  className="text-decoration-none nav-link-color"
+                  to={"/educacion"}
+                >Educación y Ciencias</Link></NavDropdown.Item>
+                <NavDropdown.Item >
+                <Link
+                  className="text-decoration-none nav-link-color"
+                  to={"/salud"}
+                >
+                Salud y Bienestar social
+                </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item >
+                <Link
+                  className="text-decoration-none nav-link-color"
+                  to={"/obras"}
+                >
+                Obras Públicas y Comunicaciones
+                </Link>
+                
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                <Link
+                  className="text-decoration-none nav-link-color"
+                  to={"/desarrollo"}
+                >
+                Desarrollo Social
+                </Link>
+                </NavDropdown.Item>
+                
+                
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

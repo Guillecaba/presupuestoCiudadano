@@ -11,6 +11,7 @@ import grafico from "../../assets/images/grafico.png";
 import { Link } from "react-router-dom";
 import flecha from "../../assets/images/flecha.png";
 import downArrow from "../../assets/icons/down-arrow.svg";
+import ventanilla from "../../assets/images/ventanilla.png"
 
 
 import impuestos from "../../assets/images/impuestos-libro.png";
@@ -195,7 +196,7 @@ Incluye el dinero provenientes del pago de ingresos tributarios y no	tributarios
               <Fade left>
         
                 <Card className="card-ministerio">
-                  <Card.Img className="w-50 align-self-center grow" src={essap} />
+                  <Card.Img className="w-50 align-self-center grow" src={ventanilla} />
                   <Card.Body>
                     <Card.Title className="font-weight-bold text-center">
                     30 - Recursos institucionales
