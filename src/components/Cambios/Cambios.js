@@ -9,6 +9,7 @@ import LightSpeed from 'react-reveal/LightSpeed';
 import Fade from 'react-reveal/Fade'
 import pdf from "../../assets/media/decreto.pdf"
 import Arrow from "../../assets/images/Arrow.png"
+import Informacion from "../Informacion/Informacion"
 
 const Cambios = () => {
   return (
@@ -177,6 +178,7 @@ const Cambios = () => {
       </Row>
       
     </Container>
+    <Informacion />
     </Fragment>
   );
 };

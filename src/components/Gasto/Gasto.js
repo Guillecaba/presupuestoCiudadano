@@ -8,6 +8,7 @@ import billete_grafico from "../../assets/images/billete-grafico.png"
 import ContainerDimensions from "react-container-dimensions";
 import {Doughnut} from 'react-chartjs-2';
 import {Fade,LightSpeed} from 'react-reveal/';
+import Informacion from '../Informacion/Informacion'
 import "./Gasto.css"
 
 
@@ -135,32 +136,7 @@ class Gasto extends Component {
   </Tabs></Col>
         </Row> */}
         </Container>
-        <div className="information py-5 ">
-          <Container>
-            <Row>
-              <Col md={5}>
-              <Fade left>
-                <img className="w-100" src={personitas} alt="Personitas" />
-                </Fade>
-              </Col>
-              <Col md={7}>
-                <Fade right>
-                <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informate
-                </h1>
-                </Fade>
-                <p className="informartion__subtitle">
-                  Conocer el Presupuesto es esencial para conocer que usos se le
-                  dan a tus impuestos, cuáles son las prioridades de las
-                  instituciones públicas y cuánto se gasta en salud, educación,
-                  obras, justicia y otros servicios que determinan tu calidad de
-                  vida.
-                </p>
-                <Button href={guia} className="button__secundary grow">Descarga la guia</Button>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Informacion />
   
       </Fragment>
     )

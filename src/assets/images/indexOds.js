@@ -1,0 +1,11 @@
+export {default as Ods2} from './ods2.png';
+export {default as Ods5} from './ods5.png';
+export {default as Ods6} from './ods6.png';
+export {default as Ods7} from './ods7.png';
+export {default as Ods9} from './ods9.png';
+export {default as Ods10} from './ods10.png';
+export {default as Ods11} from './ods11.png';
+export {default as Ods12} from './ods12.png';
+export {default as Ods13} from './ods13.png';
+export {default as Ods15} from './ods15.png';
+export {default as Ods17} from './ods17.png';

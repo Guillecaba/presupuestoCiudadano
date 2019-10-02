@@ -56,34 +56,36 @@ class Home extends React.Component {
         <div className="banner">
           <Container>
             <Row>
-              <Col md={6}>
-              <Fade className="grow" bottom>
-              <h2 className="banner__text_title grow">
-                  ¿Sabías que el Presupuesto General de Gastos de la Nación para
-                  el año 2020 propone algunos cambios?{" "}
-                </h2>
-                <Link className="text-center" to={"/cambios"}>
-                <Button className="button__primary grow">
-                  Ver más
-                </Button>
-                </Link>
-                <img
-                  className="banner__img grow"
-                  src={personitas}
-                  alt="Personitas"
-                />
-                </Fade>
-              </Col>
+              
               <Col className="banner__text" md={6}>
-              <p className="banner__text_subtitle grow">
+              <p className="banner__text_title_bold grow">
               El Presupuesto Ciudadano es una buena práctica que promueve el Gobierno, para  explicar a los ciudadanos de manera sencilla  la información clave del Presupuesto General de la Nación.
                 </p>
                 
-                <p className="banner__text_subtitle grow">
+                <p className="banner__text_title_normal grow">
                 El Presupuesto Ciudadano posibilita que las personas ejerzan su derecho de saber cómo se invierten sus recursos, incluyendo a quienes no están familiarizados con las finanzas públicas.
                 </p>
                 
                
+              </Col>
+              <Col md={6} className="mb-3">
+              <Fade className="grow" bottom>
+                <img
+                  className="banner__img d-block m-auto grow"
+                  src={personitas}
+                  alt="Personitas"
+                />
+              <h2 className="banner__text_subtitle grow">
+                  ¿Sabías que el Presupuesto General de Gastos de la Nación para
+                  el año 2020 propone algunos cambios?{" "}
+                </h2>
+                <Link className="text-center" to={"/cambios"}>
+                <Button className="button__primary  d-block m-auto grow">
+                  Ver más
+                </Button>
+                </Link>
+                
+                </Fade>
               </Col>
             </Row>
           </Container>
@@ -407,7 +409,7 @@ class Home extends React.Component {
               </div>
             </Col>
           </Row>
-          <div className="presupuesto_total  pt-5">
+          <div className="presupuesto_total  py-5">
             <Container>
             <Row>
               <Col md={12}>
@@ -455,7 +457,7 @@ class Home extends React.Component {
             </div>
             <BannerMinisterios />
    <Container>
-          <div className="banner__conoce pt-3">
+          <div className="banner__conoce pt-4">
             <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title grow">
               conocé mas sobre <br /> el presupuesto general de <br /> la
               nación:

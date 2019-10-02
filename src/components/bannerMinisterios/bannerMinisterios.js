@@ -10,9 +10,15 @@ import "../Home/Home.css"
 
 const BannerMinisterios = () => {
   return (
-    <div className="presupuesto_total_ministerios  py-3">
+    <div className="presupuesto_total_ministerios  py-5">
     <Container>
       <Row>
+        <Col>
+        <h2 className="text-center text-uppercase presupuesto_total__title pb-4">Te mostramos la información de 4 ministerios</h2>
+        </Col>
+      </Row>
+      <Row>
+      
         <Col md={3}>
           <Fade>
             <Card className="card-ministerio">

@@ -10,6 +10,7 @@ import {Fade,LightSpeed ,Zoom} from 'react-reveal/';
 import personitas from "../../assets/images/personitas-completo.png";
 import  "./Ejecucion.css";
 import downArrow from "../../assets/icons/down-arrow.svg";
+import Informacion from '../Informacion/Informacion'
 
 import bolsa from '../../assets/images/bolsa.png'
 
@@ -168,33 +169,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           </Col>
         </Container>
     </Row>
-    <div className="information py-5 ">
-          <Container>
-            <Row>
-              <Col md={5}>
-              <Fade bottom>
-                <img className="w-100" src={personitas} alt="Personitas" />
-                </Fade>
-              </Col>
-              <Col md={7}>
-                <Fade bottom>
-                <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informáte
-                </h1>
-                
-                <p className="informartion__subtitle">
-                  Conocer el Presupuesto es esencial para conocer que usos se le
-                  dan a tus impuestos, cuáles son las prioridades de las
-                  instituciones públicas y cuánto se gasta en salud, educación,
-                  obras, justicia y otros servicios que determinan tu calidad de
-                  vida.
-                </p>
-                <Button className="button__secundary grow">Descarga la guia</Button>
-                </Fade>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+    <Informacion />
     </Fragment>
   )
 }

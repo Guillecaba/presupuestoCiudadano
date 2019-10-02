@@ -19,6 +19,8 @@ import dinero from "../../assets/images/dinero.png";
 import essap from "../../assets/images/essap.png";
 import personitas from "../../assets/images/personitas-completo.png";
 
+import Informacion from "../Informacion/Informacion"
+
 import {Fade,LightSpeed ,Zoom} from 'react-reveal/';
 
 const Financiacion = () => {
@@ -216,33 +218,7 @@ Incluye además el dinero que en concepto las donaciones tanto internas como ext
               </Row>
               
     </Container>
-    <div className="information py-5 ">
-          <Container>
-            <Row>
-              <Col md={5}>
-              <Fade >
-                <img className="w-100" src={personitas} alt="Personitas" />
-                </Fade>
-              </Col>
-              <Col md={7}>
-                <Fade >
-                <h1 className="text-uppercase font-weigth-bold information__title pb-3">
-                  informáte
-                </h1>
-                
-                <p className="informartion__subtitle">
-                  Conocer el Presupuesto es esencial para conocer que usos se le
-                  dan a tus impuestos, cuáles son las prioridades de las
-                  instituciones públicas y cuánto se gasta en salud, educación,
-                  obras, justicia y otros servicios que determinan tu calidad de
-                  vida.
-                </p>
-                <Button className="button__secundary grow">Descarga la guia</Button>
-                </Fade>
-              </Col>
-            </Row>
-            </Container>
-            </div>
+    <Informacion />
     </Fragment>
   );
 };

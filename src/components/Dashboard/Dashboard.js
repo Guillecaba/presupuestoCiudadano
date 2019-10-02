@@ -1,6 +1,6 @@
 import React, { Component, Fragment} from "react";
 import axios from "axios";
-import { Dropdown, Container ,Table,Pagination,Button } from "react-bootstrap";
+import { Dropdown, Container ,Table,Pagination,Button , Card , Row , Col } from "react-bootstrap";
 import {HorizontalBar} from 'react-chartjs-2';
 import ReactLoading from 'react-loading';
 
@@ -158,6 +158,68 @@ class Dashboard extends Component {
   render() {
     return (
       <Container className="py-5">
+        <Row>
+          <Col md={6}>
+          <Card bg="light">
+  <Card.Header  as="h5">Mayor Prioridad por Ministerio</Card.Header>
+  <Card.Body>
+    <Card.Title className="m-0">{/* <p className="align-middle card-text-reporte">Seleccionar ministerio:</p> */} {this.state.ministerios ? (
+         
+         <Dropdown className="align">
+           <Dropdown.Toggle  className="" variant="info" id="dropdown-basic">
+             
+             Ministerios
+           </Dropdown.Toggle>
+           <Dropdown.Menu>
+             {this.state.ministerios.map(res => (
+               <Dropdown.Item   onClick={ () => this.handleChartTopRanking(res)}>{res.nombre}</Dropdown.Item>
+              
+             ))}
+           </Dropdown.Menu>
+         </Dropdown>
+         
+      
+     ):<div className='d-flex justify-content-center'> 
+     <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />
+     </div>} </Card.Title>
+    <Card.Text>
+    <HorizontalBar data={this.state.data2} />
+    </Card.Text>
+   {/*  <Button variant="primary">Go somewhere</Button> */}
+  </Card.Body>
+</Card>
+          </Col>
+          <Col md={6}>
+          <Card bg="light">
+  <Card.Header  as="h5">Mayor Prioridad por Ministerio</Card.Header>
+  <Card.Body>
+    <Card.Title>Seleccionar ministerio: {this.state.ministerios ? (
+         
+         <Dropdown>
+           <Dropdown.Toggle  className="my-3" variant="info" id="dropdown-basic">
+             Ministerios
+           </Dropdown.Toggle>
+           <Dropdown.Menu>
+             {this.state.ministerios.map(res => (
+               <Dropdown.Item onClick={ () => this.handleChartTopRanking(res)}>{res.nombre}</Dropdown.Item>
+              
+             ))}
+           </Dropdown.Menu>
+         </Dropdown>
+         
+      
+     ):<div className='d-flex justify-content-center'> 
+     <ReactLoading type={'bars'} color={'#CBE776'} height={'20%'} width={'20%'} />
+     </div>} </Card.Title>
+    <Card.Text>
+    <HorizontalBar data={this.state.data2} />
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+          </Col>
+        </Row>
+        
          <h1>Top de mayor interes en actividades por ministerio: {this.state.descripcion2}</h1>
           {this.state.ministerios ? (
          

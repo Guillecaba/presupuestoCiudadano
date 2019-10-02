@@ -1,115 +1,67 @@
-import React from "react";
-import { Container, Tab, Col, Row ,ListGroup} from "react-bootstrap";
+import React, { Fragment } from "react";
+import { Container, Col, Row } from "react-bootstrap";
 import ods from "../../assets/images/rueda-ods.png";
-import agua_limpia from "../../assets/images/agua_limpia.png";
-import salud_bienestar from "../../assets/images/salud_bienestar.png";
-import educacion_calidad from "../../assets/images/educacion_calidad.png";
-import industria_innovacion from "../../assets/images/industria_innovacion.png";
-import ciudades_sostenibles from "../../assets/images/ciudades_sostenibles.png";
-import LightSpeed from 'react-reveal/LightSpeed';
-import Zoom from 'react-reveal/Zoom';
+
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
+import GrillaOds from "./GrillaOds/GrillaOds";
+import ods_impacto from "../../assets/images/ods_impacto.png";
+import Informacion from '../Informacion/Informacion';
 import "./Ods.css";
 
 const Ods = () => {
   return (
+    <Fragment>
     <Container>
       <Row className="ods-banner my-5 ">
         <Col md={6}>
-        <Zoom left>
-          <img className="w-100 ods-banner-img" src={ods} alt="" />
+          <Zoom left>
+            <img className="w-100 ods-banner-img mb-5" src={ods} alt="" />
           </Zoom>
         </Col>
         <Col md={6} className="align-self-center">
-        <LightSpeed right>
-          <h1 className="text-uppercase ods-banner-title align-middle">
-            ¿El PGN esta vinculado a los ODS?
-            
-          </h1>
-          </LightSpeed>
+          <Fade right>
+            <h1 className="text-uppercase ods-banner-title align-middle">
+              ¿El PGN esta vinculado a los ODS?
+            </h1>
+          </Fade>
         </Col>
       </Row>
-      <Row />
-      <div className="my-5">
-          
-          <p className="text-center">
-            El PGN 2020 se ha construido en base a las 10 prioridades del
-            Gobierno Nacional, las cuales se alinean directamente a los
-            esfuerzos para cumplimiento de los Objetivos de Desarrollo
-            Sostenible (ODS) establecidos en la Agenda 2030.
-          </p>
-          <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-            <Row>
-              <Col sm={4}>
-                <ListGroup>
-                  
-                  <ListGroup.Item className="item_ods" href="#link1">
-                    Salud de calidad al alcance de la gente
-                  </ListGroup.Item>
-                  <ListGroup.Item className="item_ods" href="#link2">
-                    Educación para la Gente
-                  </ListGroup.Item>
-                  <ListGroup.Item className="item_ods" href="#link3">
-                    Conectividad Internacional
-                  </ListGroup.Item>
-                  <ListGroup.Item className="item_ods" href="#link4">
-                    Solución de las condiciones de vida de la población en
-                    términos de infraestructura vial y vivienda
-                  </ListGroup.Item>
-                </ListGroup>
-              </Col>
-              <Col sm={8}>
-                <Tab.Content>
-                  
-                  <Tab.Pane eventKey="#link1">
-                    <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MSPBS</h2>
-                    <Row>
-                      <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2" src={salud_bienestar} alt="salud bienestar" />
-                      </Col>
-                      <Col col={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2" src={agua_limpia} alt="agua limpia" />
-                      </Col>
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="#link2">
-                    <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MEC</h2>
-                    <Row>
-                      <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2"
-                          src={educacion_calidad}
-                          alt="educacion de calidad"
-                        />
-                      </Col>
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="#link3">
-                    <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MOPC</h2>
-                    <Row>
-                      <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2" src={industria_innovacion} alt="ods" />
-                      </Col>
-                      <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2" src={agua_limpia} alt="ods" />
-                      </Col>
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="#link4">
-                    <h2 className="text-center mb-5 text-uppercase font-weight-bold text-center banner__conoce_title">MUVH</h2>
-                    <Row>
-                      <Col md={6} className="d-flex justify-content-center">
-                        <img className="w-75 mt-2" src={ciudades_sostenibles} alt="ods" />
-                      </Col>
-                    </Row>
-                  </Tab.Pane>
-                </Tab.Content>
-              </Col>
-            </Row>
-          </Tab.Container>
-        </div>
 
-   
-      </Container>
+      <p className="mt">
+        El nuevo proceso de diseño de los programas presupuestarios incorpora el
+        esquema de Desarrollo Sostenible de la Agenda 2030 de las Naciones
+        Unidas.
+      </p>
 
+      <h2 className="text-center font-weight-bold pb-2">
+        42% distribuidos en <br></br> estos objetivos
+      </h2>
+
+      <GrillaOds />
+
+      <h2 className="text-center font-weight-bold pb-2">
+        Priorizando
+      </h2>
+
+      <img className="w-50 m-auto d-block" src= {ods_impacto} alt=""></img>
+
+      <Row>
+        <Col md={6}>
+          <p>El 100 % de los programas del PGN 2020 se vinculan a los ODS, distribuyéndose en un 58% en los ODS 1, 3, 4, 8 y 16, mientras que el 42% restante responde a los demás objetivos.  </p>
+          <p>Esta es una aproximación en términos monetarios, de la inversión realizada por el Estado Paraguayo a través del PGN y los programas que lo integran, hacia el cumplimiento de los ODS, que a su vez, se enmarcan en el Plan Nacional de Desarrollo-Paraguay 2030, logrando así una alineación completa de la planificación con el presupuesto.</p>
+
+        </Col>
+        <Col md={6}>
+          <p>Con esta metodología podemos valorar el destino y utilización de cada guaraní en base a las decisiones de priorización existentes a nivel nacional, así como los compromisos asumidos por el Estado a nivel internacional, basado en datos reales.</p>
+        </Col>
+      </Row>
+
+      
+
+    </Container>
+    <Informacion />
+    </Fragment>
   );
 };
 

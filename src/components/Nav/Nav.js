@@ -23,20 +23,20 @@ const nav = () => {
                   className="text-decoration-none nav-link-color"
                   to={"/financiacion"}
                 >
-                  ¿Qué es?
+                  ¿Qué es el PGN?
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>
 
-              <Nav.Link
+              {/* <Nav.Link
                 className="navbar__item nav-link-color"
                 href="/#proceso"
               >
                 Proceso
                 <img className="arrow" src={flecha} />
-              </Nav.Link>
+              </Nav.Link */}
 
-              <Nav.Link
+              {/* <Nav.Link
                 href="ejecucion"
                 className="navbar__item text-decoration-none"
               >
@@ -47,24 +47,34 @@ const nav = () => {
                   Ejecución
                 </Link>
                 <img className="arrow" src={flecha} />
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link className="navbar__item">
                 <Link
                   className="text-decoration-none nav-link-color"
                   to={"/cambios"}
                 >
-                  2019 vs 2020
+                   PGN  2019 vs 2020
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>
-              <NavDropdown className="navbar__item" title="Prioriza tu presupuesto" id="basic-nav-dropdown">
-                <NavDropdown.Item > <Link
+
+              <Nav.Link className="navbar__item">
+                <Link
                   className="text-decoration-none nav-link-color"
+                  to={"/"}
+                >
+                   Aprobado por el Congreso
+                </Link>
+                <img className="arrow" src={flecha} />
+              </Nav.Link>
+              <NavDropdown className="navbar__item show nav-link-color" title={"Prioriza" +"\  " + " tu  presupuesto"} id="basic-nav-dropdown">
+                <NavDropdown.Item > <Link
+                  className="text-decoration-none nav-link-color show"
                   to={"/educacion"}
                 >Educación y Ciencias</Link></NavDropdown.Item>
                 <NavDropdown.Item >
                 <Link
-                  className="text-decoration-none nav-link-color"
+                  className="text-decoration-none nav-link-color show"
                   to={"/salud"}
                 >
                 Salud y Bienestar social
@@ -72,7 +82,7 @@ const nav = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item >
                 <Link
-                  className="text-decoration-none nav-link-color"
+                  className="text-decoration-none nav-link-color show"
                   to={"/obras"}
                 >
                 Obras Públicas y Comunicaciones
@@ -81,7 +91,7 @@ const nav = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item>
                 <Link
-                  className="text-decoration-none nav-link-color"
+                  className="text-decoration-none nav-link-color show"
                   to={"/desarrollo"}
                 >
                 Desarrollo Social
