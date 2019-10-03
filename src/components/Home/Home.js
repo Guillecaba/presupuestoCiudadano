@@ -79,7 +79,7 @@ class Home extends React.Component {
                   ¿Sabías que el Presupuesto General de Gastos de la Nación para
                   el año 2020 propone algunos cambios?{" "}
                 </p>
-                <Link className="text-center" to={"/cambios"}>
+                <Link className="text-center text-decoration-none" to={"/cambios"}>
                 <Button className="button__primary  d-block m-auto grow">
                   Ver más
                 </Button>
