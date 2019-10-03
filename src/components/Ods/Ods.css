@@ -13,10 +13,16 @@
 .ods-banner-title {
   color:white;
 }
+.img-ods-impacto {
+  width:50%;
+}
 
 @media only screen and (max-width: 768px) {
   .ods-banner-title {
     padding-top:20%;
+  }
+  .img-ods-impacto {
+    width:100%;
   }
   
  

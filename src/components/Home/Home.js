@@ -75,10 +75,10 @@ class Home extends React.Component {
                   src={personitas}
                   alt="Personitas"
                 />
-              <h2 className="banner__text_subtitle grow">
+              <p className="banner__text_title_normal text-center grow">
                   ¿Sabías que el Presupuesto General de Gastos de la Nación para
                   el año 2020 propone algunos cambios?{" "}
-                </h2>
+                </p>
                 <Link className="text-center" to={"/cambios"}>
                 <Button className="button__primary  d-block m-auto grow">
                   Ver más

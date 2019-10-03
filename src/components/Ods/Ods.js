@@ -28,7 +28,7 @@ const Ods = () => {
         </Col>
       </Row>
 
-      <p className="mt">
+      <p className="text-center">
         El nuevo proceso de diseño de los programas presupuestarios incorpora el
         esquema de Desarrollo Sostenible de la Agenda 2030 de las Naciones
         Unidas.
@@ -44,7 +44,7 @@ const Ods = () => {
         Priorizando
       </h2>
 
-      <img className="w-50 m-auto d-block" src= {ods_impacto} alt=""></img>
+      <img className="img-ods-impacto m-auto d-block" src= {ods_impacto} alt=""></img>
 
       <Row>
         <Col md={6}>
