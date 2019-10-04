@@ -169,20 +169,29 @@
 .banner_presupuesto_total__title {
   color: white !important;
   line-height: auto;
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.banner_presupuesto_total__title2 {
+  color: white !important;
+  line-height: auto;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .banner_presupuesto_total__subtitle{
-  font-weight: bold;
+  font-weight: normal;
   color:white !important;
   font-size: 18px;
   line-height: auto;
   
 }
 
-.banner_presupuest_total__subtitle_number {
-  font-weight: bold;
+
+
+.banner_presupuesto_total__subtitle_number {
+  font-weight: normal;
   color:white !important;
   font-size:  18px;
   line-height: auto;

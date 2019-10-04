@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import CountUp from 'react-countup';
+
 import personitas from "../../assets/images/personitas-completo.png";
 import billete from "../../assets/images/billete.png";
 import moneda from "../../assets/images/moneda.png";
@@ -410,10 +412,10 @@ class Home extends React.Component {
             <Row>
               <Col md={7} className="d-flex align-items-center">
                 <Row>
-                  <Col className="d-flex align-items-center" md={4}>
+                  <Col className="d-flex align-items-center py-5 py-md-0" md={4}>
                     <img
                       src={moneda_blanca}
-                      className="w-50 d-block m-auto"
+                      className="w-50 d-block m-auto "
                       alt="monedaBlanca"
                     ></img>
                   </Col>
@@ -425,52 +427,76 @@ class Home extends React.Component {
                       PRESUPUESTO TOTAL 2020{" "}
                       {/* <img className=" icon"  src={help}></img> */}
                     </h1>
-                    <h2 className="banner_presupuesto_total__subtitle text-left grow">
+                    {/* <h2 className="banner_presupuesto_total__subtitle text-left grow">
                       {" "}
                       Gs.85 billones{" "}
-                    </h2>
-                    <h2 className="presupuesto_total__subtitle_number text-left   ">
+                    </h2> */}
+                    <CountUp className="d-block banner_presupuesto_total__subtitle text-left grow"
+                    duration={7.25}
+                    prefix="Gs. "
+                    suffix=" billones"
+                     end={85} />
+
+<CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                    duration={7.25}
+                    prefix="Gs. "
+                    separator="."
+                    suffix=""
+                     end={85539568662797} />
+                   {/*  <h2 className="banner_presupuesto_total__subtitle_number text-left   ">
                       {" "}
                       Gs. 85.539.568.662.797{" "}
-                    </h2>
+                    </h2> */}
                   </Col>
                 </Row>
               </Col>
-              <Col className="py-5" md={5}>
+              <Col className="py-md-5" md={5}>
                 <Row>
-                  <Col md={4} className="d-flex align-items-centerr">
+                  <Col md={4} className="d-flex align-items-center">
                     <img
                       src={moneda_blanca}
-                      className="w-50 d-block m-auto"
+                      className="w-50 d-block m-auto py-5 py-md-0"
                       alt="monedaBlanca"
                     ></img>
                   </Col>
                   <Col md={8}>
-                    <h1 className="banner_presupuesto_total__title text-left">
+                    <h1 className="banner_presupuesto_total__title2 text-left">
                       Entidades <br></br> de la Administración Central
                     </h1>
-                    <h2 className="presupuesto_total__subtitle_number text-left  ">
+                    {/* <h2 className="banner_presupuesto_total__subtitle text-left  ">
                       Gs. 45.934.977.875.335 <br />
-                    </h2>
+                    </h2> */}
+                    <CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                    duration={7.25}
+                    prefix="Gs. "
+                    separator="."
+                    suffix=""
+                     end={45934977875335} />
                   </Col>
                 </Row>
                 <Row>
                   <Col  className=" d-flex align-items-center" md={4}>
                     <img
                       src={moneda_blanca}
-                      className="w-50 d-block m-auto"
+                      className="w-50 d-block m-auto py-5 py-md-0"
                       alt="monedaBlanca"
                     ></img>
                   </Col>
                   <Col md={8}>
                     
-                    <h1 className="banner_presupuesto_total__title text-left">
+                    <h1 className="banner_presupuesto_total__title2 text-left">
                       Entidades <br />
                       Descentralizadas
                     </h1>
-                    <h2 className="presupuesto_total__subtitle_number text-left   ">
-                      Gs. 39.604.590.787.444 <br />
-                    </h2>
+                    <CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                    duration={7.25}
+                    prefix="Gs. "
+                    separator="."
+                    suffix=""
+                     end={39604590787444} />
+                    
+                  
+                    
                   </Col>
                 </Row>
               </Col>
