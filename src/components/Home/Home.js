@@ -3,30 +3,23 @@ import React, { Fragment } from "react";
 import personitas from "../../assets/images/personitas-completo.png";
 import billete from "../../assets/images/billete.png";
 import moneda from "../../assets/images/moneda.png";
-import lineamientos from "../../assets/images/lineamientos.png"
-import lupa from "../../assets/images/lupa.png"
-import anteproyecto from "../../assets/images/ANTEPROYECTO.png"
+import lineamientos from "../../assets/images/lineamientos.png";
+import lupa from "../../assets/images/lupa.png";
+import anteproyecto from "../../assets/images/ANTEPROYECTO.png";
 
+import moneda_blanca from "../../assets/images/moneda-blanca.png";
 import escuela from "../../assets/images/escuela.png";
 import cruz from "../../assets/images/cruz.png";
 import casco from "../../assets/images/casco.png";
 import casa from "../../assets/images/casa.png";
 import white from "../../assets/images/White.png";
 
+import desarrollo from "../../assets/images/desarrollo.png";
+import construccion from "../../assets/images/construccion.png";
+import BannerMinisterios from "../bannerMinisterios/bannerMinisterios";
 
-import desarrollo from "../../assets/images/desarrollo.png"
-import construccion from "../../assets/images/construccion.png"
-import BannerMinisterios from '../bannerMinisterios/bannerMinisterios'
-
-import Fade from "react-reveal/Fade"
-import {
-  Container,
-  Col,
-  Row,
-  Button,
-  Card,
-  Carousel
-} from "react-bootstrap";
+import Fade from "react-reveal/Fade";
+import { Container, Col, Row, Button, Card, Carousel } from "react-bootstrap";
 import ods from "../../assets/images/rueda_color_resize.png";
 
 import { Link } from "react-router-dom";
@@ -56,35 +49,38 @@ class Home extends React.Component {
         <div className="banner">
           <Container>
             <Row>
-              
               <Col className="banner__text" md={6}>
-              <p className="banner__text_title_bold grow">
-              El Presupuesto Ciudadano es una buena práctica que promueve el Gobierno, para  explicar a los ciudadanos de manera sencilla  la información clave del Presupuesto General de la Nación.
+                <p className="banner__text_title_bold grow">
+                  El Presupuesto Ciudadano es una buena práctica que promueve el
+                  Gobierno, para explicar a los ciudadanos de manera sencilla la
+                  información clave del Presupuesto General de la Nación.
                 </p>
-                
+
                 <p className="banner__text_title_normal grow">
-                El Presupuesto Ciudadano posibilita que las personas ejerzan su derecho de saber cómo se invierten sus recursos, incluyendo a quienes no están familiarizados con las finanzas públicas.
+                  El Presupuesto Ciudadano posibilita que las personas ejerzan
+                  su derecho de saber cómo se invierten sus recursos, incluyendo
+                  a quienes no están familiarizados con las finanzas públicas.
                 </p>
-                
-               
               </Col>
               <Col md={6} className="mb-3">
-              <Fade className="grow" bottom>
-                <img
-                  className="banner__img d-block m-auto grow"
-                  src={personitas}
-                  alt="Personitas"
-                />
-              <p className="banner__text_title_normal text-center grow">
-                  ¿Sabías que el Presupuesto General de Gastos de la Nación para
-                  el año 2020 propone algunos cambios?{" "}
-                </p>
-                <Link className="text-center text-decoration-none" to={"/cambios"}>
-                <Button className="button__primary  d-block m-auto grow">
-                  Ver más
-                </Button>
-                </Link>
-                
+                <Fade className="grow" bottom>
+                  <img
+                    className="banner__img d-block m-auto grow"
+                    src={personitas}
+                    alt="Personitas"
+                  />
+                  <p className="banner__text_title_normal font-weight-bold text-center grow">
+                    ¿Sabías que el Presupuesto General de Gastos de la Nación
+                    para el año 2020 propone algunos cambios?{" "}
+                  </p>
+                  <Link
+                    className="text-center text-decoration-none"
+                    to={"/cambios"}
+                  >
+                    <Button className="button__primary  d-block m-auto grow">
+                      Ver más
+                    </Button>
+                  </Link>
                 </Fade>
               </Col>
             </Row>
@@ -94,11 +90,11 @@ class Home extends React.Component {
         <Container>
           <Row id="proceso">
             <Col>
-            <Fade >
-            <h1 className="como-se-elabora  text-center grow">
-            ¿CÓMO SE ELABORA EL PRESUPUESTO?
+              <Fade>
+                <h1 className="como-se-elabora  text-center grow">
+                  ¿CÓMO SE ELABORA EL PRESUPUESTO?
                 </h1>
-                </Fade>
+              </Fade>
               <Carousel interval="5000" className="">
                 {/* <Carousel.Item>
                   <img
@@ -124,8 +120,8 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade >
-                        <img className=" w-100" src={ciclo} alt="C" />
+                        <Fade>
+                          <img className=" w-100" src={ciclo} alt="C" />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -149,12 +145,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={lineamientos}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={lineamientos}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -177,12 +173,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={anteproyecto}
-                          alt="anteproyecto"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={anteproyecto}
+                            alt="anteproyecto"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -208,12 +204,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={proyecto}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={proyecto}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -238,12 +234,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={estudio}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={estudio}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -269,12 +265,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={aprobacion}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={aprobacion}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -299,12 +295,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-50"
-                          src={presidente}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-50"
+                            src={presidente}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -329,12 +325,12 @@ class Home extends React.Component {
                   <Carousel.Caption>
                     <Row>
                       <Col md={6}>
-                      <Fade>
-                        <img
-                          className=" w-100"
-                          src={ejecucion}
-                          alt="Lineamientos"
-                        />
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={ejecucion}
+                            alt="Lineamientos"
+                          />
                         </Fade>
                       </Col>
                       <Col md={6} className="slide-text-side">
@@ -357,74 +353,147 @@ class Home extends React.Component {
               </Carousel>
             </Col>
           </Row>
-          </Container>
-          <Row className="timeline">
-            <Col>
-              <div class="scrolling-wrapper-flexbox">
-                <div class="tarjeta ">
-                  <h2 className="tarjeta-title font-weight-bold">Abril</h2>
-                  <p className="tarjeta-text">LINEAMIENTOS PARA PROGRAMACIÓN</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Mayo</h2>
-                  <p className="tarjeta-text">ANTEPROYECTO DE PRESUPUESTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Junio</h2>
-                  <p className="tarjeta-text">ANTEPROYECTO DE PRESUPUESTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Julio</h2>
-                  <p className="tarjeta-text">PROYECTO DE PRESUPUESTO</p>{" "}
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Agosto</h2>
-                  <p className="tarjeta-text">PROYECTO DE PRESUPUESTO</p>{" "}
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Septiembre</h2>
-                  <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Octubre</h2>
-                  <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Noviembre</h2>
-                  <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
-                  <p className="tarjeta-text">APROBACIÓN DEL PRESUPUESTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">Diciembre</h2>
-                  <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
-                  <p className="tarjeta-text">APROBACIÓN DEL PRESUPUESTO</p>
-                  <p className="tarjeta-text">PROMULGACIÓN DEL PRESUPUESTO</p>
-                </div>
-                <div class="tarjeta">
-                  <h2 className="tarjeta-title font-weight-bold">
-                    Enero a Diciembre{" "}
-                  </h2>
-                  <p className="tarjeta-text">EJECUCIÓN DEL PRESUPUESTO</p>
-                </div>
+        </Container>
+        <Row className="timeline">
+          <Col>
+            <div class="scrolling-wrapper-flexbox">
+              <div class="tarjeta ">
+                <h2 className="tarjeta-title font-weight-bold">Abril</h2>
+                <p className="tarjeta-text">LINEAMIENTOS PARA PROGRAMACIÓN</p>
               </div>
-            </Col>
-          </Row>
-          <div className="presupuesto_total  py-5">
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Mayo</h2>
+                <p className="tarjeta-text">ANTEPROYECTO DE PRESUPUESTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Junio</h2>
+                <p className="tarjeta-text">ANTEPROYECTO DE PRESUPUESTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Julio</h2>
+                <p className="tarjeta-text">PROYECTO DE PRESUPUESTO</p>{" "}
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Agosto</h2>
+                <p className="tarjeta-text">PROYECTO DE PRESUPUESTO</p>{" "}
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Septiembre</h2>
+                <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Octubre</h2>
+                <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Noviembre</h2>
+                <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
+                <p className="tarjeta-text">APROBACIÓN DEL PRESUPUESTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">Diciembre</h2>
+                <p className="tarjeta-text">ESTUDIO DEL PROYECTO</p>
+                <p className="tarjeta-text">APROBACIÓN DEL PRESUPUESTO</p>
+                <p className="tarjeta-text">PROMULGACIÓN DEL PRESUPUESTO</p>
+              </div>
+              <div class="tarjeta">
+                <h2 className="tarjeta-title font-weight-bold">
+                  Enero a Diciembre{" "}
+                </h2>
+                <p className="tarjeta-text">EJECUCIÓN DEL PRESUPUESTO</p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <div className="banner_presupuesto_total">
+          <Container>
+            <Row>
+              <Col md={7} className="d-flex align-items-center">
+                <Row>
+                  <Col className="d-flex align-items-center" md={4}>
+                    <img
+                      src={moneda_blanca}
+                      className="w-50 d-block m-auto"
+                      alt="monedaBlanca"
+                    ></img>
+                  </Col>
+                  <Col md={8} >
+                    <h1
+                      onClick={this.handleClick}
+                      className="banner_presupuesto_total__title text-left  grow "
+                    >
+                      PRESUPUESTO TOTAL 2020{" "}
+                      {/* <img className=" icon"  src={help}></img> */}
+                    </h1>
+                    <h2 className="banner_presupuesto_total__subtitle text-left grow">
+                      {" "}
+                      Gs.85 billones{" "}
+                    </h2>
+                    <h2 className="presupuesto_total__subtitle_number text-left   ">
+                      {" "}
+                      Gs. 85.539.568.662.797{" "}
+                    </h2>
+                  </Col>
+                </Row>
+              </Col>
+              <Col className="py-5" md={5}>
+                <Row>
+                  <Col md={4} className="d-flex align-items-centerr">
+                    <img
+                      src={moneda_blanca}
+                      className="w-50 d-block m-auto"
+                      alt="monedaBlanca"
+                    ></img>
+                  </Col>
+                  <Col md={8}>
+                    <h1 className="banner_presupuesto_total__title text-left">
+                      Entidades <br></br> de la Administración Central
+                    </h1>
+                    <h2 className="presupuesto_total__subtitle_number text-left  ">
+                      Gs. 45.934.977.875.335 <br />
+                    </h2>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col  className=" d-flex align-items-center" md={4}>
+                    <img
+                      src={moneda_blanca}
+                      className="w-50 d-block m-auto"
+                      alt="monedaBlanca"
+                    ></img>
+                  </Col>
+                  <Col md={8}>
+                    
+                    <h1 className="banner_presupuesto_total__title text-left">
+                      Entidades <br />
+                      Descentralizadas
+                    </h1>
+                    <h2 className="presupuesto_total__subtitle_number text-left   ">
+                      Gs. 39.604.590.787.444 <br />
+                    </h2>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+
+        {/* <div className="presupuesto_total  py-5">
             <Container>
             <Row>
               <Col md={12}>
                 <h1 onClick={this.handleClick} className="presupuesto_total__title text-center grow ">
-                  PRESUPUESTO TOTAL 2020 {/* <img className=" icon"  src={help}></img> */} 
+                  PRESUPUESTO TOTAL 2020
           
         
                 </h1>
                 <h2 className="presupuesto_total__subtitle grow">
-                  {" "}
-                  Gs.85 billones{" "}
+                 
+                  Gs.85 billones
                 </h2>
                 <h2 className="presupuesto_total__subtitle_number text-center  mb-5 ">
-                  {" "}
-                  Gs.  85.539.568.662.797{" "}
+                  
+                  Gs.  85.539.568.662.797
                 </h2>
               </Col>
             </Row>
@@ -454,9 +523,9 @@ class Home extends React.Component {
               </Col>
             </Row>
             </Container>
-            </div>
-            <BannerMinisterios />
-   <Container>
+            </div> */}
+        <BannerMinisterios />
+        <Container>
           <div className="banner__conoce pt-4">
             <h1 className="text-uppercase font-weight-bold text-center banner__conoce_title grow">
               conocé mas sobre <br /> el presupuesto general de <br /> la
@@ -464,77 +533,77 @@ class Home extends React.Component {
             </h1>
             <Row>
               <Col md={3}>
-              <Fade >
-                <Card>
-                  <Card.Img className="grow" variant="top" src={billete} />
-                  <Card.Body>
-                    <Card.Title className="card__title text-center">
-                      ¿Qué es el presupuesto y cómo se financia?
-                    </Card.Title>
-                  </Card.Body>
-                  <Link className="text-center" to={"/financiacion"}><Button className="button__primary align-self-center   grow mb-3">
-                  Ver más
-                  </Button></Link>
-                </Card>
+                <Fade>
+                  <Card>
+                    <Card.Img className="grow" variant="top" src={billete} />
+                    <Card.Body>
+                      <Card.Title className="card__title text-center">
+                        ¿Qué es el presupuesto y cómo se financia?
+                      </Card.Title>
+                    </Card.Body>
+                    <Link className="text-center" to={"/financiacion"}>
+                      <Button className="button__primary align-self-center   grow mb-3">
+                        Ver más
+                      </Button>
+                    </Link>
+                  </Card>
                 </Fade>
               </Col>
               <Col md={3}>
-              <Fade >
-                <Card>
-                  <Card.Img className="grow " variant="top" src={moneda} />
-                  <Card.Body>
-                    <Card.Title className="card__title text-center">
-                      ¿En qué se gasta el presupuesto?
-                    </Card.Title>
-                  </Card.Body>
-                  <Link className="text-center" to={"/gasto"}>
-                  <Button className="button__primary align-self-center  grow   mb-3">
-                  Ver más
-                  </Button>
-                  </Link>
-                </Card>
+                <Fade>
+                  <Card>
+                    <Card.Img className="grow " variant="top" src={moneda} />
+                    <Card.Body>
+                      <Card.Title className="card__title text-center">
+                        ¿En qué se gasta el presupuesto?
+                      </Card.Title>
+                    </Card.Body>
+                    <Link className="text-center" to={"/gasto"}>
+                      <Button className="button__primary align-self-center  grow   mb-3">
+                        Ver más
+                      </Button>
+                    </Link>
+                  </Card>
                 </Fade>
               </Col>
               <Col md={3}>
-              <Fade >
-                <Card>
-                  <Card.Img className="gro img-ods   " src={ods} />
-                  <Card.Body>
-                    <Card.Title className="card__title text-center">
-                      ¿El PGN está vinculado a los ODS?
-                    </Card.Title>
-                  </Card.Body>
-                  <Link className="text-center" to={"/ods"}>
-                    <Button className="button__primary align-self-center  grow   mb-3">
-                    Ver más
-                    </Button>
-                  </Link>
-                </Card>
+                <Fade>
+                  <Card>
+                    <Card.Img className="gro img-ods   " src={ods} />
+                    <Card.Body>
+                      <Card.Title className="card__title text-center">
+                        ¿El PGN está vinculado a los ODS?
+                      </Card.Title>
+                    </Card.Body>
+                    <Link className="text-center" to={"/ods"}>
+                      <Button className="button__primary align-self-center  grow   mb-3">
+                        Ver más
+                      </Button>
+                    </Link>
+                  </Card>
                 </Fade>
               </Col>
               <Col md={3}>
-              <Fade >
-                <Card>
-                  <Card.Img  className="grow " variant="top" src={lupa} />
-                  <Card.Body>
-                    <Card.Title className="card__title text-center">
-                      ¿Cómo se ejecuta el presupuesto?
-                    </Card.Title>
-                  </Card.Body>
-                  <Link className="text-center" to={"/ejecucion"}>
-
-                  <Button className="button__primary align-self-center grow  mb-3">
-                  Ver más
-                  </Button>
-                  </Link>
-                </Card>
+                <Fade>
+                  <Card>
+                    <Card.Img className="grow " variant="top" src={lupa} />
+                    <Card.Body>
+                      <Card.Title className="card__title text-center">
+                        ¿Cómo se ejecuta el presupuesto?
+                      </Card.Title>
+                    </Card.Body>
+                    <Link className="text-center" to={"/ejecucion"}>
+                      <Button className="button__primary align-self-center grow  mb-3">
+                        Ver más
+                      </Button>
+                    </Link>
+                  </Card>
                 </Fade>
               </Col>
             </Row>
-          </div>    
+          </div>
         </Container>
         <Informacion />
-        
       </div>
     );
   }

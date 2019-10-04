@@ -15,8 +15,8 @@ const data = {
   datasets: [
     {
       data: [  5387709245284 , 844972495318,  7840145062 ,   322207712994 , 0],
-      backgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue'],
-      hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+      backgroundColor: ["#55A3EB", "#0AFC5D", "##E16163", "#FAFF0E",'blue'],
+      hoverBackgroundColor: ["#55A3EB", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
     }
   ]
 };
