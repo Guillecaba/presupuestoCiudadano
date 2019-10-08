@@ -8,6 +8,7 @@ import moneda from "../../assets/images/moneda.png";
 import lineamientos from "../../assets/images/lineamientos.png";
 import lupa from "../../assets/images/lupa.png";
 import anteproyecto from "../../assets/images/ANTEPROYECTO.png";
+import lupaTimeline from '../../assets/images/lupa_timeline.png';
 
 import moneda_blanca from "../../assets/images/moneda-blanca.png";
 import escuela from "../../assets/images/escuela.png";
@@ -361,7 +362,7 @@ class Home extends React.Component {
                         <Fade>
                           <img
                             className=" w-100"
-                            src={proyecto}
+                            src={lupaTimeline}
                             alt="Lineamientos"
                           />
                         </Fade>
@@ -440,7 +441,7 @@ class Home extends React.Component {
             </div>
           </Col>
         </Row>
-        <div className="banner_presupuesto_total">
+        <div className="banner_presupuesto_total py-5">
           <Container>
             <Row>
               <Col md={7} className="d-flex align-items-center">

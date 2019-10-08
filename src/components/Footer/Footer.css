@@ -34,6 +34,14 @@ ul {
   
     .footer__img_2{
         width:50%;
+        margin:auto;
+        display:block;
+    }
+
+    .footer__img {
+        width:50%;
+        margin:auto;
+        display:block;
     }
     
   }

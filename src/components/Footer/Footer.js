@@ -43,7 +43,7 @@ const footer = () => {
               </Col>
               <Col className="py-3" md={4} sm={4}>
                 <a href = "https://www.bancomundial.org/" >
-                <img className = 'w-100' src={ banco } alt='banco'></img>
+                <img className = 'footer__img' src={ banco } alt='banco'></img>
                 </a>
               
               </Col>
@@ -70,7 +70,7 @@ const footer = () => {
               <Col md={4}>
               <a href="http://www.ceamso.org.py/" >
                 <img
-                  className="footer__img"
+                  className="footer__img"x
                   src={ceamso}
                   alt="ceamso"
                 />
