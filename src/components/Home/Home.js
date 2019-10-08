@@ -461,7 +461,7 @@ class Home extends React.Component {
                   </Col>
                   <Col md={8}>
                     <h1 className="banner_presupuesto_total__title2 text-left">
-                      Entidades <br></br> de la Administración Central
+                      Organismos <br></br> de la Administración Central
                     </h1>
                     {/* <h2 className="banner_presupuesto_total__subtitle text-left  ">
                       Gs. 45.934.977.875.335 <br />

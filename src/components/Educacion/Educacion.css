@@ -50,6 +50,18 @@
   list-style-position: inside;
 }
 
+.banner__principal_item_proyecto {
+  border-left: solid 10px #EB903D;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_actividad {
+  border-left: solid 10px #69FFED;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
 
 .gastos__title {
   font-size: 28px;

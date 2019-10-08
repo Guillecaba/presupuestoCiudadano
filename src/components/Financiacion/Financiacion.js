@@ -120,7 +120,8 @@ const Financiacion = () => {
     Programa Central
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
-      <Card.Body className='acordeon-card-text '>Recoge todas las actividades que respondan a la Misión Institucional y al Fortalecimiento Institucional (administrativo), de un programa Central, pueden depender proyectos que contribuyan a la misión o mal fortalecimiento de la entidad.</Card.Body>
+      <Card.Body className='acordeon-card-text '><p>Comprende las actividades  orientadas a la gestión institucional, es decir, aquellas de apoyo  transversal para  todos los programas  de la institución, y/o aquellas misionales  que tengan  un resultado esperado pero  que no arrojen una producción final.</p>
+      <p>Puede tener proyectos de inversión siempre  y cuando los mismos sean destinados al fortalecimiento institucional y no se vinculen a los resultados de los programas presupuestarios sustantivos</p></Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card className="card-acordeon">
@@ -129,7 +130,7 @@ const Financiacion = () => {
     Programas Sustantivos
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="1">
-      <Card.Body className="acordeon-card-text ">Son los creados para solucionar problemas específicos en un tiempo determinado, para generar Resultados concretos y medibles que le afecten una población bien identificada. Estos Programas generan Producto. De un Programa Sustantivo, pueden depender Proyectos que contribuyan al resultado que busca el Programa.y</Card.Body>
+      <Card.Body className="acordeon-card-text ">Son los creados para solucionar problemas específicos en un tiempo determinado, para generar resultados concretos y medibles que le afecten una población bien identificada. Estos Programas generan  productos. De un Programa Sustantivo, pueden depender proyectos que contribuyan al resultado que busca el Programa.</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card className="card-acordeon" >

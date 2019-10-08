@@ -743,7 +743,7 @@ Participá!
                       </li>
                       <li>
                         <ul>
-                          <li className="banner__principal_item_one ml-5">
+                          <li className="banner__principal_item_proyecto ml-5">
                             <div className="d-flex align-items-start">
                               <p className="banner__principal_item">Proyecto</p>
                               <a href="/cambios#def-proyecto-acti">
@@ -755,7 +755,7 @@ Participá!
                               {state.banner.datos.programas[6].monto}
                             </p>
                           </li>
-                          <li className="banner__principal_item_two ml-5">
+                          <li className="banner__principal_item_actividad ml-5">
                             <div className="d-flex align-items-start">
                               <p className="banner__principal_item">
                                 Actividad

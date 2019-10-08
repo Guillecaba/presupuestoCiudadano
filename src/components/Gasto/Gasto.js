@@ -77,7 +77,7 @@ class Gasto extends Component {
         </Row>
         <Row className="my-5">
           <Col className="text-center">
-          <h1 className=" ">En el 2020 de cada 1 00.000 gs se gasto:</h1>
+          <h1 className=" ">En el 2020 de cada 1 00.000 gs se asignará :</h1>
           <img className="billete pt-3" src={billete_grafico} alt="billete grafico"></img>
           </Col>
         </Row>

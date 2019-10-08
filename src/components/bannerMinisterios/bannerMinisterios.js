@@ -54,7 +54,7 @@ const BannerMinisterios = () => {
               />
               <Card.Body>
                 <Card.Title className="presupuesto_total__card_title text-center">
-                  Ministerio de Salud y Bienestar social
+                  Ministerio de Salud Pública y Bienestar social
                 </Card.Title>
                 <Card.Text className="presupuesto_total__card_monto_primary  text-center">
                   Gs. 5,823 billones
@@ -84,10 +84,10 @@ const BannerMinisterios = () => {
                 </Card.Title>
 
                 <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                  Gs. 5,241 billones
+                  Gs. 5,245 billones
                 </Card.Text>
                 <Card.Text className="presupuesto_total__card_monto_secondary text-center">
-                  Gs. 5.241.719.832.513
+                  Gs. 5.245.803.832.513
                 </Card.Text>
               </Card.Body>
               <Link className="text-center" to={"/obras"}>

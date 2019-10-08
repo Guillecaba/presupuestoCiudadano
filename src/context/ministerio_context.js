@@ -3,12 +3,12 @@ import React from "react"
 const ministerioContext = React.createContext([{
   educacion:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
+    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
     datasets: [
       {
-        data: [ 62.56  ,8.93,  0.2 ,  10.76 , 17.55],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+        data: [ 62.56  ,8.93,  0.2  ,8.39,2.37 ,17.55],
+        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163",'#EB903D','#69FFED','blue'],
+        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163",'#EB903D','#69FFED','blue']
       }
     ]
   }},
@@ -171,12 +171,12 @@ const ministerioContext = React.createContext([{
 }, {
   obras:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
+    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
     datasets: [
       {
         data: [   3.03, 7.08 , 9.95 ,   78.93 , 1.04],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
+        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue']
       }
     ]
   }},
@@ -205,7 +205,7 @@ const ministerioContext = React.createContext([{
       monto:"Gs. 521.006.738.546 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 4.136.419.123.340"
+      monto:"Gs. 4.140.503.123.340"
     },{
       nombre:"Partidas no asignables",
       monto:"Gs. 53.774.694.697"
@@ -218,7 +218,7 @@ const ministerioContext = React.createContext([{
       monto:"Gs. 0"
     }
   ],
-  presupuestoTotal: "Gs. 5.241.719.832.513",
+  presupuestoTotal: "Gs. 5.245.803.832.513",
   },
  
     
@@ -305,7 +305,7 @@ const ministerioContext = React.createContext([{
                         {"name":"CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN ESTE","value":8100000000},
                         {"name":"CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES -REGIÓN NORTE","value":2100000000},
                         {"name":"CONSTRUCCIÓN PAV. TIPO EMPED. Y PUENTES - REGIÓN CHACO","value":1000000000},
-                        {"name":"CONSTRUCCIÓN PAVIMENTO TIPO ADOQUIN - REGIÓN SUR","value":1000000000},
+                        {"name":"CONSTRUCCIÓN PAVIMENTO TIPO ADOQUIN - REGIÓN SUR","value":5084000000},
                         {"name":"CONSTRUCCIÓN  PASOS A DESNIVEL - CENTRAL","value":2100000000},
                         {"name":"CONSTRUCCIÓN ALCANTARILLADO Y DESAGÜE PLUVIAL EN CENTRAL","value":100000000},
                         {"name":"CONSTRUCCIÓN PAV. S/ EMPEDRADOS EN REGIÓN NORTE","value":2000000000},
@@ -343,7 +343,7 @@ const ministerioContext = React.createContext([{
                         {"name":"CONSERVACIÓN CAMINOS RURALES NO PAVIMENT. R. ORIENTAL","value":15123912692},
                         {"name":"LEVANTAMIENTO FACTIB. Y DISEÑO INGENIERÍA CAMINOS Y PUENTES","value":2536000000},
                         {"name":"MEJORAMIENTO CAMINOS VECINALES Y PUENTES EN LA RO","value":291092465900},
-                        {"name":"MEJORAMIENTO DE LA GESTIÓN DE LOS DISTRITOS DEPARTAMENTALES","value":8329044840},
+                        {"name":"MEJORAMIENTO DE LA GESTIÓN DE LOS DISTRITOS DEPARTAMENTALES","value":83290448400},
                 
                     ]
                 },
@@ -515,12 +515,12 @@ const ministerioContext = React.createContext([{
 },{
   salud:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
+    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
     datasets: [
       {
-        data: [  3.57 , 24.05,  2.21,  70.08 ,0.11 ],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+        data: [  3.57 , 24.05,  2.21,  68.01, 2.07,0.11 ],
+        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
+        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", '#EB903D','#69FFED','blue']
       }
     ]
   }},
@@ -769,12 +769,12 @@ const ministerioContext = React.createContext([{
 {
   desarrollo:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Sustantivo", "No asignables"],
+    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
     datasets: [
       {
-        data: [  2 , 10,  0,  88 , 0],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", "#FAFF0E",'blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", "#FAFF0E",'blue']
+        data: [  2 , 10,  0,  0,88 , 0],
+        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
+        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", '#EB903D','#69FFED','blue']
       }
     ]
   }},

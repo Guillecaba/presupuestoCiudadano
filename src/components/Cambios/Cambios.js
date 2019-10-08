@@ -59,9 +59,9 @@ const Cambios = () => {
             Clasificación Programática
           </h2>
           <ul className="py-1 pl-2 clasi-list">
-            <li className="clasi-item-1 pt-1">Programa</li>
-            <li className="clasi-item-2 pt-1">Proyecto :<br></br> &emsp; Conjunto de actividades y/u obras con periodo definido de ejecución para mejorar la provisión de los bienes y servicios en el cumplimiento de un resultado. </li>
-            <li className="clasi-item-2 pt-1">Actividad: <br></br> &emsp; Es el conjunto de acciones de mínimo nivel que se llevan a cabo para cumplir las metas de un programa, que consiste en la ejecución de ciertos procesos o tareas mediante la utilización de los recursos humanos, materiales, técnicos, y financieros asignados a la actividad con un costo determinado. </li>
+            <li className="clasi-item-1 pt-1 font-weight-bold">Programa</li>
+            <li className="clasi-item-2 pt-1 "><p className="font-weight-bold">Proyecto :</p><p className="text-justify">Conjunto de actividades y/u obras con periodo definido de ejecución para mejorar la provisión de los bienes y servicios en el cumplimiento de un resultado. </p> </li>
+            <li className="clasi-item-2 pt-1"><p  className="font-weight-bold">Actividad:</p><p className="text-justify">Es el conjunto de acciones de mínimo nivel que se llevan a cabo para cumplir las metas de un programa, que consiste en la ejecución de ciertos procesos o tareas mediante la utilización de los recursos humanos, materiales, técnicos, y financieros asignados a la actividad con un costo determinado. </p> </li>
             {/* <li className="clasi-item-3 pt-1">Obra</li> */}
           </ul>
         
