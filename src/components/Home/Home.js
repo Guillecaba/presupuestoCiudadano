@@ -352,6 +352,38 @@ class Home extends React.Component {
                     </Row>
                   </Carousel.Caption>
                 </Carousel.Item>
+                <Carousel.Item>
+                  <img className="d-block w-75" src={white} alt="back" />
+
+                  <Carousel.Caption>
+                    <Row>
+                      <Col md={6}>
+                        <Fade>
+                          <img
+                            className=" w-100"
+                            src={proyecto}
+                            alt="Lineamientos"
+                          />
+                        </Fade>
+                      </Col>
+                      <Col md={6} className="slide-text-side">
+                        <p className="slide-text text-left">
+                          ENERO A DICIEMBRE DEL SIGUENTE AÑO
+                        </p>
+
+                        <h3 className="slide-title text-left">
+                          Control y evaluación 
+                        </h3>
+                        <p className="slide-text text-left">
+                         Consiste  en comparar  el comportamiento de los montos y de los servicios planificados y ejecutados.
+                        </p>
+                        <p className="slide-text text-left">
+                         Se miden los resultados que se obtienen de cada uno de los programas se verifican  los objetivos y metas previstos y se emiten juicios sobre su desarrollo.
+                        </p>
+                      </Col>
+                    </Row>
+                  </Carousel.Caption>
+                </Carousel.Item>
               </Carousel>
             </Col>
           </Row>
@@ -403,6 +435,7 @@ class Home extends React.Component {
                   Enero a Diciembre{" "}
                 </h2>
                 <p className="tarjeta-text">EJECUCIÓN DEL PRESUPUESTO</p>
+                <p className="tarjeta-text">CONTROL Y EJECUCIÓN </p>
               </div>
             </div>
           </Col>
