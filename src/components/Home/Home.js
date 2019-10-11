@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 import personitas from "../../assets/images/personitas-completo.png";
 import billete from "../../assets/images/billete.png";
@@ -8,7 +8,7 @@ import moneda from "../../assets/images/moneda.png";
 import lineamientos from "../../assets/images/lineamientos.png";
 import lupa from "../../assets/images/lupa.png";
 import anteproyecto from "../../assets/images/ANTEPROYECTO.png";
-import lupaTimeline from '../../assets/images/lupa_timeline.png';
+import lupaTimeline from "../../assets/images/lupa_timeline.png";
 
 import moneda_blanca from "../../assets/images/moneda-blanca.png";
 import escuela from "../../assets/images/escuela.png";
@@ -162,9 +162,9 @@ class Home extends React.Component {
                           LINEAMIENTOS PARA PROGRAMACIÓN
                         </h3>
                         <p className="slide-text text-left">
-                          El Ministerio de Hacienda elabora un decreto donde se
-                          estipulan los lineamientos para que las instituciones
-                          realicen sus anteproyectos.
+                        El Ministerio de Hacienda elabora un Decreto en el cual se
+incorporan las indicaciones o directrices, para que las Instituciones realicen su plan de gastos e ingresos
+del siguiente año y se lo denomina Anteproyecto de Presupuesto
                         </p>
                       </Col>
                     </Row>
@@ -346,7 +346,7 @@ class Home extends React.Component {
                         </h3>
                         <p className="slide-text text-left">
                           A partir del 1 de enero hasta el 31 de diciembre del
-                          año siguiente, los organismos y Entidades del Sector
+                          año siguiente, los Organismos y Entidades del Sector
                           Público proceden a ejecutar el Presupuesto aprobado.
                         </p>
                       </Col>
@@ -373,13 +373,16 @@ class Home extends React.Component {
                         </p>
 
                         <h3 className="slide-title text-left">
-                          Control y evaluación 
+                          Control y evaluación
                         </h3>
                         <p className="slide-text text-left">
-                         Consiste  en comparar  el comportamiento de los montos y de los servicios planificados y ejecutados.
+                          Consiste en comparar el comportamiento de los montos y
+                          de los servicios planificados y ejecutados.
                         </p>
                         <p className="slide-text text-left">
-                         Se miden los resultados que se obtienen de cada uno de los programas se verifican  los objetivos y metas previstos y se emiten juicios sobre su desarrollo.
+                          Se miden los resultados que se obtienen de cada uno de
+                          los programas se verifican los objetivos y metas
+                          previstos y se emiten juicios sobre su desarrollo.
                         </p>
                       </Col>
                     </Row>
@@ -446,14 +449,17 @@ class Home extends React.Component {
             <Row>
               <Col md={7} className="d-flex align-items-center">
                 <Row>
-                  <Col className="d-flex align-items-center py-5 py-md-0" md={4}>
+                  <Col
+                    className="d-flex align-items-center py-5 py-md-0"
+                    md={4}
+                  >
                     <img
                       src={moneda_blanca}
                       className="w-50 d-block m-auto "
                       alt="monedaBlanca"
                     ></img>
                   </Col>
-                  <Col md={8} >
+                  <Col md={8}>
                     <h1
                       onClick={this.handleClick}
                       className="banner_presupuesto_total__title text-left  grow "
@@ -465,19 +471,23 @@ class Home extends React.Component {
                       {" "}
                       Gs.85 billones{" "}
                     </h2> */}
-                    <CountUp className="d-block banner_presupuesto_total__subtitle text-left grow"
-                    duration={7.25}
-                    prefix="Gs. "
-                    suffix=" billones"
-                     end={85} />
+                    <CountUp
+                      className="d-block banner_presupuesto_total__subtitle text-left grow"
+                      duration={7.25}
+                      prefix="Gs. "
+                      suffix=" billones"
+                      end={85}
+                    />
 
-<CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
-                    duration={7.25}
-                    prefix="Gs. "
-                    separator="."
-                    suffix=""
-                     end={85539568662797} />
-                   {/*  <h2 className="banner_presupuesto_total__subtitle_number text-left   ">
+                    <CountUp
+                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      duration={7.25}
+                      prefix="Gs. "
+                      separator="."
+                      suffix=""
+                      end={85539568662797}
+                    />
+                    {/*  <h2 className="banner_presupuesto_total__subtitle_number text-left   ">
                       {" "}
                       Gs. 85.539.568.662.797{" "}
                     </h2> */}
@@ -500,16 +510,18 @@ class Home extends React.Component {
                     {/* <h2 className="banner_presupuesto_total__subtitle text-left  ">
                       Gs. 45.934.977.875.335 <br />
                     </h2> */}
-                    <CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
-                    duration={7.25}
-                    prefix="Gs. "
-                    separator="."
-                    suffix=""
-                     end={45934977875335} />
+                    <CountUp
+                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      duration={7.25}
+                      prefix="Gs. "
+                      separator="."
+                      suffix=""
+                      end={45934977875335}
+                    />
                   </Col>
                 </Row>
                 <Row>
-                  <Col  className=" d-flex align-items-center" md={4}>
+                  <Col className=" d-flex align-items-center" md={4}>
                     <img
                       src={moneda_blanca}
                       className="w-50 d-block m-auto py-5 py-md-0"
@@ -517,20 +529,18 @@ class Home extends React.Component {
                     ></img>
                   </Col>
                   <Col md={8}>
-                    
                     <h1 className="banner_presupuesto_total__title2 text-left">
                       Entidades <br />
                       Descentralizadas
                     </h1>
-                    <CountUp className=" d-block banner_presupuesto_total__subtitle text-left grow"
-                    duration={7.25}
-                    prefix="Gs. "
-                    separator="."
-                    suffix=""
-                     end={39604590787444} />
-                    
-                  
-                    
+                    <CountUp
+                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      duration={7.25}
+                      prefix="Gs. "
+                      separator="."
+                      suffix=""
+                      end={39604590787444}
+                    />
                   </Col>
                 </Row>
               </Col>

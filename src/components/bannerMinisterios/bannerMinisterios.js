@@ -31,7 +31,7 @@ const BannerMinisterios = () => {
                   Ministerio de Educación y Ciencias
                 </Card.Title>
                 <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                  Gs. 9,243 billones
+                  Gs. 9,2 billones
                 </Card.Text>
                 <Card.Text className="presupuesto_total__card_monto_secondary text-center">
                   Gs. 9.243.946.951.188
@@ -57,7 +57,7 @@ const BannerMinisterios = () => {
                   Ministerio de Salud Pública y Bienestar social
                 </Card.Title>
                 <Card.Text className="presupuesto_total__card_monto_primary  text-center">
-                  Gs. 5,823 billones
+                  Gs. 5,8 billones
                 </Card.Text>
                 <Card.Text className="presupuesto_total__card_monto_secondary  text-center">
                   Gs. 5.823.285.397.358
@@ -84,7 +84,7 @@ const BannerMinisterios = () => {
                 </Card.Title>
 
                 <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                  Gs. 5,245 billones
+                  Gs. 5,2 billones
                 </Card.Text>
                 <Card.Text className="presupuesto_total__card_monto_secondary text-center">
                   Gs. 5.245.803.832.513
@@ -110,7 +110,7 @@ const BannerMinisterios = () => {
                 Ministerio de <br></br> Desarrollo social
                 </Card.Title>
                 <Card.Text className="presupuesto_total__card_monto_primary text-center">
-                  Gs. 0,524 billones{" "}
+                  Gs. 0,5 billones{" "}
                 </Card.Text>
                 <Card.Text className="presupuesto_total__card_monto_secondary text-center">
                   Gs. 524.872.980.571

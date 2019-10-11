@@ -3,12 +3,12 @@ import React from "react"
 const ministerioContext = React.createContext([{
   educacion:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
+    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
     datasets: [
       {
-        data: [ 62.56  ,8.93,  0.2  ,8.39,2.37 ,17.55],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163",'#EB903D','#69FFED','blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163",'#EB903D','#69FFED','blue']
+        data: [ 71.71  ,10.76,  17.53],
+        backgroundColor: ["orange", "#FAFF0E",'blue'],
+        hoverBackgroundColor: ["orange", "#FAFF0E",'blue']
       }
     ]
   }},
@@ -171,12 +171,12 @@ const ministerioContext = React.createContext([{
 }, {
   obras:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
+    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
     datasets: [
       {
-        data: [   3.03, 7.08 , 9.95 ,   78.93 , 1.04],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue']
+        data: [   20.05, 78.93 , 1.03],
+        backgroundColor: ["orange", "#FAFF0E",'blue'],
+        hoverBackgroundColor: ["orange", "#FAFF0E",'blue']
       }
     ]
   }},
@@ -212,7 +212,7 @@ const ministerioContext = React.createContext([{
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 4.136.419.123.340"
+      monto:"Gs. 4.140.503.123.340"
     },{
       nombre:"Actividad",
       monto:"Gs. 0"
@@ -230,7 +230,7 @@ const ministerioContext = React.createContext([{
       "name":"Programa Central",
       "children": [
                   { 
-                      "name": "Actividades Administrativa" ,
+                      "name": "Actividades Administrativas" ,
                       "children": [
                           {"name":"GESTION ADMINISTRATIVA FINANCIERA","value":  371512289231 },
                           
@@ -515,13 +515,13 @@ const ministerioContext = React.createContext([{
 },{
   salud:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
-    datasets: [
-      {
-        data: [  3.57 , 24.05,  2.21,  68.01, 2.07,0.11 ],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", '#EB903D','#69FFED','blue']
-      }
+      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+      datasets: [
+        {
+          data: [   29.84, 70.08 , 0.08],
+          backgroundColor: ["orange", "#FAFF0E",'blue'],
+          hoverBackgroundColor: ["orange", "#FAFF0E",'blue']
+        }
     ]
   }},
   {items: [
@@ -577,7 +577,7 @@ const ministerioContext = React.createContext([{
       "name":"Programa Central",
       "children": [
                   { 
-                      "name": "Actividades Administrativa" ,
+                      "name": "Actividades Administrativas" ,
                       "children": [
                           {"name":"Gestión administrativa p/el funcionamiento institucional","value":  1188371059555 },
                           {"name":"Recursos financieros transferidos a consejos de salud ","value":  48440653763 },
@@ -621,7 +621,7 @@ const ministerioContext = React.createContext([{
     "name":"Programa Sustantivo",
     "children": [
                 { 
-                    "name": "0ACCESO A LA ATENCIÓN PRIMARIA DE LA SALUD" ,
+                    "name": "ACCESO A LA ATENCIÓN PRIMARIA DE LA SALUD" ,
                     "children": [
                         {"name":"SERVICIOS DE ATENCIÓN PRIMARIA DE LA SALUD","value":309911543761}
                     ]
@@ -769,13 +769,13 @@ const ministerioContext = React.createContext([{
 {
   desarrollo:[{
     data:{
-    labels: ["Misional", "Administrativo","Proyecto","Proyecto","Actividad", "No asignables"],
-    datasets: [
-      {
-        data: [  2 , 10,  0,  0,88 , 0],
-        backgroundColor: ["#A7D5FF", "#0AFC5D", "#E16163", '#EB903D','#69FFED','blue'],
-        hoverBackgroundColor: ["#A7D5FF", "#0AFC5D", "##E16163", '#EB903D','#69FFED','blue']
-      }
+      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+      datasets: [
+        {
+          data: [   12, 88 ],
+          backgroundColor: ["orange", "#FAFF0E",'blue'],
+          hoverBackgroundColor: ["orange", "#FAFF0E",'blue']
+        }
     ]
   }},
   {items: [
@@ -874,7 +874,7 @@ const ministerioContext = React.createContext([{
                 ]
             },
             { 
-              "name": "003 - PROMOCION SOCIAL" ,
+              "name": "PROMOCION SOCIAL" ,
               "children": [
                   {"name":"REGULARIZACIÓN DE TERRITORIOS SOCIALES","value":9144931935},
                   

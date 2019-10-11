@@ -31,9 +31,10 @@ const Ejecucion = () => {
       <Row className="mt-5">
         <Col md={7}>
         <Fade bottom>
-            <p>A partir del 1 de enero hasta el 31 de diciembre del año siguiente, los Organismos y Entidades del Sector Público proceden a ejecutar el Presupuesto aprobado.
+            <p>A partir del 1 de enero hasta el 31 de diciembre de cada año, los Organismos y Entidades del Sector Público proceden a ejecutar el Presupuesto aprobado.
 </p>
-            <p>Es importante el conocimiento del proceso de ejecución presupuestaria del gasto, cuyo resguardo y cumplimiento está a cargo del Ministerio de Hacienda (Art. 29 de la Ley 1535/99) y que identifica los siguientes requisitos e instrumentos requeridos para poder gastar bien.</p>
+            <p>Es importante el conocimiento del proceso de ejecución presupuestaria del gasto, cuyo resguardo y cumplimiento está a cargo del Ministerio de Hacienda (Art. 29 de la Ley 1535/99) y que identifica los siguientes requisitos e instrumentos requeridos para poder garantizar el uso eficiente
+de los recursos públicos.</p>
             <p>Apartir de la promulgación de la Ley Anual de Presupuesto de la Nación, se debe tener en consideración los siguientes instrumentos:
 </p>
         </Fade>
@@ -93,7 +94,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           <Fade bottom>
 
           <h2 className= "font-weight-bold">Plan Financiero Institucional</h2>
-          <p>Es un documento técnico por el cual los Organismos y Entidades del sector público realizan la programación mensual del Presupuesto anual autorizado, en el mismo las instituciones prevén los meses en el que van a usar sus rubros para pagar las obligaciones contraídas con las personas y empresas seleccionadas en las contrataciones de bienes, servicios y obras requeridas para el cumplimiento de las actividades de los programas, en función a los objetivos generales de las instituciones.
+          <p>Es un Instrumento técnico por el cual los Organismos y Entidades del sector público realizan la programación mensual del Presupuesto anual autorizado, en el mismo las instituciones prevén los meses en el que van a usar sus rubros para pagar las obligaciones contraídas con las personas y empresas seleccionadas en las contrataciones de bienes, servicios y obras requeridas para el cumplimiento de las actividades de los programas, en función a los objetivos generales de las instituciones.
 
 </p>
           <p>El Plan Financiero es muy importante porque define el monto límite de dinero sobre los cuales las instituciones pueden contraer compromisos, es decir que en ningún caso las instituciones podrían comprometer un rubro cuyo monto sea superior al Plan Financiero aprobado. El Plan Financiero es aprobado por Decreto del Poder Ejecutivo (para el ejercicio 2016 el PF fue aprobado por el Decreto N° 4931/16)</p>
@@ -134,7 +135,9 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
     Plan de Caja:
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
-      <Card.Body className='acordeon-card-text '>Recoge todas las actividades que respondan a la Misión Institucional y al Fortalecimiento Institucional (administrativo), de un programa Central, pueden depender proyectos que contribuyan a la misión o mal fortalecimiento de la entidad.</Card.Body>
+      <Card.Body className='acordeon-card-text '>Instrumento financiero por medio del cual se proyectan las necesidades financieras de corto plazo y se
+determinan los recursos que se asignan a cada Organismo del Sector Público para el cumplimiento de
+sus funciones. Es elaborado en función al Plan Financiero anual aprobado</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card className="card-acordeon">
@@ -162,7 +165,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
     Pago de la Obligación:
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="3">
-      <Card.Body className='acordeon-card-text '>Constituye la etapa por el cual se registra el cumplimiento parcial o total de las obligaciones contraídas. Con posterioridad al depósito de los recursos en la cuenta bancaria del proveedor el banco operante emite la nota de depósito que confirma el traspaso del Dinero a su cuenta, el proveedor emite el Recibo de Dinero que constituye el documento utilizado para registrar el Pago o cancelación de la obligación asumida por el ente público respectivo, derivando toda la documentación respaldatoria para elaborar los legajos de Rendición de cuenta respectiva.</Card.Body>
+      <Card.Body className='acordeon-card-text '>La etapa en la cual se registran el cumplimiento parcial o total de las obligaciones contraídas. Con posterioridad al depósito de los recursos en la cuenta bancaria del proveedor el banco operante emite la nota de depósito que confirma el traspaso del Dinero a su cuenta, el proveedor emite el Recibo de Dinero que constituye el documento utilizado para registrar el Pago o cancelación de la obligación asumida por el ente público respectivo, derivando toda la documentación respaldatoria para elaborar los legajos de Rendición de cuenta respectiva.</Card.Body>
     </Accordion.Collapse>
   </Card>
 </Accordion>

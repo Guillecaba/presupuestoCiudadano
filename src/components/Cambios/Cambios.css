@@ -113,6 +113,13 @@
   width:25%;
 }
 
+
+.cambios__title {
+  font-size: 28px;
+  line-height: 30px;
+  color: #363736;
+  font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
   .cambios_banner_title {
     color:black;

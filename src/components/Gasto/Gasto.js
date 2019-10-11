@@ -62,8 +62,8 @@ class Gasto extends Component {
         </Row>
         <Row>
           <Col className="pl-5" md={6}>
-              <p className="font-weight-bold">El Presupuesto General de la Nación contiene la previsión de los ingresos y la asignación de los gastos.<br/>
-  Los gastos son los montos que el Estado calcula utilizar para:</p>
+              <p className="font-weight-bold">Todos los ingresos recaudados por el sector público, son utilizados para cubrir los gastos prioritarios
+definidos por el PGN y que permiten a las distintas entidades cumplir con sus funciones destinadas a:</p>
   <ul>
     <li className="lista-elemento" >Construir caminos, puentes, hospitales, escuelas,</li>
     <li className="lista-elemento">Brindar servicios de luz, apoyo a estudiantes a través de becas,</li>
@@ -77,7 +77,7 @@ class Gasto extends Component {
         </Row>
         <Row className="my-5">
           <Col className="text-center">
-          <h1 className=" ">En el 2020 de cada 1 00.000 gs se asignará :</h1>
+          <h1 className=" ">En el 2020 de cada 100.000 gs se asignará :</h1>
           <img className="billete pt-3" src={billete_grafico} alt="billete grafico"></img>
           </Col>
         </Row>

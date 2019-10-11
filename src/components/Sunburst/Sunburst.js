@@ -46,8 +46,8 @@ import { transition as d3Transition } from 'd3-transition';
 * @param {func} [props.condensedLabelFunc] - backup function to try to fit less text
         for smaller slices.
 * @param {func} [props.tooltipFunc=(data) => data.name]
-* @param {number} [props.tooltipX=20] - x pointer offset to show tooltip 
-* @param {number} [props.tooltipY=20] - y pionter offset to show tooltip
+* @param {number} [props.tooltipX=0] - x pointer offset to show tooltip 
+* @param {number} [props.tooltipY=0] - y pionter offset to show tooltip
 * @param {string} [props.domID] - will be random if undefined
 * @param {func} [props.onMouseover]
 * @param {func} [props.onMouseout]

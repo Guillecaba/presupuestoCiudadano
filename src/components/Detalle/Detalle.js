@@ -27,7 +27,10 @@ import {
   Table,
   Button,
   Card,
-  Dropdown
+  Dropdown,
+  OverlayTrigger,
+  Tooltip,
+  Popover
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import RubberBand from "react-reveal/RubberBand";
@@ -671,117 +674,208 @@ class DetalleMinisterio extends Component {
                   alt="escuela"
                 />
                 <Fade bottom>
-                  <h1 className="text-center">{state.banner.datos.nombre}</h1>
+                  <h1 className="text-center text-uppercase">
+                    {state.banner.datos.nombre}
+                  </h1>
                 </Fade>
-                <a  className="text-decoration-none" href={this.props.location.pathname + '#participacion'}><button
-                  className="button__secundary   d-block mx-auto "
-                  
+                <a
+                  className="text-decoration-none"
+                  href={this.props.location.pathname + "#participacion"}
                 >
-Participá!
-                
-                  
-                </button></a>
+                  <button className="button__secundary   d-block mx-auto ">
+                    Participá
+                  </button>
+                </a>
 
                 <Row className="pt-5">
                   <Col className="pb-5" md={4}>
-                    <h2 className="">Estructura por tipo de programa</h2>
+                    <h3 className="">Estructura por clases de programas: </h3>
                     <ul>
                       <li className="banner__principal_item_central">
-                        <div className="d-flex align-items-start">
+                        <div className="d-flex align-items-start justify-content-end">
                           <p className="banner__principal_item">
                             Programa Central
                           </p>
-                          <a href="/financiacion/#infoProgramas">
-                            {" "}
-                            <img className=" icon" src={help}></img>{" "}
-                          </a>
+                          <OverlayTrigger
+                            trigger="click"
+                            overlay={
+                              <Popover id={`popover-positioned-central`}>
+                                <Popover.Title as="h3">{` Programa Central `}</Popover.Title>
+                                <Popover.Content>
+                                  Comprende las actividades orientadas a la
+                                  gestión institucional, es decir, aquellas de
+                                  apoyo transversal para todos los programas de
+                                  la institución, y/o aquellas misionales que
+                                  tengan un resultado esperado pero que no
+                                  arrojen una producción final. Puede tener
+                                  proyectos de inversión siempre y cuando los
+                                  mismos sean destinados al fortalecimiento
+                                  institucional y no se vinculen a los
+                                  resultados de los programas presupuestarios
+                                  sustantivos
+                                </Popover.Content>
+                              </Popover>
+                            }
+                          >
+                            <span>
+                              <img className=" icon" src={help}></img>{" "}
+                            </span>
+                          </OverlayTrigger>
                         </div>
 
-                        <p className="banner__principal_item_monto">
+                        <p className="banner__principal_item_monto text-right">
                           {state.banner.datos.programas[0].monto}
                         </p>
                       </li>
                       <li>
                         <ul>
-                          <li className="banner__principal_item_one ml-5">
-                            <p className="banner__principal_item">Misional</p>
-                            <p className="banner__principal_item_monto">
+                          <li className="banner__principal_item_one ml-5 ">
+                            <p className="banner__principal_item text-right">
+                              Misional
+                            </p>
+                            <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[1].monto}
                             </p>
                           </li>
-                          <li className="banner__principal_item_two ml-5">
-                            <p className="banner__principal_item">
+                          <li className="banner__principal_item_two ml-5 ">
+                            <p className="banner__principal_item text-right">
                               Administrativo
                             </p>
-                            <p className="banner__principal_item_monto">
+                            <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[2].monto}
                             </p>
                           </li>
                           <li className="banner__principal_item_three ml-5">
-                            <p className="banner__principal_item">Proyecto</p>
-                            <p className="banner__principal_item_monto">
+                            <p className="banner__principal_item text-right">
+                              Proyecto
+                            </p>
+                            <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[3].monto}
                             </p>
                           </li>
                         </ul>
                       </li>
 
-                      <li className="banner__principal_item_four">
-                        <div className="d-flex align-items-start">
+                      <li className="banner__principal_item_four justify-content-end">
+                        <div className="d-flex align-items-start justify-content-end">
                           <p className="banner__principal_item">
                             Programa sustantivo
                           </p>
-                          <a href="/financiacion#infoProgramas">
-                            {" "}
-                            <img className=" icon" src={help}></img>{" "}
-                          </a>
+                          <OverlayTrigger
+                            trigger="click"
+                            overlay={
+                              <Popover id={`popover-positioned-sustantivo`}>
+                                <Popover.Title as="h3">{` Programas Sustantivos `}</Popover.Title>
+                                <Popover.Content>
+                                  Son los creados para solucionar problemas
+                                  específicos en un tiempo determinado, para
+                                  generar resultados concretos y medibles que le
+                                  afecten una población bien identificada. Estos
+                                  Programas generan productos. De un Programa
+                                  Sustantivo, pueden depender proyectos que
+                                  contribuyan al resultado que busca el
+                                  Programa.
+                                </Popover.Content>
+                              </Popover>
+                            }
+                          >
+                            <span>
+                              <img className=" icon" src={help}></img>{" "}
+                            </span>
+                          </OverlayTrigger>
                         </div>
 
-                        <p className="banner__principal_item_monto">
+                        <p className="banner__principal_item_monto text-right">
                           {state.banner.datos.programas[4].monto}
                         </p>
                       </li>
                       <li>
                         <ul>
                           <li className="banner__principal_item_proyecto ml-5">
-                            <div className="d-flex align-items-start">
+                            <div className="d-flex align-items-start justify-content-end">
                               <p className="banner__principal_item">Proyecto</p>
-                              <a href="/cambios#def-proyecto-acti">
-                                {" "}
-                                <img className=" icon" src={help}></img>{" "}
-                              </a>
+                              <OverlayTrigger
+                                trigger="click"
+                                overlay={
+                                  <Popover id={`popover-positioned-proyecto`}>
+                                    <Popover.Title as="h3">{`Proyecto `}</Popover.Title>
+                                    <Popover.Content>
+                                      Conjunto de actividades y/u obras con
+                                      periodo definido de ejecución para mejorar
+                                      la provisión de los bienes y servicios en
+                                      el cumplimiento de un resultado.
+                                    </Popover.Content>
+                                  </Popover>
+                                }
+                              >
+                                <span>
+                                  <img className=" icon" src={help}></img>{" "}
+                                </span>
+                              </OverlayTrigger>
                             </div>
-                            <p className="banner__principal_item_monto">
+                            <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[6].monto}
                             </p>
                           </li>
                           <li className="banner__principal_item_actividad ml-5">
-                            <div className="d-flex align-items-start">
+                            <div className="d-flex align-items-start justify-content-end">
                               <p className="banner__principal_item">
                                 Actividad
                               </p>
-                              <a href="/cambios#def-proyecto-acti">
-                                {" "}
-                                <img className=" icon" src={help}></img>{" "}
-                              </a>
+                              <OverlayTrigger
+                                trigger="click"
+                                overlay={
+                                  <Popover id={`popover-positioned-proyecto`}>
+                                    <Popover.Title as="h3">{`Actividad `}</Popover.Title>
+                                    <Popover.Content>
+                                      Es el conjunto de acciones de mínimo nivel
+                                      que se llevan a cabo para cumplir las
+                                      metas de un programa, que consiste en la
+                                      ejecución de ciertos procesos o tareas
+                                      mediante la utilización de los recursos
+                                      humanos, materiales, técnicos, y
+                                      financieros asignados a la actividad con
+                                      un costo determinado.
+                                    </Popover.Content>
+                                  </Popover>
+                                }
+                              >
+                                <span>
+                                  <img className=" icon" src={help}></img>{" "}
+                                </span>
+                              </OverlayTrigger>
                             </div>
-                            <p className="banner__principal_item_monto">
+                            <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[7].monto}
                             </p>
                           </li>
                         </ul>
                       </li>
                       <li className="banner__principal_item_five">
-                        <div className="d-flex align-items-start">
-                          <p className="banner__principal_item">
+                        <div className="d-flex align-items-start justify-content-end">
+                          <p className="banner__principal_item text-right">
                             Partidas no asignables
                           </p>
-                          <a href="/financiacion#infoProgramas">
-                            {" "}
-                            <img className=" icon" src={help}></img>{" "}
-                          </a>
+                          <OverlayTrigger
+                            trigger="click"
+                            overlay={
+                              <Popover id={`popover-positioned-no-asignables`}>
+                                <Popover.Title as="h3">{`Partidas no asignables `}</Popover.Title>
+                                <Popover.Content>
+                                  Recogen todas las actividades que de alguna
+                                  forma, el Estado tiene que realizar o
+                                  presupuestar, pero no expresan Resultado, sino
+                                  un compromiso contraído.
+                                </Popover.Content>
+                              </Popover>
+                            }
+                          >
+                            <span>
+                              <img className=" icon" src={help}></img>{" "}
+                            </span>
+                          </OverlayTrigger>
                         </div>
-                        <p className="banner__principal_item_monto">
+                        <p className="banner__principal_item_monto text-right">
                           {state.banner.datos.programas[5].monto}
                         </p>
                       </li>
@@ -828,7 +922,7 @@ Participá!
             <Container>
               <div className="py-5">
                 <h1 className="text-uppercase text-center mb-5 gastos__title ">
-                  Presupuesto {this.state.banner.datos.nombre} <br />
+                  Presupuesto del {this.state.banner.datos.nombre} <br />
                   en detalle
                 </h1>
                 <Row>
@@ -1017,29 +1111,26 @@ Participá!
                                 callback: value => {
                                   return String(value).substring(0, 20) + "..."; //truncate
                                 }
-                              },
-                              
+                              }
                             }
                           ],
                           xAxes: [{ display: false }]
-                        }
-                      ,
-                      tooltips: {
-                        enabled: true,
-                        mode: "single",
-                        callbacks: {
-                          label: function(tooltipItems, data) {
-                            return (
-                              data.labels[tooltipItems.index] +
-                              " : " +
-                              data.datasets[tooltipItems.datasetIndex].data[
-                                tooltipItems.index
-                              ] 
-                             
-                            );
+                        },
+                        tooltips: {
+                          enabled: true,
+                          mode: "single",
+                          callbacks: {
+                            label: function(tooltipItems, data) {
+                              return (
+                                data.labels[tooltipItems.index] +
+                                " : " +
+                                data.datasets[tooltipItems.datasetIndex].data[
+                                  tooltipItems.index
+                                ]
+                              );
+                            }
                           }
                         }
-                      }
                       }}
                       data={this.state.data2}
                     />

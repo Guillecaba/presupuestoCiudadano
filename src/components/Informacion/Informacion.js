@@ -27,7 +27,7 @@ import '../Home/Home.css'
           </Fade>
           <Fade bottom>
           <p className="information__subtitle">
-            Conocer el Presupuesto es esencial para conocer que usos se le
+            Entender el Presupuesto es esencial conocer que usos se le
             dan a tus impuestos, cuáles son las prioridades de las
             instituciones públicas y cuánto se gasta en salud, educación,
             obras, justicia y otros servicios que determinan tu calidad de
