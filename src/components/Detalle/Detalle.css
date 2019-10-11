@@ -2,3 +2,162 @@
   width:4px;
  
 }
+
+
+.banner__principal {
+  background: #CBE776;
+}
+
+.banner__principal_item {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.banner__principal_item_monto {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.banner__principal_item_central {
+  border-left: solid 10px orange;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_one {
+  border-left: solid 10px #55A3EB;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+
+.banner__principal_item_two {
+  border-left: solid 10px #0AFC5D;
+  padding-left:10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_three {
+  border-left: solid 10px #E16163;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_four {
+  border-left: solid 10px #FAFF0E;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_five {
+  border-left: solid 10px blue;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_proyecto {
+  border-left: solid 10px #EB903D;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+.banner__principal_item_actividad {
+  border-left: solid 10px #69FFED;
+  padding-left: 10%;
+  list-style-position: inside;
+}
+
+
+.gastos__title {
+  font-size: 28px;
+  line-height: 30px;
+  color: #363736;
+  font-weight: bold;
+}
+.gastos__treemap {
+  text-align: center;
+}
+
+.encuesta__title {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.encuesta__subtitle {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+
+.item { 
+  background:#E16163;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2;
+  margin-bottom: 1%;
+  padding: 1% 1% 1% 4%;
+  color:white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background: #E5E5E5;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+
+
+ul {
+  padding-left: 0;
+}
+li {
+  cursor: grab;
+  padding-left: 0;
+}
+
+.dragAndDropIcon {
+  position: relative;
+    top: 1px;
+    display: block;
+    width: 18px;
+    height: 11px;
+    margin-right: 20px;
+    cursor: row-resize;
+    /* background: -webkit-linear-gradient(top,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff);
+    background: linear-gradient(180deg,#fff,#fff 20%,transparent 0,transparent 40%,#fff 0,#fff 60%,transparent 0,transparent 80%,#fff 0,#fff); */
+    background-image:url('../../assets/icons/arrows.png') !important;
+    color:white
+}
+
+.img-flecha{
+  width:15px;
+  margin:0px 15px;
+  transform:          rotate(90deg);
+  -ms-transform:      rotate(90deg);
+-moz-transform:     rotate(90deg);
+-webkit-transform:  rotate(90deg);
+-o-transform:       rotate(90deg);
+}
+
+
+/* .tabla-grafico {
+  table-layout: fixed;
+} */
+
+.Toastify__toast--success {
+  background: #CBE776 !important;
+}
+
+.resultado_ministerio_titulo{
+  color:#E16163;
+}
+
+.btn-info {
+  background:rgb(225,97,99);
+  border:none;
+}

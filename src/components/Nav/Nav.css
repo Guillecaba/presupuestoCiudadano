@@ -52,5 +52,12 @@
   .navbar-toggler {
     border:none;
   }
+  .navbar__item .arrow {
+    display: none;
+    position: absolute;
+    bottom: -1.4rem;
+    left: 75%;
+    transform: translateX(-50%);
+  }
  
 }

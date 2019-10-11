@@ -86,7 +86,7 @@ const Cambios = () => {
           <Col md={5} className="d-flex  justify-content-center">
             <img
               src={presupuestoAprobado}
-              className="w-75  grow"
+              className="w-100  grow"
               alt="presupuesto aprobado"
             />
           </Col>
@@ -122,7 +122,7 @@ const Cambios = () => {
             className="align-self-center text-center d-flex flex-row justify-content-center "
           >
             <div className="d-flex flex-row">
-              <img src={legis} className=" px-3 grow" alt="" />
+              <img src={legis} className=" img__cambios__palacio px-3 grow" alt="" />
               <div className="d-flex flex-column align-self-center pl-md-4">
                 <p className="text-center pt-1 font-weight-bold">
                   Decreto de Lineamiento <br /> Nº 1710/19

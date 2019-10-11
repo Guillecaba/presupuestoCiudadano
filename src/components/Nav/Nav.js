@@ -28,32 +28,13 @@ const nav = () => {
                 <img className="arrow" src={flecha} />
               </Nav.Link>
 
-              {/* <Nav.Link
-                className="navbar__item nav-link-color"
-                href="/#proceso"
-              >
-                Proceso
-                <img className="arrow" src={flecha} />
-              </Nav.Link */}
-
-              {/* <Nav.Link
-                href="ejecucion"
-                className="navbar__item text-decoration-none"
-              >
-                <Link
-                  className="text-decoration-none nav-link-color "
-                  to={"/ejecucion"}
-                >
-                  Ejecución
-                </Link>
-                <img className="arrow" src={flecha} />
-              </Nav.Link> */}
+             
               <Nav.Link className="navbar__item">
                 <Link
                   className="text-decoration-none nav-link-color"
                   to={"/cambios"}
                 >
-                   PGN  2019 vs 2020
+                   PGN <br></br>2019 vs 2020
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>

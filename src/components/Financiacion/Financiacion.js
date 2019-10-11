@@ -139,7 +139,7 @@ const Financiacion = () => {
         <h1 className="text-center programa-presu-title pt-5">
           Programas del Presupuesto
         </h1>
-        <p className="text-center  programa-presu-subtitle">
+        <p className="text-center px-4 p-lg-0  programa-presu-subtitle">
           El presupuesto tiene 3 clases de programas:
         </p>
         <Container>

@@ -113,6 +113,9 @@
   width:25%;
 }
 
+.img__cambios__palacio {
+  width:50%;
+}
 
 .cambios__title {
   font-size: 28px;
@@ -125,13 +128,19 @@
     color:black;
     position:relative;
     top:0%;
-    
-    
+  }
+
   
+.img__cambios__palacio {
+  width:50%;
+}
+
+  .img__cambios {
+    width:50%;
   }
 
   .img-palacio {
-    width:100%;
+    width:50%;
   }
 
   .rotate {

@@ -39,7 +39,7 @@ const BannerMinisterios = () => {
               </Card.Body>
               <Link className="text-center" to={"/educacion"}>
                 <Button className="button__secundary align-self-center grow   mb-3">
-                  Ver Mas
+                  Ver más
                 </Button>
               </Link>
             </Card>
@@ -65,7 +65,7 @@ const BannerMinisterios = () => {
               </Card.Body>
               <Link className="text-center" to={"/salud"}>
                 <Button className="button__secundary align-self-center grow  mb-3">
-                  Ver Mas
+                Ver más
                 </Button>
               </Link>
             </Card>
@@ -92,7 +92,7 @@ const BannerMinisterios = () => {
               </Card.Body>
               <Link className="text-center" to={"/obras"}>
                 <Button className="button__secundary align-self-center grow  mb-3">
-                  Ver Mas
+                Ver más
                 </Button>
               </Link>
             </Card>
@@ -118,7 +118,7 @@ const BannerMinisterios = () => {
               </Card.Body>
               <Link className="text-center" to={"/desarrollo"}>
                 <Button className="button__secundary align-self-center grow  mb-3">
-                  Ver Mas
+                Ver más
                 </Button>
               </Link>
             </Card>

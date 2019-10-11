@@ -49,18 +49,16 @@ import {
   sortableHandle
 } from "react-sortable-hoc";
 import arrayMove from "array-move";
-//import Sunburst from "react-zoomable-sunburst"
 import Sunburst from "../../components/Sunburst/Sunburst";
-import "../Educacion/Educacion.css";
+import "../Detalle/Detalle.css";
 import NumberFormat from "react-number-format";
 import flecha from "../../assets/icons/arrows.png";
 
-//import datap from '../../assets/data/data'
 
 import ContainerDimensions from "react-container-dimensions";
 
 const DragHandle = sortableHandle(() => (
-  <img src={flecha} className="img-flecha"></img>
+  <img src={flecha} className="img-flecha" alt="flecha"></img>
 ));
 
 const SortableItem = sortableElement(({ index, value }) => (

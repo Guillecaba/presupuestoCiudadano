@@ -448,7 +448,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
           <Container>
             <Row>
               <Col md={7} className="d-flex align-items-center">
-                <Row>
+                <Row className="pt-lg-4">
                   <Col
                     className="d-flex align-items-center py-5 py-md-0"
                     md={4}
@@ -495,7 +495,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                 </Row>
               </Col>
               <Col className="py-md-5" md={5}>
-                <Row>
+                <Row className="pb-lg-4">
                   <Col md={4} className="d-flex align-items-center">
                     <img
                       src={moneda_blanca}
