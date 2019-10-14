@@ -9,6 +9,8 @@ import LightSpeed from "react-reveal/LightSpeed";
 import Fade from "react-reveal/Fade";
 import pdf from "../../assets/media/decreto.pdf";
 import Arrow from "../../assets/images/Arrow.png";
+import actual from "../../assets/images/estructura_actual.png";
+import nueva from "../../assets/images/estructura_nueva.png";
 import Informacion from "../Informacion/Informacion";
 
 const Cambios = () => {
@@ -122,7 +124,11 @@ const Cambios = () => {
             className="align-self-center text-center d-flex flex-row justify-content-center "
           >
             <div className="d-flex flex-row">
-              <img src={legis} className=" img__cambios__palacio px-3 grow" alt="" />
+              <img
+                src={legis}
+                className=" img__cambios__palacio px-3 grow"
+                alt=""
+              />
               <div className="d-flex flex-column align-self-center pl-md-4">
                 <p className="text-center pt-1 font-weight-bold">
                   Decreto de Lineamiento <br /> Nº 1710/19
@@ -134,6 +140,19 @@ const Cambios = () => {
                 </button>
               </div>
             </div>
+          </Col>
+        </Row>
+        <h2 className="cambios__title text-center text-uppercase  py-5">
+          Cambios en la estructura
+        </h2>
+        <Row>
+          <Col md={6}>
+            <h3 className="text-center cambios__subtitle text-uppercase py-5">Estructura Actual</h3>
+            <img src={actual} className="w-50 m-auto d-block " alt="estructura actual"></img>
+          </Col>
+          <Col md={6}>
+          <h3 className="text-center cambios__subtitle text-uppercase  py-5">Nueva Estructura</h3>
+          <img src={nueva} className="w-100 m-auto d-block " alt= "nueva estructura"></img>
           </Col>
         </Row>
         <h2 className="cambios__title text-center text-uppercase  py-5">

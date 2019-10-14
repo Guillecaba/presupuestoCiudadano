@@ -117,12 +117,25 @@
   width:50%;
 }
 
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cambios__title {
   font-size: 28px;
   line-height: 30px;
   color: #363736;
   font-weight: bold;
 }
+.cambios__subtitle {
+  font-size: 22px;
+  line-height: 30px;
+  color: #363736;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
   .cambios_banner_title {
     color:black;

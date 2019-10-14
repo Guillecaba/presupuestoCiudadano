@@ -97,8 +97,8 @@ class Sunburst extends React.Component {
     colorFunc: (node, current_color) => current_color,
     key_member: 'key',
     font_size: 12,
-    tooltipX: 20,
-    tooltipY: 20,
+    tooltipX: 1,
+    tooltipY: 1,
     saturation: 0.9,
     lightness: 0.6,
     child_brightness: 0.9,
@@ -629,8 +629,8 @@ class Sunburst extends React.Component {
       .style('background', 'lightsteelblue')
       .style('padding', '3px');
 
-    const dx = 150;
-    const dy = 15;
+    const dx = 200*2;
+    const dy = 15*2;
     this.svg
       .selectAll('path.sunburst-main-arc')
       .on(
