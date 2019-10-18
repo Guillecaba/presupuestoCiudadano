@@ -3,7 +3,7 @@ import React from "react"
 const ministerioContext = React.createContext([{
   educacion:[{
     data:{
-    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables a Programas"],
     datasets: [
       {
         data: [ 71.71  ,10.76,  17.53],
@@ -45,7 +45,7 @@ const ministerioContext = React.createContext([{
       nombre:"Programa sustantivo",
       monto:"Gs. 994.908.680.081"
     },{
-      nombre:"Partidas no asignables",
+      nombre:"Partidas no asignables a Programas",
       monto:"Gs. 1.620.564.757.342"
     },{
       nombre:"Proyecto",
@@ -80,11 +80,11 @@ const ministerioContext = React.createContext([{
                           {"name":"BRINDAR SERVICIO EDUCATIVO EN PRIMER Y SEGUNDO CICLO DE EEB","value":  3788337220084 },
                           {"name":"BRINDAR SERVICIO EDUCATIVO EN EL TERCER CICLO DE LA EEB Y EM","value":  1446246278653 },
                           {"name":"ATENCION A EDUCACION SUPERIOR Y CIENCIAS","value":  55655897369},
-                          {"name":"FORMACION DE MUSICOS EN LOS DISTINTOS GENEROS DE MUSICAL","value":  15378406129},
+                          {"name":"FORMACION DE MUSICOS EN LOS DISTINTOS GENEROS DE MUSICA","value":  15378406129},
                           {"name":"BRINDAR SERV.EDUC.A JOVENES Y ADULTOS DE 15 AÑOS Y MAS","value":  335486421492 },
                           {"name":"BRINDAR SERVICIO EDUCATIVO EN CENTROS REGIONALES DE EDUC","value":  80117516114 },
                           {"name":"SERV.EDUC.A ESTUDIANTES C/NECESIDADES ESPECIFICAS DE APOYO","value":  18766116131},
-                          {"name":"PROMOVER EL TALENTOY LA FORMACION ARTISTICA","value":  964526200 },
+                          {"name":"PROMOVER EL TALENTO Y LA FORMACION ARTISTICA","value":  964526200 },
                           {"name":"BRINDAR ATENCION A INSTITUCIONES DE EDUC ESCOLAR INDIGENA","value":  4937942157},
                           {"name":"OTORGAR BECAS PARA EDUCACION SUPERIOR","value":  7837900000 },
                           {"name":"PLANIFICACION Y MONITOREO DE LA POLITICA EDUCATIVA NACIONAL","value":  377987871},
@@ -148,8 +148,11 @@ const ministerioContext = React.createContext([{
                 }
             ]
   },{
-    "name":"Partidas no asignables",
-    "value":"1620564757342"    
+    "name":"Partidas no asignables a Programas",
+    "children": [
+      {"name":"Transferencias Consolidables","value":"1620564757342" }
+    ]
+      
   }]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
@@ -171,7 +174,7 @@ const ministerioContext = React.createContext([{
 }, {
   obras:[{
     data:{
-    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+    labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables a Programas"],
     datasets: [
       {
         data: [   20.05, 78.93 , 1.03],
@@ -207,7 +210,7 @@ const ministerioContext = React.createContext([{
       nombre:"Programa sustantivo",
       monto:"Gs. 4.140.503.123.340"
     },{
-      nombre:"Partidas no asignables",
+      nombre:"Partidas no asignables a Programas",
       monto:"Gs. 53.774.694.697"
     },
     {
@@ -359,7 +362,7 @@ const ministerioContext = React.createContext([{
                 
             ]
 },{
-  "name":"Partidas no asignables",
+  "name":"Partidas no asignables a Programas",
   "value":"53774694697"
 }]}},{resumen:[
       {
@@ -424,7 +427,7 @@ const ministerioContext = React.createContext([{
       nombre:"Programa sustantivo",
       monto:"Gs. 379.991.025.878"
     },{
-      nombre:"Partidas no asignables",
+      nombre:"Partidas no asignables a Programas",
       monto:"Gs. 0"
     },
     {
@@ -515,7 +518,7 @@ const ministerioContext = React.createContext([{
 },{
   salud:[{
     data:{
-      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables a Programas"],
       datasets: [
         {
           data: [   29.84, 70.08 , 0.08],
@@ -553,7 +556,7 @@ const ministerioContext = React.createContext([{
       nombre:"Programa sustantivo",
       monto:"Gs. 4.081.022.674.528"
     },{
-      nombre:"Partidas no asignables",
+      nombre:"Partidas no asignables a Programas",
       monto:"Gs. 4.565.004.915"
     },
     {
@@ -745,7 +748,7 @@ const ministerioContext = React.createContext([{
             ]
 },
 {
-  "name":"Partidas no asignables",
+  "name":"Partidas no asignables a Programas",
   "value":"4565004915"    
 }]}},{resumen:[
       {
@@ -769,10 +772,10 @@ const ministerioContext = React.createContext([{
 {
   desarrollo:[{
     data:{
-      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables"],
+      labels: ["Programa Central","Programa Sustantivo", "Partidas no asignables a Programas"],
       datasets: [
         {
-          data: [   12, 88 ],
+          data: [   13, 87 ],
           backgroundColor: ["orange", "#FAFF0E",'blue'],
           hoverBackgroundColor: ["orange", "#FAFF0E",'blue']
         }
@@ -795,7 +798,7 @@ const ministerioContext = React.createContext([{
       monto: "Gs. 63.000.224.308  "
     },{
       nombre:"Misional",
-      monto:"Gs. 10.316.780.170"
+      monto:"Gs. 17.176.470.340"
     },{
       nombre:"Administrativo",
       monto:"Gs.   52.683.444.138"
@@ -807,7 +810,7 @@ const ministerioContext = React.createContext([{
       nombre:"Programa sustantivo",
       monto:"Gs. 461.872.756.263"
     },{
-      nombre:"Partidas no asignables",
+      nombre:"Partidas no asignables a Programas",
       monto:"Gs. 0"
     },
     {
@@ -842,6 +845,7 @@ const ministerioContext = React.createContext([{
                       "name":"Actividad Misional",
                       "children": [
                           {"name":"ATENCION SOCIAL Y COMEDORES COMUNITARIOS","value":  10316780170 },
+                          {"name":"ASISTENCIA A PESCADORES POR VEDA PESQUERA","value":  6859690170 },
                           
                           
                               

@@ -54,7 +54,6 @@ import "../Detalle/Detalle.css";
 import NumberFormat from "react-number-format";
 import flecha from "../../assets/icons/arrows.png";
 
-
 import ContainerDimensions from "react-container-dimensions";
 
 const DragHandle = sortableHandle(() => (
@@ -727,26 +726,93 @@ class DetalleMinisterio extends Component {
                       </li>
                       <li>
                         <ul>
-                          <li className="banner__principal_item_one ml-5 ">
-                            <p className="banner__principal_item text-right">
-                              Misional
-                            </p>
+                          <li className="banner__principal_item_one ml-5 justify-content-end">
+                            <div className="d-flex align-items-start justify-content-end">
+                              <p className="banner__principal_item text-right">
+                                Misional
+                              </p>
+                              <OverlayTrigger
+                                trigger="click"
+                                overlay={
+                                  <Popover id={`popover-positioned-proyecto`}>
+                                    <Popover.Title as="h3">{`Misional `}</Popover.Title>
+                                    <Popover.Content>
+                                      En la definición de este tipo de
+                                      actividades a incluir en este programa, es
+                                      necesario reconocer cuales acciones
+                                      Misionales se realizan con un resultado
+                                      esperado claro pero sin generar un bien
+                                      y/o servicio, como la generación de
+                                      políticas, o cualquier producción que
+                                      responda a la demanda y no a la oferta,
+                                      como ser el registro de empresas o
+                                      controles y acreditaciones.
+                                    </Popover.Content>
+                                  </Popover>
+                                }
+                              >
+                                <span>
+                                  <img className=" icon" src={help}></img>{" "}
+                                </span>
+                              </OverlayTrigger>
+                            </div>
                             <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[1].monto}
                             </p>
                           </li>
-                          <li className="banner__principal_item_two ml-5 ">
-                            <p className="banner__principal_item text-right">
-                              Administrativo
-                            </p>
+                          <li className="banner__principal_item_two ml-5 justify-content-end">
+                            <div className="d-flex align-items-start justify-content-end">
+                              <p className="banner__principal_item text-right">
+                                Administrativo
+                              </p>
+                              <OverlayTrigger
+                                trigger="click"
+                                overlay={
+                                  <Popover id={`popover-positioned-proyecto`}>
+                                    <Popover.Title as="h3">{`Administrativo `}</Popover.Title>
+                                    <Popover.Content>
+                                      Tipo de actividades generales que hacen al
+                                      funcionamiento de la Institución y son
+                                      transversales a toda la entidad,
+                                      correspondientes a las funciones
+                                      administrativas y de fortalecimiento.
+                                    </Popover.Content>
+                                  </Popover>
+                                }
+                              >
+                                <span>
+                                  <img className=" icon" src={help}></img>{" "}
+                                </span>
+                              </OverlayTrigger>
+                            </div>
                             <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[2].monto}
                             </p>
                           </li>
                           <li className="banner__principal_item_three ml-5">
+                          <div className="d-flex align-items-start justify-content-end">
                             <p className="banner__principal_item text-right">
                               Proyecto
                             </p>
+                            <OverlayTrigger
+                            trigger="click"
+                            overlay={
+                              <Popover id={`popover-positioned-sustantivo`}>
+                                <Popover.Title as="h3">{`Proyecto `}</Popover.Title>
+                                <Popover.Content>
+                                Conjunto de actividades y/u obras con
+                                      periodo definido de ejecución para mejorar
+                                      la provisión de los bienes y servicios en
+                                      el cumplimiento de un resultado.
+                                </Popover.Content>
+                              </Popover>
+                            }
+                          >
+                            <span>
+                              <img className=" icon" src={help}></img>{" "}
+                            </span>
+                          </OverlayTrigger>
+                        </div>
                             <p className="banner__principal_item_monto text-right">
                               {state.banner.datos.programas[3].monto}
                             </p>
@@ -852,7 +918,7 @@ class DetalleMinisterio extends Component {
                       <li className="banner__principal_item_five">
                         <div className="d-flex align-items-start justify-content-end">
                           <p className="banner__principal_item text-right">
-                            Partidas no asignables
+                            Partidas no asignables a Programas
                           </p>
                           <OverlayTrigger
                             trigger="click"
@@ -924,7 +990,7 @@ class DetalleMinisterio extends Component {
                   en detalle
                 </h1>
                 <Row>
-                  <Col md={6}>
+                  <Col md={5}>
                     {!this.state.lista && (
                       <RubberBand>
                         <h2 className="gastos__title text-center">
@@ -944,7 +1010,7 @@ class DetalleMinisterio extends Component {
                             //labelFunc={node => node.data.name}
                             tooltipFunc={data => {
                               let value = addDots(data.value);
-                              return `${data.data.name} \n Gs. ${value}`;
+                              return `${data.data.name} ${Math.round((data.value/state.lista.titulo.valor)*100,-2)} % `;
                             }}
                             _debug={false}
                           />
@@ -952,11 +1018,11 @@ class DetalleMinisterio extends Component {
                       </ContainerDimensions>
                     </div>
                   </Col>
-                  <Col md={6}>
+                  <Col className="d-flex align-items-center" md={7}>
                     <div>
                       {this.state.lista && (
                         <Fragment>
-                          <div className="text-center text-uppercase text-center my-5 gastos__title">
+                         {/*  <div className="text-center text-uppercase text-center my-5 gastos__title">
                             <h2>{state.lista.titulo.nombre}</h2>
                             <p>
                               <NumberFormat
@@ -964,18 +1030,18 @@ class DetalleMinisterio extends Component {
                                 displayType={"text"}
                                 decimalSeparator={","}
                                 thousandSeparator={"."}
-                                /* thousandSeparator={false} */
+                                
                                 prefix={"Gs "}
                               />
                             </p>
-                          </div>
+                          </div> */}
 
                           <Table className="tabla-grafico" responsive>
                             <thead>
                               <tr>
-                                <th>Nombre</th>
-                                <th className="text-right">Monto</th>
-                                <th className="text-right">Porcentaje</th>
+                                <th width="20%" >Nombre</th>
+                                <th width="60%"  className="text-right">Monto</th>
+                                <th width="20%"  className="text-right">Porcentaje</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -992,7 +1058,7 @@ class DetalleMinisterio extends Component {
                                         ) + "%"}) solid`
                                       }}
                                     >
-                                      <td width="30%">{item.nombre}</td>
+                                      <td width="20%" className="text-uppercase">{item.nombre}</td>
                                       <td width="60%" className="text-right">
                                         <NumberFormat
                                           value={item.valor}

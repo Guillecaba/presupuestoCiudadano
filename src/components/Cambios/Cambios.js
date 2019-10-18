@@ -143,7 +143,8 @@ const Cambios = () => {
           </Col>
         </Row>
         <h2 className="cambios__title text-center text-uppercase  py-5">
-          Cambios en la estructura
+          {" "}
+          PRINCIPALES CAMBIOS EN LA ESTRUCTURA PRESUPUESTARIA 2020{" "}
         </h2>
         <Row>
           <Col md={6}>
@@ -155,11 +156,8 @@ const Cambios = () => {
           <img src={nueva} className="w-100 m-auto d-block " alt= "nueva estructura"></img>
           </Col>
         </Row>
-        <h2 className="cambios__title text-center text-uppercase  py-5">
-          {" "}
-          PRINCIPALES CAMBIOS EN LA ESTRUCTURA PRESUPUESTARIA 2020{" "}
-        </h2>
-        <Row className="pb-5 mb-5 d-flex">
+        
+        <Row className="py-5 mb-5 d-flex">
           <Col md={4} className="">
             <div className="h-100">
               <Row className="">
@@ -202,11 +200,9 @@ const Cambios = () => {
                 <Col className="versus-columna pt-5 px-5 h-100">
                   <h3>Programa Central</h3>
                   <p>
-                    Recoge todas las actividades que respondan a la Misión
-                    Institucional y al Fortalecimiento Institucional
-                    (administrativo), de un programa Central, pueden depender
-                    proyectos que contribuyan a la misión o mal fortalecimiento
-                    de la entidad.
+                  Comprende las actividades orientadas a la gestión institucional, es decir, aquellas de apoyo transversal para todos los programas de la institución, y/o aquellas misionales que tengan un resultado esperado pero que no arrojen una producción final.
+
+Puede tener proyectos de inversión siempre y cuando los mismos sean destinados al fortalecimiento institucional y no se vinculen a los resultados de los programas presupuestarios sustantivos
                   </p>
                   <h3>Programas Sustantivos</h3>
                   <p>

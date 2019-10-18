@@ -163,7 +163,7 @@ class Home extends React.Component {
                         </h3>
                         <p className="slide-text text-left">
                         El Ministerio de Hacienda elabora un Decreto en el cual se
-incorporan las indicaciones o directrices, para que las Instituciones realicen su plan de gastos e ingresos
+incorporan las indicaciones o directrices, para que las Instituciones realicen su plan de ingresos y gastos
 del siguiente año y se lo denomina Anteproyecto de Presupuesto
                         </p>
                       </Col>
@@ -190,7 +190,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                           ANTEPROYECTO DE PRESUPUESTO
                         </h3>
                         <p className="slide-text text-left">
-                          Los organismos y entidades del sector público elaboran
+                          Los Organismos y Entidades del sector público elaboran
                           sus anteproyectos de presupuestos donde calculan el
                           monto de dinero que se puede obtener y disponer y por
                           otro la asignación de los recursos hacia los
@@ -253,10 +253,10 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                           ESTUDIO DEL PROYECTO
                         </h3>
                         <p className="slide-text text-left">
-                          El Congreso Nacional, a través de una comisión
+                          El Congreso Nacional, a través de una Comisión
                           bicameral formada por diputados y senadores se encarga
                           de revisar y discutir el proyecto de ingresos y gastos
-                          recibidos, incorpora cambios y modificaciones.
+                          recibidos, incorporar cambios y modificaciones.
                         </p>
                       </Col>
                     </Row>
@@ -338,7 +338,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                          ENERO A DICIEMBRE DEL SIGUENTE AÑO
+                        ENERO A DICIEMBRE DEL SIGUIENTE
                         </p>
 
                         <h3 className="slide-title text-left">
@@ -369,7 +369,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                          ENERO A DICIEMBRE DEL SIGUENTE AÑO
+                          ENERO A DICIEMBRE DEL SIGUIENTE AÑO
                         </p>
 
                         <h3 className="slide-title text-left">
@@ -485,7 +485,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       prefix="Gs. "
                       separator="."
                       suffix=""
-                      end={85539568662797}
+                      end={85539568662779}
                     />
                     {/*  <h2 className="banner_presupuesto_total__subtitle_number text-left   ">
                       {" "}

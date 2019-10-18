@@ -185,7 +185,7 @@ const Financiacion = () => {
                   <Card.Body className="acordeon-card-text ">
                     Son los creados para solucionar problemas específicos en un
                     tiempo determinado, para generar resultados concretos y
-                    medibles que le afecten una población bien identificada.
+                    medibles que le afecten a una población bien identificada.
                     Estos Programas generan productos. De un Programa
                     Sustantivo, pueden depender proyectos que contribuyan al
                     resultado que busca el Programa.
@@ -242,13 +242,8 @@ const Financiacion = () => {
                     10 - Recursos del tesoro
                   </Card.Title>
                   <Card.Text className=" text-center">
-                    Ingresos Ordinarios recaudados durante el año por el
-                    Ministerio de Hacienda y que son destinados para el
-                    financiamiento de los gastos de funcionamiento e inversiones
-                    de los Organismos y Entidades del Estado. Incluye el dinero
-                    provenientes del pago de ingresos tributarios y no
-                    tributarios (IVA, Renta, Royalties de Itaipú y Yacyretá,
-                    venta de algún bien o servicio Público, etc).
+                Recauda los ingresos generales del estado. Ejemplo: impuestos y
+regalías (Itaipú y Yacyreta).
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -266,13 +261,8 @@ const Financiacion = () => {
                     20 - Recursos del Crédito Público
                   </Card.Title>
                   <Card.Text className=" text-center">
-                    Ingresos que el Estado obtiene y que derivan del
-                    Endeudamiento Público Interno (colocación de bonos del
-                    Tesoro, letras de tesorería, etc) y Endeudamiento Público
-                    Externo (obtención de préstamos contratados directamente por
-                    el Estado con organismos multilaterales de crédito,
-                    gobiernos extranjeros o instituciones financieras privadas
-                    del exterior.
+                  Provenientes del endeudamiento público interno y externo, por
+la colocación de títulos y valores o por los préstamos.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -290,11 +280,10 @@ const Financiacion = () => {
                     30 - Recursos institucionales
                   </Card.Title>
                   <Card.Text className=" text-center">
-                    Ingresos generados por la producción y venta de bienes o la
-                    prestación de servicios de determinados Organismos y
-                    Entidades del Estado . Incluye además el dinero que se
-                    recibe en concepto de donaciones tanto internas como
-                    externas reciben los Organismos y Entidades del Estado.
+                  Recauda cada Institución del Estado. Ejemplo: ventas de bienes y
+servicios, rentas y otros.
+Incluye además el dinero que reciben los Organismos y Entidades del Estado en concepto de
+donaciones tanto internas, como externas.
                   </Card.Text>
                 </Card.Body>
               </Card>
