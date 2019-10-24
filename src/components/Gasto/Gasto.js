@@ -77,7 +77,7 @@ definidos por el PGN y que permiten a las distintas entidades cumplir con sus fu
         </Row>
         <Row className="my-5">
           <Col className="text-center">
-          <h1 className=" ">En el 2020 de cada 100.000 gs se asignará :</h1>
+          <h1 className=" ">En el 2020 de cada G. 100.000  se asignará :</h1>
           <img className="billete pt-3" src={billete_grafico} alt="billete grafico"></img>
           </Col>
         </Row>

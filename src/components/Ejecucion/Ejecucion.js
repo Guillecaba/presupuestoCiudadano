@@ -55,7 +55,7 @@ de los recursos públicos.</p>
         <Col md={7}>
         <Fade bottom>
           <h2 className= "font-weight-bold">Decreto Reglamentario de la Ley que Aprueba el Presupuesto</h2>
-          <p>La Ley anual que aprueba el PGN de cada ejercicio autoriza al poder Ejecutivo a Reglamentar la mencionada Ley (Para el ejercicio 2016 Decreto N° 4774/16).
+          <p>La Ley anual que aprueba el PGN de cada ejercicio autoriza al poder Ejecutivo a Reglamentar la mencionada Ley a través de un Decreto.
 </p>
           <p>Marca los límites dentro del cual se debe realizar el proceso de ejecución presupuestaria anual y es el instrumento legal en el cual el Ministerio de Hacienda establece las normas, formularios e instructivos requeridos para poder gastar bien y ejecutar los distintos rubros como sueldos, contratos, compra de insumos, construcciones, pago de jubilaciones y pensiones y entrega de transferencias a entidades sin fines de lucro y personas etc.</p>
           </Fade>
@@ -66,7 +66,7 @@ de los recursos públicos.</p>
         <Fade bottom>
         <h2 className= "font-weight-bold">Programación Financiera</h2>
             <p>Es un instrumento de Gerencia Financiera a través del cual el Ministerio Hacienda estima a principio de año las posibilidades reales de financiamiento del presupuesto aprobado.
-.
+
 </p>
             <p>Las estimaciones incorporan los montos de dinero que se pretende recaudar en cada uno de los conceptos y el tiempo real en el que se recauda (estacionalidad) los ingresos, a fin de financiar el cumplimento de las actividades institucionales programadas.
 </p>
@@ -97,8 +97,8 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
           <p>Es un Instrumento técnico por el cual los Organismos y Entidades del sector público realizan la programación mensual del Presupuesto anual autorizado, en el mismo las instituciones prevén los meses en el que van a usar sus rubros para pagar las obligaciones contraídas con las personas y empresas seleccionadas en las contrataciones de bienes, servicios y obras requeridas para el cumplimiento de las actividades de los programas, en función a los objetivos generales de las instituciones.
 
 </p>
-          <p>El Plan Financiero es muy importante porque define el monto límite de dinero sobre los cuales las instituciones pueden contraer compromisos, es decir que en ningún caso las instituciones podrían comprometer un rubro cuyo monto sea superior al Plan Financiero aprobado. El Plan Financiero es aprobado por Decreto del Poder Ejecutivo (para el ejercicio 2016 el PF fue aprobado por el Decreto N° 4931/16)</p>
-          </Fade>
+          <p>El Plan Financiero es muy importante porque define el monto límite de dinero sobre los cuales las instituciones pueden contraer compromisos, es decir que en ningún caso las instituciones podrían comprometer un rubro cuyo monto sea superior al Plan Financiero aprobado. El Plan Financiero es aprobado por Decreto del Poder Ejecutivo.</p>
+          </Fade>(
         </Col>
       </Row>
       <Row className="mt-5">
@@ -137,7 +137,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
     <Accordion.Collapse eventKey="0">
       <Card.Body className='acordeon-card-text '>Instrumento financiero por medio del cual se proyectan las necesidades financieras de corto plazo y se
 determinan los recursos que se asignan a cada Organismo del Sector Público para el cumplimiento de
-sus funciones. Es elaborado en función al Plan Financiero anual aprobado</Card.Body>
+sus funciones. Es elaborado en función al Plan Financiero anual aprobado.</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card className="card-acordeon">

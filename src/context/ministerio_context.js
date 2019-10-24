@@ -30,32 +30,32 @@ const ministerioContext = React.createContext([{
     nombre:"Ministerio de Educación y Ciencias",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 6.628.473.513.765"
+      monto: "G. 6.628.473.513.765"
     },{
       nombre:"Misional",
-      monto:"Gs. 5.783.387.122.583"
+      monto:"G. 5.783.387.122.583"
     },{
       nombre:"Administrativo",
-      monto:"Gs. 825.610.338.799"
+      monto:"G. 825.610.338.799"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 19.476.052.383 "
+      monto:"G. 19.476.052.383 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 994.908.680.081"
+      monto:"G. 994.908.680.081"
     },{
       nombre:"Partidas no asignables a Programas",
-      monto:"Gs. 1.620.564.757.342"
+      monto:"G. 1.620.564.757.342"
     },{
       nombre:"Proyecto",
-      monto:"Gs. 766.478.517.916"
+      monto:"G. 766.478.517.916"
     },{
       nombre:"Actividad",
-      monto:"Gs. 228.430.162.165"
+      monto:"G. 228.430.162.165"
     }
   ],
-  presupuestoTotal: "Gs. 9.243.946.951.188",
+  presupuestoTotal: "G. 9.243.946.951.188",
   },
  
     
@@ -195,33 +195,33 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 1.051.526.014.476 "
+      monto: "G. 1.051.526.014.476 "
     },{
       nombre:"Misional",
-      monto:"Gs. 159.006.986.699"
+      monto:"G. 159.006.986.699"
     },{
       nombre:"Administrativo",
-      monto:"Gs.  371.512.289.231"
+      monto:"G.  371.512.289.231"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 521.006.738.546 "
+      monto:"G. 521.006.738.546 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 4.140.503.123.340"
+      monto:"G. 4.140.503.123.340"
     },{
       nombre:"Partidas no asignables a Programas",
-      monto:"Gs. 53.774.694.697"
+      monto:"G. 53.774.694.697"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 4.140.503.123.340"
+      monto:"G. 4.140.503.123.340"
     },{
       nombre:"Actividad",
-      monto:"Gs. 0"
+      monto:"G. 0"
     }
   ],
-  presupuestoTotal: "Gs. 5.245.803.832.513",
+  presupuestoTotal: "G. 5.245.803.832.513",
   },
  
     
@@ -363,7 +363,10 @@ const ministerioContext = React.createContext([{
             ]
 },{
   "name":"Partidas no asignables a Programas",
-  "value":"53774694697"
+  "children": [
+    {"name":"Transferencias Consolidables","value":53774694697},
+  ]
+  
 }]}},{resumen:[
       {
         nombre:"ATENCIÓN EDUCATIVA OPORTUNA AL PRE JARDIN Y JARDIN",
@@ -412,33 +415,33 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE URBANISMO VIVIENDA Y HABITAT",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs.  80.899.039.448  "
+      monto: "G.  80.899.039.448  "
     },{
       nombre:"Misional",
-      monto:"Gs. 2.268.000.000"
+      monto:"G. 2.268.000.000"
     },{
       nombre:"Administrativo",
-      monto:"Gs.  78.631.039.448"
+      monto:"G.  78.631.039.448"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 0 "
+      monto:"G. 0 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 379.991.025.878"
+      monto:"G. 379.991.025.878"
     },{
       nombre:"Partidas no asignables a Programas",
-      monto:"Gs. 0"
+      monto:"G. 0"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 90.284.170.236"
+      monto:"G. 90.284.170.236"
     },{
       nombre:"Actividad",
-      monto:"Gs. 289.706.855.642"
+      monto:"G. 289.706.855.642"
     }
   ],
-  presupuestoTotal: "Gs.  460.890.065.326",
+  presupuestoTotal: "G.  460.890.065.326",
   
   },
  
@@ -541,33 +544,33 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE SALUD PÚBLICA Y BIENESTAR SOCIAL",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 1.737.697.717.915  "
+      monto: "G. 1.737.697.717.915  "
     },{
       nombre:"Misional",
-      monto:"Gs. 208.058.116.414"
+      monto:"G. 208.058.116.414"
     },{
       nombre:"Administrativo",
-      monto:"Gs.  1.400.850.048.847"
+      monto:"G.  1.236.811.713.318"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 128.789.552.654 "
+      monto:"G. 292.827.888.183 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 4.081.022.674.528"
+      monto:"G. 4.081.022.674.528"
     },{
       nombre:"Partidas no asignables a Programas",
-      monto:"Gs. 4.565.004.915"
+      monto:"G. 4.565.004.915"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 120.694.316.564"
+      monto:"G. 120.694.316.564"
     },{
       nombre:"Actividad",
-      monto:"Gs. 3.960.328.357.964"
+      monto:"G. 3.960.328.357.964"
     }
   ],
-  presupuestoTotal: "Gs. 5.823.285.397.358",
+  presupuestoTotal: "G. 5.823.285.397.358",
   
   },
  
@@ -584,9 +587,9 @@ const ministerioContext = React.createContext([{
                       "children": [
                           {"name":"Gestión administrativa p/el funcionamiento institucional","value":  1188371059555 },
                           {"name":"Recursos financieros transferidos a consejos de salud ","value":  48440653763 },
-                          {"name":"CONSTRUCCIÓN DEL HOSPITAL NACIONAL  DE CORONEL OVIEDO ","value":    50000000000  },
-                          {"name":"CONSTRUCCIÓN GRAN HOSPITAL GENERAL DE BARRIO OBRERO ","value":    50000000000  },
-                          {"name":"MEJORAMIENTO FORT. Y APOYO INTEGRAL A LOS SERV DE SALUD PUB ","value":    64038335529  },
+                         
+                        
+                          
                           
                       ]
                   },
@@ -598,7 +601,7 @@ const ministerioContext = React.createContext([{
                           {"name":"ENFERMEDADES. TRANSMITIDAS POR VECTORES REDUCIDAS Y CONTROLADAS","value":  116013836082 },
                           {"name":"CURSOS Y CAPACITACIONES EN EL ÁREA DE SALUD","value":  882673445 },
                           {"name":"ACCIONES PARA LA ATENCIÓN INTEGRAL DEL VIH-SIDA","value":  2362552658 },
-                          {"name":"VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES Y TRANSMISIBLES","value":  8978755067 },
+                          {"name":"VIGILANCIA DE SALUD Y RIESGOS ASOCIADOS A SUS DETERMINANTES","value":  8978755067 },
                           {"name":"VIGILANCIA DE ENFERMEDADES NO TRANSMISIBLES","value":  590864166 },
                           {"name":"ATENCIÓN INTEGRAL A PACIENTES CON ENFERM. DE LA DIABETES","value":  868798357 },
                           {"name":"GENERACIÓN DE INFORMACIÓN DE CALID S/ LA SITUAC DE SALUD D TERRI","value":  2925992407 },
@@ -612,6 +615,9 @@ const ministerioContext = React.createContext([{
                   {
                       "name":"Proyecto",
                       "children": [
+                          {"name":"MEJORAMIENTO FORT. Y APOYO INTEGRAL A LOS SERV DE SALUD PUB ","value":    64038335529  },
+                          {"name":"CONSTRUCCIÓN GRAN HOSPITAL GENERAL DE BARRIO OBRERO ","value":    50000000000  },
+                          {"name":"CONSTRUCCIÓN DEL HOSPITAL NACIONAL  DE CORONEL OVIEDO ","value":    50000000000  },
                           {"name":"SP PROGRAMA DE DESARROLLO INFANTIL TEMPRANO (DIT)","value":  120322934005 },
                           {"name":"INVESTIGACIÓN ,EDUC. Y BIOTECNOLOGÍA APLICADAS A LA SALUD","value":8466618649},
 
@@ -795,33 +801,33 @@ const ministerioContext = React.createContext([{
     nombre:"MINISTERIO DE DESARROLLO SOCIAL",
     programas:[{
       nombre:"Programa Central",
-      monto: "Gs. 63.000.224.308  "
+      monto: "G. 63.000.224.308  "
     },{
       nombre:"Misional",
-      monto:"Gs. 17.176.470.340"
+      monto:"G. 10.316.780.170"
     },{
       nombre:"Administrativo",
-      monto:"Gs.   52.683.444.138"
+      monto:"G.   52.683.444.138"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 0 "
+      monto:"G. 0 "
     },{
       nombre:"Programa sustantivo",
-      monto:"Gs. 461.872.756.263"
+      monto:"G. 461.872.756.263"
     },{
       nombre:"Partidas no asignables a Programas",
-      monto:"Gs. 0"
+      monto:"G. 0"
     },
     {
       nombre:"Proyecto",
-      monto:"Gs. 0"
+      monto:"G. 0"
     },{
       nombre:"Actividad",
-      monto:"Gs. 461.872.756.263"
+      monto:"G. 461.872.756.263"
     }
   ],
-  presupuestoTotal: "Gs. 524.872.980.571",
+  presupuestoTotal: "G. 524.872.980.571",
   
   },
  
@@ -844,7 +850,7 @@ const ministerioContext = React.createContext([{
                   {
                       "name":"Actividad Misional",
                       "children": [
-                          {"name":"ATENCION SOCIAL Y COMEDORES COMUNITARIOS","value":  10316780170 },
+                          {"name":"ATENCION SOCIAL Y COMEDORES COMUNITARIOS","value":  3457090000 },
                           {"name":"ASISTENCIA A PESCADORES POR VEDA PESQUERA","value":  6859690170 },
                           
                           

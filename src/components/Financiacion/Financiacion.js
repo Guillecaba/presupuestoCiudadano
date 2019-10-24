@@ -167,7 +167,7 @@ const Financiacion = () => {
                       Puede tener proyectos de inversión siempre y cuando los
                       mismos sean destinados al fortalecimiento institucional y
                       no se vinculen a los resultados de los programas
-                      presupuestarios sustantivos
+                      presupuestarios sustantivos.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>
@@ -199,7 +199,7 @@ const Financiacion = () => {
                   eventKey="2"
                 >
                   <img className="icono-flecha-abajo" src={downArrow} />
-                  Programas de Partidas no Asignables
+                  Partidas no asignables a programas
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="2">
                   <Card.Body className="acordeon-card-text ">
@@ -216,13 +216,9 @@ const Financiacion = () => {
       <Container>
         <Row>
           <Col md={8}>
-            <h1 className="text-left financiacion__fuente_title text-uppercase">El PGN se financia con tres fuentes de financiamiento</h1>
+            <h1 className="text-left financiacion__fuente_title text-uppercase">EL PGN SE FINANCIA CON VARIAS FUENTES DE FINANCIAMIENTO.</h1>
             <p>
-              La Clasificación por Fuente de Financiamiento fue diseñada a fin
-              de tener un ordenamiento del registro de los Ingresos Públicos en
-              función a su origen y naturaleza y de asignarlos sistemáticamente
-              hacia el financiamiento de los Gastos de los Organismos y
-              Entidades del Estado.
+            Las Fuentes de Financiamiento constituyen un ordenamiento de los Recursos Financieros que se recaudan, en funcion al origen de donde provienenlos Ingresos; pudiendo provenir, entre otros, del pago de los Impuestos de las empresas y personas, los creditos obtenidos de Organismos Financieros Internacionales, los Bonos emitidos, asi como la venta de bienes o servicios de los entes públicos y las donaciones recibidas por el sector publico.
             </p>
             <p className="font-weight-bold fuente-clasi">
               Estas fuentes se clasifican en:

@@ -35,10 +35,10 @@ const Ods = () => {
         Unidas.
       </p>
       <Row>
-        <Col md={5}> <h2 className="text-center font-weight-bold pb-2">
+        <Col md={6}> <h2 className="text-center font-weight-bold pb-2">
         42% distribuidos en <br></br> estos ODS
       </h2> <GrillaOds /></Col>
-        <Col md={7}>
+        <Col md={6}>
         <h2 className="text-center font-weight-bold pb-2">
         58% distribuidos en <br></br> estos ODS
         

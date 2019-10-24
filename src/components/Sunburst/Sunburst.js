@@ -89,6 +89,28 @@ class Sunburst extends React.Component {
     _warn: PropTypes.func
   };
 
+
+  index = 0;
+  maxIndex = 11;
+  colores = [
+    {h:209,s:0.79 ,l:0.63 ,opacity:1},
+    {h:175,s:0.65 ,l:0.5 ,opacity:1},
+    {h:70,s:0.70 ,l:0.68 ,opacity:1},
+    {h:24,s:0.87 ,l:0.62 ,opacity:1},
+    {h:359,s:0.68 ,l:0.63 ,opacity:1},
+    {h:340,s:0.84 ,l:0.62 ,opacity:1},
+    {h:44,s:0.94 ,l:0.61 ,opacity:1},
+    {h:288,s:0.77 ,l:0.70 ,opacity:1},
+    {h:240,s:0.78 ,l:0.77 ,opacity:1},
+    {h:71,s:0.51 ,l:0.50 ,opacity:1},
+    {h:326,s:0.76 ,l:0.74 ,opacity:1},
+    {h:241,s:0.62 ,l:0.60 ,opacity:1},
+    
+
+  ]
+
+  
+
   static defaultProps = {
     tooltip: true,
     tooltipFunc: data => data.name,
@@ -164,6 +186,7 @@ class Sunburst extends React.Component {
   _destroy_svg() {
     this.props._debug && this.props._log("Sunburst: _destroy_svg()");
     this.prevX0Node = null;
+    this.index = 0;
     this.svg && this.svg.selectAll("*").remove();
     this.svg = null;
     var rectangle = document.getElementById('svg');
@@ -683,38 +706,63 @@ class Sunburst extends React.Component {
         if(d.x0-this.prevX0Node < 0.1){ //De los pequenos
           
           const newDx0 = d.x0+0.1
-          if(newDx0 > 1){
-            /* hue = this.hueDXScale(Math.random()); */
+          /* if(newDx0 > 1){
+           
             hue = this.hueDXScale(d.x0);
           }else{
-            /* hue = this.hueDXScale(Math.random()); */
+            
             hue = this.hueDXScale(d.x0);
-          }
+          } */
           
           console.log(hue)
           current.fill = d3Hsl(hue, saturation, lightness);
+          current.fill.h=this.colores[this.index].h;
+          current.fill.s=this.colores[this.index].s;
+          current.fill.opacity=this.colores[this.index].opacity;
+          current.fill.l=this.colores[this.index].l;
           this.prevX0Node = d.x0
+          this.index++;
+          if(this.index ==this.maxIndex) {
+            this.index= 0
+          }
           return current.fill;
         }else if(d.x0-this.prevX0Node > 0.9){ // Caso de los grandes
           
-          const newDx0 = d.x0/* +0.25 */
-          if(newDx0 > 1){
-          /*   hue = this.hueDXScale(0.5); */
+          const newDx0 = d.x0;
+         /*  if(newDx0 > 1){
+          
             hue = this.hueDXScale(d.x0);
           }else{
-           /*  hue = this.hueDXScale(newDx0); */
+          
             hue = this.hueDXScale(d.x0);
-          }
+          } */
           
           console.log(hue)
           current.fill = d3Hsl(hue, saturation, lightness);
           this.prevX0Node = d.x0
+          current.fill.h=this.colores[this.index].h;
+          current.fill.s=this.colores[this.index].s;
+          current.fill.opacity=this.colores[this.index].opacity;
+          current.fill.l=this.colores[this.index].l;
+          this.index++;
+          if(this.index ==this.maxIndex) {
+            this.index= 0
+          }
           return current.fill;
         }else{          //Caso normal
           hue = this.hueDXScale(d.x0);
           console.log(hue)
           current.fill = d3Hsl(hue, saturation, lightness);
+          current.fill.h=this.colores[this.index].h;
+          current.fill.s=this.colores[this.index].s;
+          current.fill.opacity=this.colores[this.index].opacity;
+          current.fill.l=this.colores[this.index].l;
           this.prevX0Node = d.x0
+          console.log("MIRAR ESTE: ",current.fill)
+          this.index++;
+          if(this.index ==this.maxIndex) {
+            this.index= 0
+          }
           return current.fill;
         }
 
@@ -724,8 +772,18 @@ class Sunburst extends React.Component {
         hue = this.hueDXScale(d.x0);
         console.log(hue)
         current.fill = d3Hsl(hue, saturation, lightness);
+        
         this.prevX0Node = d.x0
+        current.fill.h=this.colores[this.index].h;
+          current.fill.s=this.colores[this.index].s;
+          current.fill.opacity=this.colores[this.index].opacity;
+          current.fill.l=this.colores[this.index].l;
+
         console.log("Caso normal")
+        this.index++;
+        if(this.index ==this.maxIndex) {
+          this.index= 0
+        }
         console.log(current.fill)
         return current.fill;
       }

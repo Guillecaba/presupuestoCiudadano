@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col ,Card, Accordion} from "react-bootstrap";
 import "./Cambios.css";
 import palacio from "../../assets/images/palacio.png";
 import presupuestoAprobado from "../../assets/images/presu.png";
@@ -12,6 +12,7 @@ import Arrow from "../../assets/images/Arrow.png";
 import actual from "../../assets/images/estructura_actual.png";
 import nueva from "../../assets/images/estructura_nueva.png";
 import Informacion from "../Informacion/Informacion";
+import downArrow from "../../assets/icons/down-arrow.svg";
 
 const Cambios = () => {
   return (
@@ -39,15 +40,13 @@ const Cambios = () => {
           <Col md={12} className="pb-5 d-flex align-items-center">
             <p className="text-center font-weight-bold">
               El Ministerio de Hacienda en su carácter de Administrador del
-              proceso Presupuestario del Sector Público para el ejercicio 2020
-              incorpora importantes modificaciones en la forma de elaborar el
-              Anteproyecto, en ese contexto y en el marco de la Gestión por
-              Resultados, plantea la elaboración del presupuesto basado en una
-              estructura adaptada al Presupuesto por resultados (PpR) . Esta
-              nueva metodología permitirá garantizar el aumento del valor que
-              las Instituciones Públicas aportan a la ciudadanía por medio de
-              las mejoras de sus Productos y Servicios que prestan, a fin de
-              mejorar las condiciones de vida de la población.
+              proceso Presupuestario del Sector Público, incorpora importantes
+              modificaciones en la forma de elaborar el Anteproyecto para el
+              Ejercicio Fiscal 2020. En ese contexto plantea la elaboración del
+              presupuesto orientado a resultados buscando brindar mayor
+              transparencia e información para la toma de decisiones, que
+              finalmente se enfoquen a mejorar las condiciones de vida de la
+              población.
             </p>
           </Col>
           {/* <Col md={3} className="py-5">
@@ -57,7 +56,7 @@ const Cambios = () => {
       </Container>
       <Row className="clasif pt-5 pl-5  ">
         <Container id="def-proyecto-acti" className="d-lg-flex">
-          <Col md={7} className="d-flex flex-column justify-content-center">
+         {/*  <Col md={7} className="d-flex flex-column justify-content-center">
             <h2 className="font-weight-bold clasi_item_title ">
               Clasificación Programática
             </h2>
@@ -81,8 +80,68 @@ const Cambios = () => {
                   asignados a la actividad con un costo determinado.{" "}
                 </p>{" "}
               </li>
-              {/* <li className="clasi-item-3 pt-1">Obra</li> */}
+              
             </ul>
+          </Col> */}
+          <Col>
+          <h2 className="font-weight-bold clasi_item_title ">
+              Clasificación Programática
+            </h2>
+            <Accordion defaultActiveKey="0">
+              <Card className="card-acordeon">
+                <Accordion.Toggle
+                  className="acordeon-card-title font-weight-bold"
+                  as={Card.Header}
+                  eventKey="0"
+                >
+                  <img className="icono-flecha-abajo" src={downArrow} />
+                  Programa:
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body className="acordeon-card-text ">
+                    Instrumento presupuestario destinado a cumplir las funciones del Estado y sus planes, por el cual se establecen objetivos, resultados y metas a cumplirse mediante un conjunto de acciones integradas y obras específicas coordinadas, empleando  los recursos humanos, materiales y financieros asignados a un costo global y unitario. 
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card className="card-acordeon">
+                <Accordion.Toggle
+                  className="acordeon-card-title font-weight-bold"
+                  as={Card.Header}
+                  eventKey="1"
+                >
+                  <img className="icono-flecha-abajo" src={downArrow} />
+                  Proyecto:
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="1">
+                  <Card.Body className="acordeon-card-text ">
+                  Conjunto de actividades y/u obras con periodo definido de
+                  ejecución para mejorar la provisión de los bienes y servicios
+                  en el cumplimiento de un resultado.
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card className="card-acordeon">
+                <Accordion.Toggle
+                  className="acordeon-card-title font-weight-bold"
+                  as={Card.Header}
+                  eventKey="2"
+                >
+                  <img className="icono-flecha-abajo" src={downArrow} />
+                  Actividad:
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="2">
+                  <Card.Body className="acordeon-card-text ">
+                  Es el conjunto de acciones de mínimo nivel que se llevan a
+                  cabo para cumplir las metas de un programa, que consiste en la
+                  ejecución de ciertos procesos o tareas mediante la utilización
+                  de los recursos humanos, materiales, técnicos, y financieros
+                  asignados a la actividad con un costo determinado.
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+
+              
+            </Accordion>
           </Col>
 
           <Col md={5} className="d-flex  justify-content-center">
@@ -102,7 +161,7 @@ const Cambios = () => {
           </Col>
           <Col md={7} className=" pr-5  program-column ">
             <h2 className=" program-title font-weight-bold">
-              Programación del Gasto
+            Clasificación de Programas
             </h2>
             <ul className=" clasi-list align-self-center">
               <li className="text-right program-item pt-1">Programa Central</li>
@@ -111,7 +170,7 @@ const Cambios = () => {
                 Programa Sustantivo
               </li>
               <li className="text-right program-item  pt-1">
-                Programa de Partidas no asignables
+              Partidas no asignables a programas
               </li>
             </ul>
           </Col>
@@ -148,15 +207,27 @@ const Cambios = () => {
         </h2>
         <Row>
           <Col md={6}>
-            <h3 className="text-center cambios__subtitle text-uppercase py-5">Estructura Actual</h3>
-            <img src={actual} className="w-50 m-auto d-block " alt="estructura actual"></img>
+            <h3 className="text-center cambios__subtitle text-uppercase py-5">
+              Estructura Actual
+            </h3>
+            <img
+              src={actual}
+              className="w-50 m-auto d-block "
+              alt="estructura actual"
+            ></img>
           </Col>
           <Col md={6}>
-          <h3 className="text-center cambios__subtitle text-uppercase  py-5">Nueva Estructura</h3>
-          <img src={nueva} className="w-100 m-auto d-block " alt= "nueva estructura"></img>
+            <h3 className="text-center cambios__subtitle text-uppercase  py-5">
+              Nueva Estructura
+            </h3>
+            <img
+              src={nueva}
+              className="w-100 m-auto d-block "
+              alt="nueva estructura"
+            ></img>
           </Col>
         </Row>
-        
+
         <Row className="py-5 mb-5 d-flex">
           <Col md={4} className="">
             <div className="h-100">
@@ -200,20 +271,25 @@ const Cambios = () => {
                 <Col className="versus-columna pt-5 px-5 h-100">
                   <h3>Programa Central</h3>
                   <p>
-                  Comprende las actividades orientadas a la gestión institucional, es decir, aquellas de apoyo transversal para todos los programas de la institución, y/o aquellas misionales que tengan un resultado esperado pero que no arrojen una producción final.
-
-Puede tener proyectos de inversión siempre y cuando los mismos sean destinados al fortalecimiento institucional y no se vinculen a los resultados de los programas presupuestarios sustantivos
+                    Comprende las actividades orientadas a la gestión
+                    institucional, es decir, aquellas de apoyo transversal para
+                    todos los programas de la institución, y/o aquellas
+                    misionales que tengan un resultado esperado pero que no
+                    arrojen una producción final. Puede tener proyectos de
+                    inversión siempre y cuando los mismos sean destinados al
+                    fortalecimiento institucional y no se vinculen a los
+                    resultados de los programas presupuestarios sustantivos.
                   </p>
                   <h3>Programas Sustantivos</h3>
                   <p>
                     Son los creados para solucionar problemas específicos en un
                     tiempo determinado, para generar Resultados concretos y
-                    medibles que le afecten una población bien identificada.
+                    medibles que le afecten a una población bien identificada.
                     Estos Programas generan Producto. De un Programa Sustantivo,
                     pueden depender Proyectos que contribuyan al resultado que
                     busca el Programa.
                   </p>
-                  <h3>Programas de Partidas no Asignables</h3>
+                  <h3>Partidas no asignables a programas</h3>
                   <p>
                     Recogen todas las actividades que de alguna forma, el Estado
                     tiene que realizar o presupuestar, pero no expresan

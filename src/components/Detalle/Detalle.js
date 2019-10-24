@@ -17,7 +17,6 @@ import {
   scaleSqrt as d3ScaleSqrt
 } from "d3-scale";
 
-import LightSpeed from "react-reveal/LightSpeed";
 import {
   Row,
   Col,
@@ -135,6 +134,25 @@ class DetalleMinisterio extends Component {
   }
   static contextType = MinisterioContext;
 
+  index = 0;
+  maxIndex = 11;
+  colores = [
+    {h:209,s:0.79 ,l:0.63 ,opacity:1},
+    {h:175,s:0.65 ,l:0.5 ,opacity:1},
+    {h:70,s:0.70 ,l:0.68 ,opacity:1},
+    {h:24,s:0.87 ,l:0.62 ,opacity:1},
+    {h:359,s:0.68 ,l:0.63 ,opacity:1},
+    {h:340,s:0.84 ,l:0.62 ,opacity:1},
+    {h:44,s:0.94 ,l:0.61 ,opacity:1},
+    {h:288,s:0.77 ,l:0.70 ,opacity:1},
+    {h:240,s:0.78 ,l:0.77 ,opacity:1},
+    {h:71,s:0.51 ,l:0.50 ,opacity:1},
+    {h:326,s:0.76 ,l:0.74 ,opacity:1},
+    {h:241,s:0.62 ,l:0.60 ,opacity:1},
+    
+
+  ]
+
   url = `https://presupuesto-ciudadano.herokuapp.com`;
 
   notify = message => {
@@ -172,8 +190,17 @@ class DetalleMinisterio extends Component {
     console.log("colorNodo");
     console.log(nodo.x0);
     const color = d3Hsl(hue, 0.9, 0.6);
+    color.h=this.colores[this.index].h;
+    color.s=this.colores[this.index].s;
+    color.opacity=this.colores[this.index].opacity;
+    color.l=this.colores[this.index].l;
     let nodoNuevo = { ...nodo, color: color };
     console.log(nodoNuevo);
+    this.index++;
+    if(this.index >= this.maxIndex) {
+      console.log('EY',this.index)
+        this.index= 0
+    }
     return nodoNuevo;
   }
 
@@ -185,6 +212,7 @@ class DetalleMinisterio extends Component {
       valor: nodoNuevoTitulo.value,
       color: nodoNuevoTitulo.color
     };
+    this.index=0;
 
     const lista = [];
     if (node.children) {
@@ -200,6 +228,7 @@ class DetalleMinisterio extends Component {
         lista[index] = elemento;
       });
     }
+    this.index = 0;
 
     const estado = {
       titulo: titulo,
@@ -628,7 +657,7 @@ class DetalleMinisterio extends Component {
           value={item.valor}
           displayType={"text"}
           thousandSeparator={false}
-          prefix={"Gs "}
+          prefix={"G "}
         />{" "}
       </td>
     </tr>
@@ -1022,19 +1051,7 @@ class DetalleMinisterio extends Component {
                     <div>
                       {this.state.lista && (
                         <Fragment>
-                         {/*  <div className="text-center text-uppercase text-center my-5 gastos__title">
-                            <h2>{state.lista.titulo.nombre}</h2>
-                            <p>
-                              <NumberFormat
-                                value={state.lista.titulo.valor}
-                                displayType={"text"}
-                                decimalSeparator={","}
-                                thousandSeparator={"."}
-                                
-                                prefix={"Gs "}
-                              />
-                            </p>
-                          </div> */}
+                         
 
                           <Table className="tabla-grafico" responsive>
                             <thead>
@@ -1065,7 +1082,7 @@ class DetalleMinisterio extends Component {
                                           displayType={"text"}
                                           decimalSeparator={","}
                                           thousandSeparator={"."}
-                                          prefix={"Gs \r\n"}
+                                          prefix={"G.\r\n"}
                                         />{" "}
                                       </td>
                                       <td width="20%" className="text-right">
@@ -1098,7 +1115,7 @@ class DetalleMinisterio extends Component {
                 {!this.state.enviado && (
                   <div id="participacion">
                     <h1 className="encuesta__title text-center">
-                      ¿Cuáles serían tus prioridades?
+                      ¿Cuáles serían tus prioridades?.
                     </h1>
                     <p className="text-center encuesta__subtitle">
                       Organiza tus prioridades, arriba las más importantes,{" "}

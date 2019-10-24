@@ -78,30 +78,30 @@ class Educacion extends Component {
                 <ul>
                   <li className="banner__principal_item_central">
                   <p className="banner__principal_item">Programa Central</p>
-                    <p className='banner__principal_item_monto'>Gs. 6.240.521.885.664</p></li>
+                    <p className='banner__principal_item_monto'>G. 6.240.521.885.664</p></li>
                   <li><ul>
                   <li className="banner__principal_item_one ml-5">
                     <p className="banner__principal_item">Misional</p>
-                    <p className='banner__principal_item_monto'>Gs. 5.387.709.245.284</p>
+                    <p className='banner__principal_item_monto'>G. 5.387.709.245.284</p>
                   </li>
                   <li className='banner__principal_item_two ml-5'>
                     <p className="banner__principal_item">Administrativo</p>
-                    <p className='banner__principal_item_monto'>Gs. 844.972.495.318</p>
+                    <p className='banner__principal_item_monto'>G. 844.972.495.318</p>
                   </li>
                   <li className='banner__principal_item_three ml-5'>
                     <p className="banner__principal_item">Proyecto</p>
-                    <p className='banner__principal_item_monto'>Gs. 7.840.145.062  </p>
+                    <p className='banner__principal_item_monto'>G. 7.840.145.062  </p>
                   </li>
                   </ul>
                   </li>
                   
                   <li className='banner__principal_item_four'>
                     <p className="banner__principal_item">Programa sustantivo</p>
-                    <p className='banner__principal_item_monto'>Gs. 322.207.712.994</p>
+                    <p className='banner__principal_item_monto'>G. 322.207.712.994</p>
                   </li>
                   <li className='banner__principal_item_five'>
                     <p className="banner__principal_item">Partidas no asignables</p>
-                    <p className='banner__principal_item_monto'>Gs. 0</p>
+                    <p className='banner__principal_item_monto'>G. 0</p>
                   </li>
                 </ul>
               </Col>
@@ -110,7 +110,7 @@ class Educacion extends Component {
               </Col>
               <Col className="align-self-center font-weight-bold text-center" md={3}>
                 <h3>Presupuesto total</h3>
-                <p>Gs. 6.562.729.598.658 </p>
+                <p>G. 6.562.729.598.658 </p>
               </Col>
             </Row>
           </Container>
@@ -121,7 +121,7 @@ class Educacion extends Component {
             <div className="d-flex align-items-center justify-content-center ">
               <ContainerDimensions>
                 {({ width, height }) => (
-                  <TreeMap className='gastos__treemap' width={width} data={dataTree} valueUnit={"GS"} />
+                  <TreeMap className='gastos__treemap' width={width} data={dataTree} valueUnit={"G"} />
                 )}
               </ContainerDimensions>
               

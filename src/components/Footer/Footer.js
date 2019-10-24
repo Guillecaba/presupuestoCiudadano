@@ -89,7 +89,7 @@ const footer = () => {
           </Col>
           <Col md={6}>
           <p className="footer_text  pl-3">
-              El diseño e implementación del Presupuesto Ciudadano es parte de una asociación más amplia entre el Ministerio de Hacienda, el grupo del Banco Mundial y CEAMSO para fortalecer la diseminación de información sobre y la participación pública en el proceso presupuestario. Esta iniciativa se basa en un piloto inicial lanzado en 2016 con el apoyo financiero de USAID. 
+              El diseño e implementación del Presupuesto Ciudadano es parte de una asociación más amplia entre el Ministerio de Hacienda, el grupo del Banco Mundial y CEAMSO para fortalecer la diseminación de información sobre la participación pública en el proceso presupuestario. Esta iniciativa se basa en un piloto inicial lanzado en 2016 con el apoyo financiero de USAID. 
               </p>
             <p className="footer_text  pl-3">Este material es publicado gracias al apoyo de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID). El contenido del mismo es exclusiva responsabilidad de sus autores y no refleja necesariamente las opiniones o puntos de vista de USAID o el Gobierno de los Estados Unidos.</p>
           </Col>

@@ -478,10 +478,29 @@
     font-size: 1.250em;
   }
   .banner__text {
-    padding-top:25%;
+    padding-top:2.5%;
   }
   .information__title {
     padding-top:20px;
+  }
+
+  .banner__text_title_bold {
+    font-size:1.063rem;
+  line-height: auto;
+  text-align: left; 
+  font-weight: bold;
+  color: white !important;
+  }
+
+  .banner__text {
+    padding-bottom:2.5%
+  } 
+
+  .banner__text_title_normal {
+    font-size:0.963rem;
+    line-height:auto;
+    text-align: left;
+    color: white !important;
   }
 }
 

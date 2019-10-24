@@ -136,7 +136,7 @@ class Home extends React.Component {
                           conocer cuánto de los recursos programados va a
                           disponer para poder gastar y cumplir con sus fines, se
                           establece un ciclo presupuestario compuesto de las
-                          siguientes etapas:
+                          siguientes etapas.
                         </p>
                       </Col>
                     </Row>
@@ -164,7 +164,7 @@ class Home extends React.Component {
                         <p className="slide-text text-left">
                         El Ministerio de Hacienda elabora un Decreto en el cual se
 incorporan las indicaciones o directrices, para que las Instituciones realicen su plan de ingresos y gastos
-del siguiente año y se lo denomina Anteproyecto de Presupuesto
+del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                         </p>
                       </Col>
                     </Row>
@@ -190,7 +190,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                           ANTEPROYECTO DE PRESUPUESTO
                         </h3>
                         <p className="slide-text text-left">
-                          Los Organismos y Entidades del sector público elaboran
+                          Los Organismos y Entidades del Sector Público elaboran
                           sus anteproyectos de presupuestos donde calculan el
                           monto de dinero que se puede obtener y disponer y por
                           otro la asignación de los recursos hacia los
@@ -254,9 +254,9 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                         </h3>
                         <p className="slide-text text-left">
                           El Congreso Nacional, a través de una Comisión
-                          bicameral formada por diputados y senadores se encarga
+                          Bicameral formada por diputados y senadores se encarga
                           de revisar y discutir el proyecto de ingresos y gastos
-                          recibidos, incorporar cambios y modificaciones.
+                          recibidos, además de  incorporar cambios y modificaciones.
                         </p>
                       </Col>
                     </Row>
@@ -286,7 +286,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                         <p className="slide-text text-left">
                           Una vez acordadas las modificaciones y cambios se
                           procede a aprobar el presupuesto a través de una ley
-                          de la Nación
+                          de la Nación.
                         </p>
                       </Col>
                     </Row>
@@ -308,15 +308,16 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                          21 DICIEMBRE — 31 DICIEMBRE{" "}
+                          HASTA 20 DÍAS HÁBILES DESDE LA SANCIÓN DE LA LEY
+                        
                         </p>
                         <h3 className="slide-title text-left">
                           PROMULGACIÓN DEL PRESUPUESTO
                         </h3>
                         <p className="slide-text text-left">
                           Dicha ley debe ser presentada al Poder Ejecutivo que
-                          deberá refrendar y publicar la “Ley que aprueba el
-                          Presupuesto General de la Nación”
+                          deberá refrendar y publicar la "Ley que aprueba el
+                          Presupuesto General de la Nación".
                         </p>
                       </Col>
                     </Row>
@@ -338,15 +339,14 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                        ENERO A DICIEMBRE DEL SIGUIENTE
+                        ENERO A DICIEMBRE DE CADA AÑO
                         </p>
 
                         <h3 className="slide-title text-left">
                           EJECUCIÓN DEL PRESUPUESTO
                         </h3>
                         <p className="slide-text text-left">
-                          A partir del 1 de enero hasta el 31 de diciembre del
-                          año siguiente, los Organismos y Entidades del Sector
+                          A partir del 1 de enero hasta el 31 de diciembre de cada año, los Organismos y Entidades del Sector
                           Público proceden a ejecutar el Presupuesto aprobado.
                         </p>
                       </Col>
@@ -369,10 +369,10 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                          ENERO A DICIEMBRE DEL SIGUIENTE AÑO
+                          ENERO A DICIEMBRE DE CADA AÑO
                         </p>
 
-                        <h3 className="slide-title text-left">
+                        <h3 className="slide-title text-left text-uppercase">
                           Control y evaluación
                         </h3>
                         <p className="slide-text text-left">
@@ -462,35 +462,29 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                   <Col md={8}>
                     <h1
                       onClick={this.handleClick}
-                      className="banner_presupuesto_total__title text-left  grow "
+                      className="banner_presupuesto_total__title text-sm-left text-center grow "
                     >
                       PRESUPUESTO TOTAL 2020{" "}
                       {/* <img className=" icon"  src={help}></img> */}
                     </h1>
-                    {/* <h2 className="banner_presupuesto_total__subtitle text-left grow">
-                      {" "}
-                      Gs.85 billones{" "}
-                    </h2> */}
+                   
                     <CountUp
-                      className="d-block banner_presupuesto_total__subtitle text-left grow"
+                      className="d-block banner_presupuesto_total__subtitle text-sm-left text-center grow"
                       duration={7.25}
-                      prefix="Gs. "
+                      prefix="G. "
                       suffix=" billones"
                       end={85}
                     />
 
                     <CountUp
-                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      className=" d-block banner_presupuesto_total__subtitle text-sm-left text-center grow"
                       duration={7.25}
-                      prefix="Gs. "
+                      prefix="G. "
                       separator="."
                       suffix=""
                       end={85539568662779}
                     />
-                    {/*  <h2 className="banner_presupuesto_total__subtitle_number text-left   ">
-                      {" "}
-                      Gs. 85.539.568.662.797{" "}
-                    </h2> */}
+                    
                   </Col>
                 </Row>
               </Col>
@@ -504,16 +498,16 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                     ></img>
                   </Col>
                   <Col md={8}>
-                    <h1 className="banner_presupuesto_total__title2 text-left">
+                    <h1 className="banner_presupuesto_total__title2 text-sm-left text-center">
                       Organismos <br></br> de la Administración Central
                     </h1>
                     {/* <h2 className="banner_presupuesto_total__subtitle text-left  ">
-                      Gs. 45.934.977.875.335 <br />
+                      G. 45.934.977.875.335 <br />
                     </h2> */}
                     <CountUp
-                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      className=" d-block banner_presupuesto_total__subtitle text-sm-left text-center grow"
                       duration={7.25}
-                      prefix="Gs. "
+                      prefix="G. "
                       separator="."
                       suffix=""
                       end={45934977875335}
@@ -529,14 +523,14 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
                     ></img>
                   </Col>
                   <Col md={8}>
-                    <h1 className="banner_presupuesto_total__title2 text-left">
+                    <h1 className="banner_presupuesto_total__title2 text-sm-left text-center">
                       Entidades <br />
                       Descentralizadas
                     </h1>
                     <CountUp
-                      className=" d-block banner_presupuesto_total__subtitle text-left grow"
+                      className=" d-block banner_presupuesto_total__subtitle text-sm-left text-center grow"
                       duration={7.25}
-                      prefix="Gs. "
+                      prefix="G. "
                       separator="."
                       suffix=""
                       end={39604590787444}
@@ -547,53 +541,6 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto
             </Row>
           </Container>
         </div>
-
-        {/* <div className="presupuesto_total  py-5">
-            <Container>
-            <Row>
-              <Col md={12}>
-                <h1 onClick={this.handleClick} className="presupuesto_total__title text-center grow ">
-                  PRESUPUESTO TOTAL 2020
-          
-        
-                </h1>
-                <h2 className="presupuesto_total__subtitle grow">
-                 
-                  Gs.85 billones
-                </h2>
-                <h2 className="presupuesto_total__subtitle_number text-center  mb-5 ">
-                  
-                  Gs.  85.539.568.662.797
-                </h2>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-              <Fragment>
-            <h1  className="presupuesto_total__card__title_two text-center">
-                
-            Entidades <br></br> de la Administración Central 
-                </h1>
-                <h2 className="presupuesto_total__subtitle_two  mb-4 ">
-                  Gs. 45.934.977.875.335 <br /> 
-                 
-                </h2>
-                </Fragment>
-              </Col>
-              <Col md={6}>
-                <Fragment>
-                <h1 className="presupuesto_total__card__title_two text-center">
-                  
-                  Entidades <br />Descentralizadas
-                </h1>
-                <h2 className="presupuesto_total__subtitle_two  mb-4 ">
-                  Gs. 39.604.590.787.444 <br /> 
-                </h2>
-                </Fragment>
-              </Col>
-            </Row>
-            </Container>
-            </div> */}
         <BannerMinisterios />
         <Container>
           <div className="banner__conoce pt-4">

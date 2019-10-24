@@ -58,7 +58,7 @@ const nav = () => {
                   className="text-decoration-none nav-link-color show"
                   to={"/salud"}
                 >
-                Salud y Bienestar social
+                Salud Pública y Bienestar social
                 </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item >
