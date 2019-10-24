@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import {
   Dropdown,
@@ -432,7 +432,10 @@ class Dashboard extends Component {
                 
               {this.state.listaComentarios.results.map(res => (
                   <tr>
-                    <td>{res.comentario}</td>
+                    {res.comentario && (
+                      <td>{res.comentario}</td>
+                    )}
+                    
                   </tr>
                 ))}
                 </div>
@@ -441,19 +444,45 @@ class Dashboard extends Component {
                 </Table>
                 <nav aria-label="Page navigation example">
               <ul class="pagination">
+                {this.state.listaComentarios && (
+
+                
                 <li
-                  class="page-item"
+                  className="page-item"
                   onClick={() => this.handlePagination("prev")}
                 >
-                  <a class="page-link">Anterior</a>
+                  <a class="page-link" alt ="anterior">Anterior</a>
                 </li>
-
+                )}
                 <li
-                  class="page-item"
+                  
+                  
+                >
+                  {this.state.listaComentarios && (
+                    <div>
+                        {this.state.listaComentarios.next && (
+                           <a class="page-link">{`Pagina: ${this.state.listaComentarios.next.split('&')[1].split('=')[1]-1 } de: ${((this.state.listaComentarios.count/5)+1).toFixed(0)}`}</a>
+                        )}
+                    </div>
+                   
+                  )}
+                  
+                </li>
+                {this.state.listaComentarios && (
+                  <div>
+                    {this.state.listaComentarios.next && (
+                      <li
+                  className="page-item"
                   onClick={() => this.handlePagination("next")}
                 >
                   <a class="page-link">Siguiente</a>
                 </li>
+                    )}
+                  </div>
+                  
+                  
+                )}
+                
               </ul>
             </nav>
                 </Card.Body>
