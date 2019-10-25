@@ -80,7 +80,7 @@ class Home extends React.Component {
                     className="text-center text-decoration-none"
                     to={"/cambios"}
                   >
-                    <Button className="button__primary  d-block m-auto grow">
+                    <Button className="button__secundary  d-block m-auto grow">
                       Ver más
                     </Button>
                   </Link>
@@ -162,9 +162,11 @@ class Home extends React.Component {
                           LINEAMIENTOS PARA PROGRAMACIÓN
                         </h3>
                         <p className="slide-text text-left">
-                        El Ministerio de Hacienda elabora un Decreto en el cual se
-incorporan las indicaciones o directrices, para que las Instituciones realicen su plan de ingresos y gastos
-del siguiente año y se lo denomina Anteproyecto de Presupuesto.
+                          El Ministerio de Hacienda elabora un Decreto en el
+                          cual se incorporan las indicaciones o directrices,
+                          para que las Instituciones realicen su plan de
+                          ingresos y gastos del siguiente año y se lo denomina
+                          Anteproyecto de Presupuesto.
                         </p>
                       </Col>
                     </Row>
@@ -256,7 +258,8 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                           El Congreso Nacional, a través de una Comisión
                           Bicameral formada por diputados y senadores se encarga
                           de revisar y discutir el proyecto de ingresos y gastos
-                          recibidos, además de  incorporar cambios y modificaciones.
+                          recibidos, además de incorporar cambios y
+                          modificaciones.
                         </p>
                       </Col>
                     </Row>
@@ -309,7 +312,6 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
                           HASTA 20 DÍAS HÁBILES DESDE LA SANCIÓN DE LA LEY
-                        
                         </p>
                         <h3 className="slide-title text-left">
                           PROMULGACIÓN DEL PRESUPUESTO
@@ -339,14 +341,15 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                       </Col>
                       <Col md={6} className="slide-text-side">
                         <p className="slide-text text-left">
-                        ENERO A DICIEMBRE DE CADA AÑO
+                          ENERO A DICIEMBRE DE CADA AÑO
                         </p>
 
                         <h3 className="slide-title text-left">
                           EJECUCIÓN DEL PRESUPUESTO
                         </h3>
                         <p className="slide-text text-left">
-                          A partir del 1 de enero hasta el 31 de diciembre de cada año, los Organismos y Entidades del Sector
+                          A partir del 1 de enero hasta el 31 de diciembre de
+                          cada año, los Organismos y Entidades del Sector
                           Público proceden a ejecutar el Presupuesto aprobado.
                         </p>
                       </Col>
@@ -467,7 +470,7 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                       PRESUPUESTO TOTAL 2020{" "}
                       {/* <img className=" icon"  src={help}></img> */}
                     </h1>
-                   
+
                     <CountUp
                       className="d-block banner_presupuesto_total__subtitle text-sm-left text-center grow"
                       duration={7.25}
@@ -484,7 +487,6 @@ del siguiente año y se lo denomina Anteproyecto de Presupuesto.
                       suffix=""
                       end={85539568662779}
                     />
-                    
                   </Col>
                 </Row>
               </Col>

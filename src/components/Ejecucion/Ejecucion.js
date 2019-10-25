@@ -98,7 +98,7 @@ Constituye el instrumento técnico utilizado para la determinación de los topes
 
 </p>
           <p>El Plan Financiero es muy importante porque define el monto límite de dinero sobre los cuales las instituciones pueden contraer compromisos, es decir que en ningún caso las instituciones podrían comprometer un rubro cuyo monto sea superior al Plan Financiero aprobado. El Plan Financiero es aprobado por Decreto del Poder Ejecutivo.</p>
-          </Fade>(
+          </Fade>
         </Col>
       </Row>
       <Row className="mt-5">
