@@ -18,6 +18,7 @@ import dinero from "../../assets/images/dinero.png";
 import essap from "../../assets/images/essap.png";
 import personitas from "../../assets/images/personitas-completo.png";
 
+import ConoceMas from '../ConoceMas/ConoceMas';
 import Informacion from "../Informacion/Informacion";
 
 import { Fade, LightSpeed, Zoom } from "react-reveal/";
@@ -286,6 +287,7 @@ donaciones tanto internas, como externas.
             </Fade>
           </Col>
         </Row>
+        <ConoceMas />
       </Container>
       <Informacion />
     </Fragment>

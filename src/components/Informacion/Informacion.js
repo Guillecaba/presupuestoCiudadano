@@ -33,7 +33,7 @@ import '../Home/Home.css'
             obras, justicia y otros servicios que determinan tu calidad de
             vida.
           </p>
-          <Button href={guia} className="button__secundary grow mb-3">Descargá la guía</Button>
+          <Button href={guia} className="button__secondary grow mb-3">Descargá la guía</Button>
           
           
           </Fade>

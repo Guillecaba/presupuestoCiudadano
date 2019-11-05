@@ -34,7 +34,7 @@ const nav = () => {
                   className="text-decoration-none nav-link-color"
                   to={"/cambios"}
                 >
-                   PGN <br></br>2019 vs 2020
+                   PGN 2019 vs 2020
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>
@@ -48,7 +48,7 @@ const nav = () => {
                 </Link>
                 <img className="arrow" src={flecha} />
               </Nav.Link>
-              <NavDropdown className="navbar__item show nav-link-color" title={"Prioriza" +"\  " + " tu  presupuesto"} id="basic-nav-dropdown">
+              <NavDropdown className="navbar__item_boton button__secondary_nav  show " title={"Prioriza" +"\  " + " tu  presupuesto"} id="basic-nav-dropdown">
                 <NavDropdown.Item > <Link
                   className="text-decoration-none nav-link-color show"
                   to={"/educacion"}

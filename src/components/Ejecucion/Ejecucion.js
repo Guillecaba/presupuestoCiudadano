@@ -11,6 +11,7 @@ import personitas from "../../assets/images/personitas-completo.png";
 import  "./Ejecucion.css";
 import downArrow from "../../assets/icons/down-arrow.svg";
 import Informacion from '../Informacion/Informacion'
+import ConoceMas from '../ConoceMas/ConoceMas';
 
 import bolsa from '../../assets/images/bolsa.png'
 
@@ -172,6 +173,9 @@ sus funciones. Es elaborado en función al Plan Financiero anual aprobado.</Card
           </Col>
         </Container>
     </Row>
+    <Container>
+    <ConoceMas />
+    </Container>
     <Informacion />
     </Fragment>
   )

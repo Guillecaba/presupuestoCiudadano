@@ -259,12 +259,32 @@ class DetalleMinisterio extends Component {
           this.setState({ enviado: true });
           this.notify(`Enviamos tu voto!`);
 
+          const pathname = this.props.location.pathname;
+
+          switch(pathname) {
+            case '/educacion':
+              localStorage.setItem('educacion','true')
+              break;
+            case '/obras':
+              localStorage.setItem('obras','true')
+              break;
+            case '/salud':
+              localStorage.setItem('salud','true')
+              break
+            case '/desarrollo':
+              localStorage.setItem('desarrollo','true')
+              break
+            default:
+              
+          }
+          
+
           /*  console.log(res.data); */
 
           const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
           axios.get(url).then(res => {
-            /*  console.log(res.data) */ const ministerios = res.data;
-            /*  console.log(ministerios) */ this.setState({ ministerios });
+            const ministerios = res.data;
+            this.setState({ ministerios });
             this.setState({ loading: false });
 
             console.log(this.state.ministerios);
@@ -319,6 +339,20 @@ class DetalleMinisterio extends Component {
     this.setState({ data2: prevData, descripcion2: data.nombre });
   }
 
+  votosPorcentaje = (actividadVoto) => {
+    console.log('VOTOPORCENTAJE: ',porcentaje)
+    let cantidadVotos = 0;
+    this.state.data2.datasets[0].data.forEach( item =>{
+      cantidadVotos += item;
+    })
+
+    let porcentaje = actividadVoto/ cantidadVotos
+    
+
+   
+    return porcentaje +'%'
+  }
+
   changeInputHandler = (event, id) => {
     console.log(event.target.value);
     const comentario = event.target.value;
@@ -351,6 +385,32 @@ class DetalleMinisterio extends Component {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
+
+                if (localStorage.getItem('educacion')) {
+                
+                
+              
+          
+                  const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                  axios.get(url).then(res => {
+                    const ministerios = res.data;
+                    this.setState({ ministerios });
+                    this.setState({ loading: false });
+                    this.setState({ enviado: true });
+        
+                    console.log(this.state.ministerios);
+                    console.log(this.state.items[0].ministerio);
+                    this.state.ministerios.map(res => {
+                      if (this.state.items[0].ministerio == res.id) {
+                        this.handleChartTopRanking(res);
+                      }
+                    });
+                   
+                  });
+                  
+                }
+
+               
               });
 
               this.setState({
@@ -388,6 +448,28 @@ class DetalleMinisterio extends Component {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
+
+
+                if (localStorage.getItem('obras')) {
+          
+                  const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                  axios.get(url).then(res => {
+                    const ministerios = res.data;
+                    this.setState({ ministerios });
+                    this.setState({ loading: false });
+                    this.setState({ enviado: true });
+        
+                    console.log(this.state.ministerios);
+                    console.log(this.state.items[0].ministerio);
+                    this.state.ministerios.map(res => {
+                      if (this.state.items[0].ministerio == res.id) {
+                        this.handleChartTopRanking(res);
+                      }
+                    });
+                   
+                  });
+                  
+                }
               });
               this.setState({
                 logo: casco,
@@ -423,6 +505,31 @@ class DetalleMinisterio extends Component {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
+
+                if (localStorage.getItem('salud')) {
+                
+                
+              
+          
+                  const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                  axios.get(url).then(res => {
+                    const ministerios = res.data;
+                    this.setState({ ministerios });
+                    this.setState({ loading: false });
+                    this.setState({ enviado: true });
+        
+                    console.log(this.state.ministerios);
+                    console.log(this.state.items[0].ministerio);
+                    this.state.ministerios.map(res => {
+                      if (this.state.items[0].ministerio == res.id) {
+                        this.handleChartTopRanking(res);
+                      }
+                    });
+                   
+                  });
+                  
+                }
+
               });
               this.setState({
                 logo: cruz,
@@ -458,6 +565,31 @@ class DetalleMinisterio extends Component {
                 item.orden = index;
                 item.actividad = item.id;
                 item.ministerio = item.ministerio.id;
+
+                if (localStorage.getItem('desarrollo')) {
+                
+                
+              
+          
+                  const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                  axios.get(url).then(res => {
+                    const ministerios = res.data;
+                    this.setState({ ministerios });
+                    this.setState({ loading: false });
+                    this.setState({ enviado: true });
+        
+                    console.log(this.state.ministerios);
+                    console.log(this.state.items[0].ministerio);
+                    this.state.ministerios.map(res => {
+                      if (this.state.items[0].ministerio == res.id) {
+                        this.handleChartTopRanking(res);
+                      }
+                    });
+                   
+                  });
+                  
+                }
+
               });
               this.setState({
                 logo: casa,
@@ -488,6 +620,8 @@ class DetalleMinisterio extends Component {
     }
   }
 
+  
+
   componentDidMount() {
     console.log("Detalle: componentDidMount");
     console.log(this.props.location);
@@ -507,6 +641,30 @@ class DetalleMinisterio extends Component {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
+
+              if (localStorage.getItem('educacion')) {
+                
+                
+              
+          
+                const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                axios.get(url).then(res => {
+                  const ministerios = res.data;
+                  this.setState({ ministerios });
+                  this.setState({ loading: false });
+                  this.setState({ enviado: true });
+      
+                  console.log(this.state.ministerios);
+                  console.log(this.state.items[0].ministerio);
+                  this.state.ministerios.map(res => {
+                    if (this.state.items[0].ministerio == res.id) {
+                      this.handleChartTopRanking(res);
+                    }
+                  });
+                 
+                });
+                
+              }
             });
 
             this.setState({
@@ -542,6 +700,31 @@ class DetalleMinisterio extends Component {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
+
+              if (localStorage.getItem('obras')) {
+                
+                
+              
+          
+                const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                axios.get(url).then(res => {
+                  const ministerios = res.data;
+                  this.setState({ ministerios });
+                  this.setState({ loading: false });
+                  this.setState({ enviado: true });
+      
+                  console.log(this.state.ministerios);
+                  console.log(this.state.items[0].ministerio);
+                  this.state.ministerios.map(res => {
+                    if (this.state.items[0].ministerio == res.id) {
+                      this.handleChartTopRanking(res);
+                    }
+                  });
+                 
+                });
+                
+              }
+
             });
             this.setState({
               logo: casco,
@@ -576,6 +759,33 @@ class DetalleMinisterio extends Component {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
+
+              if (localStorage.getItem('salud')) {
+                
+                
+              
+          
+                const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                axios.get(url).then(res => {
+                  const ministerios = res.data;
+                  this.setState({ ministerios });
+                  this.setState({ loading: false });
+                  this.setState({ enviado: true });
+      
+                  console.log(this.state.ministerios);
+                  console.log(this.state.items[0].ministerio);
+                  this.state.ministerios.map(res => {
+                    if (this.state.items[0].ministerio == res.id) {
+                      this.handleChartTopRanking(res);
+                    }
+                  });
+                 
+                });
+                
+              }
+
+
+
             });
             this.setState({
               logo: cruz,
@@ -610,6 +820,29 @@ class DetalleMinisterio extends Component {
               item.orden = index;
               item.actividad = item.id;
               item.ministerio = item.ministerio.id;
+
+              if (localStorage.getItem('desarrollo')) {
+                
+          
+                const url = `https://presupuesto-ciudadano.herokuapp.com/v1/report`;
+                axios.get(url).then(res => {
+                  const ministerios = res.data;
+                  this.setState({ ministerios });
+                  this.setState({ loading: false });
+                  this.setState({ enviado: true });
+      
+                  console.log(this.state.ministerios);
+                  console.log(this.state.items[0].ministerio);
+                  this.state.ministerios.map(res => {
+                    if (this.state.items[0].ministerio == res.id) {
+                      this.handleChartTopRanking(res);
+                    }
+                  });
+                 
+                });
+                
+              }
+
             });
             this.setState({
               logo: casa,
@@ -637,6 +870,8 @@ class DetalleMinisterio extends Component {
     }
   }
 
+ 
+
   onSortEnd = ({ oldIndex, newIndex }) => {
     const newItems = arrayMove(this.state.items, oldIndex, newIndex);
     newItems.map((item, index) => (item.orden = index));
@@ -662,6 +897,7 @@ class DetalleMinisterio extends Component {
       </td>
     </tr>
   );
+
 
   render() {
     let items;
@@ -708,7 +944,7 @@ class DetalleMinisterio extends Component {
                   className="text-decoration-none"
                   href={this.props.location.pathname + "#participacion"}
                 >
-                  <button className="button__secundary   d-block mx-auto ">
+                  <button className="button__secondary   d-block mx-auto ">
                     Participá
                   </button>
                 </a>
@@ -1195,19 +1431,33 @@ class DetalleMinisterio extends Component {
                               }
                             }
                           ],
-                          xAxes: [{ display: false }]
+                          xAxes: [{ display: false ,
+                            ticks: {
+                              min: 0,
+                              
+                        
+                              // forces step size to be 5 units
+                              stepSize: 1 // <----- This prop sets the stepSize
+                            }}]
                         },
                         tooltips: {
                           enabled: true,
                           mode: "single",
                           callbacks: {
                             label: function(tooltipItems, data) {
+                              let cantidadVotos = 0;
+                              data.datasets[0].data.forEach( item =>{
+                               cantidadVotos += item;
+                              })
                               return (
-                                data.labels[tooltipItems.index] +
-                                " : " +
-                                data.datasets[tooltipItems.datasetIndex].data[
+                                String(data.labels[tooltipItems.index]).substring(0,100)+"..." +data.datasets[tooltipItems.datasetIndex].data[
                                   tooltipItems.index
-                                ]
+                                ]+' votos' +
+                                " : " +
+                                (((data.datasets[tooltipItems.datasetIndex].data[
+                                  tooltipItems.index
+                                ])/cantidadVotos).toFixed(2))*100 + '%'
+                                
                               );
                             }
                           }

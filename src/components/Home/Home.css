@@ -263,7 +263,7 @@
   color: white !important;
 }
 
-.button__secundary {
+.button__secondary {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   /*   font-family: 'Helsinki'; */
   background: #55a3eb;
@@ -274,12 +274,14 @@
   border: none;
   text-decoration: none;
 }
-.button__secundary:hover,
-.button__secundary:active,
-.button__secundary:focus {
+.button__secondary:hover,
+.button__secondary:active,
+.button__secondary:focus {
   background: #cbe776 !important;
   border: none !important;
 }
+
+
 
 .information {
   background: #cbe776;

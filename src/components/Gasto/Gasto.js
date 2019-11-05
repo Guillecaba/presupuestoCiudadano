@@ -8,7 +8,8 @@ import billete_grafico from "../../assets/images/billete-grafico.png"
 import ContainerDimensions from "react-container-dimensions";
 import {Doughnut} from 'react-chartjs-2';
 import {Fade,LightSpeed} from 'react-reveal/';
-import Informacion from '../Informacion/Informacion'
+import Informacion from '../Informacion/Informacion';
+import ConoceMas from '../ConoceMas/ConoceMas';
 import "./Gasto.css"
 
 
@@ -135,6 +136,7 @@ definidos por el PGN y que permiten a las distintas entidades cumplir con sus fu
     </Tab>
   </Tabs></Col>
         </Row> */}
+        <ConoceMas />
         </Container>
         <Informacion />
   

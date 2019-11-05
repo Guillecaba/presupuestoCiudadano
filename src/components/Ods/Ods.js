@@ -8,6 +8,7 @@ import GrillaOds from "./GrillaOds/GrillaOds";
 import GrillaOds2 from "./GrillaOds/GrillaOds2"
 import ods_impacto from "../../assets/images/ods_impacto.png";
 import Informacion from '../Informacion/Informacion';
+import ConoceMas from '../ConoceMas/ConoceMas';
 import "./Ods.css";
 
 const Ods = () => {
@@ -69,7 +70,7 @@ const Ods = () => {
       </Row>
 
       
-
+      <ConoceMas />
     </Container>
     <Informacion />
     </Fragment>
